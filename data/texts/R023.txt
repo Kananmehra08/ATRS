@@ -1,0 +1,193 @@
+Oak National Academy: Aila (Oak's AI Lesson Assistant)
+AI lesson assistant for UK teachers to create personalised lesson resources for their classes, with the aim of reducing teacher workload.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+17 December 2024
+Organisation:
+Department for Education
+Organisation type:
+Agency or public body
+Function:
+Education
+Capability:
+Computer linguistics
+and
+Planning
+Task:
+Sentence and text generation. Planning optimisation.
+Phase:
+Beta/Pilot
+Region:
+UK
+Date published:
+17 December 2024
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Aila (Oak’s AI Lesson Assistant)
+2 - Description
+This is an AI lesson assistant for UK teachers to create lesson resources personalised for their classes, with the aim of reducing teacher workload.
+User interaction with Aila happens through a large-language model (LLM) chat stream (currently OpenAI’s GPT-4o).
+Users can generate lesson plans by interacting with Aila, Oak’s AI lesson assistant which uses retrieval augmented generation (RAG) process where similar lessons from Oak’s corpus are returned and displayed to the user.
+A separate LLM instance, with no contextual awareness of the lesson, to moderate the lesson for safe, guidance-required, or toxic content.
+3 - Website URL
+https://labs.thenational.academy/
+https://github.com/oaknational/oak-ai-lesson-assistant
+4 - Contact email
+help@thenational.academy
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Oak National Academy
+1.2 - Team
+Product and Engineering
+1.3 - Senior responsible owner
+Director of Product and Engineering
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Users can generate lesson plans by interacting with Aila, Oak’s AI lesson assistant. When a user instantiates a new lesson with an initial input (subject, key stage or lesson title), the application creates and saves a skeleton lesson plan that it then populates through subsequent chat interaction with the user. It also sends a request to the LLM to categorise the lesson title into a subject and key stage, which is then added to the lesson plan.
+There is a one-shot retrieval augmented generation (RAG) process where similar lessons from Oak’s corpus are returned and displayed to the user. This process finds relevant lesson plans from vectorised tables of Oak’s lessons. Once found, the application then ranks them using Cohere Rerank and displays them to the user, who then has the option of using one as the basis for their lesson (using content anchoring), which improves the accuracy of the generated lesson.
+User interaction with Aila happens through a large-language model (LLM) chat stream (currently OpenAI’s GPT-4o). User messages are sent to the LLM along with a system prompt that describes the task, includes any relevant lesson plans selected by the user, includes the current lesson plan and an explanation of how to iterate it, how to respond to the user, what information to send back and in what format, what voice to use and when and a check for Americanisms. The lesson plan updates are returned as JSON, which is then patched into the current lesson plan.
+Lesson plans follow a standard format that matches Oak’s pedagogy (lesson details, lesson outcome, learning cycle outcomes, prior knowledge, key learning points, misconceptions, keywords, starter quiz, learning cycles and exit quiz). Once a lesson has all these sections, the lesson resources, including a lesson plan, starter quiz, slide deck, worksheet and exit quiz, can all be downloaded.
+The application has an independent and asynchronous moderation agent. This uses a separate LLM instance, with no contextual awareness of the lesson, to moderate the lesson for safe, guidance-required, or toxic content. If a lesson plan contains toxic content, the lesson is stopped, and an explanation is displayed to the user.
+2.2 - Scope
+The tool is designed to generate lesson plans and resources for teachers in UK schools. Generated lesson plans follow Oak’s lesson template. Oak’s existing corpus of lessons, which are aligned with the National Curriculum, can be provided to the LLM for context.
+The tool is not designed for teacher workload activities outside of lesson planning, pupils, or teachers outside the UK, or as a generic chatbot in the style of ChatGPT.
+2.3 - Benefit
+The tool is designed to save teachers time when preparing lessons. The specific benefits are the speed at which Aila can generate full lesson plans, being able to use Oak’s corpus of lessons as a starting point, and the ability to ask Aila to personalise the lesson in ways that might normally take a significant amount of time (such as lowering the literacy level, adding or removing content, or changing context to make it more relevant to a school’s geographic location.)
+2.4 - Previous process
+This tool augments the existing education resources available on Oak’s platform, which allows teachers to download pre-made lessons and adapt them manually for their needs. Prior to this tool, there was no automated tool to support adaptation or personalisation of lesson/curriculum resources, and the majority of Oak users download resources and manually adapt them. This tool helps reduce the manual workload of teachers by making it easier and quicker to adapt lessons for their classes or to start new lessons on topics from scratch.
+2.5 - Alternatives considered
+This tool provides a resource to enhance Oak’s offering of lesson resources by providing a way to personalise lessons or create them on new topics from scratch.
+As such, Oak still predominantly offers non-algorithmic alternatives in lesson and curriculum resources for teachers.
+Aila combines algorithmic and non-algorithmic approaches to provide the overall product. We will keep refining the product to ensure it uses the simplest approach to achieve the best results.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool is designed for teachers to use during their lesson planning process, specifically when preparing a lesson for a particular class. It guides teachers through creating each part of the lesson and co-creating the content through a chat-based interface.
+Based on the teacher’s input, it provides suggestions for various lesson elements, such as addressing common misconceptions in explanations. Teachers can adapt and edit the lesson sections as they go, either by interacting with the chat or using the ‘modify’ tool within the output section.
+At the end, all lesson resource outputs are fully editable, allowing teachers to make any final adjustments to meet their students’ specific needs.
+3.2 - Provided information
+The tool uses a chat-based interface, allowing a two-way conversation where the teacher provides inputs and the tool offers suggestions as the lesson is created. The user interface displays a chat stream on the left and the lesson output on the right.
+Suggestions are made either within the chat such as: recommending existing Oak lessons as a starting point or by generating lesson outputs directly on the right-hand side as part of the lesson plan. If the teacher wants to modify any section, they can either make a request in the chat or use the ‘modify’ feature on the output. Options like ‘make this harder,’ ‘add more detail,’ or a free-text ‘other’ option allow for customisations to specific lesson content.
+3.3 - Frequency and scale of usage
+We don’t expect teachers to need to use the tool for every lesson, but rather when they need to create a new lesson from scratch or adapt a lesson for a specific class or use case.
+Approximately one-third of teachers in the England use Oak products at least every six months. We expect Aila to be used as part of this product suite, and to grow the overall usage of Oak.
+3.4 - Human decisions and review
+The tool ensures that humans remain ‘in the loop’ and are involved at every stage and section selection of the lesson creation process by prompting and agreeing to each input. It is intentionally designed not to generate lessons ‘at the touch of a button.’ Instead, it takes input and feedback from teachers to create lessons before suggesting or updating lesson content. This means that teachers, who know their students bestcan craft the most suitable lesson for their students’ needs.
+3.5 - Required training
+The product is built on the principle of requiring minimal training and the product will continue to be iterated based on user feedback to enable minimal onboarding friction.
+User training: Demonstration videos are available on the site, and users have access to a series of webinar demonstrations. The team plans to continue offering these depending on demand.
+Development team training: The tool was designed and built by an experienced team with expertise in building AI tools.
+3.6 - Appeals and review
+There are several mechanisms for users to provide feedback. A feedback widget is available at the bottom right of the screen, allowing users to easily submit feedback, which is then triaged by our customer support team. Users can also send feedback via email, which is processed in the same way to ensure any issues are addressed and communicated to the delivery team. There are specific forms are available at the point of use for users to appeal actions such as lessons being moderated for safety.
+Additionally, all usage data, including in-app modifications, provide valuable analytics that inform the ongoing development of the tool.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+GitHub repository:
+https://github.com/oaknational/oak-ai-lesson-assistant
+4.1.2 - Phase
+Public Beta
+4.1.3 - Maintenance
+The tool is in active development, so is continually being maintained and reviewed. This involves reviewing user feedback and behaviour, making technical improvements, fixing bugs, adding features. There are several methods of capturing user feedback embedded into the tool, including forms and a live chat.
+4.1.4 - Models
+OpenAI GPT-4o
+Cohere Rerank English
+Tier 2 - Model Specification: GPT-4o (1/2)
+4.2.1 - Model name
+GPT-4o
+4.2.2 - Model version
+gpt-4o-2024-08-06 (currently)
+4.2.3 - Model task
+User messages are sent to the LLM along with a system prompt that describes the task and includes any relevant lesson plans selected by the user, the current lesson plan and an explanation of how to iterate it, how to respond to the user, what information to send back and in what format, what voice to use and when, and a check for Americanisms. The lesson plan updates are returned as JSON, which is then patched into the current lesson plan.
+4.2.4 - Model input
+User messages, any relevant Oak lesson plans, the current lesson plan, instructions on how to iterate, how to respond, what information to include and format of the output.
+4.2.5 - Model output
+JSON of a generated ‘initial’ lesson plan, or JSON of lesson plan updates that are then patched into the lesson plan.
+4.2.6 - Model architecture
+We have not built our own model. Instead, Aila currently utilises GPT-4o, a transformer-based model architecture. Transformers are a type of deep learning model designed for tasks that involve sequential data, such as natural language processing. GPT-4o is a large language model with multiple layers of self-attention mechanisms, allowing it to process and generate contextually relevant text based on input. The model consists of billions of parameters (weights), organised into multiple layers that capture complex language patterns.
+Aila incorporates retrieval-augmented generation (RAG) and content anchoring, which allows the model to pull from Oak’s lesson content to ensure that generated lesson plans are accurate, relevant, and aligned with the curriculum.
+Aila is not reliant upon this model, and the model we use is and will continue to be regularly reviewed and evaluated.
+4.2.7 - Model performance
+We are evaluating the lesson outputs across all subjects generated by Aila to ensure that the content meets our standards, and to improve Aila where and when we identify areas for improvement.
+As well as analysing and manually evaluating user feedback, we are also working on auto-evaluation to do this at scale. This is a process where we use an LLM as a judge to evaluate the content generated by Aila, providing both an assessment and a justification. Specifically, we’ve designed a number of LLM-as-judge evaluations based on Oak’s pedagogical rubric, moderation guidelines, and other key considerations. These evaluations are carefully formatted to meet research-backed criteria, ensuring that we receive meaningful evaluation feedback. This includes evaluation on the model we are using, and comparison to other models - so we can change models if we see better performance from them.
+In addition to using LLMs, we also gather feedback from teachers to enhance our LLM-as-judge tests, ensuring they align closely with the assessments and standards set by the teachers at Oak. We continuously develop and refine these tests to address evolving needs, maintaining an ongoing evaluation process. As we gather user feedback, we can identify areas for improvement in Aila, make the necessary adjustments, and use these LLM-as-judge tests to confirm that these changes have been successful without adversely affecting other areas.
+The repo for our work on this is also open source, at
+https://github.com/oaknational/oak-ai-autoeval-tools,
+and we hope to make the evaluation outputs public soon.
+4.2.8 - Datasets
+A vectorised dataset of Oak’s lesson corpus. This is described in further detail in the Data section.
+4.2.9 - Dataset purposes
+Lesson data from the dataset can be anchored in the prompt to enhance model responses. If the tool finds lessons similar to a user’s prompt (e.g., “Maths KS3 Linear Equations”) and the user chooses to base their lesson on the chosen similar one.
+Tier 2 - Model Specification: Cohere Rerank (2/2)
+4.2.1 - Model name
+Cohere Rerank
+4.2.2 - Model version
+rerank-english-v3.0
+4.2.3 - Model task
+Cohere rerank is used to sort the most relevant lesson plans returned from the database using vector search. This adds an extra layer of similarity search and gives the user a better list of similar lessons to their initial key stage, subject or title.
+4.2.4 - Model input
+An array of lesson plans and a query combining the title and topic variables of the generated lesson plan.
+4.2.5 - Model output
+An array of results, where each result contains a relevance score and an index.
+4.2.6 - Model architecture
+We use Cohere’s rerank model, which is a transformer-based model architecture. Transformers are deep learning models designed for tasks involving sequential data, such as natural language processing. Rerank English v3.0 is optimised for ranking tasks, employing multiple layers of self-attention mechanisms to capture context and relevance between a query and a set of documents.
+This model consists of millions of parameters (weights), structured into several layers that enable it to accurately assess the relevance of documents based on their content and the input query. It is particularly useful for reranking search results in various systems, including semantic and lexical retrieval systems.
+Aila is not reliant upon this model, and the model we use is and will continue to be regularly reviewed and evaluated.
+4.2.7 - Model performance
+We are not evaluating Cohere’s model beyond application testing, as it makes up a small part of our lesson generation logic.
+4.2.8 - Datasets
+No Oak datasets were used to develop the model. The tool uses Cohere Rerank with no fine-tuning, prompt engineering or model alignment.
+4.2.9 - Dataset purposes
+No Oak datasets were used to develop the model.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Vectorised dataset of Oak’s lesson corpus.
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Lesson data including title, topic, key stage, starter quiz, learning cycles (including title, feedback, practice, explanation and duration), exit quiz, key stage, misconceptions, prior knowledge, learning outcome, additional materials and key learning points. It then includes generated vector embeddings used for similarity search (to return similar lesson plans to the user request).
+4.3.4 - Data quantities
+Oak’s lesson corpus currently includes approximately 10,000 lessons. Lessons are categorised broadly into units, which are further categorised into programmes and subjects. The tool database includes a vectorised subset of these lessons used for similarity search in the retrieval augmented generation (RAG) process. The dataset was not used for model development. It is instead to provide context to the prompt if the user selects a similar lesson they want to base the generated one on.
+4.3.5 - Sensitive attributes
+The dataset contains no personal data, protected characteristics or proxy variables. The vectorised dataset includes minimal extra information to Oak’s publicly available lesson corpus.
+4.3.6 - Data completeness and representativeness
+The data contains all the lessons available on Oak’s platform. This focuses on the UK national curriculum.
+4.3.7 - Source data URL
+https://open-api.thenational.academy/
+https://www.thenational.academy/
+4.3.8 - Data collection
+The dataset was ingested from Oak’s lesson database, which is available on the Oak National Academy website. The ingestion process involves taking each lesson, storing it in the Aila database and adding embeddings through OpenAI to allow the model to search for similiar lessons.
+4.3.9 - Data cleaning
+We don’t clean the original dataset as it is created and maintained by Oak National Academy.
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+The dataset is managed by and stored in a cloud service. Access to the cloud service requires 2FA and we use other best practices to secure the infrastructure.
+Direct superuser access to the database is restricted to engineers working on the tool using a zero trust process. Access to the database from the application uses specific application users with restricted access.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+We have conducted Data Protection Impact Assessments (DPIAs) for our AI tools, and third-party tooling where appropriate. We have also conducted an equality impact assessment, and are currently finalising our algorithmic impact assessment.
+5.2 - Risks and mitigations
+We manage the risk associated with Aila and our AI tools through Oak’s governance risk framework.
+Risks identified with implemented and ongoing mitigations include:
+Harmful or inappropriate lesson material produced: we have safety mechanisms in place to provide content guidance or block lessons from being created where they are deemed to be inappropriate.
+Bias or misinformation in content: we have an auto-evaluation framework in place to monitor our lessons for bias, which is regularly reviewed and updated with human input and reviews.
+Digital security: we have mechanisms in place to prevent prompt injection or other malicious intentions. We have also carried out an independent penetration testing review.
+Contents

@@ -1,0 +1,14 @@
+services:
+  atrs-pipeline:
+    build: .
+    container_name: atrs_pipeline
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Run interactive menu or pass flags like: docker compose run atrs-pipeline python run_pipeline.py --demo
+    command: python run_pipeline.py --demo
+    stdin_open: true
+    tty: true

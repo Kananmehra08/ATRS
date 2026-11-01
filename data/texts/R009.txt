@@ -1,0 +1,228 @@
+Public Sector Fraud Authority: Fraud Risk Assessment Accelerator
+Tool to generate initial drafts of Fraud Risk Assessments.
+Updates to this page
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+26 June 2025
+Last updated:
+12 May 2026
+Show all updates
+12 May 2026
+Record updated with additional and updated information as tool has moved into Public Beta Phase.
+26 June 2025
+First published.
+Organisation:
+Cabinet Office
+Organisation type:
+Agency or public body
+Function:
+Economic affairs
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Phase:
+Public Beta
+Region:
+Scotland
+,
+Wales
+and
+England
+Date published:
+26 June 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Fraud Risk Assessment Accelerator
+2 - Description
+Fraud Risk Assessment (FRA) Accelerator is a cloud-hosted web application that allows users to generate preliminary FRA using large language model (LLM). The tool extracts relevant domain knowledge context information from guide documents curated by Public Sector Fraud Authority (PSFA) fraud risk experts to analyse users provided documents. The tool aims to aid fraud risk professionals across the government departments in the initial FRA process.
+3 - Website URL
+https://www.gov.uk/guidance/fraud-risk-assessment-fra-accelerator
+4 - Contact email
+fra-accelerator@cabinetoffice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Public Sector Fraud Authority (PSFA)
+1.2 - Team
+Data Analytics Service
+1.3 - Senior responsible owner
+Deputy Director
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Deloitte LLP
+1.4.2 - Companies House Number
+OC303675
+1.4.3 - External supplier role
+Deloitte LLP was engaged by Cabinet Office to supply consultants to support the Public Sector Fraud Authority with the delivery of a range of projects.  Consultants deployed under this contract worked as part of the PSFA Data science and analytics team to develop the application and perform associated business analysis and evaluation tasks.
+1.4.4 - Procurement procedure type
+Deloitte is engaged by Cabinet Office to provide the wider consultancy services described above through a contract procured under the pre-established MCF3 framework.
+1.4.5 - Data access terms
+Deloitte has no access to the data or the application.  Deloitte’s staff deployed to the project are issued with Cabinet Office laptops and logins and use these exclusively to perform their work on the engagement.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+FRA Accelerator is a Django web application implemented in Python and hosted securely on Cloud Base Analytical System (CBAS). To access the tool, users must be authenticated via CBAS. At its core, the tool leverages the Microsoft Azure Chat OpenAI model GPT 5.2 as implemented in LangChain OpenAI package.
+File upload: A unique session-specific identifier (session id) is generated at the moment the user accesses the file upload page; this is to ensure all subsequent actions are mapped to a specific user instance. Here, they are prompted to provide information related to the scheme, including the scheme name and scheme file. Additionally, the user can submit an optional guide document as an additional context for the LLM. The uploaded documents are then validated by the native Django framework to ensure data integrity (i.e., checking for correct file extensions, naming convention and file corruption). Next, using the TextAnalyticsClient class of Microsoft Azure Language service, the tool detects and redacts Personally Identifiable Information (e.g., names, address or phone number) from the validated documents. Once sanitised, the files are uploaded to a dedicated folder on the Azure Blob Storage. Each file can later be retrieved based on the session identifier.
+Vector-store creation: Once the user initiates the FRA process, preprocessed files are downloaded from the Azure blob storage. The text content of each file is then chunked into lists of strings of predetermined number of characters. text-embedding-ada-002, an embedding model developed by OpenAI is used to convert each chunk into a high dimensional numerical representation (i.e., vectors). The resulting set of vector embeddings for the scheme and guide documents are subsequently indexed on the Azure AI Search and can be retrieved based on the session identifier. FRA Accelerator maintains a set of counter-fraud guide documents, compiled by Public Sector Fraud Authority experts as knowledge base. These documents are similarly chunked and the resulting vectors are stored on the Azure AI Search. If the user has uploaded a guide document, then subsequent context retrieval step will search for guide context in both the user-uploaded guide and knowledge base indices, otherwise only the knowledge base index will be used for guide context.
+LangGraph workflow: The tool utilises the graph architecture as implemented in LangGraph. It is composed of functional nodes (specific algorithmic task), edges (directed path and conditional logic between nodes) and State (a shared Python dictionary that persists data across the nodes). At each node, specific keys within the State are appended or modified (e.g., messages). These state changes are immediately available to subsequent nodes, allowing information of an earlier task to directly inform the parameters of the later task. Upon graph instantiation, a dedicated START and END node are created to denote the beginning and end of the workflow. At the START node, the State object is ingested and passed to the first functional node. Similarly, at the final functional node the State is passed to the END node, where the workflow is terminated.
+FRA LLM process: The first functional node of the tool automatically extracts relevant scheme and guide information using predefined queries. Here, the tool performs a similarity search between the query and the vector embeddings of the scheme and guide documents. The retrieved information contains details about the scheme and how to perform an FRA. The second functional node is an LLM instance, with a predefined system prompt to conduct preliminary FRA using the retrieved context information. The result is a structured output list of potential fraud risks. The third functional node is a secondary LLM instance, with a predefined system prompt to expand on the previous LLM response by providing deeper analysis on each risk line identified. To ensure integrity of the long form response, if the expansion of the third node is cut short due to token limit, then the workflow transition to a continuation node to resume generation without losing the context. If the process terminates due to the trigger of a content filter, then the pipeline restarts at the first functional node to attempt FRA again. If the response is complete, the data moves to the final stage. In the last functional node, the expanded response is parsed into a structured list.
+Output file download and clean up: The FRA Accelerator maintains an FRA excel file template on the Azure Blob Storage. Once the FRA LLM process is finished, the system downloads the template and populate it with the LLM output. The file is then staged to a dedicated output folder on the Azure Blob Storage and can be retrieved with the scheme name and session identifier. To ensure seamless status monitoring, the system employs a background polling system. Here, a JavaScript function executes a browser status check every 3 seconds to monitor the LLM process. Once the file is available for download, the status is switched to done and the file is automatically downloaded to the user’s computer. Once the pipeline has finished, all files and vector embeddings created are deleted from the Azure Blob Storage.
+2.2 - Scope
+The purpose of the tool is to allow users to use LLM in order to generate draft FRAs by reference to a defined set of source documents. Qualified fraud risk assessors will use the application to develop FRAs, with the application’s outputs being reviewed, amended and / or enriched by experts in order to produce a final FRA.
+The tool is currently in a Public Beta Phase. This means that the tool is available to a select few groups so that we can implement improvements. Following this we would be able to scale the tool for wider use.
+2.3 - Benefit
+The tool will accelerate the preparation of FRAs by automating early stage tasks to assemble risk typologies.
+2.4 - Previous process
+Decisions around the tool have been informed by a multidisciplinary team consisting of Fraud Subject Matter Experts (SMEs), Governance, and Data Scientists from Public Sector Fraud Authority (PSFA). This was also supported by conversations with Microsoft on knowledge exchange on Azure.
+Initially these groups contributed to a Discovery Phase where we experimented with a proof of concept  to understand the capability of an LLM to generate FRAs. The Data Scientists worked on the technical development of the tool.  Fraud SMEs provided feedback on the tool’s outputs to evaluate the tool’s effectiveness and the Data Scientists implemented improvements based on this feedback.  Governance specialists advised the team on legal, ethics and data privacy considerations, including the preperation of a DPIA. They have continued to contribute these inputs for readying the proof of  concept for Private Beta.
+2.5 - Alternatives considered
+The non-algorithmic methods is a Fraud Risk Assessor carrying out the following process:
+Kick-Off: Initial working sessions in order to understand the scope of the scheme.
+Futher Reading: Fraud SME conducting research based on internal documentation and additional relevant information provided by government departments.
+Drafting: Drafting inherent risks, respective controls, and residual risks.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The output of the tool is intended to be used by humans qualified to produce Fraud Risk Assessments (FRAs), i.e., Fraud Subject Matter Experts (SMEs)
+The Fraud Risk Assessment Accelerator is intended to be integrated in the following process:
+Kick-Off: Initial working sessions in order to understand the scope of the scheme.
+Futher Reading: Fraud SME conducting research based on internal documentation and additional relevant information provided by government departments.
+Drafting: Drafting inherent risks, respective controls, and residual risks.
+The tool supports these processes by ingesting relevant documentation and generating an initial draft of inherent risks in the form of Actor, Action, and Outcome (described below).
+3.2 - Provided information
+The tool will generate an initial Fraud Risk Assessment (FRA) draft in the form of an Excel Sheet, specifically containing:
+Actor: Type of entity who commits the fraud. Entity refers to an archetype of an individual or organisation.
+Action: How the actor commits the fraud.
+Outcome: What happens as a result of the fraud, including actor benefit and effects on the public sector.
+The output would not be a final submission. It should be used to inform/undergo review by a Fraud Subject Matter Expert (SME).
+3.3 - Frequency and scale of usage
+The number of users will increase over time. We have added additional users in phases during Public Beta, scaling the tool to perform up to 1000 FRAs a year now in Public Beta. Currently there are 143 users.
+3.4 - Human decisions and review
+Once the initial FRA is generated, a qualified Fraud Risk Assesor will evaluate the relevance, specification, and quality of the Fraud Risk Lines.
+3.5 - Required training
+Users will interact with the model via a user interface.  This interface will state terms of use governing what types of document can be uploaded.  This includes not uploading personal information. Users will be familiar with what a Fraud Risk Assessment is, given their roles. Users do not modify the algorithm but rather upload source documents, and review the tool’s outputs.
+Public Sector Fraud Authority (PSFA) will also user guidance and give demos of the tool as it onboards users.
+3.6 - Appeals and review
+Not applicable - this is not available to the general public.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The FRA Accelerator tool is deployed using the Azure Web App Service, it is a Platform-as-a-Service which builds, deploys, and scales web applications. The tool leverages Microsoft Entra ID for authentication. It utilises Redis and PostgreSQL in Azure as the cache and database management system, respectively. The user interface is created using the Django architecture. Django also provides more standardised tooling as it has a more established developer community, which allows for better adherence to the Gov.uk Design Systems.
+Azure Blob Storage is used to store any project related documentation and output. This includes user uploaded scheme and guide documents, FRA Accelerator knowledge base documents, FRA Accelerator output file template, logging messages, and the output generated. Each file is saved in the dedicated folder and can be retrieved using the generated session identifier. Except for the knowledge base documents, all files are deleted after the FRA workflow process or after a certain file retention period.
+Scheme and guide vector embeddings are stored on the Azure AI Search. This is an information retrieval system that is highly compatible with generative AI search applications. Vector embeddings created can be retrieved with unique session identifier. Except for the knowledge base guide, all embeddings created during the FRA process are deleted.
+FRA Accelerator utilises at its core the Microsoft Azure Chat OpenAI model GPT 5.2 via secure API calls as implemented in the LangChain library. LangChain provides a simple interface to manage communication between the tool and the Azure endpoint.
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+Fraud Subject Matter Experts will be reviewing the output of the tool to ensure that it is working as intended.
+Throughout Private Beta Deployment Public Sector Fraud Authority (PSFA) reviewed outputs and feedback from user testing group. During Public Beta PSFA give permitted users the chance to  periodically check in with the team around their experience.
+We will also ensure that the application is maintained through code refinement, debugging, error handling, and other coding infrastructure considerations.
+Maintenance of all Azure instances will be maintained by Cloud Based Analytics System.
+4.1.4 - Models
+GPT-5.2
+Text-embedding-ada-002
+Azure Language PII detection module.
+Tier 2 - Model Specification: GPT (1)
+4.2.1 - Model name
+GPT
+4.2.2 - Model version
+5.2
+4.2.3 - Model task
+GPT 5.2 is designed  for tasks that require long-form reasoning, such as analysising complex documents and generating reports. It has a broad knowledge across the domain and can perform multimodal analysis. In FRA Accelerator, given the built-in system prompt and user provided scheme and guide documents, GPT 5.2 is used to 1) generate preliminary risk lines in a structured output, 2) expand on the previously generated risk lines and 3) decide whether to terminate or restart the FRA workflow.
+4.2.4 - Model input
+The FRA Accelerator uses 4 separate system prompts, written in British English to guide the model through specialised tasks.
+-        Initial combination: contains step-by-step instruction on how to generate the draft FRA along with the retrieved context information from the knowledge base and user’s uploaded documents.
+-        Expansion: Directs the model to build upon and refine its prior answers.
+-        Workflow control: Instructs the model to evaluate the metadata of the previous LLM response and decide if the generation is complete or requires a restart.
+-        Continuation: A dedicated system prompt is used to resume the FRA generation if the process was stopped by token limit.
+4.2.5 - Model output
+The LLMs in FRA Accelerator return text-based responses to instructions in the system prompts. The output of the last FRA Accelerator LLM is used to populate an Excel file template.
+4.2.6 - Model architecture
+GPT 5.2 is a transformer-based LLM, which is a type of deep learning neural network that utilises multi-head attention mechanism. This architecture allows the model to evaluate the entire context window in parallel, establishing the semantic relationship by comparing each token against all others. The model subsequently generates one token at a time. Further architecture specific to GPT 5.2 is not available due to it not being released by OpenAI.
+4.2.7 - Model performance
+Performance is evaluated through expert validation and operational feedback. Initial assessments were conducted by Fraud Subject Matter Experts (SMEs), who provided categorised quantitative and qualitative reviews of output quality.
+In the current public beta stage, we have expanded this evaluation to a broader user base. This human-centric approach allows us to measure the tool’s accuracy and practical value based on real-world professional experience. By prioritising feedback from practitioners, we ensure the model consistently delivers actionable insights that meet rigorous operational standards.
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Model Specification: Text-embedding-ada-002 (2)
+4.2.1 - Model name
+Text-embedding-ada-002
+4.2.2 - Model version
+N/A
+4.2.3 - Model task
+Text-embedding-ada-002 is a general-purpose transformer-based embedding model. It is a deep neural network designed to transform text into numerical representations that can be used to measure semantic relatedness.
+4.2.4 - Model input
+The embedding model can take text input of around 8100 tokens. Within the FRA Accelerator, at the document ingestion stage, the text content of user-uploaded and knowledge base documents are chunked into strings of pre-defined number of characters. These are then sent to the embedding model to be converted into vectors for storage. Similarly, at the subsequent document retrieval stage, pre-defined prompts are used to identify and retrieve most semantically related text from the vector database.
+4.2.5 - Model output
+Each text input processed by the embedding model is transformed into a 1536-dimensional vector. Within the FRA Accelerator, these vectors are indexed and stored in Azure AI Search. During the document retrieval stage, the system compares the vector of a predefined prompt against this stored data, performing similarity search between them. The system then ranks all stored vectors based on their numerical relevance and returns the top eight most relevant text segments to be used as context for the LLM.
+4.2.6 - Model architecture
+Text-embedding-ada-002 is a transformer-based embedding model. It converts text to dense high-dimensional numerical representations. The weights and layers of the model remain propriety to OpenAI.
+4.2.7 - Model performance
+Qualitative assessment was carried out by data scientists and fraud subject matter experts.
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Model Specification: Azure PII detection service (3)
+4.2.1 - Model name
+Azure PII detection service
+4.2.2 - Model version
+N/A
+4.2.3 - Model task
+PII detection service is a cloud-based API that utilises machine learning and AI to identify and redact sensitive information. These include phone, numbers, email addresses, and identification documents.
+4.2.4 - Model input
+The input to this service is unstructured text extracted from user-uploaded documents
+4.2.5 - Model output
+The output of this service is the same text with sensitive information redacted with “*” placeholder.
+4.2.6 - Model architecture
+The PII detection model uses a transformer-based multilingual named entity recognition architecture, optimised for entity detection and redaction. The PII Redaction supports up to 125000 characters. In the FRA Accelerator, this process is further optimised by processing only one page at a time, which minimises the network overhead. Additionally, the tool selectively redacts only a predefined set of entity categories, which minimises unnecessary processing.
+4.2.7 - Model performance
+Performance is evaluated through expert validation and operational feedback. Initial assessments were conducted by Fraud Subject Matter Experts (SMEs), who provided categorized quantitative and qualitative reviews of output quality. Qualitative review of the tool was undertaken by the Data Scientist.
+We have expanded this evaluation during the public beta stage to include a larger, more diverse user base. This human-centric approach allows us to measure the tool’s accuracy and practical value based on user experience. We ensure the model consistently delivers high-quality, actionable insights that meet operational demands by prioritising feedback from fraud professionals.
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Fraud Risk Assessments (FRAs) Guidance Documents
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+These are documents compiled by PSFA fraud experts and are used during the retrieval augmented generation (RAG) step to provide additional context for the LLM.
+4.3.4 - Data quantities
+7 documents
+4.3.5 - Sensitive attributes
+Guidance documents contain:
+- Government staff names
+- Author names
+4.3.6 - Data completeness and representativeness
+The dataset is unstructured/in long format which acts as an external knowledge source. It does not contain rows, and does not refer to a target population.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+N/A
+4.3.9 - Data cleaning
+The data was scanned for personal data and these were removed.
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+The PSFA data science and analytics team will have access to back-end architecture. This includes coding repos in Azure DevOps, and input/output data stored in Azure Storage containers. This is hosted in a CBAS environment. All user uploaded files are stored temporarily and deleted once the specific pipeline instance is complete.
+Generated FRA output are downloaded automatically or prompted to be downloaded from the web browser. Users will only be able to interact with documents that they upload. All generated files are stored temporarily on the storage blob and are permanently deleted after one hour.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+While the tool is not intended to process personal data, a Data Privacy Impact Assessment was completed to address the risk of individuals’ names (such as authors) appearing in uploaded documents and to consider the risks associated with the use of Generative AI models more generally (such as the unpredictable return of personal data in the model’s outputs).  The DPIA was approved by PSFA’s SRO on 4 March 2025 and no material residual risks were identified.
+5.2 - Risks and mitigations
+The project uses the LLM GTP-5.2, as described in the earlier sections.  Associated risks are:
+Personal data in output/inputs: This has been mitigated by having no personal data be involved in inputs or prompting, and monitoring outputs. - PII removal
+Hallucinations: This is mitigated by establishing accountability and responsibility through human-in-the-loop feedback. We have had independent Fraud Subject Matter Experts evaluate generated Fraud Risk Assessments to implement improvements.
+Fairness, Bias, and Discrimination: This is mitigated due to having no personal data/reference to specific persons. All Actors are defined in terms of archetypes. All outputs will be monitored for edge cases by the Public Sector Fraud Authority team.
+Sensitive data: This has been mitigated by hosting the application on Cloud Based Analytics System as input data is sensitive.
+Contents

@@ -1,0 +1,173 @@
+HMRC: Ask HMRC online
+Digital (virtual) assistant chat (chatbot) and human HMRC adviser webchat.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+26 June 2025
+Organisation:
+HM Revenue & Customs
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation. Bot interaction and conversation.Sentence and text generation.
+Phase:
+Production
+Region:
+UK
+Date published:
+26 June 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Ask HMRC Online Chatbot
+Digital Engagement Product (DEP)
+2 - Description
+DEP provides digital contact support to our external users (citizens/ customers) whilst they are online. Contact is currently served by webchat and or digital assistant (DA). Our solutions enable users to get information, educate and sign-post to self-serve and complete transactions with HMRC. On some lines of business, users can escalate from the DA to webchat with HMRC advisers to help solve more complex queries and complete transactions with us.
+3 - Website URL
+https://www.tax.service.gov.uk/ask-hmrc/hmrc-digital-assistant
+4 - Contact email
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+HM Revenue and Customs
+1.2 - Team
+Chief Digital Product Office
+1.3 - Senior responsible owner
+Head of OE Customer Communication Services
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Microsoft (formerly known as Nuance)
+1.4.2 - Companies House Number
+NA
+1.4.3 - External supplier role
+Microsoft are our third party Software as as Service (SaaS) supplier. They provide back end functionality for our DA and webchat including data insights and metrics, Natural Language Understanding modelling, reporting and set up and maintenance of Agent Groups and Business Rules
+1.4.4 - Procurement procedure type
+Competitive procedure with negotiation
+1.4.5 - Data access terms
+Restricted to non authenticated user data. Any Personal Identifiable Information is redacted.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Exernal users (HMRC customers) use the digital assistant to ask tax related queries. They use natural, non jargon, language and search for a response. The digital assistant uses keywords and Natural Language Understanding to match a response (answer) to the user’s intent (question). The responses give accurate, non personalised information to the user linking to GOV.UK guidance pages. Microsoft are our third party Software as as Service (SaaS) supplier. They provide back end functionality for our DA and webchat including data insights and metrics and Natural Language Understanding.
+2.2 - Scope
+The digital assistant helps the user to navigate the information they need for clarity, confirmation, managing expectations and next steps. In many scenarios, the user can escalate to webchat with a human adviser to resolve a complex query.
+2.3 - Benefit
+The Digital assistant is available 24 hours, 7 days a week, 365 days a year. It contains over 1,500 sample phrases recognising 1000s+ user phrases / questions and has coverege of 60 of HMRC’s 120+ taxes.
+In 2024 (1 Jan - 31 Dec) the DA was accessed 5.48+ million times, representing substantial public savings & freeing up adviser time to handle more complex cases with users.
+It includes the ability to print and save transcripts of DA and webchat chats so the user can refer back to them at a later time. Any urls given to the user as part of the answer stay active in a saved pdf.
+2.4 - Previous process
+No previous digital assistant or webchat process exists; the legacy process still exists: users can resolve queries by contacting HMRC via phonecall to the contact centres or, to write in to HMRC.
+2.5 - Alternatives considered
+Digital Assistant and webchat have been available for 5 years. The service has passed Discovery, Alpha, Beta and Live running service standard assessments. The service was introduced as a contact channel during the early stages of the Covid 19 pandemic as an altternative contact channel for HMRC users. It is the first of its kind at HMRC and helps it meet an essential public need.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The digital assistant (DA) uses natural language understanding to understand what a user is asking and relays an answer back to the user based on confidence on ‘matching’ keywords and phrases. Where the DA is unsure / unconfident, it asks the user to rephrase rewrite their query using and strategy of related answers.
+The DA also uses ‘disambiguation’ options of responses to help triage and and refine the user ask. This helps to improve the accuracy of giving the correct response to the user based on their question e.g. do you mean: X, Y or, Z? The DA can then give a more accurate response based on the disambiguation option chosen by the user.
+The DA does not require authentication or login credentials to use and does not give advice based on personal / individual circumstances.
+3.2 - Provided information
+External users are able to print and save a pdf at the end of their chat with the DA and also if they escalate to webchat with an adviser. This can be used to refer back to at a later time.
+Where user chats escalate to webchat, the webchat adviser can see / read all previous interaction with the DA prior to escalation.
+A webchat adviser will only continue to have a conversation with a user if they pass identity and verification (ID&V) and then follow the same secure conversation as a contact centre call adviser.
+3.3 - Frequency and scale of usage
+The digital assistant has had 5.48m interactions in the tax year 2024/25 (to date as at 6 March 2025). That is an 18.8% growth on the 2023/24 tax year.
+For webchat, 909,000 users have escalated to speak to an adviser in the tax year 2024/25 (to date as at 6 March 2025). That is a 20% decrease on the 2023/24 tax year. The decrease is a positive as fewer users need to speak to an adviser and self serve their queries.
+3.4 - Human decisions and review
+For each conversation passed from digital assistant to webchat adviser, the adviser is presented with a transcript of the conversation between the digital assistant and the user prior to transfer, which the adviser can use to better understand the user’s request.
+Once the user passes an identity and verification check, the adviser can then access back end head of duty systems to view user account details.
+3.5 - Required training
+Digital assistant and webchat are hosted on HMRC’s Multi-Channel Digital Tax Platorm (MDTP).
+Development of the digital assistant chatskin is built in-house by HMRC ScaLa developers and supported by Microsoft developers and analysts to implement the chatskin ‘tax.service’ on MDTP. A development implementation guide is available to support developers who code using open source coding. All coding information is stored in the service Runbook and also via Github.
+HMRC Content Designers collaborate with Microsoft Content Designers to develop Natural Language Understanding (NLU) curated content. Content Designers adhere to the HMRC Style Guide. Review and monitoring of the content  is done frequently to help train, refine and improve the sample data in the NLU.
+Webchat advisers are trained to used the Microsoft webchat adviser portal from HMRC colleagues in our Operational Excellence directorate.
+3.6 - Appeals and review
+External users can ask multiple questions, or can rephrase their questions in the digital assistant as a way to review the responses from the digital assistant.
+External users are asked to complete and submit a Customer Satisfaction (CSAT) survey post-chat. Users can also submit a Deskpro query, which will be resolved by the development team if there is any incorrect information in the service, or report if the service is not working.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+GitHub Chatskin:
+https://github.com/hmrc/digital-engagement-platform-skin
+Runbook:
+https://confluence.tools.tax.service.gov.uk/display/DEP/Digital+Engagement+Product+Runbook
+Tech Architecture:
+https://confluence.tools.tax.service.gov.uk/display/DEP/Architecture
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Performance of the digital assistant and webchat is monitored daily by developers using Grafana and Kibana.
+Pager duty alerts are also in place to monitor service availability or service failure. Where there is service failure, work is expedited to ensure the service is back online as soon as possible.
+Daily performance analytics are displayed in a Power BI dashboard to measure traffic such as page views, escalations, chat handling times etc.
+Content and conversation transcriptions are reviewed on a fortnightly basis or more frequently if we have a stakeholder ask. Where content is inaccurate, misleading or not match well, immediate remedial work is prioritised to address the errors.
+The Development and Design scrum team operate under agile methodologies and also host a monthly show and tell review to demonstrate to stakeholders what content, accessibility, design and development features have been added to the product over the past 4 weeks (Sprint cycle period).
+4.1.4 - Models
+Intent recognition is based on Natural Language Understanding (NLU). It is a model built on sample and intent recognition.
+The greater the number of users who use the digital assistant and add variety to the digital assistant, the greater likelihood the digital assistant can match a response to the user question.
+New content added to the digital must have existing evidence of user ‘asks’ to help with training data and improving samples within the content.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Digital Assistant
+4.2.2 - Model version
+QNLP 10.2.20
+NDP 4.3
+Locale en-GB
+4.2.3 - Model task
+Intent recognition.
+User ask (question) - intent recogntion - response (answer provided)
+4.2.4 - Model input
+Text-based customer questions in English
+4.2.5 - Model output
+Where the digital assistant NLU has confidence it can match a response to a user’s question it will provide a pre determined response.
+If the DA is not confident in giving the user a response, it will use a related answer strategy and ask the user to rephrase their query (try again).
+If the user asks a question that is misunderstood or, the DA does not have an answer for it will give an incomprehension and out of scope response. At no point would the user not get some form of response from the DA.
+4.2.6 - Model architecture
+Classifier based intent recognition.
+Intent classification - large linear classification
+Entity (semantic) tagging - discriminative sequence labelling
+Confidence scores - deep neural network
+4.2.7 - Model performance
+NLU Accuracy test set result March 2025† 83.03% on known intents
+4.2.8 - Datasets
+1 dataset
+4.2.9 - Dataset purposes
+Map samples to existing intents and analyse for new intents
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Digital Engagement Product Dataset
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Sample user input for a virtual assistant
+4.3.4 - Data quantities
+28575 unique samples
+4.3.5 - Sensitive attributes
+No personal data is used to train the algorithm.
+4.3.6 - Data completeness and representativeness
+100% representative of the target audience based on the fact the model is built on live user samples
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+When a user interacts with the Digital Assistant, their conversation is collected and stored according to HMRC policy. Conversation attributes are recorded that provide context to the interaction. The conversations are then used to review the performance of the algorithm and to improve the curated answers given in response to user questions.
+4.3.9 - Data cleaning
+Yes data is cleaned manually
+4.3.10 - Data sharing agreements
+N/A outside of HMRC.
+4.3.11 - Data access and storage
+Personnel from HCLTech and HMRC who require access to the models. As long as the project is running, the NLU model data will be stored. HMRC is responsible as it is the controller and it’s hosted on UK cloud tennant.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+HMRC Standards Assurance Live Service Assessment held 4 August 2024.
+Result 13 standards with green rating, 1 standard with amber rating.
+Service Accessibility Statement. Service accessible to WCAG 2.1 AA. Url to statement:
+https://www.tax.service.gov.uk/accessibility-statement/digital-engagement-platform-frontend?referrerUrl=%2Fask-hmrc%2Fchat%2Fself-assessment-dav3-nuance
+5.2 - Risks and mitigations
+Risks are mostly mitigated with the product being a mature live service.
+Security risk are minimal as no Personally identifiable information or personal data is stored or presented in the Digital Assistant or webchat. The service is not authenticated so does not require any login credentials or passwords to access.
+The only small risk which exists is around user perception that digital assistants and chatbots are not helpful to resolve queries. Our 5m+ annual usage shows this risk is continuing to decrease.
+Contents

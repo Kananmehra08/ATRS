@@ -1,0 +1,233 @@
+DVLA: Contact Centre Natural Language IVR
+A Natural Language IVR is used on the Contact Centre's voice channel, allowing customers to 'tell' us what their enquiry is about and then route them through to a relevant meessage and/or a advisor.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+7 April 2026
+Organisation:
+Department for Transport
+Organisation type:
+Agency or public body
+Function:
+General public services
+Phase:
+Production
+Region:
+Great Britain
+Date published:
+7 April 2026
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+DVLA Contact Centre Natural Language IVR
+2 - Description
+All of the DVLA Contact Centre’s IVRs have been redsigned to allow customers to ‘tell’ us what their enquiry is about at the start of the call using their voice. Natural Language Processing is then used to understand the customer intent and route to the relevant message and/or advisor.
+To use this tool, customers will call one of the DVLA Contact Centre’s main telephone numbers and will be asked to to tell us what their enquiry us about. The IVR is then designed to route the customer to a message within the IVR (which may answer their enquiry) or will route them directly to an advisor if record access is required to resolve.
+The move to voice recognition IVRs through NLP was delivered to simplify the routing and move away from large menu based (touchtone) routing. We’ve reduced the amount of time customers spend navigating our IVR by over 50%. Additionally the new IVRs have provided enhanced NLP reporting based on what the customer says allowing the buisness to make more informed decisions around training, resourcing and coaching requirements and more easily understand the imapct of failure demand.
+The data processed in the NLP IVR is provided directly by the customer when they tell us what their enquiry is about.
+3 - Website URL
+https://contact.dvla.gov.uk/driving-licence
+The DVLA phone number for Drivers is visible on this page
+4 - Contact email
+Contact Centre CCMT <
+ContactCentreCCMT@dvla.gov.uk
+>
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Driver and Vehicle Licensing Agency
+1.2 - Team
+DVLA Contact Centre
+1.3 - Senior responsible owner
+Head of Contact Centre
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Content Guru (Supplier of the Storm Platform, who integrated the NLP Machine Agent product with the voice channel)
+Google DialogFlow (the Machine Agent product being used). This product is acquired through Content Guru who have selected it as the NLP product of choice for use with the Storm platform and is included in the overarching contract
+1.4.2 - Companies House Number
+05653869
+1.4.3 - Third party role
+Content Guru are the supplier of our Cloud Contact Centre platform (Storm) which is integrated wth the GoogleDialogFlow Machine Agent product. When we migrated over to the Storm platform, Content Guru migrated our existing IVR flows Storm (from AVAYA). Following this migration, all IVR development including the introduction of NLP, development was completed by in-house DVLA administrators. Google DialogFlow has been through Content Guru who have selected it as the NLP product of choice for use with the Storm platform and is included in the overarching contract
+1.4.4 - Procurement procedure type
+Open procurement using the Crown Commercial Framework - Network Services  RM3808
+1.4.5 - Third party data access terms
+Content Guru provide Contact Centre Cloud services to the DVLA and are only provided permission based access to the IVR as part of incident investigation and resolution.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Customers can get in touch with DVLA via a voice/telephony channel. The telephone numbers are listed on the Contact Us page on the DVLA web page on GOV.UK or the customer can drop out of a service and call us from a number lised on a failure page.
+The Natural Language Interactive Voice Response (IVR) asks a customer to ‘tell us’ what their enquiry is about using their voice. The NLP engine uses this intent to route to pre-programmed options within the IVR. These include:
+- Messages that will attempt to answer the customer’s enquiry
+- Options to recieve an SMS which contains a link to a DVLA service or Knowledge Article on GOV.UK
+- Routing customers to the appropriate advisor.
+The data is obtained directly from the customer as the customer will say what their enquiry is about when first engaging the NLP IVR.
+The IVR uses AI through NLP to undertsand teh customer’s intent and is routed in line with the design of the IVR.
+Services utilising the NLP IVR are:
+1. Vehicles General / Electronic Vehicle Licensing
+1. Drivers General
+1. Drivers Medical
+1. Driving Licence Online (DLO)
+1. View Drivers Licence
+1. Vehicle management & Personal Registrations
+If a customer has their enquiry answered by a message in the IVR then they may hang up the call without the need to speak to an advisor.
+The intents captured by the NLP IVR are broken down into categories/descriptors for reporting purposes and continous improvement to ensure accuracy of routing.
+2.2 - Benefits
+The NLP IVR has simplified the customer journey when they call us, reducing the average time a customer spends in our IVR by 50% (90 seconds).
+Additionally, it has helped to automate 20k transfers every month through the improved routing accuarcy when compared to a touchtone IVR.
+Upon deployment of our IVR we saw our Customer Satisfaction score jump by 5%.
+NLP IVR has also provided the business with more granular and accurate call descriptors enabling the business to make more informed decisions around training and coaching requirements and routing accuracy.
+2.3 - Previous process
+The previous IVRs did not route customers through voice, they were DTMF (touchtone) based and involved the customer selecting numbers on the phone dialpad which corresponded to relevant options. To allow us to understand the enquiry type, these menus often included 4 or 5 options and were 3 or 4 levels deep. This created a clunky customer journey and did not achieve a high level of routing accuracy
+2.4 - Alternatives considered
+No other options were considered, the previous method of touchtone IVR was outdated and relied heavily on customer effort to navigate successfully. NLP IVRs were the trusted new method in the Contact Centre industry for simplifing IVR journies and imprving routing accuracy
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+DVLA NLP IVR asks the customer to tell us their intent and provides answers based on programmed rules and logic. It decides which route and response to provide based on how similar the customers inputted question / statement is to the expected input. If the IVR cannot confidently interpret an intent, it will transfer the customer to a DVLA  advisor to continue the conversation.
+The  advisor has access to DVLA databases so if any record access is required to answer the customer’s enquiry, then only the advisor can do this. The NLP IVR can only answer higher level general enquiries, record access and more complex enquiries require a human.
+There are 2 main ways a customer would access our NLP IVR
+- From a DVLA digital service (like taxing a vehicle). The telephone number is provided when something goes wrong to provide transactional support
+- From the Contact DVLA Page on Gov.uk as a general enquiry option when a customer can’t find what they need from the website. Customers are able to choose the telephone number  they need to contact the DVLA.
+3.2 - Human review
+The NLP IVRs are reviewed and maintained every day by the DVLA Contact Centre’s Voice and IVR Administration Team. Intents that have not been able to be categorised are captured in audit logs reviewed and are added to our list of call type descriptors to ensure accurate routing. Advisors also feed back to the administration team where descriptors passed through to them from the IVR do not match the callers enquiry for review and action if required.
+3.3 - Frequency and scale of usage
+The NLP IVR  is used on a daily basis as part of business as usual processes within the Contact Centre. Around 900k customers access the IVR every month.
+3.4 - Required training
+The IVR has been designed to be used without the need for formal training. Customers are only asked to tell us what their enquiry is about
+All Contact Centreadvisors are trained on using the voice and IVR channel and the features available to them, which include the descriptiptor of what teh customer said in the IVR. There are also training materials, knowledge articles, security documents  avaialble to them.
+The GOV.UK page for Contacting DVLA explains to the customer what they can expect from the channel and the opening hours.
+3.5 - Appeals and review
+The NLP IVR will not be making any decisions which will have a significant impact on the customer. The role of the IVR will be to gather information, offer general advice and to route to the appropriate advisor where applicable.
+Ongoing maintenance and updates to the IVR are carried out on a daily basis by the Contact Centre Voice and IVR adminustration team, they are continually checking for accurate routing and ensuring the NLP is sending the customers to the correct advice. The IVR does not use any generative AI capability so only offers responses that this team have configured
+The intended outcome of the processing will be that the customer gets their enquiry answered via the IVR, where this is not possible it will be routed to an advisor. The IVR is designed in such a way that if there is ‘confusion’ around the understanding of teh customer’s intent, then they are routed through to an advisor. The customer can also ask to ‘speak to an advisor’ at any point.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The NLP IVR is part of DVLAs Contact Centre platform (built on Storm - by Content Guru), a feature called Google AI Machine Agent is used (Also referred to as Google AI DialogFlow).
+The system architecture of Google AI Dialogflow is designed to support scalable, intelligent, and responsive conversational agents. It integrates multiple components such as natural language understanding (NLU), intent recognition, context management, and fulfillment services.
+The high-level architecture:
+1. User Interface (Input Channels)
+IVR Systems (for phone-based interactions)
+Dialogflow receives text or speech input through these channels.
+Dialogflow Core Components
+NLU Engine - Parses user input to identify intents and entities using machine learning and NLP.
+Intent Classification - Determines the goal of the user’s query.
+Entity Extraction - Extracts relevant parameters from input.
+Context Management	Manages state and flow of multi-turn conversations using short-term and long-term context.
+Session Management - Keeps track of a unique user’s conversation, including past intents and variables.
+Dialog Management- Determines how to respond based on intent, entities, and context.
+Fulfillment Module - Can connect to external APIs or backends to perform actions.
+Fulfillment & Webhooks
+Fulfillment is an optional but powerful part of Dialogflow that allows dynamic responses.
+Webhook Integration: Sends a POST request to your server with intent and entity data.
+Backend Logic: Processes the request
+Response Returned: Sent back through Dialogflow to the user.
+More information around Google DialogFlow can be found here:
+https://docs.cloud.google.com/dialogflow/docs
+4.1.2 - System-level input
+Inbound voice calls through the Storm Cloud Cintact Centre Platform are routed into Google DialogFlow. Customer intent is then captured through voice recognition, these intents cover Vehicles, Drivers and Drivers Medical enquiries
+4.1.3 - System-level output
+Outputs include
+- Voice call routing to advisor
+- Voice call routing to Storm ‘Flow’ where information messages are played to the customer
+- Voice call routing to Storm ‘Flow’ where customers are offerd an option to receive an SMS with a link to a DVLA Digital Service or a Knowledge Article on GOV.UK
+4.1.4 - Maintenance
+The DVLA Voice and IVR Administration team undertake observations to monitor the accuracy of the routing the IVR based on teh customer intent
+There is an established resolution path which routes to the Telecoms Development Team to address these in case of issues.
+Google AI Dialogflow Maintenance & Update Frequency
+1. Continuous Backend Updates
+Google frequently updates Dialogflow’s backend services, including:
+NLU models (improving intent detection and entity extraction)
+Stability, speed, and scalability enhancements
+Bug fixes and security patches
+These updates are automatic and do not require DVLA intervention.
+Scheduled Platform Maintenance
+Planned maintenance windows (usually for infrastructure or Cloud dependencies) are announced in advance via:
+Google Cloud Status Dashboard
+Google Cloud Console notifications
+Maintenance is typically non-disruptive, and high-availability strategies are in place.
+Feature Releases
+Dialogflow has regular feature releases, especially in Dialogflow CX:
+New API endpoints
+Expanded language support
+Better integration tools (e.g., for Contact Center AI, Cloud Functions)
+These updates are usually announced in:
+Dialogflow release notes
+Google Cloud blog or changelog
+4.1.5 - Models
+Natural language understanding (NLU)
+Tier 2 - Model Specification
+4.2.1. - Model name
+Google AI DialogFlow
+4.2.2 - Model version
+gemini‑2.0‑flash‑001 & gemini‑2.0‑flash‑lite‑001
+4.2.3 - Model task
+To understand verbal user intent from natural language inputs,
+recognise what the user wants to achieve, extract relevant information from user queries, identify key parameters, manage the flow of conversation across multiple turns, reply with predefined messages or route to an advisor
+4.2.4 - Model input
+Verbal customer intents - in English
+4.2.5 - Model output
+To provide users with predefined answers to their questions or to route the call to an advisor
+4.2.6 - Model architecture
+The detailed internal model architecture of Google’s Gemini-2.0-flash isn’t publicly disclosed in full by Google, but this is is what is infered from information known.
+Foundation: Transformer-based Large Language Model (LLM) Gemini-2.0-flash is a Transformer-based LLM
+Likely employs stacked transformer encoder-decoder layers optimised for both understanding and generation.
+Flash Optimisation
+FlashAttention is a fast, memory-efficient attention algorithm improving inference speed and reducing GPU memory usage.
+Pretraining & Fine-tuning
+Pretrained on massive multilingual datasets (text, code, dialogue data). Fine-tuned specifically for:
+Dialogflow conversational tasks
+Reasoning and contextual understanding
+Instruction following
+Parameter Scale
+While exact size is not public, Gemini-2.0 models are multi-billion to possibly over 100 billion parameters scale, putting them in the class of large foun
+4.2.7 - Model performance
+Google’s Intent Detection Accuracy
+Dialogflow’s intent classification models are designed for high accuracy in practical application:
+90%+ accuracy or higher on well-trained intents with good example phrases.
+Accuracy depends heavily on quality and quantity of training data provided by developers.
+Google’s transfer learning and pretraining on large language datasets help boost generalisation.
+Entity Extraction Precision
+Prebuilt system entities have very high precision and recall due to extensive pretraining and engineering.
+Dialogflow is optimised for low latency suitable for real-time conversations. Google Cloud infrastructure allows scaling to millions of queries per day with consistent performance.
+4.2.8 - Datasets and their purposes
+N/A - The NLP IVR did not require training, it uses NLP to understand customer intent and routes to the pre-defined scripts and flows built by the Contact Centre Voice and IVR Administration Team
+2.4.3. Development Data
+4.3.1 - Development data description
+Test calls were used to help design and test the NLP IVR
+4.3.2 - Data modality
+Audio
+4.3.3 - Data quantities
+We enabled a basic NLP IVR which only asked the customer to tell us what their enquiry was about, we then routed their call directly to an agent. We ran this version of the IVR for around 3 days (100k Calls) which provided us valuable insight around the words customers used when telling us about their enquiry. The NLP IVR routing and structure was then designed using this data
+4.3.4 - Sensitive attributes
+We do not ask the customer to provide any senstitive or personal data in the NLP IVR, they are only asked to tell us what their enquiry is about
+4.3.5 - Data completeness and representativeness
+If the customer chooses not to provide the data (i.e they don’t speak) they will still be routed through to an advisor. There is no integration between the NLP IVR and DVLA records. It is the advisors responsibility to confirm any relevant data protection in line with our data security guidelines
+4.3.6 - Data cleaning
+N/A
+4.3.7 - Data collection
+Logs capturing the intents from the IVR are stored for 90 days and deleted in line with DVLA Security Policy
+4.3.8 - Data access and storage
+Only Storm Administartors with the relavant administartion licence can view the data captured in the intent logs
+4.3.9 - Data sharing agreements
+N/A
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+The data is provided from the customer when they tell us what their enquiry is about. Following that, the tool uses it’s NLP capability to undertsand the intent and route the call accordingly
+4.4.2 - Sensitive attributes
+We do not ask the customer to provide any senstitive or personal data in the NLP IVR, they are only asked to tell us what their enquiry is about
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+Only logs which capture the customer intent are stored (for 90 days). No sensitive or operational data is captured by the NLP IVR.
+4.4.5 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+A Data Protection Impact Assessment (DPIA) has been completed and will be updated if any changes to the service are undertaken.
+The most current iteration was updated in January 2025.
+5.2 - Risks and mitigations
+The main risk linked to the use of NLP IVRs was the IVR misundertsanding an intent and routing the customer to an irrelevant information message. Ultimately, the customer will still be able to choose to speak to an advisor shoud this happen. The NLP IVR does not make any significant decisions. Additionally the Contact Centre Voice and IVR  Administration Team continually maintains the IVR and ensures the information provided is the latest and most accurate advice.
+Contents

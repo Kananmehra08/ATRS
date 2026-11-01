@@ -1,0 +1,167 @@
+Standards and Testing Agency: Reception Baseline Assessment Routing
+Rules applied to the Reception Baseline Assessment which help prevent pupils from being presented with too many questions with which they are unlikely to be successful.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Organisation:
+Department for Education
+Organisation type:
+Agency or public body
+Function:
+Education
+Capability:
+Management
+Task:
+Rule-based calculation
+Phase:
+Production
+Region:
+England
+Date published:
+30 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Reception Baseline Assessment (RBA) Routing
+2 - Description
+The RBA is a statutory assessment that must be taken by pupils in reception within their first 6 weeks of starting school.
+https://www.gov.uk/government/collections/reception-baseline
+Routing is a rules based model used within the RBA to help prevent pupils from being presented with too many questions with which they are unlikely to be successful. Routing means that a more difficult question may not be presented to a pupil if their previous answers suggest they are unlikely to get it right. It also helps to reduce the time required for the assessment and could reduce the possible discomfort a pupil may feel if they are unable to answer a question.
+3 - Website URL
+Information on the RBA is available at the following URL, including administration guide and assessment and reporting arrangements:
+https://www.gov.uk/government/collections/reception-baseline
+The assessment framework is available at
+https://www.gov.uk/government/publications/reception-baseline-assessment-framework
+The current assessment (until the end of 2024/25 academic year - no automated routing) is accessed at :
+https://receptionbaseline.education.gov.uk/
+The assessment for 2025/26 onwards is accessed at:
+https://interactions.signin.education.gov.uk//87XoQ-GaZU-AahmkflRoq/select-organisation?uid=F1753489-B671-4063-A71A-CECCB3D9B2A0&redirect_uri=https://start-assessment.sta.education.gov.uk/auth/cb
+4 - Contact email
+assessments@education.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Standards and Testing Agency
+1.2 - Team
+Test development team
+1.3 - Senior responsible owner
+Deputy Director
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+NFER/Made Tech
+1.4.2 - Companies House Number
+MADE TECH LIMITED Company number 06591591
+NFER Company number 00900899
+1.4.3 - External supplier role
+NFER have a contract with the Standards and Testing Agency to support the delivery of primary assessments from the 2021 to 2024 academic year. The forms are currently on their system for schools to access and they have implemented the rules engine.
+Made Tech currently have a contract with the Standards and Testing Agency to support the delivery of primary assessments from the 2025 to 2029 academic year. The forms are currently available in the system for schools to access and they have implemented the rules engine.
+1.4.4 - Procurement procedure type
+call-off from a framework
+1.4.5 - Data access terms
+NFER/Made Tech act as a Data Processor under contract to STA, they have access to the data from the reception baseline assessment systems and can only use it for the activities they are agreed to carry out on STA’s behalf as part of their contract.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Reception Baseline Assessment (RBA) is a statutory assessment in England designed to measure the early mathematics, literacy, communication, and language skills of children when they start school in reception.
+Purpose: The RBA aims to provide a starting point to measure the progress of pupils from reception until the end of key stage 2. It includes practical tasks using physical resources, and is administered in English within the first six weeks of a pupil starting reception.
+Assessment Areas: The assessment focuses on early mathematics and early literacy, communication, and language skills1 The data collected from the RBA is used to create school-level progress measures.
+Within each component of the Reception Baseline Assessment there are several places where this tool’s rules based routing decisions may be applied based on how a pupil performs in responding to each question they are presented with. If pupils get particular combinations of questions incorrect, they will not be presented with further subsequent questions. The pupils who answer the questions correctly will be routed to recieve further questions. Questions that are not presented to the pupil due to routing will score 0 marks.
+The routing is integrated as part of the Reception Baseline Assessment. Routing is the term given to the concept of showing a pupil certain physical items during an assessment based on their responses. Hence, they are ‘routed’ through an assessment in a certain way.
+The platform can route an assessment based on pre-configured ‘routing rules’. These rules specify which items should be routed past when a certain pattern of item responses is given. Routing rules are configured in the assessment components.
+2.2 - Scope
+Routing is used within the Reception Baseline Assessment, taken by pupils in their first 6 weeks of school, to help prevent pupils from being presented with too many questions with which they are unlikely to be successful in answering.
+Routing is used to help prevent pupils from being presented with too many questions with which they are unlikely to be successful in answering. Routing means that a more difficult question may not be presented to a pupil if their previous answers suggest they are unlikely to get it right. It also helps to reduce the time required for the assessment and could reduce the possible discomfort a pupil may feel if they are unable to answer a question.
+2.3 - Benefit
+Routing prevents children from being presented with too many questions with which they are unlikely to successfully answer due to their age and development to date.
+It reduces the time taken to complete an assessment and can improve the pupil experience by not asking them numerous questions back to back that they do not understand or answer correctly. There is a further benefit for the school by reducing the burden on school staff administering the assessment.
+2.4 - Previous process
+Data and evidence from trials of the assessment were used to determine the appropriateness of routing, along with feedback from schools.
+In the version of the Reception Baseline Assessment used up until the 2025/26 academic year, school practitioners manually route children through the assessment based on similar rules that are now automated.
+2.5 - Alternatives considered
+Alternative is to let the school practitioner manually route children, i.e. the follow a set of rules about whether to skip particular questions for pupils based on whether they have answered previous questions incorrectly. Automated routing provides a more consistent delivery of the assessment and removes the burden from the practitioner.
+Tier 2 - Decision making Process
+3.1 - Process integration
+This routing is embedded into the Reception Baseline Assessment to prevent children from being presented with too many questions with which they are unlikely to be successful. The routing is designed and iterated based on trial data.
+The outcome of the Reception Baseline Assessment (RBA) is primarily used to establish a starting point for measuring pupils’ progress from reception to the end of key stage 2.
+Baseline Measure: The RBA provides a baseline measure of a child’s early mathematics, literacy, communication, and language skills.
+Progress Tracking: This baseline is used to calculate the progress pupils make throughout their primary education.
+Not for Individual Diagnosis: The RBA is not intended to provide detailed diagnostic information about individual pupils’ areas for development.
+School-Level Data: The data is used to create school-level progress measures rather than evaluating individual performance.
+Schools and pupils do not receive scores from the assessment.
+3.2 - Provided information
+N/A
+3.3 - Frequency and scale of usage
+Around 600,000 pupils take the Reception Baseline Assessment every year. The assessment should be taken within the first six weeks of reception but is open throughout the year for pupils with different start dates.
+3.4 - Human decisions and review
+The application is fully automated. Quality assurance checks are in place to ensure the routing is operating as intended.
+3.5 - Required training
+Whilst we do not provide training specifically on routing, we do recommend practitioners involved in the administration of the Reception Baseline Assessment complete the training modules available within the assessment service. These modules include useful information about navigating between questions. The Reception Baseline Assessment administration guidance also provides information to schools explaining questions are routed.
+3.6 - Appeals and review
+Reception Baseline Assessment is not for tracking or labelling individual pupils and only will be used as the baseline for progress measures etc, to underline the point that there shouldn’t be a need for parents or teachers to appeal as it’s not being used to ‘judge’ children and has no consequences for them regardless of the result. The Reception Baseline Assessment numerical scores are not shared with schools, teachers nor parents. Schools will only receive narrative statements describing what a ‘pupil can do’ and parents can request to receive this from schools. Routing is done automatically and has been quality assured so we do not expect any errors to arise from routing that will affect narrative statements. Broadly speaking, appeals of narrative statements are unlikely and we have not received complaints or appeals as such. If parents do have an issue more broadly, they are advised to speak to the school in the first instance.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The rules-based engine is a system designed to apply predefined logical rules to input data in order to make decisions, automate processes, or trigger specific actions.
+The process begins with an input layer, which collects data so that it can be evaluated by the rules engine.
+At the heart of the architecture lies the rules engine core. This component includes a repository where all the business rules are stored, in a declarative format “if-then” logic. An inference engine evaluates these rules against the input data. The engine uses a working memory to temporarily hold the facts and intermediate results during evaluation.
+The results of this evaluation process are passed to the decision layer, which generates the final outputs.
+The user interface and integration layer allows people and systems to interact with the rules engine.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The Standards and Testing Agency will review how many pupils have been subject to routing in every cycle (yearly) of the Reception Baseline Assessment but there is no intention to periodically re-assess the rules and change them so long as the assessment is in the same format.
+4.1.4 - Models
+The routing tool uses a rule based model. The platform can route the reception baseline assessment based on pre-configured ‘routing rules’. These rules specify which items should be routed past when a certain pattern of item responses is given. Routing rules are configured during the development of an assessment.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Reception Baseline Assessment Routing
+4.2.2 - Model version
+The last update to the rules engine was Jun 2025.
+4.2.3 - Model task
+The assessment platform can route an assessment based on pre-configured ‘routing rules’. These rules specify which items should be routed past when a certain pattern of item responses is given.
+4.2.4 - Model input
+Responses from a pupil undertaking an assessment applied to the model to determine the sequence of questions they are shown.
+4.2.5 - Model output
+The model output is the decision on whether to route past particular questions. e.g. A user will be asked the next question or not.
+4.2.6 - Model architecture
+Rules-based Engine
+4.2.7 - Model performance
+STA have automated tests which check each permutation of the rules engine to ensure the decision is correct as based on the configured logic.
+4.2.8 - Datasets
+Data from trialling of the Reception Baseline Assessment was used in development of the routing logic. Dummy data has also been used.
+4.2.9 - Dataset purposes
+Data from trialling of the Reception Baseline Assessment was used to determine the appropriateness of the routing rules. Dummy data has also been used to test the application of the routing rules against the 2025 version of the assessment and ensure that the logic has been implemented as expected.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Dummy Data testing
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+The routing functionality is logged as part of the broader reception baseline assessment platform data. This assessment data is collected through various end-to-end tests and functional trials, which are used to validate the routing performance and ensure its reliability.
+4.3.4 - Data quantities
+N/A
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+N/A - Complete dummy data set
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The routing is logged as part of wider reception baseline assessment platform data. All data is securely stored within Department for Education (DfE)’s Cloud Infrastructure Platform hosted on Azure Cloud’s infrastructure.
+4.3.9 - Data cleaning
+N/A - Not required for the dummy data set as it was created
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+All data is securely stored within DfE’s Cloud Infrastructure Platform hosted on Azure Cloud’s  infrastructure. We have implemented role-based access to limit access to data with the principle of least privilege such that users only have the minimum level of access needed to do their jobs.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Equality impact assessment and DPIA completed on the RBA assessment including routing.
+5.2 - Risks and mitigations
+Routing can mean a pupil isn’t presented with a question that they might have been able to answer. We have balanced this risk against the risk of pupils being presented with a large number questions they cannot answer. In mitigation we have based our routing rules on those used in the pre-2025 version of the assessment for manual application of routing and we have used data from trialling to ensure that the probability of this risk being realised is low. The impact of this risk is also low. There is no impact on the individual pupil because the outcomes are used for school level progress measures only. If pupils are routed past a question they may be able to answer, the aggregate school baseline measure would potentially be lower than if there was no routing which means there is no disadvantage to the school when progress measures are calculated at KS2.
+Other risks are that the routing logic is defined incorrectly or that it is applied incorrectly during the assessment. To mitigate against this the logic itself has been through a quality assurance (QA) process where each rule has been checked. The application of the routing logic has also been tested in a number of ways. The application of routing was tested in an end to end functional trial and was implemented as expected. The specific logic applied to the 2025 assessment has also been tested as part of our wider Business Acceptance Testing. Each routing scenario has been tested using dummy pupils and scripted test inputs and the outcomes were as expected. Further to this we will have automatic QA alerts set up during the live administration window which will alert us to any unexpected implementation of the routing logic.
+Contents

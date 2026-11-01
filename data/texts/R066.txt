@@ -1,0 +1,194 @@
+Camden Council: RentSense
+RentSense analyses rent transaction data from Council Housing tenants' rent accounts to present a prioritised list of arrears cases recommended for contact via a standalone case management portal. This will be used alongside the existing Housing system to manage tenancies.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 January 2025
+Organisation:
+Camden Council
+Organisation type:
+Local authority
+Function:
+Housing and community amenities
+Capability:
+Analysis
+and
+Management
+Phase:
+Beta/Pilot
+Region:
+London
+Date published:
+28 January 2025
+ATRS version:
+v3.0
+Tier 1 Information
+###Name
+RentSense AI Tool Pilot
+Description
+RentSense uses algorithms (Artificial Intelligence (AI)) to analyse rent transaction data from Council Housing tenants’ rent accounts and then presents a prioritised list of arrears cases recommended for contact via a standalone case management portal. This will be used alongside the existing Housing system to manage tenancies.
+Website URL
+Camden Open Data Platform
+Contact email
+CamdensDataCharter@camden.gov.uk
+Tier 2 - Owner and Responsibility
+###1.1 - Organisation or department
+London Borough of Camden, Housing Department
+1.2 - Team
+Leaseholder Services and Housing Income
+1.3 - Senior responsible owner
+Head of Leaseholder Services and Housing Income
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Mobysoft Limited
+1.4.2 - Companies House Number
+4546648
+1.4.3 - External supplier role
+The aim of the project is to implement the rent arrears management software, RentSense (developed by Mobysoft) for a 6-month pilot period to provide Camden’s rent teams with the tools to provide the right support, maximise their efficiency, and ultimately improve the council’s rent arrears position.
+RentSense uses AI to analyse rent transaction data from the tenant’s rent account and then presents a prioritised list of arrears cases recommended for contact via a standalone case management portal. This will be used alongside the existing NEC Housing system to manage tenancies.
+1.4.4 - Procurement procedure type
+As this is just a pilot evaluation of the concept at this stage there will be a procurement exercise after the pilot has proved this concept is useful to the service.
+1.4.5 - Data access terms
+RentSense needs read-only access to the specific areas of the NEC Housing system that relate to the tenants’ rent accounts and supporting transactional data. It does not require integration into other systems.
+Mobysoft’s data extract tool (MIDAS) will connect to NEC and run queries to extract the requisite data on a daily basis. The data is then uploaded via HTTPS3 to Mobysoft’s Amazon S3 storage. Data is encrypted at rest (when it is stored) and in transit (when it is transferred).
+The data feed will be created by Mobysoft and validated by Camden - only extracting the minimum data required for RentSense to work effectively.
+Under 18 year olds will be excluded from the data feed that is sent to Mobysoft.
+Tier 2 - Description and Rationale
+###2.1 - Detailed description
+The complexities of rent charges and payments can be difficult to decipher, especially when you factor in different payment cycles e.g. weekly, fortnightly, four weekly and monthly, where there can be multiple part payments in varying forms, and understanding whether a tenant is in genuine arrears and needs contacting.
+Using rent transactional data as input, RentSense uses algorithms to identify payment patterns as well as the type of payment e.g. direct debit, housing benefit, cash etc. - highlighting any decline in payments which could suggest a tenant experiencing financial difficulty. This is used to predict which tenant may or may not pay their rent, and outputs from the algorithm are presented to housing officers as a prioritised list of recommended cases for contact on the RentSense portal. Accuracy of predictions are validated from subsequent payment cycles.
+It has not been possible to obtain more detail from Mobysoft around how the algorithms work, the weighting, specific features it considers, and how it processes the data. This is because this is considered intellectual property by MobySoft, which they cannot share.
+2.2 - Scope
+Reducing rent arrears and supporting residents to maintain their tenancies is a key priority for the council. With Camden’s total rent arrears the second highest in London and nearing £18 million (December 2023) - compounded by the ongoing cost of living crisis affecting household finances, the council are considering new approaches to rent collection.
+Income from rent helps to fund the maintenance and management of the council’s housing stock, services, and new homes for people in housing need.
+2.3 - Benefit
+Camden’s rent teams have struggled to focus their efforts on the right areas. This means they often end up missing opportunities to provide preventative support to those who cannot pay their rent.
+The aim of the project is to implement the rent arrears management software, RentSense by Mobysoft, for a 6-month pilot period to provide Camden’s rent teams with the tools to provide the right support, maximise their efficiency, and ultimately improve the council’s rent arrears position.
+2.4 - Previous process
+The council were previously only able to use the NEC Housing system to manage rent arrears cases. However, this was a less efficient use of officer time as it is difficult to anaylse all the factors that lead to arrears, so there is no effective way to prioritise cases as there is a large and growing number of arrears records. This would affect the ability to reduce arrears and can ultimately lead to rent arrears continuing to rise.
+2.5 - Alternatives considered
+A pilot of a different product from an alternative provider had been trialled but the user interface was not as intuitive, and the system had reduced functionality and reporting capabilities to what is required. As a result this has been discontinued.
+Tier 2 - Decision making Process
+###3.1 - Process integration
+RentSense does not make any decisions for the Housing officer, but instead assists them with a caseload prioritisation list.
+RentSense will update at the start of each week, providing each housing officer with a caseload and a series of actions to work through in a week. This ensures that officers are focusing their attention on cases that need the most priority and reduces time spent on tenants that do not need intervention.
+There is no data entry required in the RentSense web portal. Housing officers will tick a box after actioning a case, which removes it from their caseload. They will then input all notes and actions into NEC.
+3.2 - Provided information
+RentSense provides a list of recommended cases for contact in terms of propensity for those residents to pay their outstanding rent.
+Rules are applied to clearly explain why a tenant has been recommended for contact e.g. ‘In Arrears And Balance Is Increasing’, ‘Arrangement Broken’ or ‘Housing Benefit Has Reduced’. This will help housing officers to meaningfully interpret outputs from RentSense.
+3.3 - Frequency and scale of usage
+As this is a pilot the usage is small scale and controlled for now. Wider usage will be considered based on the results of the pilot.
+3.4 - Human decisions and review
+It is important to stress, there will be no automated decision-making and that it is the human interventions of housing officers which is key. The RentSense recommendations are just a decision-support tool to help them in understanding a tenant’s likely scenario, and other important contextual information should not be discounted.
+As part of the pilot, housing officers will need to feedback on the recommendations (with oversight from managers) and use their professional judgement and other case information in the round before deciding whether to action a case or not.
+3.5 - Required training
+Housing officers and managers will receive on-site training and support from the supplier in the use of the RentSense portal during the pilot.
+3.6 - Appeals and review
+Not applicable as the outputs from the RentSense model are a list of cases to prioritise for contact to pay existing debts rather than any decision outputs.
+Tier 2 - Tool Specification
+###4.1.1 - System architecture
+As per MIDAS documentation from Mobysoft: “MIDAS is a small light-weight 32 bit Java application which connects to the client application server via JDBC. It will run select statements against the database, output the data into XML, compress this data and then transfer the resulting files to Mobysoft’s servers. Upon successful transfer Midas will delete the locally extracted files. Mobysoft will then process the data with custom algorithms and will output this data into the RentSense web portal.”
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+After two weeks of system usage, there will be an initial tuning phase whereby Camden will provide feedback on any changes that need to be made to optimise RentSense. Thereafter, any rules to determine if a tenant is recommended for contact that needs to be re-configured will be done on an ad-hoc basis, more info here:
+digitalmarketplace.service.gov.uk
+“RentSense allows for configuration to meet the needs of the client organisation. There are a range of configuration parameters including thresholds (examples include minimum balance to consider as arrears, the amount that an account should reduce by on a weekly basis); and the decision making
+rules which are active and used to determine if and why a case is presented to users (there are core rules and then a range of optional rules used to configure RentSense so that is aligned to the clients organisations process and capacity).”
+Mobysoft also state:
+“After every payment cycle RentSense’s forecasts are audited against the actual outcomes to validate the projections and help ensure consistency and accuracy.”
+4.1.4 - Models
+RentSense employs algorithmic predictive analytics and supervised machine learning (Artificial Intelligence) to
+predict which tenant may or may not pay their rent.
+The inner workings of the solution are not known to Camden as this is part of Mobysoft’s intellectual property (IP), however the data shared with Mobysoft are agreed and validated by Camden, and decisions on how the recommendations are used will be made by Camden housing officers.
+Tier 2 - Model Specification
+###4.2.1 - Model name
+Algorithmic predictive analytics and supervised machine learning (Artificial Intelligence)
+4.2.2 - Model version
+Unknown (supplier did not share)
+4.2.3 - Model task
+Case prioritisation based on propensity to pay outstanding transactional rent data.
+4.2.4 - Model input
+Transactional rent data
+4.2.5 - Model output
+Caseload prioritisation based on propensity to pay outstanding transactional rent debt.
+4.2.6 - Model architecture
+Proprietary information from the supplier which we are not able to share.
+4.2.7 - Model performance
+Mobysoft’s information about their RentSense model’s performance is: “Every prediction validated against next payment cycle. Accuracy is typically 95%+.
+Accuracy has been validated by over 230 social landlords.”
+4.2.8 - Datasets
+Housing Rent transaction data: No special category data will be shared with or otherwise processed by Mobysoft in the RentSense AI model.
+4.2.9 - Dataset purposes
+The model development is carried out by the supplier, but the outcome data from the pilot exercise will be evaluated internally by Camden against an enriched dataset that includes special characteristics to assess data bias of those outcomes.
+Tier 2 - Data Specification
+###4.3.1 - Source data name
+Council Housing rent collection data
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+This dataset is specific columns from the overall Council Housing rent collection database, with the specific columns mentioned below.
+4.3.4 - Data quantities
+Rent transactions linked to current council tenants, which results in millions of rows of transaction data (the exact size of these quantities of data are not available to share).
+4.3.5 - Sensitive attributes
+Name, Address, Email address, Telephone [and Mobile] number.
+Financial Information about the person: This relates to tenants’ rent balance and transaction history, payment arrangements and arrears actions taken.
+Housing records: No special category data will be shared with or otherwise processed by Mobysoft in the RentSense AI model.
+The equalities data/special category data that is already held by the council (and no additional data will be collected) will be processed only by the council to assess the outcomes for bias and discrimination only and not as part of the AI pilot. No special category data will be shared with or otherwise processed by Mobysoft. Any new data will only be added subject to a revised version of this DPIA being approved.
+4.3.6 - Data completeness and representativeness
+Only rent transaction data will be processed by RentSense algorithms, and we will not be sharing protected characteristics with Mobysoft. However, as we do not know the exact workings of their algorithms and only NEC Housing data will be shared, an assessment can be carried out as part of the pilot to identify if there is any inherent bias in the recommendations presented to housing officers on the RentSense portal. For example, analysing if there is a correlation between tenants recommended for contact and specific demographic or protected groups, or how the recommendations are distributed across these groups to mitigate any discrimination. This analysis of the RentSense outputs alongside special category data and protected characteristics will be done internally by Camden staff who already have access to that data.
+Though the exact data points are not known, transaction data includes the date, type e.g. direct debit, housing benefit, cash etc., and the amount.
+4.3.7 - Source data URL
+This data is not open so we cannot provide a link
+4.3.8 - Data collection
+Name, Address, Email address, Telephone [and Mobile] number: These will be extracted from the NEC Housing system and displayed on the RentSense portal to aid housing officers’ communications with tenants and enhance the user experience. However, this will not be part of the data processed by the RentSense algorithms.
+Financial Information about the person: This relates to tenants’ rent balance and transaction history, payment arrangements and arrears actions taken.
+Other eg a reference number such as Mosaic ref: This will be the Rent Account Reference to link the data to a particular tenant.
+Social services records: This will not be used.
+Tax, benefit or pension records: This will only include the transaction type and amount which could be a housing benefit transaction. No other data originating from the benefit record will be processed/shared/viewed.
+Housing records: No special category data will be shared with or otherwise processed by Mobysoft in the RentSense AI model.
+The equalities data/special category data that is already held by the council (and no additional data will be collected) will be processed only by the council to assess the outcomes for bias and discrimination only and not as part of the AI pilot. No special category data will be shared with or otherwise processed by Mobysoft. Any new data will only be added subject to a revised version of this DPIA being approved.
+4.3.9 - Data cleaning
+There will be no pre-processing of the data as the raw NEC Housing data will be provided to the RentSense model.
+Any errors and biases identified will need to be recorded, as well as any unintended consequences. A key aspect of the pilot is measuring the efficacy of RentSense. This will help to determine whether the solution should be continued post pilot.
+4.3.10 - Data sharing agreements
+The contract with Mobysoft has stipulations that are sufficient to fulfil the data sharing agreement aspects without the need for a separate Data Sharing Agreement document.
+Mobysoft will also aggregate and anonymise the data to use it for analysis and benchmarking. Whilst this aggregation and anonymisation is categorised as processing and is for their own purposes, such as performance monitoring, as no client data is shared this aspect of processing is considered incidental to the contract.
+The contract states: ‘Mobysoft may use the Client’s Confidential Information to provide reports to third parties for analysis and benchmarking purposes, provided that, in doing so, Mobysoft does not disclose any such Confidential Information and discloses only moderated, aggregated and anonymised information from which it is not possible to identify the Client, any tenant of the Client, or any Confidential Information of the Client.’
+4.3.11 - Data access and storage
+Mobysoft Implementation Consultants and Data Scientists will have access to the core data to allow for ingestion of the data feed into RentSense.
+Mobysoft have said that ‘In accordance with our Access Control policy, all access privileges shall be assigned based on job classification, role and function. Access rights shall be restricted to the minimum necessary to perform a job role, based on a ‘least privilege’ principle.’
+Camden housing officers and managers will have access to the RentSense web portal to identify and prioritise rent arrears cases for action.
+Camden will control access to the portal. This is managed by assigning the role of “Income Administrator”, which will involve creating new users and deleting accounts.
+Tier 2 - Risks, Mitigations and Impact Assessments
+###5.1 - Impact assessment
+A full Data Privacy Impact Assessment (DPIA) including ethical assessment was completed on 20/03/2024:
+Camden Open Data Platform
+As Camden currently does not have our own AI Risk Assessment Toolkit we used the Informaton Commissioner’s Office’s AI and DP Risk Toolkit to enhance what is already in our DPI process. One of these Toolkit templates was completed on 20/03/2024.
+5.2 - Risks and mitigations
+Inherent privacy intrusion from using AI.
+a. Privacy notice will detail the processing and provide reassurance.
+b. Only required data will be used to achieve the aims. The aims are intended to benefit tenants and the council.
+c. There will always be a human involved in the decision making; interventions will never be based solely on the AI, although this possibility is addressed as a risk.  However, the inherent risks in AI cannot be eliminated.
+Housing officers use the information on the RentSense portal as an accurate firm fact rather than a prediction.
+a. Officers will be given clear explicit and firm training on how to utilise the AI and on its limitations - ensuring officers are recording actions taken.
+b. Management oversight of officers’ usage and outcomes will allow monitoring to spot incidences of this.
+c. Lived experience will allow this risk to be revisited and reviewed.
+RentSense algorithms incorrectly identifies tenants as being at risk of rent arrears.
+a. There will be no automated decision-making as a result of this implementation. Recommendations from RentSense will just be a tool to aid housing officers to provide a targeted service. Any interventions will be based on a human decision-making process.
+b. RentSense will be measured for accuracy to enhance the precision of recommendations. Mobysoft: ‘After every payment cycle RentSense’s forecasts are audited against the actual outcomes to validate the projections and help ensure consistency and accuracy.’
+RentSense algorithms incorrectly excludes tenants as being at risk of rent arrears/High priority rent arrears cases treated as low priority.
+a. RentSense will be measured for accuracy to enhance the precision of recommendations. Mobysoft: ‘After every payment cycle RentSense’s forecasts are audited against the actual outcomes to validate the projections and help ensure consistency and accuracy.’
+Mobysoft retain data after the end of the retention period.
+a. The contract has clear clauses about retention periods and data deletion. Breach would be a contractual and data protection breach.
+Data breach from Mobysoft.
+a. Data Protection Due Diligence has been cleared, so there are assurances that data will be handled safely and securely by Mobysoft.
+Lack of knowledge on how the algorithms work.
+a. The data being processed by RentSense using AI is rental information only, and no special category data. Whilst the uncertainty remains around how the algorithms work, what factors are weighted and comparative weights apportioned, the factors being considered do not include special category data thus reducing the risk.
+b. The council will be using already held special category data around protected characteristics and equalities data to assess the outcomes from RentSense to identify if there is any inherent bias in the recommendations. E.g. identifying if there is a correlation between tenants recommended for contact and specific demographic or protected groups, or how the recommendations are distributed across these groups. This analysis of the RentSense outputs will be done internally by Camden staff who already have access to that data. It will allow any bias and discrimination to be identified so remedial actions can be taken.
+Contents

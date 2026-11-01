@@ -1,0 +1,71 @@
+record_id,publisher,tool,url,date,fetch_status
+R001,DfE,Virtual Assistant for Education Providers and Learners (Davina),https://www.gov.uk/algorithmic-transparency-records/dfe-virtual-assistant-for-education-providers-and-learners-davina,2025-04-04T10:02:25Z,ok
+R002,Cabinet Office,Civil Service Verbal and Numerical Tests,https://www.gov.uk/algorithmic-transparency-records/cabinet-office-civil-service-verbal-and-numerical-tests,2025-12-16T12:11:29Z,ok
+R003,FCDO,Correspondence Triage,https://www.gov.uk/algorithmic-transparency-records/fcdo-correspondence-triage,2025-12-16T12:09:30Z,ok
+R004,DVLA,Contact Centre Natural Language IVR,https://www.gov.uk/algorithmic-transparency-records/dvla-contact-centre-natural-language-ivr,2026-04-07T13:11:26Z,ok
+R005,West Berkshire Council,Apply for a Larger Rubbish Bin,https://www.gov.uk/algorithmic-transparency-records/west-berkshire-council-apply-for-a-larger-rubbish-bin,2025-01-28T07:11:46Z,ok
+R006,DSIT,GOV.UK site search,https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-site-search,2025-02-10T07:53:40Z,ok
+R007,Money and Pensions Service,Mortgage Repayment Calculator,https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-mortgage-repayment-calculator,2025-12-16T12:10:30Z,ok
+R008,DESNZ,Find ways to save energy in your home,https://www.gov.uk/algorithmic-transparency-records/desnz-find-ways-to-save-energy-in-your-home,2026-03-30T09:18:16Z,ok
+R009,Public Sector Fraud Authority,Fraud Risk Assessment Accelerator,https://www.gov.uk/algorithmic-transparency-records/public-sector-fraud-authority-fraud-risk-assessment-accelerator,2026-05-12T13:07:39Z,ok
+R010,HMT,Policy Engine UK,https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine,2024-12-17T08:00:19Z,ok
+R011,DESNZ,Warm Homes: Local Grant,https://www.gov.uk/algorithmic-transparency-records/desnz-warm-homes-local-grant,2026-03-30T09:18:04Z,ok
+R012,UKHO,Tidal Harmonic Analysis and Prediction,https://www.gov.uk/algorithmic-transparency-records/ukho-tidal-harmonic-analysis-and-prediction,2025-10-30T08:06:13Z,ok
+R013,DWP,Child Maintenance Service (CMS) - Predictive Analytics Compliance,https://www.gov.uk/algorithmic-transparency-records/dwp-child-maintenance-service-cms-predictive-analytics-compliance,2025-10-30T08:05:29Z,ok
+R014,HMPPS,Violence in Prisons Estimator,https://www.gov.uk/algorithmic-transparency-records/hmpps-violence-in-prisons-estimator,2025-04-28T18:31:07Z,ok
+R015,DWP,Universal Credit Advances Model,https://www.gov.uk/algorithmic-transparency-records/dwp-universal-credit-advances-model,2025-12-16T12:05:38Z,ok
+R016,MoJ,Splink Master Record,https://www.gov.uk/algorithmic-transparency-records/moj-splink-master-record,2025-10-06T07:41:56Z,ok
+R017,BDUK,Project Gigabit Voucher Eligibility Engine,https://www.gov.uk/algorithmic-transparency-records/bduk-project-gigabit-voucher-eligibility-engine,2025-04-28T18:31:05Z,ok
+R018,Student Loans Company,Advanced Learning Loans Assessment Rules,https://www.gov.uk/algorithmic-transparency-records/slc-advanced-learning-loans-assessment-rules,2025-09-25T07:44:26Z,ok
+R019,OSBC,Interest Calculator,https://www.gov.uk/algorithmic-transparency-records/osbc-interest-calculator,2025-02-10T07:53:25Z,ok
+R020,DEFRA,Local Authority Waste Collection Cost Groupings,https://www.gov.uk/algorithmic-transparency-records/defra-local-authority-waste-collection-cost-groupings,2025-08-28T07:40:29Z,ok
+R021,Standards and Testing Agency,Reception Baseline Assessment Routing,https://www.gov.uk/algorithmic-transparency-records/standards-and-testing-agency-reception-baseline-assessment-routing,2025-10-30T08:03:48Z,ok
+R022,Care Quality Commission,Fees Calculator Application,https://www.gov.uk/algorithmic-transparency-records/care-quality-commission-fees-calculator-application,2026-03-30T09:18:48Z,ok
+R023,Oak National Academy,Aila (Oak's AI Lesson Assistant),https://www.gov.uk/algorithmic-transparency-records/oak-national-academy-aila-oaks-ai-lesson-assistant,2024-12-17T08:02:39Z,ok
+R024,,Survey Summarisation Tool,https://www.gov.uk/algorithmic-transparency-records/survey-summarisation-tool,2026-07-08T07:57:46Z,ok
+R025,DWP,Urgent Journal Messages,https://www.gov.uk/algorithmic-transparency-records/dwp-urgent-journal-messages,2025-10-30T08:05:54Z,ok
+R026,The Probation Service,Effective Proposal Framework,https://www.gov.uk/algorithmic-transparency-records/the-probation-service-effective-proposal-framework,2025-02-10T07:50:58Z,ok
+R027,Natural England,AI4Peat,https://www.gov.uk/algorithmic-transparency-records/natural-england-ai4peat,2025-10-30T08:04:56Z,ok
+R028,,AI Writing Assistant (Social Care),https://www.gov.uk/algorithmic-transparency-records/ai-writing-assistant-social-care,2025-11-10T12:20:06Z,ok
+R029,,DSIT - Parlex,https://www.gov.uk/algorithmic-transparency-records/dsit-parlex,2025-12-16T11:50:49Z,ok
+R030,,Whitemail Insights and Vulnerability Scanner,https://www.gov.uk/algorithmic-transparency-records/whitemail-insights-and-vulnerability-scanner,2025-11-27T15:28:20Z,ok
+R031,ICO,Registration Inbox AI,https://www.gov.uk/algorithmic-transparency-records/information-commissioners-office-registration-inbox-ai,2024-02-21T13:51:48Z,ok
+R032,HMRC,Logo Detection and Classification Toolkit (LDK),https://www.gov.uk/algorithmic-transparency-records/hmrc-logo-detection-and-classification-toolkit-ldk,2025-02-10T07:52:40Z,ok
+R033,Dorset Council,Formulate for Adult Social Care,https://www.gov.uk/algorithmic-transparency-records/dorset-council-formulate-for-adult-social-care,2025-01-28T07:08:22Z,ok
+R034,DfE,Student Loans Forecast Modelling Pipeline,https://www.gov.uk/algorithmic-transparency-records/dfe-student-loans-forecast-modelling-pipeline,2025-02-27T08:02:29Z,ok
+R035,HMRC,Ask HMRC online,https://www.gov.uk/algorithmic-transparency-records/hmrc-ask-hmrc-online,2025-06-26T07:39:09Z,ok
+R036,Cafcass,Genesys ChatBot,https://www.gov.uk/algorithmic-transparency-records/cafcass-genesys-chatbot,2024-12-17T08:03:20Z,ok
+R037,The Crown Prosecution Service,Correspondence Drafting Tool,https://www.gov.uk/algorithmic-transparency-records/the-crown-prosecution-service-correspondence-drafting-tool,2025-08-28T07:39:43Z,ok
+R038,DESNZ,Heat Pump Suitability Tool,https://www.gov.uk/algorithmic-transparency-records/desnz-heat-pump-suitability-tool,2025-12-16T12:04:45Z,ok
+R039,ICO,Chatbot,https://www.gov.uk/algorithmic-transparency-records/ico-chatbot,2026-01-14T07:42:18Z,ok
+R040,UK Heath Security Agency,TB Country of Birth support tool,https://www.gov.uk/algorithmic-transparency-records/uk-heath-security-agency-tb-country-of-birth-support-tool,2025-09-25T07:42:30Z,ok
+R041,UK Export Finance,PRISM (Portfolio Risk Simulation Model),https://www.gov.uk/algorithmic-transparency-records/uk-export-finance-prism-portfolio-risk-simulation-model,2025-12-16T12:08:07Z,ok
+R042,Money and Pensions Service,Mortgage Affordability Calculator,https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-mortgage-affordability-calculator,2025-12-16T12:10:02Z,ok
+R043,DESNZ,Warm Home Discount Eligibility - Energy Cost Modelling,https://www.gov.uk/algorithmic-transparency-records/desnz-warm-home-discount-eligibility-energy-cost-modelling,2025-03-02T07:58:06Z,ok
+R044,Money and Pensions Service,Redundancy Pay Calculator,https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-redundancy-pay-calculator,2025-02-10T07:52:26Z,ok
+R045,MoJ,nDelius Contact Log Semantic Search,https://www.gov.uk/algorithmic-transparency-records/moj-ndelius-contact-log-semantic-search,2025-10-08T13:11:02Z,ok
+R046,DWP,CMG Return Letters processing,https://www.gov.uk/algorithmic-transparency-records/dwp-cmg-return-letters-processing,2025-12-22T14:05:09Z,ok
+R047,Standards and Testing Agency,Key stage 2 Test Administration form rules,https://www.gov.uk/algorithmic-transparency-records/standards-and-testing-agency-key-stage-2-test-administration-form-rules,2025-10-30T08:04:08Z,ok
+R048,Bristol City Council,"Not In Education, Employment or Training Model",https://www.gov.uk/algorithmic-transparency-records/bristol-city-council-not-in-education-employment-or-training-model,2025-01-28T07:12:20Z,ok
+R049,Valuation Office Agency,Automated Valuation Model,https://www.gov.uk/algorithmic-transparency-records/valuation-office-agency-automated-valuation-model,2025-08-06T08:38:21Z,ok
+R050,HMPPS,Key Work quality assurance automation,https://www.gov.uk/algorithmic-transparency-records/hmpps-key-work-quality-assurance-automation,2025-09-25T07:43:06Z,ok
+R051,MoJ,Data First (Splink),https://www.gov.uk/algorithmic-transparency-records/moj-data-first-splink,2024-12-17T08:01:45Z,ok
+R052,Natural England,Living England,https://www.gov.uk/algorithmic-transparency-records/natural-england-living-england,2025-02-10T07:54:03Z,ok
+R053,Maritime and Coastguard Agency,Proview Proctoring Tool,https://www.gov.uk/algorithmic-transparency-records/maritime-and-coastguard-agency-proview-proctoring-tool,2026-07-02T09:28:29Z,ok
+R054,Met Office,Weather and climate forecasting,https://www.gov.uk/algorithmic-transparency-records/met-office-weather-and-climate-forecasting,2025-02-10T07:53:51Z,ok
+R055,Network Rail,Digital Assistant,https://www.gov.uk/algorithmic-transparency-records/network-rail-digital-assistant,2024-12-17T08:03:53Z,ok
+R056,DSIT,GOV.UK One Login - Liveness & Likeness Checks,https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-one-login-liveness-and-likeness-checks,2025-12-16T11:54:44Z,ok
+R057,DBT,Business Growth Service AI Summariser,https://www.gov.uk/algorithmic-transparency-records/dbt-business-growth-service-ai-summariser,2025-10-16T07:34:44Z,ok
+R058,Newcastle City Council,Magic Notes,https://www.gov.uk/algorithmic-transparency-records/newcastle-city-council-magic-notes,2025-12-16T12:22:50Z,ok
+R059,DfE,Correspondence Drafter,https://www.gov.uk/algorithmic-transparency-records/dfe-correspondence-drafter,2025-12-16T12:10:55Z,ok
+R060,National Highways,Highways Webchat,https://www.gov.uk/algorithmic-transparency-records/national-highways-highways-webchat,2025-02-10T07:52:58Z,ok
+R061,DfE,Apprenticeship Withdrawal Rate AI,https://www.gov.uk/algorithmic-transparency-records/dfe-apprenticeship-withdrawal-rate-ai,2025-04-28T18:31:05Z,ok
+R062,NHS Blood & Transplant,Organ Offering Scheme Algorithms,https://www.gov.uk/algorithmic-transparency-records/nhs-blood-and-transplant-organ-offering-scheme-algorithms,2025-06-26T07:37:34Z,ok
+R063,,TrustID,https://www.gov.uk/algorithmic-transparency-records/trustid,2025-11-27T15:40:07Z,ok
+R064,Greater Cambridge Partnership,Smart Pedestrian Crossing Trial,https://www.gov.uk/algorithmic-transparency-records/greater-cambridge-partnership-smart-pedestrian-crossing-trial,2024-04-15T13:28:53Z,ok
+R065,Health Research Authority,Proportionate Review Toolkit,https://www.gov.uk/algorithmic-transparency-records/health-research-authority-proportionate-review-toolkit,2025-02-10T07:53:07Z,ok
+R066,Camden Council,RentSense,https://www.gov.uk/algorithmic-transparency-records/camden-council-rentsense,2025-01-28T07:08:46Z,ok
+R067,Leeds City Council,Xylo Core,https://www.gov.uk/algorithmic-transparency-records/leeds-city-council-xylo-core,2025-11-27T15:31:41Z,ok
+R068,HMRC,VAT Return Analysis Tool,https://www.gov.uk/algorithmic-transparency-records/hmrc-vat-return-analysis-tool,2025-12-16T12:00:44Z,ok
+R069,Environment Agency,Hello Lamp Post,https://www.gov.uk/algorithmic-transparency-records/environment-agency-hello-lamp-post,2025-06-03T09:06:44Z,ok
+R070,DBT,Redbox,https://www.gov.uk/algorithmic-transparency-records/dbt-redbox,2025-10-16T07:34:19Z,ok

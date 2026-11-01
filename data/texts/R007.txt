@@ -1,0 +1,475 @@
+Money and Pensions Service: Mortgage Repayment Calculator
+The mortgage repayment calculator is a simple tool that lets customers estimate their monthly payments for both interest-only and repayment mortgages, and see how changes in interest rates would affect their payments.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Agency or public body
+Function:
+General public services
+Capability:
+Management
+Task:
+Rule-based
+Phase:
+Production
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Mortgage Repayment Calculator
+2 - Description
+Basic overview:
+In essence, the MoneyHelper Mortgage Repayment Calculator is a public-facing algorithmic tool that simplifies mortgage planning. It is used because it empowers individuals to make better, more informed decisions about one of the most significant financial commitments they may ever undertake.
+How the Algorithmic Tool Is Used
+The MoneyHelper Mortgage Repayment Calculator is an online tool designed to help users estimate their monthly mortgage payments. Users input key data points, including:
+Type of mortgage (repayment or interest-only)
+- Property price (or outstanding mortgage balance)
+- Deposit amount (optional)
+- Mortgage term (years)
+- Interest rate
+After entering these details, the tool calculates the expected monthly payment. It allows users to compare repayment and interest-only options, adjust the term or interest rate, and see how these changes affect their payments.
+Why the Algorithmic Tool Is Being Used
+The calculator is used to:
+Support Informed Decision-Making: It enables prospective homebuyers, remortgagers, and existing mortgage holders to understand the financial implications of their mortgage choices before making commitments.
+Promote Financial Planning: By providing clear, personalised estimates, the tool helps users budget effectively and assess affordability, especially in a changing interest rate environment.
+Increase Accessibility: The tool makes complex mortgage calculations accessible to the general public, removing the need for advanced financial knowledge or manual calculations.
+Empower Comparison: Users can easily compare different scenarios (e.g., varying deposit sizes, terms, or rates) to find the most suitable mortgage option for their circumstances.
+3 - Website URL
+https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-calculator
+4 - Contact email
+atrs.enquiries@maps.org.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Money and Pensions Service
+1.2 - Team
+Technology and Change
+1.3 - Senior responsible owner
+Chief Digital and Information Officer (CDIO)
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+2.2 Description
+2.1 - Detailed description
+Input Collection and Classification
+The tool begins by collecting user-defined parameters that shape the mortgage scenario.
+These include:
+Mortgage Type: Users select either repayment (where both interest and capital are paid monthly) or interest-only (where only interest is paid monthly, and the capital is repaid at the end of the term).
+Property Price: This is either the purchase price or the remaining balance if remortgaging.
+Deposit: An optional input that reduces the total loan amount.
+Mortgage Term: The duration over which the loan is to be repaid, typically defaulted to 25 years.
+Interest Rate: The annual percentage rate applied to the loan, which can be adjusted by the user.
+These inputs are validated for completeness and logical consistency (e.g., deposit must be less than property price).
+Calculation Engine
+Once inputs are submitted, the tool performs a series of computations:
+Loan Amount Determination:
+If a deposit is provided, it is subtracted from the property price to determine the principal loan.
+If remortgaging, the property price input is treated as the remaining balance.
+Interest Rate Conversion:
+The annual interest rate is converted into a monthly rate to align with the monthly repayment schedule.
+Term Conversion:
+The mortgage term in years is converted into the total number of monthly payments.
+Repayment Logic:
+For repayment mortgages, the tool uses an amortisation formula that calculates a fixed monthly payment. This payment ensures that both interest and capital are fully paid off by the end of the term.
+For interest-only mortgages, the monthly payment is calculated by applying the monthly interest rate to the loan amount. The capital is not reduced during the term and must be repaid separately at the end.
+Output Generation
+The result is presented as a monthly payment amount, which varies depending on the mortgage type. The tool may also provide additional insights such as:
+Total interest paid over the term.
+Total repayment amount (for repayment mortgages).
+A comparison between repayment and interest-only options.
+Assumptions and Limitations
+The calculator operates under several simplifying assumptions:
+The interest rate remains constant throughout the mortgage term.
+Payments are made monthly and on time.
+No additional costs (e.g., fees, insurance, taxes) are included.
+No early repayments or overpayments are considered.
+These assumptions make the tool suitable for quick estimations but not for detailed financial planning.
+2.2 - Scope
+The mortgage repayment calculator from MoneyHelper is designed to help individuals estimate their monthly mortgage payments based on key financial inputs. Its primary purpose is to provide a quick and accessible way for users to understand the financial commitment involved in taking out a mortgage, whether they are buying a new property or remortgaging an existing one.
+Intended Scenarios for Use
+1. Home Buyers: Individuals planning to purchase a property can use the tool to estimate monthly repayments based on the property price, deposit, mortgage term, and interest rate.
+2. Remortgaging: Users with an existing mortgage can input the remaining balance to calculate new repayment amounts, especially when considering switching lenders or adjusting terms.
+3. Comparing Mortgage Types: The tool supports both repayment and interest-only mortgages, allowing users to compare how each affects monthly payments.
+4. Budget Planning: Prospective borrowers can assess affordability and plan their finances by understanding how different interest rates or terms impact monthly costs.
+Scenarios the Tool Is Not Designed For
+1. Variable Interest Rate Modelling: The calculator assumes a fixed interest rate throughout the term. It does not simulate rate changes over time, which are common in tracker or variable mortgages.
+2. Inclusion of Fees and Taxes: It does not account for additional costs such as arrangement fees, legal fees, stamp duty, or property taxes.
+3. Early Repayment or Overpayment Scenarios: The tool does not model the impact of making extra payments or settling the mortgage early.
+4. Complex Mortgage Products: It is not suitable for offset mortgages, shared ownership schemes, or mortgages with flexible repayment structures.
+5. Credit Risk Assessment: The calculator does not evaluate creditworthiness or eligibility for a mortgage product.
+6. Investment or Buy-to-Let Analysis: It is not tailored for landlords or investors calculating rental yield or portfolio financing.
+2.3 - Benefit
+The tool is justified on the basis of:
+a. Public interest: It directly interacts with the general public, helping users make informed financial decisions.
+b. Policy alignment: It supports government objectives around financial literacy, housing affordability, and consumer protection.
+c. Transparency and trust: By documenting its logic and scope under ATRS, MaPS demonstrates ethical and accountable use of algorithmic tools.
+Key Benefits Delivered
+1. Financial Clarity and Empowerment
+The calculator provides users with a clear estimate of monthly mortgage payments based on variables such as property price, deposit, interest rate, and term. This empowers individuals to:
+a. Understand their borrowing capacity.
+b. Plan budgets realistically.
+c. Avoid overcommitment or financial stress.
+Scenario Testing and Risk Awareness
+Users can simulate different scenarios—e.g., changing interest rates or mortgage terms—to see how their repayments would be affected.
+This helps:
+a. Anticipate future affordability under rate hikes.
+b. Compare repayment vs interest-only options.
+c. Make informed decisions about remortgaging.
+Accessibility and Inclusion
+The tool is free, web-based, and designed with a user-friendly interface. It supports:
+a. First-time buyers, remortgagers, and those exploring interest-only options.
+b. Individuals with varying levels of financial literacy.
+c. Mobile and desktop access, ensuring broad usability.
+Policy and Operational Efficiency
+Internally, the tool supports MaPS’ operational goals by:
+a. Reducing demand on helpline and advisory services.
+b. Standardising mortgage guidance across platforms.
+c. Supporting data-driven insights into user behaviour and needs.
+Compliance and Ethical Assurance
+Its inclusion in the ATRS mapping ensures:
+a. Alignment with Cabinet Office transparency requirements.
+b. Ethical oversight of algorithmic decision-support tools.
+c. Ongoing review and accountability for public-facing technologies.
+2.4 - Previous process
+Here is a description of the decision making process:
+1. Identification of Public Interest and Use Case
+The tool was recognised as having a direct impact on the public, particularly in helping individuals understand and plan for mortgage commitments.
+2. Assessment of Purpose and Scope
+The team clearly defined the tool’s purpose: to calculate estimated monthly mortgage payments based on user inputs. It was scoped to support both new buyers and those remortgaging, with options for repayment and interest-only mortgages. This scoping ensured the tool would be useful for a wide range of users while remaining focused on its core functionality.
+3. Evaluation of Algorithmic Logic
+The underlying logic—based on standard financial formulas for loan amortisation and interest-only calculations—was reviewed to ensure it was:
+a. Transparent
+b. Easily explainable to non-technical users
+c. Free from bias or automated decision-making that could affect eligibility or access
+4. Risk and Impact Review
+The tool underwent a review to determine whether it involved any automated decision-making or posed risks to individuals. It was confirmed that:
+The tool does not make decisions on behalf of users.
+It does not assess creditworthiness or eligibility.
+It is purely informational and advisory.
+This classification helped determine that the tool did not require additional safeguards such as human oversight or appeal mechanisms.
+1. Documentation and Transparency
+The deployment was accompanied by detailed documentation under the ATRS framework, including:
+a. A Tier 1 summary for public understanding
+b. A Tier 2 technical description for internal and expert review
+c. Clarification of limitations and non-target scenarios
+This ensured that users and stakeholders could understand the tool’s logic, scope, and intended use.
+2. Approval and Release
+Following internal review and alignment with transparency standards, the tool was approved for public deployment via the MoneyHelper website. It was positioned as part of a broader suite of financial guidance tools.
+### 2.5 - Alternatives considered
+Alternatives Considered
+1. Non-Algorithmic Alternatives
+a. Static Guidance Pages: These would provide general advice on mortgage affordability and repayment structures without interactive calculations.
+b. PDF Worksheets or Tables: Users could manually input values and refer to lookup tables to estimate repayments.
+c. Telephone or In-Person Advisory Services: Users would speak to financial advisers to receive personalised estimates.
+Other Algorithmic Approaches
+a.
+https://www.moneysavingexpert.com/mortgages/mortgage-rate-calculator/
+MoneySavingExpert (MSE): Offers a wide range of calculators including mortgage comparison, overpayment, and offset tools. It’s geared toward savvy consumers looking to optimise financial decisions and often includes editorial commentary and deal comparisons.
+b.
+https://www.nationwide.co.uk/mortgages/mortgage-calculators/mortgage-repayment-calculator
+Nationwide: Tailored for prospective and current customers. Focuses on product-specific repayment estimates and includes options for comparing multiple mortgage types.
+c.
+https://moneyfactscompare.co.uk/mortgages/mortgage-repayment-calculator/
+MoneyfactsCompare: Primarily a comparison site. The calculator is a gateway to exploring mortgage deals and rates across providers.
+Justification for the Chosen Tool
+The Mortgage Repayment Calculator was selected because it offers a transparent, simple, and user-controlled experience. Key reasons include:
+a. Simplicity and Accessibility: The tool uses well-established financial formulas that are easy to explain and understand. This aligns with the public-facing nature of the MoneyHelper platform.
+b. Transparency and Trust: Unlike predictive or eligibility models, the calculator does not make decisions or assumptions about the user. It simply reflects the inputs provided.
+c. Low Risk Profile: The tool does not involve automated decision-making or personal data processing, reducing ethical and regulatory risks.
+d. Cost and Maintenance Efficiency: Compared to more complex algorithmic systems, the calculator is easier to maintain, update, and audit.
+e. Alignment with ATRS Standards: The tool fits within the Tier 1 and Tier 2 documentation framework for algorithmic transparency, ensuring accountability and clarity.
+Trade-offs and Limitations Acknowledged
+a. The tool does not simulate future interest rate changes or include fees and taxes.
+b. It does not assess affordability or eligibility.
+c. It is not suitable for complex mortgage products or financial planning.
+These limitations were accepted in favour of delivering a focused, reliable, and low-barrier tool that supports financial literacy and decision-making without overstepping into advisory or regulatory territory.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Here is how the Mortgage Repayment Calculator (MRC) tool integrates into decision-making process:
+Information Gathering Phase
+- The tool collects financial data through a survey-style interface
+- Users input key data points about their financial status and details about the deposit, type of mortgage
+- The process takes approximately 3-5 minutes to complete
+Financial Calculation Components
+- Computes mortgage monthly repayment based on:
+• Salary
+• Deposit
+• Type of mortgage
+• Maximum service consideration (40 years)
+- Analyzes financial sustainability by predicting monthly cost
+Influence on Decision-Making:
+Advisory Role
+- The tool provides information but does not make final decisions
+- Outputs are recommendations, not directives
+- Users retain autonomy in how they use the information provided
+Financial Planning Support
+- Helps users understand their financial position
+- Enables informed financial planning decisions
+3.2 - Provided information
+Information Output and Presentation:
+1. Financial Calculations
+- Detailed mortgage monthly repayment calculation
+- Comparison in case of changes in the interest rates
+2. Comprehensive Review Summary
+The tool presents a final summary containing:
+- User’s input information verification
+Presentation Format:
+1. Structured Sections
+- Information is organised into clear steps
+- Each section builds on previous information
+- Complex information is broken down into digestible chunks
+2. Visual Elements
+- Tables for financial breakdowns
+- Clear categorisation of costs
+- Highlighted key figures and amounts
+3.3 - Frequency and scale of usage
+The Mortgage Repayment Calculator (MPC) tool is a widely utilised resource, engaging numerous users on a daily basis. Over the course of the reporting period from October 1, 2024, to September 30, 2025, the tool recorded significant user activity. The tool start reached 2.84M in 1 year, while 2.81M is the tool completion, generating results. This represents a tool completion rate of 99%, indicating the proportion of users who fully navigated the tool and obtained calculated outcomes.
+3.4 - Human decisions and review
+User Decision-Making Process
+The tool is designed to support a sequence of user-led decisions, each of which contributes to a personalised mortgage repayment estimate:
+Choosing the Mortgage Type - Users select between:
+a. Repayment mortgage: where both interest and capital are paid monthly.
+b. Interest-only mortgage: where only interest is paid monthly, and capital is repaid at the end of the term.
+c. This decision reflects the user’s financial strategy and risk tolerance.
+Entering Property Price or Mortgage Balance
+Users input either the purchase price of a new property or the remaining balance of an existing mortgage. This determines the base loan amount.
+Providing a Deposit (if applicable)
+For new purchases, users may enter a deposit amount, which reduces the loan principal. This decision affects both monthly payments and loan-to-value ratios.
+Setting the Mortgage Term
+Users choose the duration of the mortgage (typically 25 years). A longer term reduces monthly payments but increases total interest paid.
+Adjusting the Interest Rate
+Users can modify the default interest rate to reflect current market conditions or personal expectations. This allows for scenario testing and sensitivity analysis.
+Reviewing the Output
+After submitting inputs, users receive an estimated monthly payment. They may repeat the process with different inputs to compare scenarios.
+Human Review Options
+The tool is advisory and informational, not prescriptive. Therefore, human review is built into the process in the following ways:
+User-Led Review
+Users are encouraged to:
+a. Re-enter different values to test affordability under various conditions.
+b. Compare repayment vs interest-only options.
+c. Use the output as a starting point for further financial planning.
+External Review and Advice
+The tool explicitly recommends that users:
+a. Consult with mortgage advisers or lenders before making financial commitments.
+b. Use additional tools (e.g., affordability calculators) for a more comprehensive assessment.
+c. Seek professional advice for complex scenarios such as variable rates, overpayments, or shared ownership.
+Transparency and Reproducibility
+Because the tool uses standard financial formulas, users can verify calculations independently or with the help of advisers.
+No Automated Decision-Making
+The tool does not make decisions on behalf of the user. It does not assess eligibility, creditworthiness, or product suitability. All decisions remain with the user, and the tool’s role is purely supportive.
+3.5 - Required training
+Deployment & Maintenance Teams
+a. Technical training on financial formulas and tool logic.
+b. Operational training for monitoring performance and responding to feedback.
+Support & Advisory Staff
+a. User guidance training to explain tool outputs and limitations.
+b. Scenario interpretation to help users understand different mortgage options and direct them to further resources.
+Oversight Personnel
+a. Ethical and risk awareness training to ensure responsible use.
+b. Governance training for reviewing documentation and communicating with stakeholders.
+3.6 - Appeals and review
+Mechanism for review or appeal (available to the public): The results are illustrative and not a final financial determination.
+If users believe the results are inaccurate, they are encouraged to seek regulated financial advice, especially when dealing with complex mortgage scenarios.
+For users who feel the tool is inaccurate or not functioning as expected, there are multiple ways to provide feedback or seek additional help:
+These feedback channels ensure that any issues with the tool can be promptly addressed while offering users the opportunity to consult a financial advisor if needed.
+Report Issues: If users encounter bugs, errors, or inaccuracies, they can report these issues using one of the following methods:
+1. Call the free helpline at 0800 011 3797 or use the webchat feature.
+2. Complete the feedback form available at MoneyHelper’s feedback page (e.g. https://www.moneyhelper.org.uk/en/contact-us/feedback).
+3. Participate in the navigation survey, which is presented after 120 seconds of using the site.
+4. Contact staff directly through the contact page for a more detailed issue description (e.g. https://www.moneyhelper.org.uk/en/contact-us).
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+High-Level System Architecture for the tool:
+The Mortgage Repayment Calculator (MRC) tool is a web component built using a programming language, integrated into the MoneyHelper website. This tool guides users through a structured digital journey organized into steps to provide a user with a set of predictions based on their payment scenario. Below is a high-level description of its system architecture, summarising key technical features:
+Technology and Computation:
+The tool currently operates as a web application hosted on the MoneyHelper website.
+The computations take place on the server side, leveraging the backend capabilities to perform calculations and deliver results dynamically to the user’s browser.
+The architecture ensures that all data is processed securely and efficiently.
+No data retention takes place.
+Key Technical Features:
+User Input Collection:
+The tool begins by collecting user-specific information, including type of mortgage, property price, deposit, mortgage term and interest rate. This data forms the basis for personalised calculations and advice.
+Data Processing and Calculation:
+The MRC uses algorithms to calculate mortgage monthly payment based on the user’s details.
+Output Flow - The core calculation engine utilises these inputs and assumptions to generate outputs in real time.
+The tool computes:
+- Estimated Mortgage Monthly repayment.
+- Once processed, the output is displayed on the front-end interface, allowing users to view their estimated monthly repayment cost.
+- Users can modify their inputs to re-generate results, facilitating an understanding of how different decisions impact their projected output.
+Guidance and Decision Support:
+The output includes predition of monthly repayment in case the interest rate goes up by 3% and a breakdown of costs.
+Dynamic User Interface:
+The tool provides an interactive experience, guiding users through seven key steps: calculating monthly payment, and reviewing details.
+It ensures accessibility through straightforward navigation and user-friendly design.
+Reference Documentation:
+For more detailed information on how the tool works and the information required, please refer to :
+https://www.moneyhelper.org.uk/en/homes/buying-a-home/first-time-buyer-money-tips
+https://www.moneyhelper.org.uk/en/homes/buying-a-home/mortgage-interest-rate-options
+Code updates are stored into our private GitHub repository and applied on the production environment whilst release notes are taken.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Yearly review to capture variations in legislations or on the other parameters.
+Changes in the legislation, are reflected in the code updates which are reviewed every year.
+Code is developed privately on Azure DevOps. The repository, without any metadata, is synchronised with a public GitHub code repository on a weekly basis.
+The parameters which are affected by regular review are reflected in the following Section 2.4.1.4 and include:
+• Type of mortgage
+• Property price
+• Deposit
+• Mortgage term
+• Interest rate
+4.1.4 - Models
+Model Purpose
+The MRC aims to:
+Calculate estimated monthly mortgage payments based on user inputs.
+Allow comparison between repayment and interest-only mortgage types.
+Support financial planning by illustrating how term length and interest rates affect costs.
+Key Assumptions and Parameters
+The model operates under the following assumptions:
+Interest rate remains fixed throughout the mortgage term.
+Payments are made monthly and on time.
+No additional fees, taxes, or insurance costs are included.
+No early repayment or overpayment scenarios are factored in.
+User Input
+The tool requires users to input:
+Property price or remaining mortgage balance.
+Deposit amount (optional for new purchases).
+Mortgage term (in years).
+Annual interest rate.
+Mortgage type (repayment or interest-only).
+Formulas and Calculations
+For repayment mortgages, the tool uses the standard amortisation formula to calculate fixed monthly payments covering both interest and capital.
+For interest-only mortgages, monthly payments cover interest only, with the principal due at the end of the term.
+Guidance and Outputs
+The tool provides:
+Estimated monthly repayment amount.
+Option to adjust inputs for scenario testing (e.g., different interest rates or terms).
+Links to additional MoneyHelper resources for affordability checks and financial advice.
+Transparency and Fairness
+The MRC clearly states its assumptions and limitations upfront.
+It does not make eligibility decisions or assess creditworthiness.
+Compliance with ATRS ensures transparency and accountability.
+Regular reviews ensure accuracy and alignment with current financial guidance.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Mortgage Repayment Calculator (Rule-based model)
+4.2.2 - Model version
+Current version is 1.0.0
+4.2.3 - Model task
+The model estimates mortgage monthly repayment based on input details.
+4.2.4 - Model input
+Model inputs include:
+Property price or remaining mortgage balance.
+Deposit amount (optional for new purchases).
+Mortgage term (in years).
+Annual interest rate.
+Mortgage type (repayment or interest-only)
+4.2.5 - Model output
+The model outputs the user’s predicted mortgage monthly repayment.
+4.2.6 - Model architecture
+The model is rule-based rather than machine-learning-based. It uses assumptions and calculations based on user input to project pension outcomes:
+Assumptions:
+Interest rate remains fixed throughout the mortgage term.
+Payments are made monthly and on time.
+No additional fees, taxes, or insurance costs are included.
+No early repayment or overpayment scenarios are factored in.
+The architecture of the calculator involves deterministic projections using these predefined assumptions and user inputs.
+4.2.7 - Model performance
+Performance and Accuracy of the Mortgage Repayment Calculator (MRC)
+The MRC’s performance depends on its ability to generate accurate repayment estimates based on user-provided inputs and assumptions about interest rates, mortgage term, and repayment type. As a financial planning tool, it aims to provide illustrative results that help users make informed decisions about mortgage affordability. The accuracy of outputs is directly influenced by the precision of user inputs, and results are generated instantly once data is submitted.
+Performance Testing and Quality Assurance Practices
+To ensure high-quality, accurate outputs and validate that underlying formulas and assumptions function as intended, several testing practices are applied during development and annual maintenance:
+User Guidance and Input Validation
+The tool includes clear prompts and guidance to help users enter accurate data (e.g., property price, deposit, interest rate). These instructions reduce input errors that could lead to misleading repayment estimates.
+Adjustment Flexibility
+Users can modify key assumptions—such as interest rate, mortgage term, and deposit amount—to test different scenarios. This dynamic functionality ensures the tool performs reliably under varied conditions.
+Benchmark Testing Against Financial Standards
+Performance testing uses predefined scenarios based on standard mortgage calculation principles. These scenarios act as benchmarks to confirm that repayment estimates align with expected results. Updates are applied when market conditions or regulatory guidance change (e.g., interest rate adjustments).
+Systematic Testing and Deployment
+Significant updates (e.g., formula refinements or UX improvements) are first implemented and tested in a development environment.
+The updated tool is validated against benchmark scenarios to ensure accuracy.
+Beta testing in a production-like environment confirms stability and performance under real-world conditions.
+Once the tool meets all quality standards, it is deployed for public use.
+By following these practices, the MRC maintains a high standard of accuracy and reliability, ensuring users receive dependable repayment estimates based on current assumptions. This rigorous approach helps the tool meet user expectations and comply with transparency and quality requirements.
+4.2.8 - Datasets
+The dataset utilised for developing and validating the model used by the Mortgage Repayment Calculator consists of simulated scenarios of users data with varying combinations of inputs.
+A dataset consisting of 100 various combinations and examples has been used for functional tests, and more than 100 for unit tests.
+The functional test cases consist of a structured set of input data and corresponding expected outputs. For example, given specific input parameters such as:
+Property Price, Deposit Amount, Mortgage Term (years), Annual Interest Rate (%), Mortgage Type (Repayment or Interest-Only)
+The model is evaluated by comparing its output for monthly repayment amount, ensuring that results are calculated accurately according to the underlying formulas.
+All outputs are rounded to two decimal places for clarity.
+4.2.9 - Dataset purposes
+Simulated test cases for the Mortgage Repayment Calculator covered key mortgage scenarios:
+Core Variable Testing
+a. Property price ranges (from low-value homes to high-value properties).
+b. Deposit variations (including zero deposit for remortgaging).
+c. Mortgage term lengths (short-term loans to 30-year terms).
+d. Interest rate levels (low, average, and high market rates).
+e. Mortgage types (repayment vs interest-only).
+Calculation Verification
+a. Monthly repayment accuracy for both mortgage types.
+b. Impact of term and interest rate changes on affordability.
+c. Scenario testing for different deposit amounts.
+d. Validation of rounding rules (outputs to two decimal places).
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Mortgage Repayment Calculator (MRC) Test set - Simulated dataset
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Property Price, Deposit Amount, Mortgage Term (years), Annual Interest Rate (%), Mortgage Type (Repayment or Interest-Only)
+4.3.4 - Data quantities
+100 full complete scenarios (data containing all the inputs and expected outputs) to analyse functional aspects
+More than 100 combinations for unit tests.
+4.3.5 - Sensitive attributes
+For the Mortgage Repayment Calculator (MRC), the data used is primarily financial and property-related, and it does not involve personal identifiers or demographic details.
+However, when considering sensitive attributes in the context of data protection and ethical design, here’s the list:
+Sensitive Attributes
+Property Price: Can indirectly indicate wealth or financial status.
+Deposit Amount: Reflects savings and financial capability.
+Mortgage Balance: Reveals outstanding debt obligations.
+Interest Rate: May relate to creditworthiness if personalised (though in MRC it is user-specified).
+Mortgage Term: Indicates long-term financial planning and commitments.
+Mortgage Type (Repayment vs Interest-Only): Suggests risk preference and financial strategy.
+4.3.6 - Data completeness and representativeness
+Data has no missing points, and it moderately represents the target population.
+4.3.7 - Source data URL
+https://github.com/moneyadviceservice/maps-apps/tree/main/apps/mortgage-calculator
+4.3.8 - Data collection
+This dataset comprises a sample of scenarios with varying level of property price, interest rates and other parameters. This data was obtained directly via numerical simulation.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+No data—personal, sensitive or otherwise—is stored. Data is temporarily stored in the browser during the user’s navigation through the tool, allowing them to move back and forth until they reach the final summary step (customers in this way can evaluate the impact of changes in the input parameters and how these affect the outcome). Once the browser window is closed, the session data is not persisted, and customers cannot return to their previous session.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+As part of our ongoing review of all tools, we have developed a new DPIA model for the Mortgage Repayment Calculator.
+This is based on the data we’ve collected and our latest analytics infrastructure. As a general practice, publicly-exposed tools that might use Personally Identifiable Information (PII) data, require a DPIA assessment.
+The latest DPIA model has been approved on the 13th of Nov 2025.
+Key Findings:
+Risk Level: Minimum, no relevant risks identified.
+5.2 - Risks and mitigations
+There are no relevant risks identified.
+Contents

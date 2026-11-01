@@ -1,0 +1,158 @@
+DBT: Business Growth Service AI Summariser
+An AI-powered summarisation feature that provides personalised funding information to business decision makers who are either starting a new business or looking to grow an existing business.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 October 2025
+Organisation:
+Department for Business and Trade
+Organisation type:
+Ministerial department
+Capability:
+Computer linguistics
+Task:
+Sentence and text generation
+Phase:
+Public Beta
+Region:
+Great Britain
+Date published:
+16 October 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Department of Business and Trade: Business Growth Service (BGS) AI Summariser
+2 - Description
+An AI-powered summarisation feature that provides personalised information related to funding for business decision makers who are either starting a new business or looking to grow an existing business, by providing funding information and opportunities which they are eligible for quickly and easily.
+3 - Website URL
+https://business.gov.uk
+4 - Contact email
+ai.governance@businessandtrade.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department of Business and Trade
+1.2 - Team
+BGS Team
+1.3 - Senior responsible owner
+Chief Digital officer
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Accenture (developer/Data Science contractors forming less than half of overall development team). Hays are a contract provider who also supply long term contractors.
+1.4.2 - Companies House Number
+Accenture (UK) Limited: 04757301
+Hays PLC: 02150950
+1.4.3 - Third party role
+Supplying Machine Learning Operations and Data Science contractors to work in the Agile delivery team. The team furthermore has product management and delivery management provided by the DBT’s preferred Digital, Data & Technology contract provider.
+1.4.4 - Procurement procedure type
+Call-off Contract
+1.4.5 - Third party data access terms
+Accenture data access is dictated by the conditions in the call-off contract. All Accenture contractors who undertake work on the AI-Summariser project have obtained Security Clerance.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+This tool provides an Al generated overview of funding opportunities that are deemed relevant to user inputted options. The options are obtained via a set of questions posed to the user on business.gov.uk. Once the user has inputted their responses a user support guide is presented with various content designed to help support their business. The content is organised into different tabs, one of these tabs is ‘Funding’. This contains human generated content as well as an AI generated section (near the top). The AI section is a list of websites with summaries of what they offer and how they could be relevant based on the users responses to the initial questions. The summaries are written in a way to demonstrate how the funding support option may benefit their organisation.
+The type of recommendations the website presents can be grants, loans and investments for the user to investigate as well as more general funding support. This information is generated based on the users inputted location, business sector, business age and the business’s
+revenue.​
+2.2 - Benefits
+This tool provides a time saving for the user seeking information and provides greater visibility of available relevant funding support to users.
+2.3 - Previous process
+Users previously would need to review multiple websites to check if any support was available for their Business, likely requiring the user to read content that was not relevant to them.
+2.4 - Alternatives considered
+Non-algorithmic alternative: Manually providing a digest of funding opportunities would be extremely time-consuming considering the amount of possible combinations from the triage. Refreshing the manually created content on a timely basis within the portfolio would not be viable as it would require a lot of resource to maintain.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The tool’s output is limited to simple summaries of possible financial support that may be available. This is information already available on the website but summarised into a simple format that is relevant to their context. No decisions are informed or supported by the tool’s output such as funding, loan or investment decisions. The tool provides onward weblinks with further information on available funding opportunities applicable to the user’s business. Users can use this information to access/apply for funding for their businesses.
+3.2 - Human review
+User Review: The user is expected to read the recommended content and decide if this aids them in their goals and it is down to the user if they decide to take forward recommendations. It is possible for the user to continue to search for guidance and further information if they deemed the recommendations not to be helpful.
+Development team: As the output is AI generated and the vast number of possible outputs based on user inputs, the tool’s output will be human reviewed during evaluation activity by the department’s monitoring and evaluation analysts. That review will occur on a monthly basis.
+3.3 - Frequency and scale of usage
+The tool’s use is user led. So it is dependent on the number of users who will visit business.gov.uk and complete the user flow there. DBT expect usage to be in the thousands on a monthly basis when live.
+3.4 - Required training
+The tool is designed to return digestible summaries to individuals in the simplest way possible. There is no requirement for training. The tool uses text pulled from a database as context along with a prompt generated from user inputs to answer a question. It has not undergone any pre-training.
+3.5 - Appeals and review
+The purpose of the tool is to surface relevant information in a concise format to aid individuals in their own research and search for business support. The user if they have entered the wrong information can edit their inputted information, to see new results. The user is still free and available to research grants, loans and investments through the websites search function and drop down menus.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The system comprises of two main services, the first is the data gathering/web scraping this service is comprised of Elastic Container Service (ESCS) tasks scheduled by Amazon Eventbridge which is a serverless service that uses events to connect application components together,  to build scalable event-driven applications. The second is the actual interaction with Amazon Bedrock, (website content) which uses a series of Lambdas (to run code without provisioning or managing servers) and  Application Programming Interface (API) Gateway alongside Simple Queue Service (SQS) to manage traffic from the front end.
+4.1.2 - System-level input
+Input to the tool is provided by the session information sent from the client.
+4.1.3 - System-level output
+The tool returns a personalised summary of funding opportunities using the session information provided and the information available from the document store.
+4.1.4 - Maintenance
+The tool is currently not deployed in a production environment. Once this is the case, maintenance and review will be set by the managing team. As the models are provided via Bedrock, model retraining is not applicable.
+4.1.5 - Models
+The models used in Bedrock are Amazon Titan Text Embeddings v2 and Anthropic Claude 3.7 Sonnet.
+Tier 2 - Model Specification
+4.2.1. - Model name
+Amazon Titan Text Embeddings
+Anthropic Claude sonnet.
+4.2.2 - Model version
+Version 2 2
+Version 3
+4.2.3 - Model task
+Amazon Titan Text Embeddings is the embedding model which creates numerical representations of text (of source documents and user input). These embeddings are used in a vector search to find the most relevant documents to a user input.
+Anthropic Claude Sonnet is the large language model trained to generate text.
+4.2.4 - Model input
+Session info sent from the BGS website. These are user inputs chosen from a pre-defined list of options
+4.2.5 - Model output
+A personalised summary of available funding opportunities
+4.2.6 - Model architecture
+Amazon Titan Text is A Transformer-based Language Model provided by Amazon, DBT have not trained it further and it is being used as is.
+Claude Sonnet v3.7 is a large transformer-based language model (LLM), sharing architecture features with GPT-style models, this model also has received no further training by DBT.
+4.2.7 - Model performance
+We have used a range of evaluation measures including a ROUGE 1 score and BERT Similarity score to evaluate the quality and relevance of the summaries produced by the model as compared to the reference text in the links. A simple score for checking for hallucinated links was also calculated. The evaluation was done on a random sample of 100 responses, the model was able to perform well with no links being hallucinated/modified from the original source link.                                                                                                            Here is a further breakdown of the scores:
+High BERT score (>0.8, for precision, recall and F1 score) which show the AI summary and the reference texts are semantically similar as expected.
+The ROUGE-1 precision is high and recall is low for innovate sources resulting in a low F1 score: This shows the words used in the summary match the reference text but the summary is concise and doesn’t encompass a large proportion of the reference text. This is a good indicator as the scraped reference text for the innovate pages is very long, and indicates the AI summary is both relevant and concise.
+The ROUGE-1 precision is high and recall is average (higher than that of the innovate sources). This is to be expected as the content of the gov.uk finance and support pages is sparse and contain limited information as opposed to the verbose innovate sources. This means that the words used in the AI summary make up a higher proportion of the words in the reference text, however the high precision indicates that the summary is still concise and relevant.
+Of the few innovate sources none of the links in the summary were hallucinated or different from the reference sources.
+For the gov.uk sources none of the links were hallucinated or modified from the original in the evaluation sample.
+4.2.8 - Datasets and their purposes
+The models are pretrained and fine-tuned by the respective providers. No model training has been done as part of this work.
+2.4.3. Development Data
+4.3.1 - Development data description
+A web-scraping script scrapes the live opportunities from innovate uk:
+https://iuk-business-connect.org.uk/opportunities/?sf_paged=2
+every 24 hours. We also scrape data from the finance and support for your business gov.uk page:
+https://www.gov.uk/business-finance-support
+this is done with the help of the publicly available GOV.UK content API :
+https://content-api.publishing.service.gov.uk/
+4.3.2 - Data modality
+All sources are text only
+4.3.3 - Data quantities
+Innovate pages: circa 100 pages each 400 to 800 words, these are chunked, embedded and inserted into our opensearch vector database. GOV.UK pages: approx. 280 pages 200 to 500 words. The chunks are 300 word chunks with 20 word overlap all the data is inserted into the database and the relevant sources are used as context to generate the personalised summary.
+4.3.4 - Sensitive attributes
+A Presidio Personally Identifiable Information (PII) scrubber was implemented so the scraped data is cleaned before being uploaded to the database. See more details of the preisidio tool here:
+https://microsoft.github.io/presidio/
+4.3.5 - Data completeness and representativeness
+Only available data is used, the database is updated every 24 hours. If there is an grant/loan opportunity which has closed the tool will filter this out and not use this in the generated response.
+4.3.6 - Data cleaning
+Selecting important metadata like opportunity, summary, close and open dates for the application is extracted and stored as metadata.
+4.3.7 - Data collection
+Originally used as a public source of information for companies to get access/find more information about relevant funding opportunities. The tool is making this information more accessible by finding the most relevant pages and summarising this information for the user.
+4.3.8 - Data access and storage
+Data access is limited to DBT developers who have been working on the project. Source data is refreshed daily, overwriting previous data. All data used by the AI model to generate summaries is available publicly.
+4.3.9 - Data sharing agreements
+All data is publicly available, we have been given permission by innovate.uk to be able to scrape the data from their website.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+An API call is made from the client which will trigger a backend process to return a response to the client. The API call will contain user inputs. In the backend, data is obtained from innovate uk, finance and support on gov.uk and Catapult UK.
+4.4.2 - Sensitive attributes
+There is a PII (Personally Identifiable Information) scrubber that runs as part of the web scraping/ingestion that removes PII, so that it is not written to the vector store. The client can only send pre-defined values that are enforced by a schema in the backend.
+4.4.3 - Data processing methods
+The information received from the client is converted into a prompt and sent to Bedrock. There is minimal processing of the user input data, beyond some basic mapping. For example, user location data (input as postcode) is mapped to UK region, such as South East. The postcode is not given to the model. Documents retrieved that match the users inputs are not processed further. The output that is served back to the user is processed. A software package is used to apply html formatting to the raw LLM output.
+4.4.4 - Data access and storage
+User inputs and the generative AI response will be stored in a temporary cache to improve response times and reduce cost due to repeat requests. A sample of this data will be transferred to the department’s internal data workspace for monitoring and evaluation purposes. User feedback on the generative AI response will also be captured (where provided) and transferred. Access will be restricted to DBT internal use only. The information asset owner will be responsible for the data.
+4.4.5 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+A preliminary PSED (public sector equality duty) has been completed (early July 2025). Keys findings from that were that the tool would not cause negative impact. Rather, there would be potential for advancing equality of opportunity in future with the appropriate data sources. A DPIA has also been conducted.
+5.2 - Risks and mitigations
+Privacy: small risk of individual names included in source content. This risk has been mitigated by implementing a personal information scrubber before any sources are stored.
+Unfair outcomes: The purpose of the tool is to surface the most relevant funding options based on their inputs. There is therefore a risk that options that are better suited to a user are not surfaced because we are not capturing certain inputs. This risk is mitigated by the wider context of the tool, all options are accessible within the same user journey (via the business.gov guide).
+Contents

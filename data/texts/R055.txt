@@ -1,0 +1,193 @@
+Network Rail: Digital Assistant
+Chatbot to filter and resolve public enquiries and where necessary, hand-off to a live advisor for further review.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+17 December 2024
+Organisation:
+Department for Transport
+Organisation type:
+Agency or public body
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Bot interaction and conversation
+Phase:
+Production
+Region:
+UK
+Date published:
+17 December 2024
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Digital Assistant (chatbot)
+2 - Description
+To help customers resolve common queries about Network Rail and where necessary, re-direct to the query to the correct part of the industry if it is not something Network Rail can help with. Where it can’t answer the question, it will gather some basic data and pass the query through to an individual in the contact centre staff to progress.
+3 - Website URL
+N/A
+4 - Contact email
+communityrelationsinformation@networkrail.co.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Network Rail - Communications function
+1.2 - Team
+National Contact & Communities team
+1.3 - Senior responsible owner
+Head of Contact & Communities
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+BoxFusion Consulting Limited
+1.4.2 - Companies House Number
+07296310
+1.4.3 - External supplier role
+Configured the standard Oracle tool to meet Network Rail’s needs. Built the version of the digital assistant and are responsible for the ongoing maintenance and any break/fix issues that may arise as part of a wider support contract.
+1.4.4 - Procurement procedure type
+Open - three quotes were considered before awarding to the current supplier.
+1.4.5 - Data access terms
+The supplier already had access to our production and live environments and the data contained within it as part of their support contract with us
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Uses natural language ‘intent recognition’ to understand what information the customer needs and provides links to articles, websites or pages to provide the answer. The supported questions, and their answers, are predefined. The tool does not generate content itself.
+Where the question cannot be answered, it will gather basic information (name, telephone number, email) as well as ask the user to provide a Google map link if necessary to establish the location of the issue being reported, and will ‘hand-off’ the query to a live chat advisor to take over the conversation and assist the customer. If outside of live chat hours, it will create a case in the system for review by  a member of contact centre staff.
+2.2 - Scope
+The live chat service used by customers to contact Network Rail was receiving a high number of queries that were a) not the responsibility of Network Rail and needed to be re-directed or b) the responsibility of Network Rail but where the information already existed online e.g. careers queries. The digital assistant was brought in to help customers get the answers to their queries quicker and give Network Rail live chat agents more time to deal with more complex queries.
+2.3 - Benefit
+Frees up our live chat agents to deal with more complex queries
+Get the information to customers quickly and efficiently
+Potential for additional capacity to be created at our contact centre to be filled with other customer contact channels.
+2.4 - Previous process
+All queries via the live chat were directed straight to a live agent without any filtering prior to Network Rail staff making their assessment to either progress or re-direct the query. With limited number of system licences available Network Rail needed to look at ways to reduce the number of queries that Network Rail were having to deal with and improve the service.
+2.5 - Alternatives considered
+No other digital assistant actively considered as this tool was fully compatible with our existing Customer relationship management (CRM) system and would have been the easiest and most cost-efficient option to implement.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The digital assistant provides automated answers only to a set of known, predefined ‘common’ or ‘straightforward’ questions. The answers are presented as links, either to pages on the Network Rail website, or third-party websites, such as the National Rail Enquiries website. This is intended to reduce the burden on contact centre staff from these straightforward questions, and the resources provided to customers in response to these questions are the same resources that contact centre agents would provide themselves.
+For all questions outside of the scope of the above, the digital assistant attempts to hand the conversation over to a contact centre agent, if any are available. If agents are not available, the digital assistant provides alternative contact details.
+The tool does not make any decisions on behalf of either agents or customers, except to attempt to provide the above answers.
+3.2 - Provided information
+Prior to agent handover, the digital assistant collects personal information about the customer, such as their name and email address. This information is passed directly to the contact centre agent. The purpose of the digital assistant collecting this data is simply to save agents’ time (who would otherwise have to manually collect it).
+This information may be used by agents in their own decision-making, but the tool does not behave conditionally based on this information.
+3.3 - Frequency and scale of usage
+Over the past 12 months, there have been, on average, 2151 chat sessions initiated with the digital assistant per month.
+Over the same period, an average of 371 conversations were transferred to the contact centre team per month.
+3.4 - Human decisions and review
+For each conversation passed from digital assistant to agent, the agent is presented with a transcript of the conversation between the digital assistant and the customer prior to transfer, which the agent can use to better understand the customer’s request.
+3.5 - Required training
+The digital assistant is deployed on the Oracle Digital Assistant platform. Training on this platform consists, at a high level, of -
+Understanding the integration with the CRM system for agent transfer
+Training of the natural language recognition for intent-based answering
+Developing ‘conversational flows’ to answer questions, such as configuring how to present information to the customer, and how to request information from the customer - e.g. prior to agent transfer.
+3.6 - Appeals and review
+Where the digital assistant provides an unsatisfactory answer to the customer (e.g. incorrectly recognises their intent) they are able to provide feedback such as “that did not help” and the digital assistant will immediately attempt to hand over to a contact centre agent in this scenario.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The tool is built on the ‘Oracle Digital Assistant’ platform. This is a cloud-based service which supports the creation and deployment of digital assistants, or chatbots.
+The platform provides the tools necessary to define and build the core aspects of a chatbot system. These include:
+Intents - each intent representing a customer’s requested action or question. An example in Network Rail’s application is the intent “I want to buy a train ticket”
+Conversation Flows - these define the way(s) in which the digital assistant might respond to a given intent. In the above case, the digital assistant provides the customer with a static answer explaining Network Rail’s role in the railway, and links to the third-party National Rail Enquiries site.
+Channels - these link the digital assistant to front-end applications so they can be accessed by customers. In Network Rail’s case, there is a single ‘web’ channel.
+The platform itself is standalone, but it can be integrated with various other applications, and provides tools to facilitate this. In Network Rail’s case, it is integrated with their “Oracle B2C Service Cloud” CRM application. The digital assistant hands-over chats from customers to contact centre agents who are signed in to the CRM application. This facilitates communication between agent and customer.
+Resources in relation to the ODA architecture:
+https://docs.oracle.com/en/solutions/learn-about-designing-chatbot/index.html#GUID-8A20611F-DB10-420B-9F5E-09ECE8083229
+and
+https://docs.oracle.com/en/cloud/paas/digital-assistant/use-chatbot/overview-digital-assistants-and-skills.html
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Automated platform updates are pushed to the system by Oracle approximately every two months. These add new features, bug fixes, and so on.
+The changelog for these updates can be found here:
+https://docs.oracle.com/en/cloud/paas/digital-assistant/whats-new/index.html
+As the Network Rail chat system is now live and mature, it is updated on an ad-hoc basis, only when issues are encountered or functional changes / new features are required. Reviews of the system can be carried out to identify weaknesses in the intent recognition, and it can be retrained on demand. This is not currently carried out on a fixed schedule, but is instead bundled with other functional updates when required.
+There are two main types of analysis performed when reviewing the performance of the assistant. Due to the data volumes involved, these are generally performed on a ‘spot check’ basis, by taking a defined time period - perhaps a day - and analysing each of the conversations in turn. It is not feasible to check all data.
+Intent resolution checks - for each intent, check which customer utterances have resolved to that intent. For each, mark whether this was correct or incorrect.
+Unresolved utterance checks - for each unresolved utterance, mark whether there is a defined intent which this utterance should have matched
+The result of the above is a set of utterances for which training data is insufficient. The utterances can then be added to the training data for the appropriate intents - after being sanitised.
+In addition, the above might also output other improvements which may be made to the assistant - these are ‘build’ tasks as opposed to model retraining however -
+Creation of new intents, or refactoring of existing intents (e.g. it may be identified that splitting one existing intent into multiple more nuanced intents would be beneficial)
+Tweaking of answer content to correct mistakes, outdated information, or to reflect changes to the nature of customer questions
+4.1.4 - Models
+The intent recognition functionality is built upon a machine learning model. The model is trained with sample customer questions, and is used to predict the likelihood that a given incoming customer question matches one of the trained intents.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Oracle Digital Assistant
+4.2.2 - Model version
+23.06
+4.2.3 - Model task
+Intent recognition
+4.2.4 - Model input
+User’s “utterance” - a question or task for which the customer would like support from the digital assistant.
+4.2.5 - Model output
+Potential intent matches, with their probabilities.
+Where a given intent matches with the required confidence, the customer is provided with a predefined answer to that question.
+4.2.6 - Model architecture
+The model is a proprietary, classifier-based intent recognition model.
+4.2.7 - Model performance
+This information is not available for the model itself. However, the overall performance of the digital assistant can be monitored, with the following scenarios in particular identified and investigated to understand whether further retraining of the model might benefit:
+‘unresolved’ intents - i.e. questions asked by customers for which the digital assistant could not identify a matching intent
+‘weak matches’ - i.e. questions asked by customers where the digital assistant identified a potential matching intent, but with low confidence
+The above statistics can be measured manually on an ad-hoc basis. Where examples are found of misidentification or misunderstanding of intents, these can be corrected by adding additional training utterances to the data set. This can be done on an ad-hoc basis.
+An example run of automated test cases on the current model version (which provides a high-level view of performance at a single point in time) yielded the following results: Of 324 test cases, 314 passed (i.e. the model correctly predicted the intent) while in 10 cases it failed (i.e. it predicted the wrong intent, or no intent).
+Also, of the 314 passed test cases, 26 cases passed with a confidence score of between 0.7 and 0.8 (generally speaking we might consider the range 0.7 - 0.75 to be a ‘weak match’).
+It is generally not expected for all test cases to pass at all times - failures indicate potential weaknesses in training data which it may be possible to resolve for a given intent by supplementing or modifying the training data for the intent in question, but it’s important to note that changing the training data for one intent may reduce the performance of other intents, hence the high likelihood of at least some failures, and the need to treat the system as a whole, rather than focus heavily on individual intents at a given time.
+4.2.8 - Datasets
+The model was not pre-trained on any outside data source. It has been trained during implementation on a set of common questions known by Network Rail to be regularly asked of their contact centre. The questions themselves were identified through:
+Agent experience - contact centre agents were asked which repetitive or “time-wasting” questions they spend time on
+Analysis of historical ‘incidents’ - past incidents logged in Network Rail’s CRM system were analysed based on their outcome codes and categorisations, to identify the highest-volume incident types that would be worthwhile having the digital assistant answer, to achieve the business aims.
+The above analysis was manual, not automated.
+4.2.9 - Dataset purposes
+From the above identified questions, a set of “intents” were defined within the digital assistant that it should provide answers to. For each intent, example phrases were loaded into the platform to train the model. These training phrases were taken from incidents themselves (e.g. the incident summaries written by customers or by agents), and were supplemented with wording variations chosen by the development team (e.g. common misspellings, jargon, and so on).
+The above tasks were performed manually by the development team, who removed any personal information from the data before inputting it into the model.
+Of example utterances identified for training, 20% are kept back, and not entered into the training data. These are instead used to test the performance of the model. When updates are made to the training data, these tests can be executed again to check the performance has not been negatively impacted by the modification to the training data.
+In addition to the above, individual intents or utterances can be tested on an ad-hoc basis, to output the model’s predictions as to which intents best match the question.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Network Rail’s incident history training data.
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+No formal data set used. Target intents, and example ways in which these questions were asked, were collected from Network Rail’s incident history, and this was compiled into training data.
+Example phrases that indicate an intent - e.g. “I want to buy train tickets”, “Am I allowed to take photos in the station?” , “Do you have any job vacancies?”
+4.3.4 - Data quantities
+There are currently 33 intents which relate to in-scope questions for which the digital assistant can provide an answer.  The number of training utterances varies on a per-intent basis, generally between 20 and 100 training utterances, depending on the complexity of the question and the variation in language used by customers.
+In total there are currently 1,441 training utterances across the above 33 intents.
+Note there are also a small number of “small talk” and “utility” intents which are not directly related to Network Rail. These also include training data, but are more generic in nature, such as “hello” , “goodbye” , “thank you” and allow the digital assistant to provide more ‘natural’ responses to these conversational messages.
+4.3.5 - Sensitive attributes
+None. There is no personal data included in the training material. All training material was created manually and where real-world incident data was used to inform this, the data was sanitised prior to loading into the model, not taken verbatim.
+4.3.6 - Data completeness and representativeness
+Not applicable. The purpose of the training data is intent classification. The data can never be expected to be “complete” - where gaps are identified, in terms of questions which logically match a given intent but were not identified as such by the model, these can be added to the training data to improve the performance in future, but there are no negative implications to this scenario; the user is escalated to a contact centre agent if the digital assistant does not identify a matching intent.
+4.3.7 - Source data URL
+The training data is not openly accessible.
+4.3.8 - Data collection
+Training data was collected from Network Rail’s CRM system.
+Existing incidents - their summaries, categorisations and outcome codes were used to inform decision making as to the most appropriate intents for the digital assistant to support, and to provide example training data for the model.
+The data was originally collected for the purposes of logging a history of enquiries raised with Network Rail and the organisation’s responses to those enquiries.
+Transferral of the data for the purpose of training the model is reasonable, given the purpose of the model is to support future questions of the same nature. Also, no personal or transactional data from the incidents was used - only the question summaries - and this data was not used verbatim or in an automated fashion, but was manually identified and chosen, and then manually validated and sanitised before being used for the model.
+4.3.9 - Data cleaning
+As above, the data was manually checked and sanitised prior to loading into the model. This was done manually due to the text-based nature of the content. It was not possible to automate the process of removing any sensitive, personal or irrelevant content before loading into the model, so this was done manually. The volume of training data was low enough such that this was feasible.
+4.3.10 - Data sharing agreements
+There are no such agreements in place.
+4.3.11 - Data access and storage
+Within Network Rail, a small number of the senior leadership within the Customer Service team have access to the digital assistant (and therefore the underlying model data); this access is used primarily to monitor chat volumes.
+Within Boxfusion - the implementation partner - a small number of developers who are directly responsible for monitoring and maintenance of the digital assistant have this access.
+Access is by role-based controls, so access can be granted to read-only or editable access depending on an individual’s needs.
+The data is stored on Oracle Cloud Infrastructure platforms. Model training data is stored indefinitely while the model is in use. It is not stored historically - i.e. if intents or functionalities are removed, then the corresponding training data is also removed. This is a feature of the platform. Unused training data cannot be stored.
+The platform stores transcripts of conversations between customers and the digital assistant for auditing and performance monitoring purposes. The platform does not allow for these transcripts to be stored on a long-term basis. They are purged approximately every 6 months.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Assessments already carried out for the overall system, the national helpline who operate the live chat system and the support contract for the system maintenance.
+Other data protection assessments have taken place since then that focus on how Network Rail IT partners support the system. Network Rail have a specific privacy notice that covers its contact centres and the data we collect. This can be found here.
+https://www.networkrail.co.uk/footer/privacy-notice/privacy-notice-for-network-rails-contact-centre/.
+The digital assistant is just an extension to the live chat service and does not include any new processes, it is just the bot is carrying out some of them now rather than humans.
+5.2 - Risks and mitigations
+The chatbot Network Rail have chosen uses a predefined set of scripts/answers so is not the same as one built using NLP or conversational AI.
+There is a small reputational risk should the tool break but there are other customer channels available to the public in the meantime that they can use to answer their queries. Oracle are very responsive as and when faults arise so this should not impact for long. Due this technical solution, Network Rail don’t believe there are extensive risks.
+Contents

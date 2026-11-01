@@ -1,0 +1,211 @@
+Standards and Testing Agency: Key stage 2 Test Administration form rules
+KS2 Test Administration form rules for applications
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Organisation:
+Department for Education
+Organisation type:
+Agency or public body
+Function:
+Education
+Capability:
+Management
+Task:
+Rule-based calculation
+Phase:
+Production
+Region:
+UK
+Date published:
+30 August 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Key stage 2 Test Administration form rules.
+2 - Description
+The tool partially automates assessment of forms for test administration of KS2 assessments. It enables the Standards and Testing Agency (STA) to ensure schools get rapid response to applications to support pupils in the end of key stage 2 tests.
+3 - Website URL
+www.primaryassessmentgateway.education.gov.uk/publicaccessproduction/selfservice/citizenportal/login.htm
+4 - Contact email
+assessments@education.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Standards and Testing Agency
+1.2 - Team
+Test Administration team
+1.3 - Senior responsible owner
+Deputy Director, Assessment Operations and Services
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Capita
+1.4.2 - Companies House Number
+Capita PLC 02081330
+1.4.3 - External supplier role
+Capita currently have a contract with the Standards and Testing Agency to support the delivery of primary assessments from the 2019 to 2025 academic year. The forms are currently on their system for schools to access and they have implemented the rules based engines from the automation business rules provided by STA.
+1.4.4 - Procurement procedure type
+Open
+1.4.5 - Data access terms
+Capita have access to all of the data from the system and can only use it for the activities they are paid to carry out on our behalf as part of their contract.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Key Stage 2 Test Administration rules-based engine can perform partial automatic assessments of certain forms related to the administration of KS2 assessments. The system uses information provided by schools to assist in determining outcomes for compensatory marks in spelling, specifically for pupils with profound hearing impairments who cannot access the Grammar, Punctuation, and Spelling (GPS) spelling test. If the user does not confirm that the pupil will take GPS Paper 1: Questions, and cannot access GPS Paper 2: Spelling due to their hearing impairment, their application cannot be submitted. If they confirm both points, the application will auto-approve.
+Additional time in the tests is automatically awarded to pupils with an Education, Health, and Care (EHC) plan (up to 25%) or those using braille or modified large print test papers (up to 100%) and there is no requirement to apply to or notify STA of this. Pupils who do not meet the above, but school feel those pupil still require additional time in the test can make an application. There are 7 ‘Yes’ or ‘No’ questions in the application (128 possible outcomes) and the application form is 100% automated. Additional time may or may not be awarded, dertermined by the how the questions are answered by the school. If the school confirms that the pupil has reading difficulties, writing difficulties, struggles to process information or has English as an Additional Language (EAL [and working indepently in English, for in the maths tests] - additional time will be awarded. The system also provides advice if other difficulties are identified, such as EAL (a translation of mathematics tests), hearing impairment (compensatory marks for spelling applications), visual impairment (braille or modified large print test papers), and concentration difficulties (rest breaks and/or use of a prompter).
+A timetable variation, allows schools to administer tests missed by pupils on the scheduled day,  up to five school days later in accordance with published guidance. The application will be auto-approved if the pupil missed the test as they ill (other options for the absence reason, but there is no automation attached to them), and the school confirms that the pupil is back in school and fit enough to sit the test, has not had contact with other pupils who have already taken the tests, has not accessed the test content via the internet or social media, that the security and integrity of the tests have been maintained and the school has authorised the absence. If any of these conditions are not met, the application will auto-reject.
+Special consideration application may be approved where a pupil has experienced a traumatic incident before or during the test period, in accordance with published guidance. If the school confirms that the pupil has taken all tests included in the application, completed the relevant KS2 programme of study, is working at the standard of the tests, was physically and mentally fit to take the tests, and that the incident occurred within the date parameters set by the STA, then the application will auto-approve.
+Overall, the system allows the STA to provide this service to the public at scale in a logical and consistent manner.
+2.2 - Scope
+The Key Stage 2 Test Administration rules-based engine is used to determine the outcome of applications to support school during the administration of the tests to their pupils. Some pupils may require compensatory marks for spelling because they cannot participate in the GPS spelling test. Additional time may be awarded to complete the tests for pupils who have difficulties with reading, writing, processing information or an EAL pupil in the maths tests who does not have the paper translated. A timetable variation can be approved to administer a missed test—due to illness on the scheduled day—to a date up to five school days later. Special consideration may also be given if a pupil has experienced a traumatic incident during the build-up to or at the time of the tests.
+The system is operated by the Standards and Testing Agency (STA), an executive agency of the Department for Education (DfE). It is only available to schools in England participating in the end-of-KS2 tests. The pupils taking these tests are in Year 6, typically aged 10 or 11 years old.
+2.3 - Benefit
+The Standards and Testing Agency receives a large volume of applications each year. The volume of applications is too great to be processed manually in a timely, consistent, or cost-effective manner. Automated processing supports handling these large volumes by applying the rules to each application consistently. When exceptions occur, the system updates the application to indicate to Test Administration that manual intervention is required. Automating the majority of applications enables operational staff to focus on cases of a more complex nature.
+2.4 - Previous process
+The processes are long standing and pre-date the members of STA’s Test Administration team.
+Without the support of automation, the applications would have to be manually processed by the Test Administration team.
+2.5 - Alternatives considered
+The alternatives are no automation or full automation of the forms.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The key stage 2 Test Administration rules-based engine provides decision making within a system provided by our supplier for schools to use. Applications are entered online via the forms on the system where for compensatory marks for spelling and additional time, they are automatically and immediately assessed, and an application outcome is determined. Timetable variation is part automated, where if the business rules for the forms are met, the application will auto-approve for 3 of the 5 application reasons. If the business rules are not met for these 3 application reasons (illness, funeral or religious or cultural event), the application will auto-reject. Applications for the other 2 reasons (appointment which cannot be rearranged or other) are manually processed however the form is completed. Special consideration has an auto-approve function if the business rules are met. Where the business rules are not met, the form will be manually processed. The key stage 2 Test Administration rules-based engine gathers the information provided in the form, and calculated by, the rules, presents an outcome to the user.
+3.2 - Provided information
+The information considered by the Key Stage 2 Test Administration rules-based engine includes the data provided by the school in their application, as well as their responses to the questions within the forms.
+The Key Stage 2 Test Administration rules-based engine uses this information to determine an application outcome based on the applicable business rules.
+3.3 - Frequency and scale of usage
+The following provides approximate numbers of applications processed by key stage 2 Test Administration rules based engine:
+Compensatory marks for spelling
+2024 - 102 applications
+2023 -  76 applications
+2022 - 114 applications
+2021 - No KS2 tests due to Covid
+2020 - No KS2 tests due to Covid
+2019 - 116 application
+2018 - 109 applications
+Additional time
+2024 - 123,981
+2023 - 116,693
+2022 - 106,460
+2021 - No KS2 test due to Covid
+2020 - No KS2 tests due to Covid
+2019 - 103,655
+2018 - 95,427
+Timetable variation
+2024 - 7107 total. 6017 automated.
+2023 - 7441 total. 6355 automated.
+2022 - 9052 total. 7984 automated.
+2021 - No KS2 test due to Covid
+2020 - No KS2 tests due to Covid
+2019 - 4578 total. 3780 automated.
+2018 - 4332 total. 3506 automated.
+Special consideration
+2024 - 8001 total. 7156 automated - automation on all 5 reasons
+2023 - 7835 total. 5072 automated - automation on all 5 reasons
+2022 - 7001 total. 5950 automated - automation on all 5 reasons
+2021 - No KS2 test due to Covid
+2020 - No KS2 tests due to Covid
+2019 - 14,716 total. 3763 automated - automation on 2 of 5 reasons
+2018 - 10,162 total. 2653 automated - automation on 2 of 5 reasons
+3.4 - Human decisions and review
+A typical application that is fully automated—such as those for compensatory marks for spelling and additional time, adhering to the business rules—does not undergo any human review unless there is a query or complaint.
+Applications with partial automation—such as timetable variations and special consideration—are subject to human review when the business rules for automation are not met. In these cases, applications are processed manually, with reviewers following the business rules as well as applying their knowledge and experience of the process.
+10% of the auto-approved special consideration application are quality checked by the Test Administration team to ensure accuracy, consistency and business rules are adhered to in accordance with published guidance.
+3.5 - Required training
+Team members undertake training provided by their manager before processing any applications. This training covers the business rules and how to navigate the system. Using associated guidance documents, application processing guides created by their manager, and support from more experienced or senior colleagues, team members are equipped to carry out their tasks effectively.
+3.6 - Appeals and review
+If a school believes that a decision regarding their application has been made incorrectly, they can contact us to explain why. The decision will then be reviewed by a member of the management team, and the school will be notified of the outcome. The pupils, aged 10 or 11, are likely unaware that an application has been made on their behalf or of any potential outcomes. While the pupils’ parents may be aware of the outcomes and discuss them with the school, it is the school who make the applications and would need to contact us to request a review of any decision made.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Azure-hosted infrastructure evolved from the Capita One Digital, Sovereign Cloud Stack (SCS - this provides standards for a range of cloud infrastructure types. It strives for interoperable and sovereign cloud offerings which can be deployed and used by a wide range of organizations and individuals) environment but takes advantage of many Azure-native features. Infrastructure components are defined as code and deployed using Terraform. Configuration management is performed by Puppet to ensure a consistent build.
+The design of the platform is based on the Microsoft hub-and-spoke architecture. All data ingress and egress, including both Internet and VPN connections, is terminated in the hub. The actual back-end services are contained within a spoke, with fine-grained security rules governing access as required. There is no direct access to the software or data running in the spoke. A high-level example of how external access to the platform is only possible via the hub is illustrated in the diagram above.
+Load Balanced Application Tier
+Front-end load balancers provide highly available access to the application tier of servers. Application Servers are designed to be able to scale out to cover the peak usage periods. These are deployed into an Azure Availability Set to ensure resilience against rack or network failure.
+Database Tier
+Backend database access has been designed to take advantage of SQL Server Always-On Availability Groups in combination with Azure availability features. Each region has a multi-node SQL cluster with synchronous replication within region, and asynchronous replication to the non-active region. Database backups are encrypted and written to a Read-Access Geo-Redundant Storage (RA-GRS) Azure storage account. Databases are backed up daily, and transaction logs taken every two hours during working hours.
+General
+Azure Network Security Groups are used to segregate logical tiers and application services. For the Test Operations Services solution, we have created separate environments of the entire solution. Each environment can be scaled as appropriate for its specific workload requirements.
+Storage Capacity
+The key volumetric data that has been used is from the 2023/24 test cycle. Blob storage is available to store the PDF scanned images of test scripts. This is completely elastic and will expand as demand increases.
+The peak user load on the TOpS Portal occurred as expected on results day, July 09, 2024:
+•	Approximately 14,000 logins between 07:30 and 08:00
+•	Over 25,000 page views between 07:30 and 08:30
+•	37,800 downloads in the period 07:30 to 08:30
+The system is able to be scaled up and down according to requirements and was ramped up to cope with these peak loads.
+The system utilised a 3rd party queue management system to smooth system demand during the initial phase of return of results.
+Business Continuity (BC) & Disaster Recovery (DR)
+For BC/DR purposes, The One Digital Platform will be hosted across two geographically separate Azure regions which means that, in the event of a disaster in the production data centre, a replica system can be started within the required Recovery time objectives (RTO)(stated as 24 hours maximum) using data which is at most 4 hours out of date (satisfying the 4-hour RPO requirement).
+As well as a full BCP, the solution has a high degree of resilience built-in which means that if certain key components should fail, alternate infrastructure is available to pick up the workload.
+https://www.primaryassessmentgateway.education.gov.uk
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The forms that provide the automation are reviewed, updated and maintained on an annual basis, before the form goes live to schools each academic year. The business rules relating to the automation do not tend to change - however, we did add further automation (auto-approve) to the Special consideration form in 2022. STA previously only had automation (auto-approve) function on 2 of the 5 reasons, but following internal consolation at a Senior Leadership Team (SLT) level we added further automation (auto-approve) function to the other 3 reasons. So, the auto-approve function now covers all 5 reasons.
+Typically any changes to the forms are only tweaks to the wording on the form or the outcomes (not how the outcomes are determined) - the on-screen response text once an application has been submitted, the text in the email that the schools receives and the application outcome letter. The changes are typically picked up from lessons learned by the Test Administration team in the previous academic year. On occasion, the changes come from colleagues in Capita’s Systems team which are then considered by the Test Administration team.
+The forms are tested in a User Acceptence Testing (UAT) environment by Capita’s Systems team and the Test Administration before they go live to schools each year, to ensure accuracy and that any changes to the text have been implemented correctly. The Timetable variation and Special consideration forms require the dates within the form to be updated each year.
+4.1.4 - Models
+All the models use rule-based engines to process data.
+Tier 2 - Model Specification
+4.2.1 - Model name
+The key stage 2 Test Administration rules-based engine
+4.2.2 - Model version
+2022
+4.2.3 - Model task
+To determine the outcome (where automation is in place) to applications to support pupils in the administration of the key stage 2 tests.
+4.2.4 - Model input
+Compensatory marks for spelling, additional time, timetable variation and special consideration applications.
+4.2.5 - Model output
+Forward interfacing key stage 2 Test Administration rules-based engine. Schools will be informed if the application was approved, rejected or more inforamtion is required from the school before a decision can be made. The school receive an email asking them to log into their account as their been update to one of their applications (application reference number provided). When a decision has been made on the application, the school receives a printable PDF application outcome letter. If the application has been approved, the letter just confirms this, but if the application has been rejected (TTV only) the letter provides a rationale why - lines provided by the Test Administration team following business rules confirmed in the published guidance.
+4.2.6 - Model architecture
+Rules based engine
+4.2.7 - Model performance
+The forms which have automation were thoroughly tested by STA’s Test Administration prior to the system going live to schools.
+On an annual basis, Capita’s System team and STA’s Test Administration test the forms in a UAT environment to ensure all amends made to capture new dates (where appropriate) have been implemented correctly and the form still works at is should, before it goes live to schools. The forms are also monitored by both teams whilst they are live and any anomalies are investigated and fixed asap.
+4.2.8 - Datasets
+Dummy school and pupil data created by Capita in a UAT environment for testing purposes only.
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Primary Assessment Gateway - the 4 forms are on this system.
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+The automation in place on the forms provides schools with fair and consistent outcomes based against the key stage 2 Test Administration rules-based engine.
+4.3.4 - Data quantities
+Compensatory marks for spelling in 2024: 101 applications - all automated.
+Additional time in 2024: 123, 826 applications – all automated.
+Timetable variation in 2024: 7109 applications – 6010 automated. 1090 manual. 9 More info requested not returned by school.
+Special consideration in 2024: 8001 applications - 7156 automated. 845 manual.
+4.3.5 - Sensitive attributes
+School name, Department of Educationf number, school members name, email address and telephone number.
+Pupil’s name, Date of Birth and Unique Pupil Number.
+Free text box for info to support Timetable Variation applications can provide info on if the pupil was ill, been out of the country etc.
+Free text box for info to support Special Consideration applications can include information relation to a traumatic incident that happened to them, or someone close to them in the last 12 months e.g. bereavement, life changing surgery, diagnosed with a terminal illness, approaching end of life at the time of the tests.
+4.3.6 - Data completeness and representativeness
+N/A - all data is complete and representative
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Primary Assessment Gateway application data is collected for administrative purposes by the team who owns the form and STA’s Data team.
+4.3.9 - Data cleaning
+The forms (and the data) from the previous academic year are removed from the System and the forms are updated at least once every 12 months - before the form is available to schools again in the next academic year.
+4.3.10 - Data sharing agreements
+A memorandum of understanding exists between STA and Capita concerning the data.
+4.3.11 - Data access and storage
+The data provided by the submitted forms (the forms themselves) are cleared down by the supplier every 12 months - before the form re-opens again.
+Basic high-level data on application volumes is collected every year by the Test Administration team.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+There is a DPIA in place covering the automation on the Primary Assessment Gateway. The automated decision making does not make any decisions based on the pupils personal information, but on different criteria/answers/information in the form relating to the access arrangements and the school provides this information.
+5.2 - Risks and mitigations
+The form may not be available to schools to complete and submit.
+The form provides the incorrect outcome via the automation.
+The school do not receive an application outcome letter following the decision on their application being made.
+Capita and Test Administration both keep a close eye out for any of the above issues. If the Test Administration team spot any issues/anomalies, we report it immediately, directly to Capita’s System team (including STA’s Systems) team. If Capita’s System team spot any issues/anomalies, they will ensure the Test Administration are aware and how it was fixed. If it needs STA input to confirm the issues, they will wait the information before correcting.
+Capita’s System team are responsible for fixing any issues as per the agreement in their contract.
+Contents

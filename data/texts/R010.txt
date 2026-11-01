@@ -1,0 +1,175 @@
+HMT: Policy Engine UK
+PolicyEngine UK is an open-source microsimulation model of the UK tax and benefit system. The model estimates tax liabilities and benefit entitlement in the Family Resources Survey dataset from given policy parameters and structures. HMT does not currently use PolicyEngine.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+17 December 2024
+Organisation:
+HM Treasury
+Organisation type:
+Ministerial department
+Function:
+Economic affairs
+Capability:
+Analysis
+Phase:
+Beta/Pilot
+Region:
+UK
+Date published:
+17 December 2024
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+PolicyEngine UK
+2 - Description
+PolicyEngine UK is an open-source model which uses machine learning and gradient descent methods to tackle two key sources of error in household survey data typically used for modelling tax and welfare policies: under-sampling of certain demographics of households or individuals, and measurement errors such as underreporting of income and benefits.
+HMT is exploring the scope for making greater use of this model for advising policymakers on the impact of tax and welfare measures on households, supplementing the existing models used for this (such the Intra-Governmental Tax and Benefit Microsimulation model – IGOTM).
+3 - Website URL
+https://github.com/PolicyEngine/policyengine-uk
+4 - Contact email
+DataManagement@hmtreasury.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+HM Treasury
+1.2 - Team
+Personal Tax, Welfare and Pensions (PTWP)
+1.3 - Senior responsible owner
+Chief Data Officer
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+PolicyEngine (supplier of the open-source tool)
+1.4.2 - Companies House Number
+15023806
+1.4.3 - External supplier role
+PolicyEngine provides the open source code for the model. No contract was procured as such, but PolicyEngine had developed the majority of the code and representatives from the organisation were consulted on its use a number of times.
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+HMT is exploring the scope for making greater use of the open-source PolicyEngine model for microsimulating tax and benefit policy changes, supplementing the existing models in the department.
+The main use and benefit of PolicyEngine is its ability to enhance the Family Resources Survey (FRS) dataset often used for this modelling. https://www.gov.uk/government/collections/family-resources-survey–2
+The Family Resources Survey (FRS) is a continuous household survey which collects information on a representative sample of private households in the United Kingdom.
+The methodology for this is:
+Combining Survey Years:
+To increase the sample size and robustness, the tool combines multiple consecutive years of the household survey (e.g. 2018-19, 2019-20, 2020-21 Family Resources Survey in the UK case) into a single dataset.
+Survey of Personal Incomes (SPI) Imputation
+Random forest regression models are trained using administrative tax data from the SPI to predict income variables based on common predictor variables between the SPI and FRS data. In order to avoid overwriting existing FRS income data, the FRS dataset is first duplicated. The duplicated rows are then assigned the SPI imputed values and zero weight.
+Gradient Descent Reweighting
+The dataset is then reweighted using a loss function which accounts for errors between survey aggregates (demographic, income, taxes/benefits) and target statistics from official sources. Gradient descent optimisation is performed to iteratively update the household weights of the imputed survey copy, minimising this loss function.
+Further Data Imputation
+Random Forest models are trained on Wealth and Assests Survey (WAS), Living Costs and Food Survey (LCF), and Effects of taxes and benefits on household income (ETB) data to impute additional variables and expand the feature space of the model.
+Data Uprating
+A microsimulation tax-benefit model is used to uprate the policy year of the survey data to match the target year, adjusting household tax/benefit variables. This typicaly assumes a linear change between datapoints for each year.
+The aim is to leverage machine learning to jointly address sampling and measurement errors, combining strengths of surveys (granularity) and administrative data (accuracy).
+2.2 - Scope
+The tool aims to enhance the accuracy of household survey data used for microsimulation modeling of tax-benefit policy changes. The tool aims to improve survey data quality by addressing two key sources of inaccuracy:
+Sampling error - particularly the under-sampling of high-income households
+Measurement error - such as under-reporting of specific income sources
+The tool seeks to create an enhanced survey dataset that better aligns with official statistics and administrative data sources across a wide range of demographic and financial variables.
+2.3 - Benefit
+PolicyEngine aims to address some of the errors associated with the household survey data used for tax-benefit microsimulation modelling. Specifically, it addresses errors such as the under sampling of high incomes and under reporting of benefits income at lower incomes, as well as income components prone to measurement error like self-employment, capital income, and benefit income (by imputing values from administrative tax data (SPI)). Incorporating imputed variables from multiple data sources like expenditure surveys also provides a richer combined dataset.
+2.4 - Previous process
+The current model in use (IGOTM) undertakes a similar process of calculating the output variables, but by using only available data. PolicyEngine aims to supplement missing data with imputed values and reweight the data to address sampling and measurement error.
+2.5 - Alternatives considered
+We have considered using only the dataset enhancement process from PolicyEngine (Imputing samples from other datasets and reweighting) and feeding the enhanced dataset into our existing model (IGOTM).
+This would require a mapping of output variables between the two models if the enhancement process were ever to be integrated into IGOTM.
+Tier 2 - Decision making Process
+3.1 - Process integration
+This tool would be used to quantify the effects of tax-benefit policy changes on the population at household, person, and benefit unit levels. The outputs of the tool would be used to inform tax-benefit policy making decisions.
+3.2 - Provided information
+The model outputs income and tax data in a tabular format alongside the inputs used to calculate them. Outputs can be calculated on a person, tax benefit unit, or household level granularity. Outputs can also be calculated for different years using the same input data provided sufficient uprating data is provided. The native format is a Pandas dataframe in Python. This can then be exported as a .csv or .xlsx file. Data is linked to anonymous ID numbers, no individuals can be identified from the data.
+3.3 - Frequency and scale of usage
+If implemented in the department, the tool would initially be used only by the Personal Tax Welfare and Pensions team, but there was also interest from the Households Branch. It would be used throughout the year, as policy decisions are being made and where appropriate.
+3.4 - Human decisions and review
+The distribution of outputs should be examined to ensure that variables like income deciles and tax paid match expected values. Also check that the sum of weights equals the total population if doing reweighting to make sure the process was carried out correctly
+3.5 - Required training
+Those who use PolicyEngine must have sufficient knowledge and capability such as (basic Python commands, location of data files scripts and parameter files , understanding of the required file structure, understanding of the PolicyEngine syntax, and an understanding of the dataset enhancement process).
+3.6 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+https://github.com/PolicyEngine/policyengine-uk
+The model is based on the source code in this repository, and modified to ingest internal data.
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+Not currently deployed. Previously reviewed on a weekly basis. Evaluation was carried out by comparing the distributions of outputs with those of the existing model. This process would continue with PolicyEngine if the model is to be productionised.
+4.1.4 - Models
+Gradient descent for reweighting
+Random Forest for imputation of variables
+Tier 2 - Model Specification
+4.2.1 - Model name
+Random Forest
+4.2.2 - Model version
+0.2
+4.2.3 - Model task
+Impute variables based on external survey data.
+4.2.4 - Model input
+Common variables between Family Resources Survey (FRS), and the imputation datasets:
+Survey of Personal Incomes (SPI)
+Living Costs and Food Survey (LCF)
+Wealth and Assets Survey (WAS)
+Effects of taxes and benefits on household income (ETB)
+4.2.5 - Model output
+Imputed income, wealth, tax, consumption variables
+4.2.6 - Model architecture
+The model is a random forest model.
+4.2.7 - Model performance
+The performance of the Random Forest model itself was not directly evaluated, but the outputs calculated using the imputations it generated were compared to those of our existing model. These in turn have been confirmed to be accurate by examining distributions of variables such as household incomes and total tax which can be verified against national accounts data.
+Specifically the income tax and national insurance calculations for each household were compared. NI calculations proved to be very accurate, with almost 60% of datapoints falling within 0.5% of one another.
+Income tax calculations were less promising although this was likely due to difficulty in finding appropriate variables to compare between PolicyEngine and our existing model. Further evaluation is pending.
+4.2.8 - Datasets
+Family Resources Survey (FRS)
+Survey of Personal Incomes (SPI)
+Living Costs and Food Survey (LCF)
+Wealth and Assets Survey (WAS)
+Effects of taxes and benefits on household income (ETB)
+4.2.9 - Dataset purposes
+All datasets other than FRS were used to train Random Forest models for variable imputation on the FRS dataset.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Family Resources Survey (FRS)
+Survey of Personal Incomes (SPI)
+Living Costs and Food Survey (LCF)
+Wealth and Assets Survey (WAS)
+Effects of taxes and benefits on household income (ETB)
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Survey and administrative data capturing the resources, consumption, wealth, tax, and income for households in the UK
+4.3.4 - Data quantities
+~ 100-150MB for each Family resources survey
+~ 350MB for each Living costs and food survey
+~130MB for Survey of Personal Incomes
+~70MB for Wealth and Assets Survey
+~18MB for Effects of taxes and benefits on household income
+4.3.5 - Sensitive attributes
+Resources, consumption, wealth, tax, and income data. Also includes demographic info such as age, education, location. Data is linked to anonymous ID numbers. No personally identifiable information is in any of the data.
+4.3.6 - Data completeness and representativeness
+Data appears to be complete. It has been taken directly from the external organisations who provide it. (ONS, HMRC, UK data service) and not modified. The datasets together are representative of the UK population in terms of income deciles when individual datapoints are aggregated. This is controlled by weighting the datapoints.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+N/A
+4.3.9 - Data cleaning
+Whilst the data we receive is expected to be clean. This should be validated with standard procedures such as removing any duplicate data or null rows.
+4.3.10 - Data sharing agreements
+Data comes from ONS, UK Data Service and HMRC, so no formal data sharing agreement are in place - however, not all the data is publicly available. UK Data Service data is available to certain organisations and academics.
+4.3.11 - Data access and storage
+Data is stored on a development operations repository, accessible only to those who are working on the project. Access to development operations is controlled with Microsoft Authentication. Users must access from a HMT network or VPN using a HMT Microsoft account.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+An equality impact assessment will be carried out if this model were to be used to ensure there are no demographics which have been unfairly disadvantaged by the model outputs.
+5.2 - Risks and mitigations
+Erroneous Operation of the Code: This is mitigated by ensuring all scripts that run or automate elements of PolicyEngine for decision-making should undergo thorough review and testing. This process should involve both the Data Hub team and the decision-making team to ensure reliability and accuracy.
+Incorrect Parameters or Input Data: This will be mitigated by developing robust data preprocessing steps to clean (if necessary), standardise, validate, and clean input data before it is utilised by the algorithm. Additionally, scrutinise the distributions of the outputs to ensure they are logical and consistent with expected results.
+Contents

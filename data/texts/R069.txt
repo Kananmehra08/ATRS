@@ -1,0 +1,178 @@
+Environment Agency: Hello Lamp Post
+Hello Lamp Post is a community engagement platform that uses Artificial Intelligence to playfully communicate and consult with citizens.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+3 June 2025
+Organisation:
+Department for Environment, Food and Rural Affairs
+Organisation type:
+Agency or public body
+Function:
+Environmental protection
+Capability:
+Computer linguistics
+Phase:
+Production
+Region:
+UK
+Date published:
+3 June 2025
+ATRS version:
+v3
+Tier 1 Information
+1 - Name
+Hello Lamp Post
+2 - Description
+Hello Lamp Post is a community engagement platform that uses Artificial Intelligence to playfully communicate and consult with citizens. People are encouraged to interact with street objects like bus stops, parking meters and benches, via SMS or QR codes, to access information and feedback to decision makers about their local area.
+The purpose of this engagement is to share information with members of the public in specific locations about the role of the Environment Agency, the benefits our assets provide, information about specific schemes, and to engage them in a conversation about resilience and adaptation to flooding and coastal change in line with the national Flood and Coastal Erosion Risk Management strategy. It has also seen use within the Water, Land and Biodiversity side of the Environment Agency for similar engagement reasons.
+We are using the tool to help reduce our spend on engagement activities by replacing some traditional forms of engagement where appropriate, consequently reducing the carbon footprint of our engagement works.
+3 - Website URL
+https://www.hlp.city/articles/hello-environment-agency
+4 - Contact email
+DSAI@environment-agency.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Environment Agency
+1.2 - Team
+Engagement and Insight Team
+1.3 - Senior responsible owner
+Senior Engagement Advisor
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Hello Lamp Post Ltd
+1.4.2 - Companies House Number
+11249234
+1.4.3 - External supplier role
+Hello Lamp Post Ltd have developed the tool independently and provide It as a service to various governmental institutions and private bodies as a tool to engage with the public. Currently we have a call off contract that any Defra group project can utilise to engage with Hello Lamp Post to produce and deploy a version of the tool specific to the project.
+Both the private company and the tool itself are called Hello Lamp Post. To avoid confusion, in this document Hello Lamp Post Ltd shall be used when referring to the company, and Hello Lamp Post shall be used when referring to the tool.
+1.4.4 - Procurement procedure type
+Call-off from a dynamic purchasing system.
+1.4.5 - Data access terms
+All information that is part of the secure knowledge base is non-sensitive and has been approved by Environment Agency staff and shared for inclusion in the Hello Lamp Post model.
+2.1 - Detailed description
+When Hello Lamp Post is deployed to assist with queries relating to a particular project it uses a combination of an Environment Agency knowledge base and an instance of a Large Language Model (LLM). The user’s prompts are combined with system instructions that tell the LLM to only respond to questions relevant to the specific service.
+Data about the project or particular asset is provided by the Environment Agency as reference material for the LLM as part of its corpus of knowledge, Hello Lamp Post Ltd offer the ability for the LLM to draw on a wider knowledge base if desired - however the default is to only pull from pre-approved content provided by the Environment Agency. This content is all non-sensitive Environment Agency project information.
+Hello Lamp Posts instructions are combined with the user’s original prompt, and with the use of an LLM, an appropriate response is constructed. The Hello Lamp Post system is configured so that a malicious user should not be able to craft a specific prompt that circumvents the system instructions and makes the chatbot respond with irrelevant and potentially harmful information. Human reviewers from Hello Lamp Post Ltd monitor system responses to identify any potential issues and correct as necessary.
+2.2 - Scope
+Hello Lamp Post consists of a Large Language Model accessed via QR code or SMS. Users can then have a conversation with the LLM via a browser-based chat or via text messages. on specific topics related to the Environment Agency project it has been designed for.
+It has been used as an engagement tool at multiple sites such as the Boston Barrier as well as locations across the southwest of England and Lincolnshire.
+The platform provides real-time updates on flood defences and improvements, collect valuable community feedback and help educate the public on preparing for flood risks. It has also been deployed as an engagement tool whilst installing new Sustainable Urban Drainage assets within schools in Luton.
+The ability to ask the public to submit information in to the tool is also allowing for its use as part of citizen science projects.
+2.3 - Benefit
+As part of our strategic ambitions we recognise the need to engage more with our communities as well as the need to take advantage of the digital revolution to create new and innovative services for partners and communities as detailed with our EA2025: Creating a better place strategy document available on GOV.UK.
+We also recognise the need to continue to invest in developing and transforming customer-driven digital services to better communicate risk from flooding and coastal change.” as detailed within the National Flood and Coastal Erosion Risk Management
+Strategy for England (Strategy Measure 3.1.1) available on GOV.UK
+Hello Lamp Post helps us to achieve these goals whilst being more efficient about our use of resources, as well as cutting down on carbon costs. Benefits so far have included:
+•	Reduced cost per engagement by 92%.
+•	Reduced carbon footprint.
+•	Now able to engage with the public 24/7/365.
+•	Increased community preparedness, engagement and reach, compared to previous years.
+•	Improved insight into public behaviour.
+2.4 - Previous process
+Hello Lamp Post will form only one part of our engagement work in the future. We recognise there are many instances where it will not be appropriate and we will be relying on more traditional methods of engagement. It is not intended to fully replace other methods of engagement but can at times be a replacement for more traditional EA signboards. These signs provided some physical text about a particular project as well as provide details for how to contact the Environment Agency for further information.
+2.5 - Alternatives considered
+As mentioned previously, Hello Lamp post forms one part of our engagement work - as part of our projects we consider a wide array of engagement methods to best reach our stakeholders, including face to face meetings, websites, virtual webinars, leaflet drops, disseminating news via local stakeholder forums, etc.
+These other methods are considered alongside Hello Lamp Post, given the scale of our projects we would always explore multiple avenues of communicating with stakeholders, meaning Hello Lamp Post is never the sole method of communication.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool is primarily integrated into the customer’s decision-making process, the chatbot supplies information that in combination with contact details available on the accompanying EA signage gives users clear pathways on how to obtain further information should they require, but in many situations should give clear and useful information on the Environment Agency’s work in the area.
+As part of the customers decision-making process, the tool exists to give users near immediate information that answers their questions and concerns without needing to visit our alternative information sources (citizens Space websites, direct enquiries to project teams, etc.) which may take more time/input on the part of the user and Environment Agency staff.
+As part of the Environment Agency’s decision making process, the tool can be set up to ask users questions and capture their feedback, which is further explained below.
+3.2 - Provided information
+Hello Lamp Post captures anonymised qualitative and quantitative information regarding user responses which can be fed back to the project team. This includes standard statistics around the level of engagement for each board and can also include anonymised copies of conversation logs and answers to specific questions if the tool has been set up to ask the user to provide information.
+3.3 - Frequency and scale of usage
+Hello Lamp Post is an on demand service related to particular projects. Frequency of usage is therefore irregular and dependent on the current stage of relevant projects across England.
+Over a 12 month period we have had 12 separate deployments of the tool.
+As an example, one deployment of the tool saw 33,326 interactions from 7,138 unique users.
+3.4 - Human decisions and review
+The Environment Agency project teams are involved in collating our data for use in the LLM’s knowledge base as well as multiple options around tool setup (e.g. whether the tool can utilise web based data).
+The Environment Agency project team will also take decisions based on feedback given by customers using the service - feeding into updates to the knowledge base used by the tool as well as other forms of communication. The knowledge base used within Hello Lamp Post is updated (on average) quarterly, and can be amended more frequently if required.
+User decision points are detailed in the process integration section.
+Hello Lamp Post has engineered human checks and balances into many stages of the system from using LLM’s and knowledge bases, through to monitoring how the system interprets and responds to user queries. Hello Lamp Post Ltd ensure human experts are involved in setting up the system, tuning and testing the model. (Hello Lamp Post Ltd’s response to HM Government’s Generative AI framework)
+3.5 - Required training
+Hello Lamp Post Ltd undertake all technical work and deployment of the tool and undertake their own training for their staff. Hello Lamp Post Ltd also provide advice and guidance on how to build the knowledge base of data as part of the scoping stage of new projects.
+All projects first engage with a service manager who is familiar with Hello Lamp Post and has previous experience with the system. This service manager undertakes a review process to help ensure that we are using Hello Lamp Post in an appropriate manner.
+3.6 - Appeals and review
+Information for how to contact Hello Lamp Post Ltd and the Environment Agency is provided on the physical signage - this allows members of the public to contact Hello Lamp Post Ltd regarding any mistakes or issues with the conversation, or any issues with the physical sign due to general wear and tear, vandalism, etc.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Hello Lamp Post consists of a single large language model with natural language processing capabilities - each project the tool is used for has its own instance of the LLM which is customised for that projects needs.
+The LLM’s corpus of knowledge is provided by the relevant Environment Agency project team and hosted by Hello Lamp Post Ltd internally alongside the LLM. Whilst the LLM can be configured to utilise web-based data from other sources this has not been enabled for any Environment Agency projects so far.
+Users access the LLM via a browser based chat service or through text messages.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Input data can be updated as needed, on average this is once a quarter.
+All Hello Lamp Post deployments are fully tested before deployment and have regular and robust assurance checks of system responses while the platform is live.  (Hello Lamp Post Ltd’s response to HM Government’s Generative AI framework)
+Previous pilot implementations of Hello Lamp Post by the Environment Agency have created lessons learnt documentation post-deployment to help us better inform future deployments of the tool. We are currently looking to set up further review systems to help better understand in what situations the tool is best deployed to better inform our usage of it.
+4.1.4 - Models
+Hello Lamp Post consists of a single large language model using natural language processing - each project the tool is used for has its own instance of the model which pulls from a unique knowledge base to generate answers to prompts provided by the individuals interacting with the service.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Hello Lamp Post Large Language Model
+4.2.2 - Model version
+1
+4.2.3 - Model task
+Provide text based conversation based on inputs from its associated knowledge database.
+4.2.4 - Model input
+•	Environment Agency documentation on a specific project, asset or generalised flood resilience content.
+•	GPT4 (Trained on its own database of input data from OpenAI)
+•	The prompts from the user as well as Hello Lamp Post Ltd’s own prompt engineering inputs.
+4.2.5 - Model output
+Generative AI text with HTML elements to provide basic text formatting. Future works looking to include images that would also be provided by the Environment Agency.
+4.2.6 - Model architecture
+The model is a natural language processing large language model (GPT4) with a proprietary chat engine. It is setup and maintained by Hello Lamp Post Ltd.
+4.2.7 - Model performance
+Hello Lamp Post Ltd have developed extensive in-house expertise regarding prompt engineering and have A/B tested the specific prompts they use with GPT4 via their custom built chat engine that allows them to control the flow and direction that conversations take.
+This also enables them to control two-way interactions with users, including requesting feedback, asking questions and conducting surveys when necessary. These tight control measures ensures they maintain control over the information being presented and requested from the users.
+In addition, they utilise GPT parameter controls such as temperature (TopP) to influence how Hello Lamp Post builds its response, for example to increase the likelihood of deterministic responses rather than those of varying accuracy.
+Technical details for Open AI’s GPT4 can be found using the following link: https://cdn.openai.com/papers/gpt-4.pdf
+4.2.8 - Datasets
+GPT4 Training Data
+Environment Agency Project Knowledge base
+4.2.9 - Dataset purposes
+GPT4 Training Data - Underpins GPT4 which, as described above is used primarily to understand the questions being asked by users and present knowledge base information in the appropriate context.
+Environment Agency Knowledge base - Documentation that is relevant to the project Hello Lamp Post is being used to support. The knowledge base contains a body of curated content relating to a given deployment / EA project, and from which AI selects its answers.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Environment Agency project knowledge base
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Information regarding ongoing project curated to help inform the public about the ongoing works or informing public on flood risk and resilience. Future versions may also include imagery to provide more context for the written data.
+4.3.4 - Data quantities
+The amount of data used to develop the underlying model (GPT4) is not publicly known at this time.
+The Environment Agency knowledge base used as a reference can vary in size between projects depending on the size of the project itself.
+4.3.5 - Sensitive attributes
+All information that is part of the secure knowledge base (collated and approved by EA staff) and shared as part of Hello Lamp Post is non-sensitive and publicly available information.
+4.3.6 - Data completeness and representative-ness
+Data should be considered complete when first rolled out, with Environment Agency staff providing updates for the knowledge base as the project progresses.
+4.3.7 - Source data URL
+Data is available on request from the Environment Agency depending on whether we hold data for specific projects based on our retention policies.
+4.3.8 - Data collection
+All data is collated from Environment Agency documentation created for the associated project (e.g. project documentation for a new flood defence scheme). Hello Lamp Post Ltd provide guidance on how the data should be packaged for use as a knowledge base for the tool.
+The documentation is also reviewed and approved for use by DEFRA Comms and our internal data teams before it is cleared for use in the tool.
+4.3.9 - Data cleaning
+Standard Conditional Licence - Information is provided for use within the context of the specific project.
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+Data provided to Hello Lamp Post Ltd is considered to be non sensitive data and is stored by Hello Lamp Post Ltd for the length of the project before being deleted.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Hello Lamp Post Ltd have written documentation detailing potential risks and mitigation measures alongside responses to the 10 principles of using generative AI in government organisations. The Environment Agency holds a copy of this documentation and can make it available on request.
+Individual projects must complete engagement plans that have measurable objectives, stakeholder analysis and an
+Equality, diversity and inclusion analysis to help ensure that risks of using the tool is understood for each specific project. These assessments form part of the application to the Environment Agency team that manage the contract with Hello Lamp Post Ltd and are used to inform the assessment of whether Hello Lamp Post is an appropriate tool to use for the project.
+5.2 - Risks and mitigations
+Prompt injection attacks - users crafting specific prompts to try and bypass the systems instructions. Hello Lamp Post Ltd counteract this by having only a small subset of client data and adding system instructions to user prompts to help prevent the tool from responding with irrelevant and harmful information.
+Use of private data - Hello Lamp Post Ltd and The Environment Agency ensure that the knowledge base used for the tool contains only non-sensitive data.
+Hallucination/Confabulation - LLMs are primarily designed to produce plausible text, not accurate text - Hello Lamp Post Ltd tightly control the allowed topics the tool can talk about and the Environment Agency knowledge base is the only source of data the tool can draw from.
+Sensitive or ethical context - LLMs can generate offensive, biased, or inappropriate content - Hello Lamp Post Ltd use prompt engineering and the Environment Agency’s knowledge base to help the tool respond in appropriate ways and has human reviewers who monitor responses for potential issues and correct as needed.
+Real-time information retrieval - LLMs do not always have access to real time information - Hello Lamp Post Ltd allows for API’s to be used to provide real time information as needed and allows for updates to static datasets as required.
+Contents

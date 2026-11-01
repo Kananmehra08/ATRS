@@ -1,0 +1,162 @@
+DfE: Correspondence Drafter
+The Correspondence Drafter tool assists with the drafting of responses that the department's correspondence teams have received.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Education
+Organisation type:
+Ministerial department
+Function:
+General public services
+and
+Education
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Sentence and text generation
+Phase:
+Beta/Pilot
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Correspondence Drafter
+2 - Description
+The correspondence drafter tool supports internal teams by generating first draft responses to external queries. The user inputs the external query into the tool, RAG methods and LLM (GPT4o) are used in the backend to search the core brief source documents to find the most relevant information to draft a response. This new process has been calculated to be 30x quicker than the current process in place.
+3 - Website URL
+N/A
+4 - Contact email
+laura.pullin@education.gov.uk
+;
+richard.hindmarch@education.gov.uk
+and
+lewis.spencer@education.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Education
+1.2 - Team
+Strategic Intelligence & Automation Unit
+1.3 - Senior responsible owner
+Deputy Director for the Strategic Intelligence & Automation Unit
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The correspondence drafter tool is an internal facing tool that generates responses to external queries, using LLM (GPT-4o) to extract relevant text and produce a suitable response. The tool’s infrastructure uses Azure components and is hosted in Critical Infrastructure Protection (CIP) environments.
+The process uses a Retrieval Augmented Generation (RAG) system:
+The vector database (Azure AI Search) stores vector embeddings from standard lines documents, which are relevant to each drafting area (example school attendance).
+The user pastes the body of the email they have received into the text box on the tool, this a Python FASTAPI front end.
+The inputted query follows the retrieval chain and uses FASTAPI to pass the query to the LLM which pulls relevant information from the vector database.
+The returned vectors pass through the LLM and returns text in human language.
+The text is presented to the user in the front end of the tool, in the format of an email response. The tool enables features to modify output for tone and intended audience.
+If needed, the user can adapt the output of the generated response before using it in their response email.
+2.2 - Scope
+The purpose of the tool is to provide support in the drafting process, reducing the time spent to respond to external queries. It does this by removing the need to manually search through documents and copy and paste standard lines.
+The current scenarios that this tool can be used in are to respond to queries based on the briefing packs stated further in the data section.
+2.3 - Benefit
+The drafting teams can utilise this tool to draft an appropriate response to a piece of correspondence that they have received. This should reduce the average drafting time from approx. 30 minutes to a minute.
+This will create opportunities to prioritise more complex and high priority work, leading to reduced Service Level Agreement (SLA) response times across the board and in turn hopefully enhance the department’s reputation with regards to responding to external queries.
+2.4 - Previous process
+The previous process was for correspondence teams to individually look through the appropriate documents and to draft a response based on the contents of that document. This would take approximately 30 minutes per correspondence.
+2.5 - Alternatives considered
+Utilising other large language models (LLMs) was considered as an alternative. However, Azure’s Open AI’s models provide the extra security the team needed and had received pre-approved by the department’s Chief Technology Officer. Open source LLMs have not yet been approved by the DfE.
+Tier 2 - Decision making Process
+3.1 - Process integration
+This algorithmic tool helps a human to make a decision-by presenting the proposed correspondence to the human for review. The DfE staff members first copies the correspondence request into the Correspondence drafter tool and presses run. This tool will then compute an outcome and a recommended correspondence based on the documents that it is trained on. The human staff member then reviews the proposed text to ensure they are content with the draft, they can edit, add, remove or re-write the correspondence draft. Once the human is content they can accept the draft they will then be required to copy and paste the content into an new email, here they will take a further check that the content is correct and ensure the relevant email address is attached.
+3.2 - Provided information
+The algorithmic tool provides a drafted response in an email template format based on the contents of the core briefing pack documents in current scope. This is for private beta testing. The next phase will include circa 400 documents and enable documents to be uploaded. The email format is presented in a text editor UI.
+3.3 - Frequency and scale of usage
+Based on the current number of external queries that require a response each month (1,000 on average) DfE expect the final phase of the tool to address 80% (800) of these queries.
+3.4 - Human decisions and review
+DfE staff will request that the tool provides a correspondence output to the question that the department has been asked by inputting into the tool their query. The tool will then provide a complete response output, DfE staff then review that output for any mistakes, issues and ways it could be improved. DfE staff can request the answer to a question and can manage or edit the response where needed. Finally DfE staff quality assure the correspondence drafted prior to sending the response.
+3.5 - Required training
+Operational documentation/training will be provided to users of this service. The guidance will include purpose of the tool, example end to end process, outlining what the tool can and cannot do. How to use ‘contextual information’ box to improve the prompt and who to report a fault to.
+3.6 - Appeals and review
+The individual who has been communicated with can reply back to the relevant correspondence address to ask further questions.
+A human is in the loop and reviews every correspondence draft recommendation prior to being sent to the public.
+The policy teams have a reporting mechanisms if they find any issues with the tool.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The application consists of an Azure app services which host a Python FastAPI service. The Azure app service interacts with a number of other services most notably Azure Key Vault for storage of sensitive information, Azure DB for solution metadata and feedback, Azure APIM which routes traffic to a central Azure OpenAI resource hosted for the DfE, Azure AI Search which hosts the solutions Vectors for RAG and an Azure function app which collects documents from Azure Blob Storage and vectorises the content.
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+Once live, this tool will be managed by Service Now, they will manage issues that arise and is linked to the DevOps process. DfE will undertake reviews and plan in changes to development and test environments before pushing to live. Any software updates that are needed will be planned in advance and changes pushed live outside of operating hours. We will make end users aware if production environment needs to be modified and communicate/assess impact.
+4.1.4 - Models
+gpt-4o, text-embedding-ada-002, Langchain
+Tier 2 - Model Specification
+4.2.1 - Model name
+gpt-4o, text-embedding-ada-002
+4.2.2 - Model version
+1106-Preview
+4.2.3 - Model task
+The gpt-4o model is a commercial general purpose Large Language Model provided by OpenAI & Microsoft.
+4.2.4 - Model input
+The model is inputted with queries sent to the Department for Education correspondence team
+4.2.5 - Model output
+The model outputs a response based on the briefing packs used as source documents.
+4.2.6 - Model architecture
+This is a commercial Large Language Model provided by OpenAI
+4.2.7 - Model performance
+Strategic Intelligence & Automation Unit have conducted comparison testing based on expected answers. The team have Azure monitoring software in place to assess solution performance, logs of CPU and demand, security scores, etc. This tool has not entered user testing yet, we will be asking drafting teams to provide detailed feedback on frontend, monitoring it in the backend, and asking them to assess accuracy of model output.
+4.2.8 - Datasets
+Downloaded version SCHOOL FOOD CORE BRIEFING PACK.pdf, English Core Brief - August 2023.pdf, Period Products Core Brief_Oct22[4056].pdf, School Admissions.pdf, University Complaints.pdf
+4.2.9 - Dataset purposes
+Training, validation and testing
+Tier 2 - Data Specification
+4.3.1 - Source data name
+2025_April_Apprenticeships_Core_Brief_V1.1, Core Behaviour Brief - June 2025.docx, Free schools Core Brief - June 2024 (1).pdf,  SchoolAdmissions_CoreBriefingPack.docx
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+The datasets are Department for Education drafting team’s briefing packs/standard lines to take
+4.3.4 - Data quantities
+Currently 4 standard lines documents are being used in the alpha. For the complete scaled up version the tool will be trained on circa 400 documents. Each document varies in length - ranging from 20 pages to 200.
+4.3.5 - Sensitive attributes
+None
+4.3.6 - Data completeness and representativeness
+There should be no missing data. These are the same briefing packs used by the correspondence team.
+4.3.7 - Source data URL
+N/A - Internally stored
+4.3.8 - Data collection
+The datasets utilised are department standard lines documents. This would have been used previously to aid Correspondence teams in drafting a response. This is still the same purpose however we are utilising vectorised versions of the documents so they can be used as part of Retrieval-augmented generation.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+The datasets are internally maintained documents which contain no sensitive information.
+4.3.11 - Data access and storage
+The datasets are saved on a SharePoint app and maintained by relevant policy teams.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The Data Solutions Design Authority (DSDA)
+Solution Architecture Design Forum (SADF) raised no concerns around the designs proposed for the solution.
+Data Protection Impact Assessment completed and approved in November 2023.
+SADF/DSDA for private beta signed off August 2024.
+5.2 - Risks and mitigations
+The risk is low.
+Risk: Human reliance risk of using this tool as there is a human in the process that quality assures the output.
+Mitigation: All information that the policy document is trained on is public domain. If they cannot access the tool they can default to existing, manual processes.
+Risk: Hallucinations of the model may impact accuracy
+Mitigation: The development team have built in guard rails so the model only pulls information from the input data and defaults to ‘Sorry this information is not available within the briefing pack’ if the input query is not related to the topics within the data.
+Contents

@@ -1,0 +1,192 @@
+Ofsted: Survey Summarisation Tool
+A web-based tool that utilises a large language model (LLM) to enable inspectors to quickly summarise, identify themes and safeguarding concerns, and search large volumes of free-text survey responses providing insight.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+8 July 2026
+Organisation:
+Ofsted
+Organisation type:
+Agency or public body
+Function:
+General public services
+and
+Education
+Phase:
+Private Beta
+Region:
+England
+Date published:
+8 July 2026
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Survey Summarisation Tool
+2 - Description
+The product gives colleagues access to a LLM via a web-based interface, which they can use to analyse large volumes of free-text data found in inspection survey responses. The tool has three main functions of summarisation, identification of themes and identification of safeguarding concerns.
+The tool aims to reduce inspector workload on inspection, and enable inspectors to get earlier access to insights during the inspection process.
+3 - Website URL
+N/A
+4 - Contact email
+datascience@ofsted.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+The Office for Standards in Education, Children’s Services and Skills
+1.2 - Team
+Data and Insight Team
+1.3 - Senior responsible owner
+National Director, Education
+1.4 - Third party involvement
+No
+1.4.1 - Third party
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - Third party role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Third party data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The product gives colleagues access to a LLM via a web-based front end interface, which they can use to analyse large volumes of free-text data found in inspection survey responses. These surveys are completed by parents (state-funded schools) and leaners (further education and skills providers). The tool would have three main functions of summarisation, identification of themes and identification of safeguarding concerns.
+Inspectors will submit free-text field survey responses as an Excel file to a web interface. The web page will connect to an API where Python will act as an intermediary for the text data to be processed by a LLM. The LLM will work through a series of prompts to process text data temporarily held in CPU memory (RAM). These data will not be stored. In line with the feature they choose, the user will then be presented with text which will then be reviewed, edited and appropriate aspects saved as part of the wider inspection evidence base used to form inspection judgements.
+The tool has been designed to only process data within agreed survey data structures so as to mitigate against unapproved use of the tool.
+2.2 - Benefits
+The tool is anticipated to support operational efficiency through faster and earlier access to survey findings, reducing work outside of core hours, and contribute to increase in wellbeing of inspectors at time of high cognitive load.
+There are potential benefits too for quality and consistency through earlier access to key lines of enquiry on inspection.
+The product will be designed so that it can be extended in the future to ingest other types of inspection survey, or surveys used in other provider remits, where appropriate use cases are identified.
+2.3 - Previous process
+Inspectors currently need to manually synthesise and summarise data from free-text survey responses gathered on inspection. Responses can be high in volume or in word count.
+2.4 - Alternatives considered
+Whilst different LLMs have been considered based upon their costs and capabilities, this would have minimal impact on the end product. Our current approach is for a web-based front end interface to connect via an API to Python scripts which manage LLM calls.
+Another option considered was to use Microsoft’s Power Apps with its integration to Azure AI Services. This offers a low-code development, the benefits of which are somewhat outweighed by the team’s lack of experience compared to existing knowledge of Python. In the discovery phase of development, we also found Power App’s limited customisation and compatibility challenging.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Within current inspection processes, inspectors take a high level initial look at free-text survey responses during core hours on the first day of inspection, with a deeper analysis often taking place outside of core hours, at time of high cognitive load.
+The tool aims to allow for the deeper analysis of the data coming from these responses earlier in the inspection process, and reduce inspector workload on inspection taking place outside of core inspection times.
+The product may support decision-making by surfacing themes or key responses that otherwise may be time-consuming to identify or not evident. This enables inspectors to prioritise and tailor inspection focus to lines of enquiry which matter to respondents in their free-text survey responses. The service does not make decisions, judgements or replace part of the decision making process, it enhances situational awareness and supports evidence-based planning.
+3.2 - Human review
+The service supports human decision-making by highlighting themes, best practice and areas of concern in free-text survey responses, helping inspectors prioritise and tailor their focus on key lines of enquiry. It does not make decisions or replace human judgment; instead, people review the tool’s insights to enhance situational awareness and guide evidence-based planning.
+3.3 - Frequency and scale of usage
+Whilst there are not plans to place limits on service usage, it is anticipated that the tool would be used once per survey per inspection by the inspection team to carry out a full analysis of free-text responses. Initially, the tool would be limited to a small number of survey types, but over time could be scaled up to be used more fully.
+3.4 - Required training
+All Ofsted employees carry out mandatory training on data protection. Guidance for inspectors on how to use the tool, and how the tool fits into inspection processes will be made available. It will be expected that inspectors undertake an online training module prior to using the tool for the first time.
+3.5 - Appeals and review
+No decision making is carried out by the tool. The outputs of this tool are intended to assist inspectors carry out informed, evidence-based inspections. For the pilot phase, the tool will be used at arms-length by quality assurance inspectors with lead and team inspectors not being given access to the tool or outputs so as not to influence any decision making process.
+Ofsted inspection reports can be appealed by providers through a formal complaints process. More information can be found here:
+https://www.gov.uk/government/publications/complain-about-ofsted
+As part of notifying parents and learners of the pilot, they will be given a communication route to discuss matters with the inspection team. This is current practice on inspections for those not able to complete the survey electronically.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+At present, the service is accessed through a web-based front end interface. The web interface connects to a Python pipeline through an API. Python feeds a locally stored Excel document of text data into a LLM. This runs through a series of prompts, collating the result into text presented on the web interface.
+4.1.2 - System-level input
+Excel inputs from surveys related to inspection processes (for example Parent View, FES learner survey)
+4.1.3 - System-level output
+Text - Overall summary, thematic summaries and potential safeguarding concerns found in the free-text data is provided via the web-based front end interface
+4.1.4 - Maintenance
+Updates to the LLM architecture would be tested and released as appropriate as new models become available.
+Policy colleagues would be closely worked with to understand the impact on the tool of any changes to framework or inspection process.
+Ongoing monitoring of the tool via key product metrics and customer satisfaction data will help shape future iterations to the tool to be released iteratively over the product life-cycle.
+4.1.5 - Models
+Survey Summarisation Tool utilises OpenAI’s GPT-5-mini for summarisation and identifying themes in free text field survey responses.
+2.4.2 Model
+4.2.1. - Model name
+GPT-5 mini (OpenAI via Azure OpenAI Service, internal Azure instance).
+4.2.2 - Model version
+GPT-5-mini
+4.2.3 - Model task
+To analyse free-text survey responses by generating concise summaries, identifying key themes, and calculating prevalence scores for each theme and performing safeguarding-related classification to support inspector review where relevant.
+4.2.4 - Model input
+Free-text survey responses submitted by Ofsted users through the web-based front end interface, typically originating from Excel survey files.
+4.2.5 - Model output
+Narrative text outputs and structured classifications returned through the web-based front end interface, including summaries of survey responses, identified themes, and safeguarding flags.
+4.2.6 - Model architecture
+A pre-trained large language model (LLM) accessed through Azure OpenAI Service and orchestrated through Python within a web-based front end application. The model is prompted to perform survey summarisation, theme extraction and safeguarding classification. The implementation uses prompt engineering and constrained settings to improve consistency and reduce variability in outputs. Output formatting is controlled by the application layer, with deterministic settings used where supported by the model/API path.
+4.2.7 - Model performance
+Readiness for deployment is assessed through phased internal validation and testing. Performance measures include execution time, customer satisfaction (CSAT), and human review of outputs. Testing methods include qualitative assessment by subject matter experts, manual validation, and comparison of outputs against expected findings using synthetic, curated and real-world survey-response datasets.
+Tests designed to assess biases in the LLM’s output have taken place as part of the initial build across several different LLMs. Feedback from this analysis has been used to carry out prompt engineering to progress areas of improvement. When the tool is live, this will continue to be assessed as part of a monitoring plan as part of regular updates to new models or major redevelopment work.
+Testing is designed to assess accuracy, usefulness, consistency, and whether outputs appropriately reflect the source responses while retaining human oversight. Effectiveness of the tool within expected inspection processes will be assessed too.
+4.2.8 - Datasets and their purposes
+No datasets were used by Ofsted to train or fine-tune the base model. For development, validation and prompt refinement, the team used:
+Phase 1 testing - synthetic survey-response datasets generated to resemble parent comments on children’s education and learner comments on further education and skills providers.
+Phase 2 and 3 testing - real survey responses from relevant Ofsted inspections were used to evaluate the effectiveness of the tool. These were used outside of the inspection process as part of a desk-based activity.
+Phase 4 testing - real free-text survey responses are expected to be used in the next phase of testing. These will be used within an inspection environment, but following a process to keep testing from impacting on the decision making process on inspection.
+2.4.3. Development Data
+4.3.1 - Development data description
+Early phases of testing centred on using synthetic datasets to assist in the build and testing of a proof of concept.
+Development moved on to utilising real world survey responses, but at arms length from inspection activity ensuring that testing happened after inspection activty had completed and desk based to maintain an arms length approach. Functionality testing was carried out by subject matter experts, whilst tool accuracy was tested by internal data scientists.
+A third phase of testing featured use of ‘curated’ survey responses, utilising real survey responses but combining to create datasets that met size parameters for testing purposes. This phase of testing was led by Ofsted’s Research and Evaluation function, with subject matter experts carrying out testing, and analysis being carried out by research colleagues.
+A fourth phase of testing is planned to take place on-site on inspection by Quality Assurance inspectors, again at arms length from the decision making process to ensure that testing does not impact on decision making on live inspection.
+4.3.2 - Data modality
+Free text responses
+4.3.3 - Data quantities
+Phase 1 of testing incorporated a synthetic dataset with 800 free text responses. This was used by a group of 10 inspectors (end users) to test tool functionality.
+Phase 2a testing utilised six real free-text survey responses ranging from 24 to 143 responses to test the tool accuracy. Phase 2b testing used real free-text survey data from 12 surveys with inspectors testing datasets ranging from 47 to 316 responses.
+Phase 3 of testing used data curated from real survey responses. 6 surveys were used as part of the study, ranging from 100 to 190 responses.
+Phase 4 of testing is planned to take place at arms-length to live inspection in Summer 2026. Plans are that the tool will be tested with responses from 20-30 inspection surveys. As these surveys are being used ‘as live’ alongside inspection, full dataset size range will be unknown until testing is completed.
+Throughout testing, synthetic data has been used to test services and features. Ranges from 50 to 800 synthetic free-text responses.
+4.3.4 - Sensitive attributes
+Survey responses may contain sensitive personal data if a respondent writes about an individual. There is the possibility for responses to contain identifable information, such as their age, racial or ethnic origin, health, religious beliefs, or sexual orientation.
+The LLM is prompted to specifically return broad summaries and themes across multiple responses and instructed to avoid naming individuals and any identifiable information. Testing until now has shown the LLM accurately follows these instructions. Survey data remain confidential and secure within Ofsted’s Microsoft tenant.
+This data is already processed manually by inspectors as part of as the current process to have regard to the views of parents and learners.
+4.3.5 - Data completeness and representativeness
+Surveys are completed as part of current inspection process, and free-text responses assessed manually by inspectors. The completion of these surveys is not mandatory for data subjects, and will very rarely include responses relating to the whole provider cohort,  but all responses recieved will be considered by inspectors as part of their obligations on inspection.
+4.3.6 - Data cleaning
+N/A
+4.3.7 - Data collection
+Real world responses gathered under clear transparency statements have been accessed from early November 2025 to assist with desk based testing processes.
+Onsite testing will gather responses via usual ‘business as usual’ processes as part of the inspection process. Data subjects are sent a link to surveys and asked to complete as part of current business process to be manually assessed. Those completing the survey will be informed ahead of completion that their data will be used as part of onsite testing.
+4.3.8 - Data access and storage
+User interaction logs go into secure Azure SQL database to monitor performance with a retention period of 6 months for the pilot process. The team will also store  the tool’s output during testing with a retention period of 6 months for the pilot process. Access to the SQL database will be limited to members of the internal development team only.
+4.3.9 - Data sharing agreements
+Third party survey providers have agreements to provide the survey service and hence the responses to Ofsted. No operational data from this tool is shared externally. These third parties are not involved in tool development process.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Parent View and FES Learner Survey free text responses.
+4.4.2 - Sensitive attributes
+Survey responses may contain sensitive personal data if a respondent writes about an individual. There is the possibility for responses to contain identifable information, such as their age, racial or ethnic origin, health, religious beliefs, or sexual orientation.
+The LLM is prompted to specifically return broad summaries and themes across multiple responses and instructed to avoid naming individuals and any identifiable information. Testing until now has shown the LLM accurately follows these instructions. Survey data remain confidential and secure within Ofsted’s Microsoft tenant.
+This data is already processed manually by inspectors as part of as the current process to have regard to the views of parents and learners.
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+User interaction logs go into secure Azure SQL database to monitor performance with a retention period of 6 months for the pilot process. The team will also store  the tool’s output during testing with a retention period of 6 months for pilot process. Access to the SQL database will be limited to members of the internal development team only.
+4.4.5 - Data sharing agreements
+Third party survey providers have agreements to provide the survey service and hence the responses to Ofsted. No operational data from this tool is shared externally. These third parties are not involved in tool development process.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+An Equalities Impact Assessment was completed in Autumn 2025 ahead of testing. This document will be updated ahead of further testing period in Summer 2026.
+Preliminary investigation into the potential for the LLM to output social bias in its responses found the output did not negatively target specific groups of people with protected characteristics. However, on occasions it appeared that the output did not always reflect the diversity of responses when summarising into themes. Subsequent prompt engineering work has improved the diversity of themes and ongoing testing and prompt iteration will continue to take place in Summer 2026.
+The tool will go through accessibility testing as part of the Beta build. Accessibility requirements have been factored in to design and build throughout the development process.
+Testing will continue over the impact on equalities of the tool’s services with different threshold of user response rates. Where rates fall beneath thresholds, some AI-generated services will be unavailable to avoid elaboration and up-sampling by the LLM. All responses will be manually read as part of the pilot.
+A Data Protection Impact Assessment was completed in Autumn 2025. Key risks for the project were identified as part of this process, and have been used to help formulate strong mitigations via design and test for the product. Further details can be found in ‘Risks and mitigations’ section.
+5.2 - Risks and mitigations
+governance
+Risk: Ofsted needs to be confident how the AI tool will interact with the inspection. This includes how the output is referenced within the evidence base and how it supports the decision-making process in regards to respondents’ views.
+Mitigation(s): Development teams will work closely with policy colleagues to document how the tool will fit into current inspection processes. Guidance materials will be created for inspectors on how to use the tool safely.
+of AI may restrict the rights of data subjects
+Risk: S.7 Education Act gives Ofsted the obligation to have regard to the views of parents, staff and pupils. The AI solution must demonstrably not supress the voices of any of these groups, either by preventing inspectors’ seeing them or by misrepresenting what they have said.
+Mitigation(s): The process that supports the use of AI will ensure that all responses are still read by an inspector. Testing will take place on the outputs of the tool to demonstrate that the tool does not misrepresent the views of respondents. During onsite phase of testing, the lead inspector will not access the tool or its outputs and continue to manually read all responses following current processes. A Quality Assurance Inspector will read responses first before using the tool, and ensure that the testing happens at arms-length from live inspection activity to prevent influence on decision making processes. Guidance will be provided to inspectors on safe usage of the tool. Legal colleagues will be consulted ahead of key stages of the development lifecycle.
+period of AI output
+Risk:  Appropriate retention period for AI output will need to be determined. Without these, difficulties may be caused in establishing an authentic audit trail for decision making of the inspection team.
+Mitigation(s): The development team will work with policy and information management teams to determine appropriate retention periods and storage for AI generated outputs. Inspector edited outputs may be recorded as part of the evidence base. This will be stored in line with retention policies for inspection evidence bases.
+tool may highlight individual cases and risk intruding on respondent privacy
+Risk: The AI tool could draw attention to individual cases. This may inadvertently cause privacy intrusion to respondents who were told their comments would be treated in confidence.
+Mitigation(s): The tool has been designed to ensure that individual responses are not highlighted in a manner that assists their identification. The tool is currently going through testing to ensure this objective is met. Training and guidance will be provided to inspectors on appropriate tool usage.
+profiling of user groups
+Risk: The tool could group responses in a way that leads inspectors to be exposed to generalisations about certain user groups based on responses.
+Mitigation(s): Guidance materials will be created for inspectors on how to use the tool safely. Policy colleagues will be liaised with to ensure that sufficient human overview remains in the process. Testing has been undertaken during the build lifecycle, and will continue to take place to monitor the tool for any perceived bias.
+use of the tool
+Risk: Staff may enter other unauthorised information into the tool, including personal data or sensitive inspection/regulatory data, to attempt to analyse it or assist them in making decisions.
+Mitigation(s): Guidance with clear use cases will be provided to inspectors around appropriate tool usage. The tool has been designed to only process data within agreed survey data structures.
+omissions
+Risk: The tool may fail to draw attention to a significant comment or theme in responses, leading to an inspector giving less weight to this matter as they trust the AI’s judgement of what is most important.
+Mitigation(s): Guidance given to inspectors, and agreed processes will ensure that human decision making is central to the tool’s usage. Defined testing phases will be undertaken for the tool, ensuring that tool accuracy is thoroughly tested throughout the build process by data scientists, researchers and subject matter experts.
+Contents

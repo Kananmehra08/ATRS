@@ -1,0 +1,167 @@
+DBT: Redbox
+Redbox an internal Large Language Model tool for DBT staff to ask questions and upload documents to which aids and supports their work.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 October 2025
+Organisation:
+Department for Business and Trade
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Sentence and text generation
+Phase:
+Beta/Pilot
+Region:
+Great Britain
+Date published:
+16 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+Name
+DBT: Redbox
+Description
+Redbox is a tool that utilises large language models (LLMs) to understand, process, and generate human-like text outputs based on inputs submitted by DBT staff.
+Staff at DBT can upload documents as well as use natural language queries in English to analyse documents, summarise them, search for information, and extract insights to aid the user.
+Website URL
+https://github.com/uktrade/redbox
+Contact email
+redbox@businessandtrade.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Business and Trade
+1.2 - Team
+AI Enablement Team
+1.3 - Senior responsible owner
+Chief Data Officer
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+6point6/Accenture (developer/Data Science contractors forming less than half of overall development team). Hays are a contract provider who also supply long term contractors, we have a product manager from Hays on the team.
+1.4.2 - Companies House Number
+7946687
+1.4.3 - External supplier role
+Supplying Machine Learning Operations and Data Science contractors to work in the Agile delivery team. The team furthermore has product management and delivery management provided by the DBT’s preferred Digital, Data & Technology contract provider.
+1.4.4 - Procurement procedure type
+Call-off contract
+1.4.5 - Data access terms
+6point6 data access is dictated by the conditions in the call-off contract. All 6point6 contractors who undertake work on the Redbox project have obtained Security Clearance.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Redbox’s core functionality is powered by large language models (LLMs) and retrieval-augmented generation (RAG). LLMs enable understanding and generation of natural language, while RAG allows retrieving and conditioning on relevant information from documents.
+The system ingests documents through a loader module, chunking them into semantically meaningful segments using the Amazon Titan Embed-text-V2. These chunks are indexed using vector embeddings, enabling efficient retrieval of relevant information given a query. When a user submits a request, Redbox’s intent detection classifies it (e.g. summarisation, search, chat), routes it to the appropriate workflow, and retrieves relevant document chunks using RAG. All generations are created by Claude 3 Sonnet as this is currently the best model available via AWS Bedrock.
+For generation tasks like summarisation or answering queries, the LLM intends to retrieve chunks along with the original input. This allows generating fluent responses while grounding the output in factual information from the documents. The agentic paradigm reasons over multiple tools, dynamically deciding which to invoke and how to synthesise their outputs based on the query context.
+2.2 - Scope
+The primary purpose of Redbox is to enhance information retrieval, summarisation, and interactive querying within the context of DBT’s operations. It is designed for scenarios where users need to quickly access and comprehend relevant information from large document repositories or external sources. Any use of Redbox should be mediated through ‘human-in-the-loop’ decision making and this is made clear to users of the service.
+Potential scenarios Redbox is well-suited for:
+Summarising lengthy policy documents, reports, or briefings into concise overviews.
+Quickly retrieving key information from HR policies, guidelines, or internal knowledge bases.
+Interactively querying and exploring specific topics or areas of interest through a conversational interface.
+Facilitating research and analysis by synthesising information from multiple sources.
+Scenarios Redbox is not designed for:
+Real-time decision-making or mission-critical applications where errors could have severe consequences.
+Processing highly sensitive or classified information that requires stringent security measures.
+Tasks requiring advanced reasoning, planning, or decision-making capabilities beyond information retrieval and generation.
+2.3 - Benefit
+Redbox provides;
+Improved efficiency by helping generate quick insights through document summarisation. Information retrieval, reducing time and effort required for civil servants to access relevant insights about topics via its training or from documents.
+Enhanced accessibility to staff through a user-friendly interface and natural language processing, making complex data sources more accessible to individuals with varying technical backgrounds.
+Increased knowledge sharing by providing a centralised platform for searching and querying across multiple repositories, promoting collaboration and reducing information silos within DBT.
+Redbox is being utilised at trial phase to determine whether it addresses DBT’s critical need to effectively manage and leverage the vast amounts of information generated and consumed by the department. With ever-increasing volumes and complexities of documents, policies, and reports, Redbox harnesses AI to streamline information access, retrieval, and comprehension, enabling more efficient and data-driven decision-making processes.
+2.4 - Previous process
+Previous to the development and re-use of Redbox for DBT staff there was no Large Language Model product that they could use up to the official sensitive security classification. Civil Servants were able to use publicly available models but no classified information was able to be shared with the models. Given Redbox was made available as open source code from I.AI in the Cabinet Office, there was also a desire in senior leadership to adopt this innovation and determine whether it was a tool which could be used for DBT colleagues to improve their approach to knowledge work.
+Prior to Redbox, knowledge workers had a necessarily manual approach to many of the things which Redbox enables ‘automatically’, namely: Summarisation, information retrieval, insight generation, cross-comparison of texts, and other pattern recognition work.
+2.5 - Alternatives considered
+Because the source code provided by I.AI was already at a high level of maturity, and a separate Copilot pro study was planned for DBT, senior leadership determined that DBT should use innovation funding to implement the codebase on DBT infrastructure and trial it with DBT colleagues. There are separate work streams in DBT focused on self-hosted models, models which interact with data in more secure environments, and so Redbox is part of that broader innovation focus DBT has adopted in order to assess generative AI for internal use.
+DBT is developing the I.AI original Redbox source code entirely independently, and this is because there are use cases within DBT that we believe are best served by developing features to support them better than the original code could. This includes features such as audio input, a document comparison feature, integration with desired data sources such as internal data sources and external ones such as legilsation.gov.uk, and the ability to create shared knowledge bases to enable closer and more efficient collaboration in small working groups.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Redbox serves as an assistive tool within DBT’s decision-making processes, providing synthesised information and insights to support and inform human decision-makers. While Redbox’s outputs are not directly actioned without human oversight, they may influence and shape the decision-making process by curating and presenting relevant data in a comprehensible manner.
+The wider decision-making process typically involves identifying the problem or objective, gathering and analysing relevant information, evaluating options, and selecting the optimal course of action. Redbox is integrated into the information gathering and analysis stages, where its summarisation, search, and querying capabilities allow decision-makers to quickly access and comprehend pertinent data from various sources. Human experts then critically evaluate Redbox’s outputs, validate the information, and use their domain knowledge and judgment to weigh different options and make final decisions.
+3.2 - Provided information
+Redbox outputs are presented in a user-friendly interface, often through a conversational chat-like format containing only English text. Summaries distil lengthy documents into key points, while search and querying functionalities surface specific details pertaining to the work at hand. Redbox’s outputs aim to equip decision makers with a comprehensive yet digestible overview of the available information, acting as a valuable starting point for further analysis and deliberation by human experts.
+3.3 - Frequency and scale of usage
+As of February 2025, the tool has approximately 200 people in the trial, with around 50 active users per day.
+3.4 - Human decisions and review
+Users of Redbox are advised to verify all outputs and ensure that citations for verbatim text from analysed documents are included with each response. It is the responsibility of the end user to determine whether the provided response satisfactorily addresses their query.
+Users may ask additional clarification questions to refine the answers the chatbot provides until they receive the information they were seeking. If the tool does not retrieve the required information, users can initiate a new search by phrasing their question differently. Also, Redbox provides citations when it provides information, and the person using it is responsible for using those to confirm the validity or truth of information provided by Redbox.
+Users also have the option to review the documents from which the answers have been sourced. For further clarification, the chatbot response includes direct references to the documents. Once users have sought clarification by examining the documents, they can decide whether they are satisfied with the answer or wish to continue asking clarifying or new questions of the chatbot.
+Ultimately, any user of Redbox is using it as a tool and at the end of the task process, the human has complete control over the decision making and what they include in the final output of their task.
+3.5 - Required training
+Because of the ‘intuitive’ nature of LLM’s, training is fairly minimal, comprising an onboarding guide speaking to the features of Redbox and what to do/not to do, biweekly webinars, direct access to the product team in a shared channel for help and support, and in-service assistance via tooltips and other descriptive content around features and their use. We provide clear guidance on the responsibility users have to ensure they know what common errors can occur, that bias may be present in responses.
+3.6 - Appeals and review
+The Redbox service has built in features which allow users to notify the development team if they feel that responses may be of a poor/spurious quality, contain ‘hallucinations’ (false information), or otherwise provides responses which are not in line with user expectations. Users can provide free text feedback on any response generated by Redbox which is securely stored such that the data science team can monitor and report on any user feedback of this type. The team then use this feedback to either improve Redbox or fix issues.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+https://github.com/uktrade/redbox
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+Daily maintenance and development with a dedicated Agile product team in place for the trial duration. As the trial ends officially on March 31st 2025, there is provision through April that the service shall be maintained by the existing development team and existing users retain their access. If senior leadership determine or approve ongoing development, then the team would act on that, whether it be expanding the user base, provide access to additional/better/specialised models, and even develop new features to meet users’ needs.
+4.1.4 - Models
+Amazon Titan Embed-text-V2 for embeddings and Claude Sonnet 3 from Anthropic for generations.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Anthropic’s Claude 3 Sonnet
+4.2.2 - Model version
+Claude 3 Sonnet
+4.2.3 - Model task
+Generate text responses based on text inputs.
+4.2.4 - Model input
+Text input in the form of conversational prompts by a user or documents uploaded by the user.
+4.2.5 - Model output
+Text in the form of a response to the user derived from documents submitted by the user, obtained from gov.uk or pulled from Wikipedia real-time API searches.
+4.2.6 - Model architecture
+Generative pre-trained transformers https://www.anthropic.com/news/claude-3-5-sonnet
+4.2.7 - Model performance
+https://assets.anthropic.com/m/61e7d27f8c8f5919/original/Claude-3-Model-Card.pdf. Claude Sonnet performs in line with other available models. For example in a general reasoning task (MMLU) with 5 shot (examples)  it achieved 79% accuracy, and Chain-of-thought technique, it improves to 81.5%. It responds correctly at 92.3% grade school math questions (GSM; with no examples). The area it worst performs is mathematical problem solving where performance ranges from 40.5 to 55.1%. The team is continuously monitoring feedback from users about the quality of the responses provided by Redbox, which are also classified in Topics (using BertTopic) and fed into a monitoring dashboard.
+Intensive testing by the Redbox team has been conducted to ensure that only relevant information is retrieved from documents and external sources which led to setting a high threshold (0.65 cosine similarity). User research is performed to inform different aspects of Redbox development, which also highlights potential issues with responses or user expectations. Users in the trial also have access to  a Teams channel, which is monitored closely, where issues are posted and immediately followed by team. Future steps will focus on implementing an additional framework for the evaluation of Redbox’s performance such as https://inspect.aisi.org.uk/.
+4.2.8 - Datasets
+Users upload a highly varied set of information and data into DBT Redbox. Documents uploaded may include past and potentially new policy documents, trade negotiation strategy, product safety standards and many more documents which are of interest to the test groups in the trial.
+4.2.9 - Dataset purposes
+This allows for DBT colleagues to interrogate the documents they upload using a large language model.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+A Redbox user uploads say a set of documents about trade policy in a given territory. Redbox securely processes that set of documents and allows the user to then ask questions of the documents they’ve uploaded. A user can select one or more documents to interact with in this way, and they are stored in a way where only that  user can see or access the documents. This is so that a user can improve the way they do their existing knowledge work, largely by giving them the ability to more easily access information in documents, assess the information, and ultimately improve their existing workflows.
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Content in the dataset(s) are variable due to the wide variety of knowledge tasks DBT colleagues engage in, for example trade negotiation information, inward investment information on companies, briefings and minutes, product safety standard documents and legal text.
+4.3.4 - Data quantities
+N/A
+4.3.5 - Sensitive attributes
+The main sensitivities are that information related to sensitive topics ranging from trade negotiations to disputes may be uploaded by DBT colleagues in the normal course of their work. Another aspect to the sensitivity is that a given users overall interactions with Redbox over time might give rise to a kind of personal information where a user may be identified by the type, tone and content of their interactions with the system.
+4.3.6 - Data completeness and representative-ness
+4.3.7 - Source data URL
+All data in Redbox other than the source code is securely held and maintained on DBT AWS infrastructure and so is not publicly accessible
+4.3.8 - Data collection
+Data collection in this particular context does not apply as Redbox does not collect information over and above demographic data on its users, and this data is used only for usage reporting purposes (aggregate and pseudonymous reporting on usage by directorate for example).
+4.3.9 - Data cleaning
+Redbox performs a type of data ingest necessary for retrieval augmented generation at pre-processing. This is a process whereby any information uploaded to Redbox is broken down into smaller pieces and ‘vectorised’. This process of vectorisation is what allows Redbox to ‘retrieve’ relevant information for users based on their queries.
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+A copy of all interactions on Redbox is stored in DBT’s ‘Data Workspace’, a secure repository of data assets held by DBT. This data is available only by DBT colleagues who have permission (this includes members of the product team and team data scientists, measurement and evaluation team members, and relevant senior leaders in data and data science). Access is by request/permission only, and the requestor must have a valid reason for requesting access to the data asset. Data workspace is held on secure ‘air gapped’ DBT AWS infrastructure, such that the assets within it cannot be accessed via the internet, only by users on internal DBT systems, further protected by DBT VPN access and Single Sign on systems.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Before embarking on a trial of Redbox, the IRAP (internal risk and assurance) and TDA (Technical Design Authority) processes were followed and approval granted from the data protect and cyber teams. The team completed a DPIA2, DPIA2 for LLM, SIRF, DAP and other documentation such as technical architecture diagrams.
+To evaluate the deployment of Redbox in DBT, and uncover the user groups and use cases Redbox delivers greatest value for in DBT, as well as any unforeseen risks associated with uptake, the M&E (Monitoring and evaluation) team are collecting data using the following methods:
+A Before/After Survey to monitor expectations for Redbox among trial participants, and any changes in productivity at the individual, and task level
+A week-long diary study to monitor usage of Redbox, self-reported time savings, user satisfaction, risks, and other feedback from trial participants
+Qualitative interviews with a sample of trial participants to understand the above in more detail
+Quantitative and qualitative evidence will be brought together in an evaluation report, which will include a detailed cost-benefit analysis. A Performance Dashboard has also been established to monitor uptake and usage of the tool among trial participants. A user feedback loop has been implemented in the Redbox User Interface and users can alert the team of incorrect, incomplete and not as instructed responses, together with a free text response box. Redbox usage and the tools performance is continuously being monitored.
+5.2 - Risks and mitigations
+Risk: Inaccurate or biased outputs from the AI models Mitigation: We implemented robust  human oversight processes, clearly (and often) communicate that Redbox outputs should be validated and not treated as ground truth, and providing citations from factual sources when those are used as part of a generation. We also implemented a feedback system where users can alert the team of errors in the output generated by the tool.
+Risk: Misuse or over-reliance on the tool,
+Mitigation: We have provided clear guidelines on the appropriate use cases and limitations of Redbox, emphasising the requirement for human judgment and critical evaluation of outputs.
+Risk: Privacy and security concerns with sensitive data Mitigation: We have carefully implemented the service securely on DBT infrastructure, with full information and risk approval status approved for use with OFFICIAL SENSITIVES information classification.
+Contents

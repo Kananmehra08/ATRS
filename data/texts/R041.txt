@@ -1,0 +1,320 @@
+UK Export Finance: PRISM (Portfolio Risk Simulation Model)
+An Economic Capital simulation model used to calculate and analyse the risk for a UK Government portfolio of loans, guarantees and insurance products supporting UK exports.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Forecasting
+Task:
+Trajectory and trend prediction
+Event prediction
+Phase:
+Production
+Region:
+International
+Date published:
+16 December 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+PRISM (Portfolio Risk Simulation Model)
+2 - Description
+The tool estimates potential claims and losses from a  portfolio of loans, guarantees and insurance products, provided by UK Export Finance, in the event an obligor (exporter or recipient) defaults.
+It is used for:
+- Pricing large deals by calculating the appropriate risk-weighted premiums based on risk factors (e.g. loan size, term, credit rating, correlation factors etc).
+- Managing the portfolio by calculating every month the portfolio Expected Loss and Unexpected loss. It also monitors UK Export Finance’s compliance with the Risk Appetite Limit agreed with HM Treasury.
+- Scenario and stress testing to assess possible loss outcomes, guide portfolio management, and inform the main stakeholders and decision makers of the Department.
+- As a decision making tool for active portfolio management policies and other significant changes affecting our portfolio and exposure limits.
+3 - Website URL
+N/A
+4 - Contact email
+ora@ukexportfinance.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+UK Export Finance
+1.2 - Team
+Operational Research and Analysis (“ORA”) - Analysis Division
+1.3 - Senior responsible owner
+Chief Analyst (Analysis Division)
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+PRISM  was developed in-house by the ORA team in 2011, but based on predecessor Credit Explorer (using CreditMetrics style approach). Credit Explorer was developed by the ORA team with the support of University Professor William Perraudin in early 2000.
+Quality Assured/Audited by:
+Credit Explorer: Quality assured by Ernst and Young and Rivast Consulting
+PRISM: Quality assured by Government Actuary Department (GAD)
+Audited by National Audit Office (NA0), Deloitte LLP, Grant Thornton UK LLP.
+The simulation engine is currently provided by:
+@Risk (Palisade/Lumivero Software).
+Input data for the model (training and production) is supplied by:
+S&P GLOBAL LIMITED: Probabilities of Default
+Bloomberg: Currency Rates/”FX”, Interest Rate Forwards, Discount Rates, Interest Rates
+Aircraft Valuation Company (AVACS) - Asset Based Guarantees -  Aircraft and Engines-only Sale Values and Rental rates
+1.4.2 - Companies House Number
+Ernst and Young - OC300001 and in 2005 05458987
+Deloitte LLP- OC303675
+Grant Thornton UK LLP - OC307742
+S&P GLOBAL LIMITED - 04185146
+Bloomberg UK Limited - 03430322
+AVACS LIMITED - 03542004
+LUMIVERO UK LIMITED - 06906225
+1.4.3 - Third party role
+Professor William Perraudin assisted the initial development of Credit Explorer.
+Ernst and Young performed quality assurance of Credit Explorer in 2002-03 before the initial move to production.
+Rivast Consulting performed a review and quality assurance in 2007, leading to the move to the current version of PRISM.
+NAO, Deloitte and Grant Thornton performed the annual audit review including the audit of this model and the results.
+UKEF Internal Audit and Government Actuary Department (GAD) quality assured PRISM in 2017 and 2023-24.
+Software provider (no direct development role, off the shelf software): @Risk - Palisade (now owned by Lumivero).
+Input data providers (no direct development role, data supply only): S&P GLOBAL LIMITED (Probabilities of Default), Bloomberg (Currency Rates/”FX”, Interest Rate Forwards, Discount Rates, Interest Rates)
+Aircraft Valuation Company (AVACS) (Asset Based Guarantees -  Aircraft and Engines-only Sale Values and Rental rates)
+1.4.4 - Procurement procedure type
+Government Actuary Department (audit and consultancy):
+Framework Agreement
+Lumivero UK Limited (was Palisade Risk):
+Enterprise Volume Software supplier (via CCS Framework RM6098 TePAS2 agreement):
+Deloitte LLP, Grant Thornton UK LLP (year end audit):
+UKEF Financial Crime Compliance Consultancy - CCS Framework Management consultancy three, framework call off mini competition.
+S&P GLOBAL LIMITED:
+S&P Capital IQ ratings and CreditPro – Negotiated without prior competition
+Bloomberg UK Limited:
+Bloomberg Finance data licence – below Public Contracts Regulation threshold without prior competition
+Bloomberg Finance terminal – below Public Contracts Regulation threshold without competition
+BK Associates (was AVACS Limited):
+Direct Procurement Framework (<£10k threshold) and then “One Quote” process (<£5k threshold)
+1.4.5 - Third party data access terms
+Auditors: Full access, but copies, not originals and deal data/obligors anonymised.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+PRISM is an Economic Capital and a Monte Carlo simulation tool based on the CreditMetrics approach. It performs a large number of simulations where defaults for the main obligors and recoveries are generated. The simulation of the defaults and recoveries are based on statistical distributions, country and industry correlations, the risk characteristics of the main obligor and Probabilities of Default. The simulation of these results alongside information for the specific transactions (e.g. tenor, type of product) are used to forecast the loss amount for each case UK Export Finance supports. The stochastic process  concludes by generating a loss distribution for the whole portfolio from all the simulations but also calculating the mean expected loss results and various other confidence levels of CVaR.
+The purpose of the model is to manage the portfolio risk for UK Export Finance and inform the main stakeholders and decision makers in the Department for the resilience and main vulnerabilities of the portfolio. This is achieved by estimating the likely losses of the portfolio “Expected Loss” but also the losses above this mean and up to a higher confidence interval “Unexpected Loss”. These values are measured against a notional capital limit (Risk Appetite Limit -RAL) agreed with HM Treasury. The model also used for pricing large cases, for Stress Testing and forecasting of the amount of claims the Department will pay in the future. In general though, this model is a critical decision tool for UKEF as we measure significant decisions based on their impact on the portfolio.
+Finally, as every model, the goal is to simulate as close as possible the reality but there is always uncertainty and limitation with data that increases the modelling risk.
+The intended users of the model are strictly limited to the credit risk professionals within the Operational Research and Analysis team. There are no users (or access to the systems) from outside the team or from the general public.
+2.2 - Benefits
+Robust and Accurate Risk Estimation:
+Provides full-product and full-lifetime estimates for portfolio-level Expected and Unexpected Loss, extending to dynamic Credit Value at Risk (CVaR). Incorporates multi-level obligor correlations, recoveries and restructuring scenarios for comprehensive risk modelling.
+Enhanced Portfolio Management:
+Enables UKEF to optimise exposure, capital allocation and fulfil its remit to pose no net cost to the taxpayer over the credit cycle. Supports strategic decisions on exposure management and value-for-money assessments for private reinsurance.
+Deal Simulation and Pricing:
+Facilitates simulation of large prospective deals to assess the impact of varying terms and determine appropriate risk-premium levels, ensuring accurate pricing and informed decision-making.
+Forward-Looking Risk Insights:
+Delivers ad hoc and periodic reporting on predicted claims or loss outcomes under stress tests and thematic scenario analyses. Provides a forward-looking view of potential macroeconomic shocks and concentrated market exposures, supporting resilience and proactive risk management.
+Regulatory and Audit Alignment:
+Outputs are reviewed annually by external auditors and comply with IFRS standards, ensuring transparency and robustness in risk reporting.
+2.3 - Previous process
+Predecessor Credit Explorer tool (basis for PRISM) - project development to approval from 2000 to 2003. Credit Explorer was the portfolio risk simulation model for UK Export Finance, till 2011.
+2.4 - Alternatives considered
+Crouhy, Finger, Gordy and Koyluoglu have demonstrated that all major credit portfolio models are equivalent, in the sense that they can be calibrated in such a way as to produce very similar results.
+Competing options were considered and tested, such as:
+CreditRisk+ (Credit Suisse First Boston): This model is relatively simplistic and assumes independence of defaults except through sector factors. While easy to implement, it does not adequately capture concentration risk and correlations, which are material in the UKEF portfolio. It was therefore deemed less suitable for smaller specialist portfolios with significant market volatility.
+KMV (Moody’s): Requires detailed firm-level data such as market capitalisation, volatility and liabilities, which are unavailable for many bespoke recipients or obligors. It assumes a lognormal process, making it less appropriate for extreme or stress scenarios. The approach is more suited to liquid positions or short time horizons, and less practical for private or illiquid obligors where market data is lacking.
+Chosen algorithmic approach.
+CreditMetrics-style approach: Selected for its flexibility in modelling portfolio-level risk sensitivities, Value-at-Risk calculations and incorporating multi-level correlations. It is well suited to long-term positions that cannot be liquidated, where only obligor defaults prior to term are relevant. This approach provides a robust framework for stress testing and scenario analysis across diverse portfolios.
+Non-algorithmic alternatives: Non-algorithmic methods (e.g., expert judgement or simple exposure-based scoring) were considered but rejected due to their inability to capture complex correlation structures, quantify portfolio-level risk accurately, or support regulatory and stress-testing requirements.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The tool supports  or performs the following processes:
+Pricing and Casework: Assists the Pricing Team in setting risk-neutral premium rates for new large deals.
+Financial Control and Reporting: Supports the Finance Control Division in preparing year-end accounts, in forecasting for the Main and Supplementary Estimate and informing HM Treasury and UKGI of expected claims or loss levels.
+Governance and Strategic Oversight: Enables the Board (ERiCC, Risk Committee) to assess likely losses for the coming year, evaluate stress testing and scenario analysis outcomes, and understand the portfolio impact of politically or materially significant events.
+Climate and ESG Risk Management: Provides inputs for estimating climate-related impacts on ratings and helps calibrate or validate ESG risk models.
+Active Portfolio Management: Informs decisions on reinsurance strategies, identifying the most efficient options for reducing Expected and Unexpected Loss while ensuring value for money.
+Economic and Country Risk Analysis: Assists in evaluating the impact of prospective sovereign rating changes and supporting exposure management within an evolving portfolio.
+PRISM provide the following information to UKEF:
+Portfolio-level metrics: Expected Loss (EL), Unexpected Loss (UEL), dynamic Credit Value at Risk (CVaR), and risk sensitivities.
+Deal-level analytics: Pricing ranges, incremental EL/UEL, and portfolio impact of proposed terms.
+Stress testing and thematic scenario results: Loss distributions under stressed and baseline conditions, projected claims and recoveries, and concentration/correlation diagnostics. Forward-looking insights into macroeconomic shocks and climate-related risks.
+The information from PRISM is used as follows:
+Incorporated into pricing decisions, case approvals, and governance papers.
+Used for financial reporting and the Annual Reports and Accounts, and informing HM Treasury and UKGI.
+Supports strategic portfolio management, reinsurance decisions, and ESG/climate risk assessments.
+Enables proactive risk management through stress testing and scenario planning.
+3.2 - Human review
+The following methods are used to review PRISM outputs:
+Every instance: Outputs are reviewed each time they are generated, typically during transcription into final reports or before further analysis.
+Expert scrutiny: Professional analysts examine results, apply expert judgement and interpret findings. This includes tracing key drivers and validating assumptions so that any anomalies or irreconcilable computations are identified early.
+Operational checkpoints: Reviews occur as part of monthly and quarterly risk reporting, case pricing and approval processes, stress testing exercises and governance submissions.
+Specialist end-users: Outputs are consumed by experienced professionals—such as Country Risk experts, Pricing specialists and credit risk analysts—who apply domain expertise to ensure outputs are meaningful and actionable.
+The review is assessed and assured in the following ways:
+Automated validation: Built-in checks verify data integrity from input through processing to aggregated outputs.
+Manual reconciliation: Analysts cross-check outputs against source data and investigate discrepancies.
+Governance oversight: Results are challenged in senior committees (ERiCC, Risk Committee) and documented in formal papers for transparency and accountability.
+External assurance: PRISM methodology and outputs undergo annual external audit and were last fully validated by the Government Actuary Department.
+Review of PRISM Modelling Assumptions: Each year, ORA analysts conduct a comprehensive review of the assumptions underpinning PRISM. This involves engaging with subject matter experts, analysing current market data, and consulting with other financial institutions, rating agencies and export credit agencies internationally. The objective is to ensure that all modelling assumptions remain robust, relevant and aligned with evolving market conditions.
+3.3 - Frequency and scale of usage
+The model is used exclusively within the organisation and is not accessible to the public, meaning no member of the public interacts with it at any stage.
+Access is limited to approximately ten specialist staff members.
+It is employed almost daily for tasks such as deal pricing and assessing the impact of country rating changes. In addition to these routine uses, the tool supports periodic reporting, including monthly management reports, bi-annual stress and scenario testing, and annual accounts preparation.
+Throughout the year, it is also used for ad hoc analyses, research and development activities, as well as ongoing maintenance, quality assurance and calibration tasks.
+Certain complex exercises, such as reverse stress testing or research runs, can involve hundreds of modelling simulations, each comprising hundreds of thousands of iterations under the tool’s Monte Carlo process.
+3.4 - Required training
+To undertake this task requires a specialist role within UKEF (only Operational Research Analysts within Analysis Division have access to the model). Those staff have analytical backgrounds, such as Physics, Mathematics or other sciences as well as receiving in-house training and the model having very detailed and extensive technical, functional and user documentation. On-going and specific training on the modelling techniques, and how the models work are given to the Operational Research Analysis team.
+3.5 - Appeals and review
+An unrelated third-party member of the public is unlikely to  be a position to have all the financial parameters of the original proposing parties or the deal specifics (obligor/exporter), and we could not comment on details that were commercial in confidence (for example to discuss privileged or politically sensitive deal information with competitors or members of the public).
+However, alternative pricing options may be requested  to be modelled by a prospective at client with a view to finding the best value for their situation (e.g. lower value, shorter term or other alternative deal structures).
+It should be noted, any agreement is bound both by the computed risk premia and any national or international rules.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The PRISM model run in Microsoft Excel environment using VBA, enhanced by a commercial add-in called @Risk from Lumivero, which provides Monte Carlo simulation capabilities. All inputs and outputs are handled through flat files in XLSX or CSV format. End-of-month account activity, deal characteristics and macroeconomic data are exported from the central database via an SQL interface, validated and cleansed before simulation by the Credit Risk Transformation Engine (CRAFTE).
+The model is executed by Operational Research Analysts and performs Monte Carlo loss simulations based on stochastic factors such as probabilities of default, recovery rate volatility, restructuring parameters and correlation linkages. These factors are combined with deal-level characteristics (e.g., obligor type, product and exposure profiles) to generate loss or claims distributions. The resulting outputs form the basis for contingent analyses, including stress testing and prospective deal pricing.
+The final results are saved in CSV files and uploaded via an SQL database back to the central database of the Department. These results are also uploaded to a Power BI Dashboard for people to review.
+The system is not internet-connected and runs on dedicated virtual machines to ensure computational speed, security and reliability.
+4.1.2 - System-level input
+Excel (xlsx) or CSV files (summary):
+General: Probabilities of Default, Currency Discount Rates, Currency Exchange Rates.
+Portfolio or deal-level data:  IDs, Product Type, Risk Country, Currency, Principal and Interest Repayment Profile, Aircraft Specific information for Asset Based Guarantees (Aircraft Model, Variant and Build Year).
+Customer Risk Information: Customer Names, Customer Credit Rating, Customer LGD, Customer Industry, Customer Risk Status (Sovereign/Public/Corporate), Customer Type
+Country Risk Information: Country Risk Rating, Country LGD, Country Persistence of Default.
+Other data: Aircraft  and Engines resale and monthly rental values, Correlation Factors.
+4.1.3 - System-level output
+Loss Distributions and Deal Level Metrics:
+Expected Loss (EL) and Unexpected Loss (UEL) at portfolio level. Distribution of losses across obligor types, products, and regions. Probability-weighted loss curves generated through Monte Carlo simulation.
+Loss estimates per obligor or facility.
+Stress Testing  and Claims Cashflow results:
+Projected claims cashflows over time.
+Impact of macroeconomic shocks, rating downgrades, or sector-specific stresses on portfolio losses. Scenario-based outputs for contingent analysis.
+Pricing and Contingent Analysis:
+Inputs for prospective deal pricing. Sensitivity analysis for key assumptions (e.g., PoDs, recovery rates, discount rates).
+4.1.4 - Maintenance
+PRISM operates under a continuous review cycle to maintain its functionality and ensure assumptions remain valid. This process combines routine updates with structured governance measures:
+Continuous Review: The tool is monitored on an ongoing basis, with functional enhancements—such as new products, additional capabilities or platform migrations—implemented as required.
+Monthly and Annual Updates: Portfolio exposures, macroeconomic inputs and market parameters (including interest rates, discount rates and FX rates) are refreshed monthly to reflect current conditions. Probabilities of Default and aircraft resale values are updated bi-annually or annually.
+PRISM Review of Assumptions: A comprehensive review of all relevant parameters and modelling components is conducted approximately every five years. Some elements may be reviewed more frequently, while others require longer cycles due to complexity.
+Ad-hoc Updates: Significant market events or policy changes can trigger interim updates outside the scheduled cycles.
+Governance: All updates are documented under UKEF’s model governance framework, with version control and audit trails maintained for transparency. Reviews of key assumptions are presented to the Enterprise Risk and Credit Committee (ERICC) and the Risk Committee, with outcomes shared with HM Treasury and UKGI. All papers are also subject to annual review by external auditors.
+PRISM does not require machine learning re-training because it is a deterministic simulation model. Its reliability depends on the validity of assumptions and input data, which are maintained through this structured review process.
+4.1.5 - Models
+PRISM is the entirety of the model unit. However, the core Monte Carlo simulation is provided by an off-the-shelf computation engine from @Risk (Palisade/Lumivero Software) for the internal simulation iterations handling.
+Tier 2 - Model Specification
+4.2.1. - Model name
+@Risk Monte Carlo add in for Excel (from Palisade/Lumivero Software)
+4.2.2 - Model version
+8.2.1 - Industrial Edition
+4.2.3 - Model task
+The @Risk model is intended to quantify uncertainty in spreadsheet-based forecasts by running Monte Carlo simulations. It samples from defined probability distributions to generate thousands of simulations of if and when obligors default. Then it uses these results to calculate risk metrics such as percentiles, confidence intervals and sensitivity analyses. In essence, it predicts the timing and impact of default events across multiple iterations.
+Stochastic processes include the individual default events. These events are driven by obligor probabilities of default, modelled using a Gaussian distribution and incorporating correlations across industry and country/geographical region. Double defaults are included for reinsured exposures.
+Recovery Rates: Modelled using a beta distribution based on mean and volatility assumptions.
+Restructuring Probabilities: Captured through binary distributions for specific asset classes such as aerospace.
+Distinct behaviours and constraints for different loan or guarantee products are handled within the PRISM process, either during preparation of @Risk inputs or through post-processing aggregation.
+4.2.4 - Model input
+The model uses a portfolio of deal characteristics, including ratings (to derive probabilities of default over time), recovery rates, restructuring probabilities and tenor or time to maturity. These inputs determine which deals coexist at any given point in time.
+4.2.5 - Model output
+Each simulation iteration generates outcomes for every deal across its lifetime, applying correlation factors to reflect linked obligor behaviour. These outcomes are aggregated to approximate the full distribution of possible results, which converges towards expected values as the number of iterations increases.
+In practical terms, each simulation determines whether a default occurs for each obligor and, if so, the year in which it happens. It also assigns a recovery rate for that default. These outputs are then processed by PRISM to calculate the total loss for each iteration, ultimately producing the loss distribution and portfolio-level risk statistics.
+4.2.6 - Model architecture
+The @Risk model is an off-the-shelf Monte Carlo simulation tool that allows users to specify distribution shapes and parameters (e.g., mean, deviation, skew, bounds or gradient for other non-normal distributions). For each factor—such as probability of default or recovery rate—a random value is drawn from its defined distribution, weighted by frequency.
+Probability of Default: Modelled using a normal distribution by taking into consideration the Correlation Factors.
+Recovery Rate Volatility: Modelled using a beta distribution.
+Restructuring Probability: Modelled using a uniform binary distribution for aerospace-related exposures.
+Distribution choices and scaling measures are reviewed and recalibrated periodically as part of the PRISM Review of Assumptions process.
+4.2.7 - Model performance
+UK Export Finance assesses the model’s outputs by reviewing the generated values and verifying that the correlation factors, means, and volatilities align with the defined distributions.
+Additionally, the model’s performance is validated by examining the time taken to produce these outputs.
+4.2.8 - Datasets and their purposes
+The stochastic model in PRISM is built on a set of assumptions informed by both internal and external historical data:
+Probabilities of Default (PoDs): Derived from credit default data sourced from the S&P database and rating agency publications.
+Recoveries: Assumptions for recovery methodology, profile, and rate are based on internal historical data. For sovereign defaults, information from other ECAs was used to evaluate recovery levels and timelines for countries emerging from default.
+For Asset-Based Guarantees, internal experience guided the estimation of restructuring probabilities for each airline in default.
+Correlation Assumptions: Correlation factors were determined using S&P default data and rating agency research papers.
+2.4.3. Development Data
+4.3.1 - Development data description
+PRISM is based on a series of assumptions supported by both internal and external historical data.
+Probabilities of Default (PoDs): Derived from credit default data in the S&P database and rating agency publications.
+Recoveries: Internal historical data informed assumptions for recovery methodology, recovery profile, and recovery rate. For sovereign defaults, information from other ECAs was considered to assess recovery levels and timelines for countries emerging from default.
+Correlation Assumptions: S&P default data and rating agency papers were used to determine correlation factors.
+Exposure at Default (EAD): For short-term cases where UKEF guarantees a specified limit and the obligor can utilise this limit over a period, assumptions were developed on how EAD is calculated and applied within the simulation.
+Discount Rates and Interest Rate Behaviour: Bloomberg interest rate data was used to analyse discount rates and forecast future interest rate behaviour.
+Academic or other technology white-papers, third-party (commercial) Credit Rating reports etc are continuously (or periodically) reviewed to support or enhance the various model assumptions.
+Unfortunately, much of this data is proprietary (subject to licence) or otherwise not publicly accessible
+4.3.2 - Data modality
+All portfolio data used in PRISM is point-in-time and cross-sectional. For factors that depend on time or reflect average behaviours, multiple slices of cross-sectional data are analysed across different periods. Certain inputs, such as probabilities of default, forward interest rate and discount rates, are structured as time series. Overall, the data is tabular in nature, consisting mainly of numerical identifiers and continuous financial values such as exposure, foreign exchange rates, probabilities of default and recovery rates, alongside string fields for status, flags, cohorts, obligors, products, assets or other operational identifiers. All data is stored, processed and output in Excel (.xlsx) or CSV formats.
+4.3.3 - Data quantities
+The dataset consists of monthly resolution portfolio data covering around 2,000 deals and facilities, along with other runtime data spanning around 30 years. These data points are stratified by sub-portfolio for ease of analysis, but the combined size is relatively small, up to about 3MB across four files. Support files are also provided monthly, except for cumulative default rates and AVAC values, which are bi-annual. Stripped cumulative default rates, country data, exchange rates and discount rates range between 1KB and 30KB, while AVAC files, which cover various aircraft models, can reach up to 1MB in size. All original data from source files or CRM systems is ingested into the CEDAR data warehouse and then exported or combined into files for PRISM ingestion or conditioned via CRAFTE for PRISM processing. The dataset contains relatively few observed events, particularly as monthly resolution does not align with the actual frequency of defaults or recoveries, and even fewer data points exist when stratified by asset-backed deals or product type. Due to this low volume, all available data is treated as the source of truth for modelling purposes, with no segregation into training, validation or test samples.
+4.3.4 - Sensitive attributes
+N/A
+4.3.5 - Data completeness and representativeness
+The data used in PRISM is largely complete for the portfolio exposures and associated attributes required for modelling.
+However, there are inherent limitations due to the nature of observed events. Defaults and recoveries occur infrequently, meaning that while exposure and contractual data are comprehensive, the historical default and recovery data are sparse, particularly when stratified by product type or asset-backed deals.
+This low event frequency reduces the representativeness of the dataset for certain sub-portfolios and limits the ability to derive statistically robust estimates from observed outcomes alone.
+To address these limitations, PRISM relies on a combination of internal historical data and external sources such as S&P default tables and rating agency publications to supplement assumptions.
+Where gaps exist, expert judgement and benchmarking against other ECAs are applied to ensure assumptions remain reasonable and aligned with industry practice. All available data is treated as the source of truth for modelling purposes, and no imputation or synthetic data generation is performed.
+4.3.6 - Data cleaning
+Depending on the type of review for the assumptions, we use regular data cleaning (recognised conditioning or imputation approaches) processes before we use this data for our assumptions and papers.
+Any automated cleansing processes have been audited or validated by third-party consultants as appropriate, proportional and robust (e.g. monotonic enforcement for Cumulative Default Rates by Rating)
+4.3.7 - Data collection
+The development data is collected from external data providers and collation services, such as S&P CreditPro for probabilities of default (PoDs), AVACS for aero resale or rental rates, and Bloomberg for interest rate information. In addition, data is internally collated from the central database and relevant data owners. Please note that some datasets are not stored in UK Export Finance’s central database, so it is necessary to engage with the appropriate business areas to obtain this information.
+4.3.8 - Data access and storage
+Development data for the reviews of PRISM assumptions is retained for a long period. This ensures compliance with financial audit requirements and covers the maximum live term of deals within the portfolio, which can exceed 20 years.
+Access to PRISM and its associated input data is restricted to a secure server area, available only to a small group of authorised UKEF staff (primarily the ORA team). Individual originators and data providers maintain their own retention schedules for upstream systems.
+All UKEF staff require password protection and multi-factor authentication to access the network. Only authorised users can access specific servers or remote environments where PRISM simulations and analyses are performed. UKEF network and data assets are encrypted, and any third-party access (e.g., auditors) is provided through controlled “sandbox” environments with encryption, anonymisation and read-only permissions. Third parties do not have access to the live reference archive or simulation servers.
+No personal data or GDPR-sensitive attributes are processed. Where data carries diplomatic or national security sensitivities, secure markings and controlled handling procedures are applied to ensure confidentiality.
+4.3.9 - Data sharing agreements
+N/A
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+PRISM primarily receives its data through the CEDAR to PRISM interface, which consolidates inputs from multiple upstream systems and external sources. CEDAR is the central database that all the data from the input system below are transferred.
+Case, Transaction and Customer Data:
+Case-level details are entered onto UKEF systems at the pre-issue stage and appended with definitive contractual risk profiles and exposure data at the issue stage. They include information for the case such as the product type, the loan term, the currency, the current interest rates, the risk country of the case and the ids for this transaction. They also include specific information for claims and asset based guarantees (e.g. Aircraft Model, Variant and Build Year).
+Customer risk data from Salesforce include the Customer Risk characteristics and the Customer Industry and Type.
+Country Risk Data:
+Sourced from the Country Information System (CIS). Include the Risk characteristics of each country.
+Market and Reference Data:
+Discount rates (GBP, USD, EUR, JPY), interest rate forward and exchange rates from Bloomberg.
+S&P default rates, updated every six months, sourced initially by S&P Credit Pro and updated using macroeconomic factors by Oxford Economics and the PD model by ORA.
+Specialist Data:
+AVAC aircraft resale and lease rental forecasts, uploaded by the Pricing team into CEDAR.
+Integration and Controls:
+Data flows are validated by the CRAFTE transformation tool, which performs checks on portfolio characteristics and input data before processing.
+Final outputs and portfolio data are uploaded back into CEDAR and visualised via Power BI dashboards for internal reporting.
+4.4.2 - Sensitive attributes
+No sensitive attributes are present in the operational datasets.
+The data used by the model is macro-economic in nature or relates to corporate and sovereign legal entities, as well as financial deal characteristics. While these details may be commercially confidential or carry sensitivities for diplomatic or national security reasons, they do not pertain to individuals or natural persons. The tool does not process any personal data, protected characteristics, or proxies for such characteristics. There is no human subject data involved, and therefore no GDPR risks apply.
+4.4.3 - Data processing methods
+PRISM applies a series of automated and manual data conditioning steps to ensure accuracy, timeliness and mathematical feasibility before modelling begins. Automated validation checks within PRISM and the CRAFTE transformation tool verify completeness, consistency and plausibility of input data, flagging missing values, out-of-range parameters and implausible entries. Error logs and exit-on-fail protocols prevent incomplete Monte Carlo simulations from proceeding.
+Beyond these automated checks, additional conditioning is applied where necessary. For example, end-of-month data may include new deals, updated ratings or payment profiles that require correction or confirmation. Human errors such as typos or placeholder entries are identified and amended based on notifications from relevant teams. All manual amendments are logged for audit purposes and to support permanent fixes in upstream systems. A “Data Issues” email is circulated after each monthly run to track new issues and remediation progress.
+Specific treatment is applied to external reference data such as S&P cumulative default rates. Minor statistical noise can occasionally break the expected monotonic progression across ratings and time horizons, particularly for very low default probabilities (e.g., AAA ratings at short tenors). To address this, a minimal-impact formulaic adjustment enforces monotonicity, with all changes reviewed and signed off by the Chief Analyst. Original data and interim calculations are retained for audit transparency.
+These combined processes—automated validation, manual review, conditioning for logical consistency and formal governance sign-off—ensure that PRISM operates on clean, reliable and mathematically coherent data, reducing the risk of distortion in modelling outputs.
+4.4.4 - Data access and storage
+Operational data, including tool inputs, simulation outputs, reviews of PRISM assumptions is retained for a long period.  This ensures compliance with financial audit requirements and covers the maximum live term of deals within the portfolio, which can exceed 20 years.
+Access to PRISM and its associated input data is restricted to a secure server area, available only to a small group of authorised UKEF staff (primarily the ORA team). Individual originators and data providers maintain their own retention schedules for upstream systems.
+All UKEF staff require password protection and multi-factor authentication to access the network. Only authorised users can access specific servers or remote environments where PRISM simulations and analyses are performed. UKEF network and data assets are encrypted, and any third-party access (e.g., auditors) is provided through controlled “sandbox” environments with encryption, anonymisation and read-only permissions. Third parties do not have access to the live reference archive or simulation servers.
+No personal data or GDPR-sensitive attributes are processed. Where data carries diplomatic or national security sensitivities, secure markings and controlled handling procedures are applied to ensure confidentiality.
+4.4.5 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+No formal impact assessments (such as DPIAs, Equality Impact Assessments or Algorithmic Impact Assessments) have been conducted. This is because PRISM is an internal-only tool, with no direct interaction by citizens or external parties, and is used exclusively by a small group of specialist staff.
+However, as part of the annual PRISM Review of Assumptions process, ORA analysts evaluate the impact of any proposed changes to modelling assumptions. This involves analysing market data, consulting with subject matter experts and engaging with other financial institutions, credit rating agencies and export credit agencies internationally. The review includes impact analysis of the new recommended assumptions on portfolio risk metrics (e.g., Expected Loss, Unexpected Loss, recovery profiles) to ensure that changes are robust, proportionate and aligned with regulatory standards. These findings are documented and presented to ERiCC for governance approval.
+5.2 - Risks and mitigations
+Risk of Unfair Outcomes and Operational Errors
+Description: Model outputs could lead to biased or disproportionate decisions if assumptions or input data are outdated, inaccurate or if computational errors occur during processing.
+Mitigation:
+Annual PRISM Review of Assumptions ensures modelling parameters remain robust and aligned with market conditions.
+Extensive quality assurance is applied prior to production use, including white-box testing, unit testing and reconciliation testing.
+At runtime, PRISM implements automated data validation and plausibility checks, with error logs and exit-on-fail protocols for incomplete Monte Carlo simulations.
+The  Credit Risk Analysis File Transformation Engine (CRAFTE) tool performs validation and sense checks on portfolio and input data before processing.
+External auditors and consultants periodically review model assumptions, structures and computations to provide independent assurance.
+Privacy and Data Security
+Sensitive financial and obligor data is processed within the tool, creating potential confidentiality risks.
+Mitigation: Restricted access to authorised staff, secure internal systems, encryption and compliance with organisational security policies.
+Regulatory and Compliance Risk
+Misalignment with IFRS 9 or HM Treasury risk appetite could result in inaccurate provisioning or reporting.
+Mitigation: Regular external audits, validation by the Government Actuary Department and governance oversight by ERiCC and Risk Committee.
+Unintended Consequences
+Over-reliance on model outputs without expert interpretation could lead to misinformed decisions.
+Mitigation: Outputs undergo at least a four-eye check and are reviewed by professional analysts who provide interpretation and context.
+Environmental and Societal Impact
+Indirect risk if model assumptions fail to incorporate climate-related or ESG factors adequately.
+Mitigation: Climate and ESG teams use PRISM outputs to calibrate their models and assess potential impacts.
+Contents

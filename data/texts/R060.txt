@@ -1,0 +1,207 @@
+National Highways: Highways Webchat
+The National Highways chatbot provides customers with an additional communication channel to get immediate answers to their questions using publicly available information (such as traffic information).
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Transport
+Organisation type:
+Agency or public body
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Bot interaction and conversation
+Phase:
+Production
+Region:
+Wales
+and
+England
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+Highways webchat (Customer Contact Chatbot)
+2 - Description
+The National Highways chatbot was designed to provide our customers with a new communication channel to get immediate answers to their transactional questions with publicly available answers (such as traffic information, roadworks, road defect reporting). The goal is to reduce customer wait times by providing immediate access to answers from the chatbot and wait times on other channels are reduced by fewer queries going via those channels.
+3 - Website URL
+https://nationalhighways.co.uk/help-centre/chatbot/
+4 - Contact email
+info@nationalhighways.co.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+National Highways
+1.2 - Team
+Operations Customer Service
+Digital Communications
+1.3 - Senior responsible owner
+Customer Service Director as Business Owner
+Head of Digital Communications as Compliance Assurance Owner
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Kainos-Arup
+1.4.2 - Companies House Number
+01312454 - Arup Group Limited
+1.4.3 - External supplier role
+Delivery partner
+1.4.4 - Procurement procedure type
+The Operational and Information Technology Commercial Frameworks (OT/ITCF’s) provide a one-stop-shop for all digital, data and technology related procurement which includes hardware, software, professional technical services and data modelling tools across
+National Highways. The frameworks are central in enabling National Highways ability to deliver the Road Investment Strategies (RIS) along with wider strategic business objectives.
+1.4.5 - Data access terms
+Open government license and public sector geospatial agreement
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Highways webchat operates by analysing input provided by users and generating responses based on pre-defined rules and patterns.
+This uses Natural Language Processing. The questions and answers that Highways webchat asks / provides and the order in which it does so have been programmed by a person – it does not generate its own responses via a machine learning model. However, Natural Language Processing is used to understand what the user has said relative to the type of input Highways webchat is expecting from the user at any time. This means that you can ask / answer a question to Highways webchat in a way you would naturally do so in conversation, rather than having to use the exact words Highways webchat is expecting. A language understanding model developed using Microsoft software is used to do undertake the conversion / comparison. This model has been provided with additional examples of the ways users might ask a question in the context of National Highways to increase its understanding and performance.
+2.2 - Scope
+Highways webchat is designed to provide information about:
+Real-time traffic congestion on the Strategic Road Network
+Scheduled road closures on the Strategic Road Network
+Reporting issues in the Strategic Road Network
+CCTV on the Strategic Road Network
+Speed enforcement
+Dart Charge
+Contact with us
+Noise
+Claims
+Recruitment
+Statutory removal
+Highways webchat is not designed to respond to emergency situations or incidents. In case of emergency, 999 must be called.
+2.3 - Benefit
+The webchat was designed to better address the needs of the modern-day customer who seeks to self-serve 24/7 and access online resources, and provide case officers with more time to respond to more complex requests, thereby improving the customer experience.
+2.4 - Previous process
+Prior to the deployment of the webchat, there was a limited range of ways for customers to find and question National Highways. Methods of contact were email, telephone, post, and text message.
+2.5 - Alternatives considered
+Non-algorithmic alternative methods of contact are maintained (email, telephone, post and text message).
+Highways webchat operates by analysing input provided by users and generating responses based on pre-defined rules and patterns. This means that, unlike some other algorithmic alternatives (types of webchats) which were considered for use, the answers that it will give are limited to certain topics and questions. It will not be able to address other topics. The advantage of this approach is that the answers of the chatbot are pre-programmed and predictable. The disadvantage is that by having defined topics, it may mean there are questions from customers that Highways webchat cannot answer, and will therefore revert to a human.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Highways webchat asks questions and provides answers based on programmed rules and logic. It decides which prepared response to provide based on how similar the user’s inputted question / statement is to the expected user input. If it cannot confidently interpret a question / statement respective of the question it last asked, it will ask the user to rephrase the input. Highways webchat allows customers to self-serve and obtain information more efficiently, prior to contacting the customer contact centre.
+3.2 - Provided information
+Highways webchat retrieves publicly available information and relays it to the customer when they input a query that is based on preprogrammed topic areas
+(Real-time traffic congestion on the Strategic Road Network, Scheduled Road closures on the Strategic Road Network, Reporting issues in the Strategic Road Network, CCTV on the Strategic Road Network, Speed enforcement, Dart Charge, Contact with us, Noise, Claims, Recruitment, Statutory removal). If the customer inputs a query that does not relate to the preprogrammed topic areas, customers are asked to rephrase their query, or contact the Customer Contact Centre through other means e.g., by phone or email.
+When customers use Highways webchat, they are presented with a list of topic areas to select from (Scheduled Roadworks, Real-time Traffic Enquiry, Vehicle/Statutory Removal, CCTV Footage, Dart Charge, Compensation, Defect Reporting, Noise, Recruitment, Speed Enforcement), or they can type their own question.
+When a topic area is selected/identified, the customer is then asked to enter more specific information into a form. This includes, but may change due to the topic area selected, road number, road name, type(s) of traffic information, date, and direction of travel.
+Once all the required information has been provided, Highways webchat returns the publicly available information as a message in the chat. For example, if a customer requested roadworks information for the M6, they would receive a message containing: Location (where the roadworks are e.g. junction 10), Reason (what the roadworks are for), Status (the status of the roadworks, e.g. active), and Period (when the roadworks started and when they fill finish). Customers will receive information for all occurrences of roadworks on the selected road/direction/dates and can navigate between them using the left and right arrows at the end of the message. If customers require information about multiple roads, when asked if Highways webchat can help with anything else, they can select ‘Yes’ and recomplete the previous steps.
+3.3 - Frequency and scale of usage
+Chatbot is embedded within the National Highways website with approximately 100 engaged sessions per month.
+3.4 - Human decisions and review
+The Highways webchat was built to precede the human workflow. This means that whilst the Highways webchat is engaged in a session with a user, there is no human actively reviewing the conversation. If the Highways webchat cannot confidently interpret a question / statement respective of the question it last asked, it will ask the user to rephrase the input. If it still cannot interpret a question / statement, the chatbot will provide alternative methods of contact that will involve human review.
+3.5 - Required training
+Although Highways webchat is designed to be used without the need for formal training. National Highways has produced an explainability statement to help provide users with better understanding of how the tool works
+https://nationalhighways.co.uk/help-centre/chatbot/explainability-statement-for-highways-webchat-of-national-highways/
+3.6 - Appeals and review
+National Highways is dedicated to addressing any issues, concerns, or complaints regarding its use. If a user believes that the webchat has provided an incorrect answer or has concerns about its operation, they are instructed to contact us via contact details provided in the accompanying explainability statement
+https://nationalhighways.co.uk/help-centre/.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Power Platform components of the chatbot are contained within a Power Platform Solution (Microsoft CoPilot Studio: Power Virtual Agents), which is a Microsoft platform:
+Power Virtual Agents (Bot Logic) – contains the conversational logic
+Power Automate (Automation) – process automation to provide information to the chatbot
+Dataverse (Database) – tables of data holding information for the bot which can be accessed via Power Automate and the datastore for transcripts, logs and feedback.
+To provide information on current road conditions and overnight road closures, the bot will call on a number of APIs. When requested by Power Virtual Agents, Power Automate will pull, transform, and return information from the APIs which can then be presented back to users.
+Microsoft Power BI is used in the backend for performance monitoring of the Chatbot
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Monitoring of chatbot performance can be done within the chatbot solution in Power Virtual Agents, in analytics. This shows a summary of the chatbot performance for that environment, the total number of sessions, the engagement rate, and other key metrics. This is refreshed on a daily basis. There is an established resolution path which routes to National Highways IT Service Desk in case of issues.
+On an annual basis, reviews with the business as to their business plans and needs take place within which the maintenance or enhancement of models are agreed.
+4.1.4 - Models
+Natural Language Processing
+Tier 2 - Model Specification
+4.2.1 - Model name
+Highways webchat - Natural Language Processing. Uses a Natural Language Understanding model within the Microsoft Copilot architecture.
+4.2.2 - Model version
+1.0
+4.2.3 - Model task
+Interpreting customer requests and provision answers from publicly available information (see 2.2.2)
+4.2.4 - Model input
+User prompts
+4.2.5 - Model output
+Response to user prompts with publicly available information
+4.2.6 - Model architecture
+Natural Language Processing
+4.2.7 - Model performance
+Performance reporting includes metrics such as Chatbot Engagement Rates, Customer Satisfaction and number of abandoned sessions, which are monitored via the retained chatbot transcripts and customer satisfaction score (CSAT) surveys displayed within a monitoring dashboard.
+The Chatbot uses a prebuilt Natural Language Processing model to trigger topics. These trigger phrases were tested through user testing with the general public and through in house testing. The majority of the users were able to navigate to the topic they desired.
+4.2.8 - Datasets
+There are five API or HTTP calls made as part of the solution:
+OS Names https://api.os.uk/search/names/v1/find?query=Test
+Surface Road Closure Report https://nationalhighways.co.uk/umbraco/Surface/RoadClosureReport/DisplayResults?dayOfWeek=18 November&currentPage=1&sortOrder=&filterRoads=A1&filterDirection=&filterTime=&displayPerPage=9999
+OS Linked Identifiers (1) and (2) providing Ordnance Survey API Road Link Data
+Scheduling - Retrieve Last Day of Available Data https://nationalhighways.co.uk/travel-updates/road-closure-report/
+Traffic England Realtime API https://www.trafficengland.com/api/events/getByRoad?road=A1&events=CONGESTION,INCIDENT,ROADWORKS&direction=All&includeUnconfirmedRoadworks=true
+Only the OS API requires a key for authentication. API functionality is fully documented.
+4.2.9 - Dataset purposes
+Highways webchat pulls answers from the datasets, they were not used for model training.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Highways webchat pulls answers from the datasets, they were not used for model training.
+There are five API or HTTP calls made as part of the solution:
+OS Names
+Surface Road Closure Report
+OS Linked Identifiers (1) and (2)
+Scheduling - Retrieve Last Day of Available Data
+Traffic England Realtime API
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+The datasets provide information about:
+Real-time traffic congestion on the Strategic Road Network
+Scheduled road closures on the Strategic Road Network
+Reporting issues in the Strategic Road Network
+CCTV on the Strategic Road Network
+Contact with us
+Dart Charge
+Noise
+Claims
+Recruitment
+Statutory removal
+Speed enforcement
+4.3.4 - Data quantities
+Road Closure contains all future works that have been added to the National Highways works booking system.
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+Road Closure dataset is update from the works booking system which contains all future works. Theses bookings are validated manually on the day to ensure the works are going ahead.
+4.3.7 - Source data URL
+There are five API or HTTP calls made as part of the solution:
+OS Names https://api.os.uk/search/names/v1/find?query=Test
+Surface Road Closure Report https://nationalhighways.co.uk/umbraco/Surface/RoadClosureReport/DisplayResults?dayOfWeek=18 November&currentPage=1&sortOrder=&filterRoads=A1&filterDirection=&filterTime=&displayPerPage=9999
+OS Linked Identifiers (1) and (2) providing Ordnance Survey API Road Link Data
+Scheduling - Retrieve Last Day of Available Data https://nationalhighways.co.uk/travel-updates/road-closure-report/
+Traffic England Realtime API https://www.trafficengland.com/api/events/getByRoad?road=A1&events=CONGESTION,INCIDENT,ROADWORKS&direction=All&includeUnconfirmedRoadworks=true
+Only the OS API requires a key for authentication. API functionality is fully documented.
+4.3.8 - Data collection
+Highways webchat pulls answers from these datasets, allowing the customer to self-serve and access online resources which were designed to be publicly available. These data sets were individually collected for their own purposes and re-used here to enable the model to provide up to date and correct answers.
+Road Closure contains all future works that have been added to the National Highways works booking system
+4.3.9 - Data cleaning
+Highways webchat pulls answers from publicly available datasets, they were not used for model training and hence did not undergo ‘cleaning’ for the purposes of the Chatbot.
+Customer input data is also not redacted however customers are warned not to input personal information into the chatbot.
+4.3.10 - Data sharing agreements
+Open government license and public sector geospatial agreement
+4.3.11 - Data access and storage
+Data is publicly available via API.
+Chat transcripts are held within the Microsoft Dataverse table for a 1 year retention period. Access to these tables is controlled by Azure Active Directory groups. Team members can only be added to these group with the permission of the product owner.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+An Equality Impact Assessment (EQIA) on 22/07/22
+A Data Protection Impact Assessment (DPIA) was conducted on 31/10/23
+An algorithmic impact assessment were conducted for this solution on 19/09/23
+5.2 - Risks and mitigations
+The main risk identified was customers opting to use the Chatbot while driving/in an emergency situation, or inputting personal data into the Chatbot. The main mitigation implemented were several warning messages instructing users not to input personal data or use the webchat while driving or in an emergency situation.
+Please see these detailed in the explainability statement:
+https://nationalhighways.co.uk/help-centre/chatbot/explainability-statement-for-highways-webchat-of-national-highways/
+Please also see National Highways Privacy notice:
+https://nationalhighways.co.uk/about-us/privacy-notice/
+Contents

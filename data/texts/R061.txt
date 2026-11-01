@@ -1,0 +1,304 @@
+DfE: Apprenticeship Withdrawal Rate AI
+This tool aims to help identify the likelihood of an apprentice withdrawing from their course, along with the key risk factors and the specific time intervals where the possibility is higher. The tool hopes to improve low achievement rates.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 April 2025
+Organisation:
+Department for Education
+Organisation type:
+Ministerial department
+Function:
+Education
+Capability:
+Forecasting
+and
+Analysis
+Task:
+Multivariate analysis
+Phase:
+Pre-deployment
+Region:
+England
+Date published:
+25 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+Name
+Apprenticeship Withdrawal Rate AI
+Description
+We are investigating the feasibility of an AI classification model to identify if an apprentice is likely to withdraw from their course or complete the full term and their end point assessment (EPA), and identify specific time intervals where apprentices are at greater risk of withdrawing. This analysis also allows us to identify the key risk factors which could motivate a candidate to withdraw, such as insufficient pay, personal reasons (e.g. health grounds, care responsibilities) or issues relating to the placement (e.g. unsatisfactory training or employment issues, or that an apprentice did not like their placement), and identify cohorts of apprentices who are more likely to withdraw than others (with a view to providing additional support to such candidates). Data is collected from Department internal and external (ONS) data sources to build a context surrounding a given apprenticeship to understand.  This will be coupled to an intervention in the form of a personalised email offering additional guidance which will be sent to candidates at greater risk of withdrawing to improve their chances of success in their apprenticeship. The specific email intervention will be developed by the service communications team.
+This tool is targeted toward improving low achievement rates currently identified in the service towards a currently stated target of 67% in 2025.
+Website URL
+N/A
+Contact email
+Please contact us via the form request:
+https://form.education.gov.uk/service/Contact_the_Department_for_Education
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Education
+1.2 - Team
+Department for Education Apprenticeship Service Performance Analytics and Data (PAD) team
+1.3 - Senior responsible owner
+Deputy Director of the Department for Education Apprenticeship Service
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+FARSIGHT CONSULTING UK
+EVIDEN UK
+1.4.2 - Companies House Number
+EVIDEN HOLDING UK 2 LIMITED :  14542627
+Farsight Consulting Limited: 07215255
+1.4.3 - External supplier role
+Farsight Consulting Limited: Lead contractor
+Role: Project coordination support, policy guidance, review
+Eviden UK (Subcontractor)
+Role: AI model construction, Exploratory Data Analysis (EDA), Data Cleaning, Proof of Concept (POC) work, Data Insights & Analytics, AI model testing, Software Development, Reporting.
+DFE blended team : Oversight, management, email communication, stakeholder management.
+1.4.4 - Procurement procedure type
+OPEN. Joint bid between Farsight and Eviden (formerly Atos) as part of a wider service contract to provide Data and AI services to the Apprenticeship Service.
+1.4.5 - Data access terms
+No External Data Sharing with Contractors & third parties.
+Contractors access resources directly within the DfE estate using department managed devices and DfE managed cloud services only.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Boosted Decision Tree (BDT) model pulling in data from multiple sources:
+ONS Social Deprivation Survey 2019 (Deprivation indicators per LSOA)
+ONS Economic data (National only): CPI-H inflation, House Prices, HE/FE student rates, Average Salaries per region, BCI/CCI, GDP/Production measures
+Individualised Learner Records (ILR): Details about an apprenticeship (Course they’re on, social indicators associated to where they live/work).
+Personal data such as Ethnicity, Gender, Age are not used in the model training, but are considered post-training in diagnostic plots.
+This model uses an XGBoost (eXtreme Gradient Boost) BDT to identify if an apprentice is likely to withdraw from their course (trained on historical data from 2018-2022), and we have used a Cox Proportional Hazards (DeepSurv) model trained on the same dataset to estimate when a candidate is at an elevated risk of withdrawing from their course.
+This Cox Proportional Hazards model is not directly tied to any intervention, but is indicative of when any interventions are likely to be most impactful, as it demonstrates when candidates are more likely to withdraw than a random process.
+2.2 - Scope
+This tool has been designed to identify if an apprentice is likely to withdraw from their course, and if so provide an indicator to the Apprentice Service that further action can be taken either by them to address this (either through communication to the candidate, or other interventions such as contacting the provider/employer directly).
+This tool cannot be used to make inference on any other behaviours of apprentices at present, and will not (due to limited statistics in this regard) predict and thus demonstrate why a candidate is likely to withdraw.
+2.3 - Benefit
+This tool assists in identifying candidates who are likely to withdraw from their course (as a higher risk cohort), with the intent to communicate to candidates at risk where they can find support.  This is to be coupled with an A/B test whereby we couple the AI prediction to a new personalised support email targeting themes specific to the candidates (based on historical exit surveys). This offering is an improvement to an existing email campaign so can be considered an enhancement to provide more personalised and effective support. High engagement rate with emails demonstrates that there is some scope to improve this service via email. This approach is designed to contribute to wider efforts to raise the completion rate to 67% by 2025.
+2.4 - Previous process
+Previously no algorithmic approach was taken: All candidates received the same email communications regardless of whether they were at risk of withdrawing or not (based on historical data). No personalisation was undertaken regarding the emails.
+2.5 - Alternatives considered
+Algorithmic alternatives:
+Imputation model: Auto-encoders are the only model available to generate a set of pseudo data to fill in a large number of missing rows (~30-50%) in specific columns. Multivariate linear regression models would be significantly impacted by the large number of missing rows, making extrapolation difficult. This covers several sources of missing data about apprenticeships, namely 1) Incomplete salary data (salary information can only be inferred from vacancies posted on the service’s website) 2) incorrectly/undefined postcodes /identifiers or 3) incomplete/inaccurate data returns from providers (human errors) or a number of edge cases around candidates who have been transferred across courses. The predominant source of missing entries is the salary data, but other data may be sparsely incomplete. An autoencoder is designed to simultaneously impute/estimate all missing fields, given sufficient training across a wide dataset.
+Classification model:
+Logistic Regressions & Neural Networks were considered as part of this project based on the same training data as per the BDT. However, accuracy was considered low compared to the BDT. Alternate architectures of BDT (CatBoost, LightGBM) were also attempted, but no significant improvements were observed.
+Auto-encoder architectures were also considered at this stage, but our XGBoost BDT typically out-performed all of the alternatives under extensive hyperparameter optimisation and tuning “out of the box”. An exhaustive grid search of all possible hyperparameter choices is not computationally feasible, but we include the workflow for this.
+Cox Proportional Hazards was chosen on the basis of producing a multivariate “dropout time” estimation, and we investigated using Kaplan-Meier modelling, but this does not account for the features of a given apprenticeship (merely assigns a probability considering all candidates and when they withdraw).
+Tier 2 - Decision making Process
+3.1 - Process integration
+This tool is still currently in development so currently not integrated into any processes as of writing. We are planning to undertake A/B testing with AI & a new personalised email intervention:
+Suppose you have two emails A & B. The content or exact nature of these can be considered general here, but email A is the default approach, and email B the new approach, which is still being worked out.
+Partition the group of newly starting apprentices into two groups:
+Group A: Candidates with high risk of withdrawal (based on Boosted Decision Tree (BDT) score)
+Group B: Candidates with lower risk of withdrawal (based on BDT score)
+Partition Group A, and Group B in half, and send email A to one half of each group, and email B to the other. The intervention point for our strategy should be at 3 months after apprenticeship start (to flag the withdraw).
+The idea of this test is to test the following hypotheses.
+If the model correctly identifies
+if
+an apprentice drops out in the candidate cohort.
+If the new intervention improves withdrawal rate (to all candidates).
+If the new intervention is best received (and has a notable impact) on candidates who are at significant risk of dropping out.
+This approach could be generalised to an equivalent communication approach (App push notification, apprentice notification in their account). The Shapley (SHAP) values and highest predicted withdrawal cohorts are being used as insights to drive the creation of the “B” email communication
+3.2 - Provided information
+For the decision maker in the A/B test, this will constitute a list of Unique Learner Numbers (ULNs) or Apprenticeship IDs corresponding to candidates/apprentices marked as at an elevated risk of withdrawing by the BDT, and potentially the classifier score (to facilitate the A/B testing partitioning). For BDT models, this score is typically identified on a [-1,1] or [0,1] scale (the exact choice may depend on whether XGBoost or another similar tool is used), where a specific cut on this scale corresponds to a prediction of a likely withdraw/complete. This will connect to an existing pipeline that is in place that can be linked by these IDs to the relevant email or communication service. SHAP values (relative feature importance) and cohort level information (E.g. withdrawal rates of specific groups of apprentices on specific courses in specific regions) are considered when designing the new email content, however these are principally designed by the service not directly written by the outputs of the AI model.
+The withdrawal likelihood (Cox Proportional Hazards) modelling of this dataset has motivated the intervention point for apprentices to be around 3-6 months from the start of the course, where an increased risk of withdrawal is observed. The start+3 month date is exactly when we wish to send an email to candidates, and the end of the start+6 month period is when we intend to measure if they’ve withdrawn or not.
+3.3 - Frequency and scale of usage
+This tool will generate a new classification for each apprentice joining the service once they have a record entered in Confirm My Apprenticeship Details, and an email journey is assigned (as part of the communication to the apprentice), and can be backdated to apply to all apprentices currently within the service where data is available (typically historic data will be used for model calibration & validation). This will vary as a function of apprentice uptake per academic year and over time. This model is likely to require regular retraining over new datasets to account for potential data drift. Some data sources (particularly economic data from the ONS) will require updating as a BAU process on a timeframe of approximately 6 months.
+3.4 - Human decisions and review
+This tool is still in development and provisional Proof Of Concept (POC) testing, however we can outline the plan for upcoming work:
+Dashboards for input data & relevant summary statistics (number of apprentices etc) to allow for benchmarking or understanding data quality issues. Currently this is an Exploratory Data Analysis (EDA) report by Eviden Consulting, but as part of our production plan we intend to have this dynamically updated/cached on a frequent basis. Decisions can be taken on the input features to the model to determine if the approach is still relevant in the light of new data sources, or if new data needs to be ingested into the model as an ongoing process.
+Dashboards for metrics (accuracy, precision, recall) etc for each new training of the model or over new calibration sets. This will need to be pipelined so that we can keep both the current model, and previous iterations.
+3.5 - Required training
+No specifically required training on managing the model over time.
+Data science model building experience is preferable, alongside data engineering resources to access and understand the relevant underpinning tools.
+Maintenance of the tools will require some prior Python experience, as well as prior SQL experience. The tool is primarily built in Python. A familiarity with Machine Learning (ML) modelling (weak classification) and basic plotting tools (matplotlib, seaborn) is necessary here but, when productionised, this model should be dynamically trained and updated in a way to minimise ongoing technical expertise beyond understanding the importance of key metrics and the input datasets that go into the model. Database analytics experience would be helpful, particularly given the specific reporting and data validation challenges posed by the datasets used in this model.
+Power BI analytics experience helpful to understand the process of retraining the model, validating data quality and dashboarding relevant inputs.
+3.6 - Appeals and review
+None required. Any decisions made only relate to personalised content, and content will be generally available to all candidates regardless of the model prediction.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+This algorithm is using the XGBoost Classification model using the following parameter:
+Number of iterations: 1000. (all other parameters default)
+XGBoost version: 2.0.1
+Hyperparameter optimisation on the BDT was attempted using a hill-climbing algorithm which uses random walks to identify a path to the maximum test accuracy given a set of parameters), but accuracy improvements were sufficiently marginal to be neglected.
+Imputation (filling in) of null rows is undertaken using the MIDAS Autoencoder with the following parameters:
+Layer_structure=[256,256]
+vae_layer=False
+seed=42
+input_drop=0.50
+See: MIDASPy documentation for more details. This model is to be deployed as part of an Azure workflow within the Apprenticeship Service (AS) data pipelines (AzureML platform). Input data streams are retrieved using SQL, and we will output a CSV (or Parquet file to facilitate Azure upload) hosted entirely within the Department’s Azure tenant.
+Cox Proportional Hazards Model: PyCox package based on deep neural networks to generate  Survival Likelihoods over time.  No public githubs will be provided as part of this project.
+4.1.2 - Phase
+Pre-deployment
+4.1.3 - Maintenance
+Data streams: ONS data is likely to require updates every ~ 6 months to pull in latest economic figures (CPI-H inflation rate, GDP).  Model: Likely an annual or quarterly retraining cycle, ingesting the previous year’s data as a training/calibration set and the upcoming cohort being the set designated for AI inference. Dashboards will be provided for metrics associated to the retraining (loss, model accuracy etc) and the associated data analytics of features which are included in the project. By the nature of the managed service contracts, this will likely be handed over to long term management by DfE.
+4.1.4 - Models
+XGBoost Classification model (Extreme Gradient Boosted Decision Tree - BDT). Principal component analysis (decorrelation of highly correlated social/economic indicators). Auto-encoder (MIDAS) model for imputing of missing values in the dataset where relevant. Cox Proportional Hazards model for lifetime analysis.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Withdrawal Rates AI project
+4.2.2 - Model version
+v0.01
+4.2.3 - Model task
+Identify whether an apprentice is at elevated risk of withdrawing from their placement, and identifying time periods where they are at greater than average risk of withdrawal.
+4.2.4 - Model input
+Input data (CSVs, SQL queries) from the ONS, Apprenticeship Service and Individualised Learner Record (ILR) sources
+4.2.5 - Model output
+List of Unique Learner Numbers (ULNs) corresponding to candidates identified as likely to withdraw from their courses. BDT classifier score, and a table of input features (per apprentice) to allow for quick debugging. Current output is a static CSV file, but this is likely to be replaced with an outgoing SQL create/update statement in a DfE internal database. This is to connect to a pipeline to manage which candidates specific emails (or can be re-purposed for an equivalent link to an app push notification).
+4.2.6 - Model architecture
+Boosted Decision Tree (XGBoost): 1000 iterations (otherwise out of the box). Hill climb optimisation (random variation of tree depth, branch splits etc about a maximal accuracy point - shifting to new value if new parameter set is more accurate on test set) was attempted, with no appreciable improvement in performance. Test set of the calibration set was 20% most recent apprentices who completed/withdrew between Academic Year 2018/19 and Academic Year 2022/23, and the remainder was for training.
+4.2.7 - Model performance
+Classification task: Identifying if a candidate is likely to withdraw.
+Metrics:
+Accuracy: 75.1% (All Apprentice Levels)
+Recall: 75.0%
+Precision: 80.2%
+We also make use of the Shapley scores (SHAP) to make an estimate of the impact of each feature on our model.
+Candidate withdrawal time estimation: Identifying when a candidate is likely to withdraw:
+Since no Personally Identifiable (PI) data is used in model design (Learner & workplace geographic location at local area level - ONS LSOA only -  are used implicitly to link to deprivation indices, but are not included in the model itself), no specific privacy data metrics are required. We consider the impact of the model on groups of individuals by using the following: Gender, Age (by a category), Ethnicity and where they live (the LSOA), but this is not used in model training.
+4.2.8 - Datasets
+Confirm my Apprenticeship Details (CMAD) - Apprentice service. Endpoint Assessment information (Apprentice service) - to confirm if an apprentice has withdrawn or completed.  Find an Apprenticeship (Vacancies) data. Individualised Learner Record (ILR). ONS: Social deprivation survey 2019, app-starts: data compiled from a number of DfE yearly apprenticeship reports, all of which can be found on the DfE website.
+confidence-data: compiled from
+here
+. All three were downloaded separately, filtered for GBR records only, and then compiled.
+economic_data: compiled from
+here
+, by downloading the data from the figures and compiling
+Employer-and-apprentice-feedback-ratings_23: compiled from
+here
+.
+HMLR_house_prices_over_time_various: compiled from
+here
+income_by_<x>: compiled from
+here
+iod_20<x>: compiled from
+here
+(see ‘related content’ to view historical releases). (Note the file names should really read ‘imd’…)
+lsoa_to_oa: taken from
+here
+monthlygdpto4dp: taken from
+here
+output_area_lookup: taken from
+here
+students_by_year: taken from
+here
+series-191123: taken from
+here
+No dataset cards have been completed specifically for the datasets utilised in this project.
+4.2.9 - Dataset purposes
+The different datasets were used in the development process to differing levels (different fields). The Individualised Learner Record (ILR) was used in ideation phase, but replaced by purely Apprentice Service data (which is equivalent to ILR data) for final production. ONS data stated is used for both training, testing and final production. This is because the ILR data is not filled at the start of the apprenticeship, and may not be filled until at latest 1 year after the apprenticeship start, which is too late to be used for dynamic email communication based at the start of the course.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Individualised Learner Record (ILR), Confirm My Apprenticeship Details (CMAD), Apprenticeship Commitment & Assessment data, ONS Social Deprivation Survey 2019 &  app-starts: data compiled from a number of DfE yearly apprenticeship reports, all of which can be found on the DfE website.
+confidence-data: compiled from
+here
+. All three were downloaded separately, filtered for GBR records only, and then compiled.
+economic_data: compiled from
+here
+, by downloading the data from the figures and compiling
+Employer-and-apprentice-feedback-ratings_23: compiled from
+here
+.
+HMLR_house_prices_over_time_various: compiled from
+here
+income_by_<x>: compiled from
+here
+iod_20<x>: compiled from
+here
+(see ‘related content’ to view historical releases). (Note the file names should really read ‘imd’…)
+lsoa_to_oa: taken from
+here
+monthlygdpto4dp: taken from
+here
+output_area_lookup: taken from
+here
+students_by_year: taken from
+here
+series-191123: taken from
+here
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Data sources:
+Different data sources have differing levels of completeness over different periods of time within the reporting window being used to calibrate our AI model:
+Apprentice vacancy data (salaries): Average salary data per sector, per level and per standard code.
+Individualised Learner Record (ILR):
+Main record of Learner data: Start date, End Date, Completion Status, LSOA (workplace & Learner), Standard code. Actual end date where necessary for internal validation.
+Apprenticeship Service (AS) data:
+Apprentice feedback surveys -> Star rating system to identify if a provider is negatively rated (net for a provider).
+ONS socioeconomic indices covering both national and regional socioeconomic conditions.
+4.3.4 - Data quantities
+Approx. 150 fields, about 100 of which are fields relating to economic conditions -6,-12,-18,-24 months prior to the start of the apprenticeship for a given apprentice, or the indicators. Some variables used in the model drop out as they are constants (e.g. ILR return number which is typically R14 or last data return for an academic year) or other administrative flags (such as identifying where the null entry imputation was applied). Data was sorted by start date into partition of 80/20 (80% train, 20% test) with the test set being the most 20% most recent apprenticeships in at latest AY 2022-23. A new test set is also used covering AY2023-24 to date (but this is smaller due to reporting lag of apprentice withdrawals). Total file size on the order of ~4GB  raw uncompressed CSV format.
+ILR contains 1 record per learner per academic year (where it is possible to have a course spanning over multiple academic years), so this is compacted into a single record.
+4.3.5 - Sensitive attributes
+Learner/ Workplace/ Provider Local Super Output Area (LSOA, approximately equivalent to Council Ward/first half of postcode). Unique Learner Number (ULN) & Apprentice ID used only to link to other services (e.g. email list) or to join tables. Ethnicity, Gender and Age Category used only to evaluate the impacts/biases of the model predictions towards different cohorts of apprentices.
+4.3.6 - Data completeness and representativeness
+Data sources:
+Different data sources have differing levels of completeness over different periods of time within the reporting window being used to calibrate our AI model:
+Apprentice vacancy data (salaries) Department for Education does not have access to all salary data for all apprentices. ~50% of all apprenticeships will not have a salary recorded for them. We assume that the salary distributions for both vacancies advertised privately and vacancies advertised on the service are equivalent, with these fields approximated by interpolation where empty. In practice, this appears in about 30% of cases.
+Individualised Learner Record (ILR):
+Typically very high completeness of data ~100%. Some apprentices in the record may have no location recorded. Since this data is also entered by hand by providers, there is some scope for incorrect inputs (e.g. wrong postcode, date transposition errors etc), but we expect that these data quality effects will be negligible across the entire cohort
+Apprenticeship Service (AS) data:
+Incomplete data sources over time due to:
+A. Apprenticeship service not managing apprenticeships from small employers (those not paying the Apprenticeship Levy) prior to 2020. A2: Apprentice frameworks are not recorded in service databases.
+B. Feedback survey data being collected in 2020-21 onward only.
+These data reporting discrepancies decrease with time so in subsequent academic years these will be substantially smaller and mitigated with increasing available data in subsequent retraining passes
+4.3.7 - Source data URL
+ILR specification:
+https://www.gov.uk/government/collections/individualised-learner-record-ilr
+Confidence-data: compiled from
+here
+. All three were downloaded separately, filtered for GBR records only, and then compiled.
+economic_data: compiled from
+here
+, by downloading the data from the figures and compiling
+Employer-and-apprentice-feedback-ratings_23: compiled from
+here
+.
+HMLR_house_prices_over_time_various: compiled from
+here
+income_by_<x>: compiled from
+here
+iod_20<x>: compiled from
+here
+(see ‘related content’ to view historical releases).
+lsoa_to_oa: taken from
+here
+monthlygdpto4dp: taken from
+here
+output_area_lookup: taken from
+here
+students_by_year: taken from
+here
+series-191123: taken from
+here
+4.3.8 - Data collection
+ONS data sources: Secondary, collected for national and regional level analytics for public and government use. Deprivation surveys collated every ~10 years (our model uses the 2019 results). Economic indicators collated from a variety of literature sources/models (see relevant ONS links for details). Individualised learner record: Collected to aid providers and DfE manage the status and funding for learners within learning programmes. Apprenticeship service data is typically collected for the purpose of delivering quality placements for apprentices and ensuring that providers and employers within the schemes act in accordance with their obligations. Service and ILR data can be used for the benefit of improving the services provided, of which this is a clear proposed improvement.
+4.3.9 - Data cleaning
+Current approach in model design/evaluation.
+ILR contains 1 record per learner per academic year (where it is possible to have a course spanning over multiple academic years), so this is compacted into a single record
+Individualised Learner Record (where used) is inclusively (left) joined to the apprenticeship service data (so the ILR is considered the basis)
+This is also left joined to the data from the Apprentice Service Feedback surveys, with the former being a star rating system to identify if a specific training provider was identified as “1 or 2” stars out of 5 based on feedback surveys. If no result existed for a given provider (in the case that the provider was too new, or insufficient data was available), the flag would default to “False” (Provider not marked as 1 or 2 stars). Since Vacancies data does not link directly to an apprentice (so we can’t say vacancy X mapped to a given apprentice), we calculate a weighted average annual salary for that apprentice type for that LarsCode (apprenticeship standard), Provider & Level.
+Where an apprenticeship has not been listed on the Apprenticeship service website, salary data is treated as a null. A CPI-H inflation correction is applied to account for the fact that salary data should be corrected for inflation. As a reference date, we chose March 2020, applying relevant corrections up/down as needed to have a single inflation adjusted salary.
+Since we have ~50% of apprentices having no average salary recorded for them, we apply a MIDAS auto-encoder which generates 10 decoded fields (effectively a synthetic set of average salaries), given an input set of fields which are filled. This produces 10 possible synthetic combinations to fill the null value. One out of the 10 synthetic values is chosen at random, and this replaces the null average salary entry. Additional fields are also imputed, but principally any other field imputed is «1% of the total dataset, and the impact of these are effectively negligible.
+After imputation of nulls, we sort the dataset by course start date, and partition into three sets:
+Set A: Apprentices completing/withdrawing as of at latest end of academic year 2022/2023 and earliest academic year 2018-19 (20% most recent). This is our test set
+Set B: Remaining completing/withdrawing as of at latest end of academic year 2022/2023 and earliest academic year 2018-19 (The remaining 80% of the dataset). This is our model training set.
+Set C: Apprentices who have completed/withdrawn in the current (2023/24) academic year: This is a validation set and will be updated over time with new data.
+4.3.10 - Data sharing agreements
+None expected in this use case. This is to be a strictly department internal project. Data will not be shared with other agencies or departments directly as a result of this project. Insights gained at a macro level (e.g. region, course, level etc) may be used by internal policy teams.  Individual level data will not be shared with third parties (employers, providers).
+4.3.11 - Data access and storage
+Stored according to standard DfE data policies covering apprenticeships -> Data will be maintained within the typical secure estate. See
+https://www.gov.uk/government/organisations/department-for-education/about/personal-information-charter
+and the sub-policy for the service
+https://www.apprenticeships.gov.uk/privacy.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+None currently listed publicly, so we provide a short summary. All external data is accessed consistent with an Open Government licence. All internal data sources are managed as part of the service’s licence agreements and lies within the permissions granted to improve the service. Personal data is restricted where necessary, and we use the properties of the course, not the apprentice to derive a likelihood of withdrawal. The only personal data used by our model is the local super output area (LSOA - roughly equivalent to a council ward or the first half of a postcode) which is used implicitly to link service data to socioeconomic deprivation indices (but is not directly used by our model). We also use personal data (Ethnicity, Gender)  The key risk(s) identified are particularly around disclosure of individual/small cohort level predictions to third parties which could influence their behaviour towards specific apprentices, such as “Red/Amber/Green” ratings for apprenticeships based on outputs from systems, or general data breaches containing personal data.
+5.2 - Risks and mitigations
+We identified a potential risk in the AI model output (predicted withdraw/complete) being mis-used by third parties (e.g. employers, providers) to take destructive action against specific groups of apprentices (e.g. candidates who are more likely to withdraw being denied access to apprenticeships), so this data cannot be shared with third parties. What this means in practice is that candidate level predictions must not be shared externally, but aggregate and thus anonymous (e.g. sector,  large geographic region - GOR region or apprenticeship level) may be under careful scrutiny by the service in the future (e.g. Local authority level dashboards for apprenticeships), but this is not planned within the scope of this project.  Overall data access risks have been mitigated by restricting data access to department managed devices/cloud resources only with no sharing with third parties.
+Contents

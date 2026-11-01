@@ -1,0 +1,153 @@
+MoJ: nDelius Contact Log Semantic Search
+A search tool which helps probation practitioners find information within the Probation case management system contact logs.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+8 October 2025
+Organisation:
+Ministry of Justice
+Organisation type:
+Ministerial department
+Function:
+Public order and safety
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Phase:
+Public Beta
+Region:
+England and Wales
+Date published:
+8 October 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Delius contact log semantic search
+2 - Description
+We have built a search tool to help probation practitioners more efficiently find information within offender reports (Delius contacts).
+The aim of the search tool is to help probation practitioners who are searching through large quantities of unstructured text within an offender’s contact log. Probation practitioners complete searches in order to find information about offenders, for example, for intelligence gathering, to inform risk assessment or in preparation for engagement with the offender.
+3 - Website URL
+N/A
+4 - Contact email
+datascience@justice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Ministry of Justice
+1.2 - Team
+MoJ Data Science & AI Hub
+1.3 - Senior responsible owner
+Chief Data Scientist
+1.4 - Third party involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+We have built a search tool to help probation practitioners more efficiently find information within offender reports (Delius contacts). The aim of the search tool is to help probation practitioners who are searching through large quantities of unstructured text within an offender’s contact log. Probation Practitioners complete searches to find information about the offender, for example, for intelligence gathering, to inform risk assessment or in preparation for engagement with the offender.
+The search relies on a technique called semantic search which is underpinned by a Large Language Model (LLM). LLMs are trained on large amounts of text that are taken from multiple sources to calculate the strength of the link between different words. Links can also be made between phrases or sentences. When the search tool is used, the model reads every Delius contact in that person’s contact log looking for words or phrases which have a similar meaning to what was searched for. Each contact is scored by how strongly it is associated with the search query. A threshold has been set above which contacts are deemed relevant to the search and those contacts are returned.
+2.2 - Benefits
+An increase in the amount of relevant information provided and a reduction in time taken to search by reducing the number of instances where users have to search a number of different terms to find what they were looking for.
+2.3 - Previous process
+A literal keyword search which returns the exact words searched for or are in a manually maintained acronym and synonym dictionary.
+2.4 - Alternatives considered
+We considered not changing the current literal search. We explored a fuzzy search which finds words spelt a little differently. Neither option addressed the problem that the searchers of contacts, and the writers of those contacts, will have used different words to mean the same thing. A semantic search can find words and phrases that mean the same as each other.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The tool is designed to support probation practitioners find relevant information faster when searching an offender’s contact log. Probation practitioners decide when they need to search the contact log and what they need to search for. It does not replace their professional judgment, for example assessing whether information identified via semantic search is relevant to and sufficient for their needs.
+The tool provides additional relevant contacts that would not have previously been returned using the literal search function, but could still be accessed by manually searching the contact log.
+3.2 - Human review
+The user sees a list of returned contacts which they can then read and expand to decide if relevant. They can also choose to not use the search function and manually search the full contact log.
+3.3 - Frequency and scale of usage
+The tool is used by 1,000 daily users and there are 5,000 searches on average per weekday (March 2025).
+3.4 - Required training
+N/A
+3.5 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+When a modification occurs to the contact log in nDelius, an event is queued for processing. The contact data is read from the contact log in nDelius and stored securely in a search tool. The search tool is integrated with the LLM tool for the contact data and search queries to be converted into the required format for semantic search. The data is repopulated in the search tool on a scheduled basis to make sure it is kept accurate and up-to-date. Authorised users (probation practitioners) can use nDelius to submit search queries to the search service. The search results are displayed to the users in nDelius.
+4.1.2 - System-level input
+For each offender being searched there are four input fields to the search model (listed below). Note the semantic search element only sees the notes field.
+- notes: body of the contact (free text)
+- type: contact type (categorical)
+- outcome: outcome of the contact (categorical; often blank)
+- description: text description of the contact type (categorical)
+4.1.3 - System-level output
+A list of the offender’s contacts that are deemed relevant by the search. There is a relevance score associated with each and results can be ordered by this (or ordered by date if the user chooses).
+4.1.4 - Maintenance
+We have ongoing monitoring of the model performance and use.
+We also have a formal model review scheduled for every 12 months, which involves assessing data drift (language being used in the notes), concept drift (change in search terms), industry developments in models available, assessing the need and usage of the model, gathering user feedback, and a decision about whether to retire the model.
+The model is hosted on MoJ cloud storage and is on a static release. The model will therefore not change unless we make a decision to change it. The reason for changing the model could be because there has been a significant change in the search terms or the language being used. It could also be changed if industry developments mean that significantly better models become available.
+There is also ad hoc ongoing maintenance required to keep the model operational when there are changes to upstream data or infrastructure.
+4.1.5 - Models
+Models used:
+- Okapi BM25 algorithm (literal search)
+- Mixedbread AI’s mxbai-embed-large-v1 model (semantic search)
+- OpenSearch implementation of the hybrid model that combines the outputs of these models.
+Tier 2 - Model Specification
+4.2.1. - Model name
+Mixedbread AI’s mxbai-embed-large-v1 model.
+This model is self-hosted within our infrastructure (i.e. not accessed via a third-party API).
+Further information and documentation are available at:
+https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1
+4.2.2 - Model version
+mxbai-embed-large-v1 – this is the version identifier as specified by the model provider, Mixedbread AI, on Hugging Face. There are no sub-versions or patch numbers listed at the time of use.
+4.2.3 - Model task
+The model is designed to generate semantic similarity comparisons between texts. Specifically, it is used to return the most semantically similar notes to the search query provided by the user.
+4.2.4 - Model input
+The model input is the “notes” field from the nDelius Contact Log, which contains free-text entries written by probation practitioners. These entries typically describe interactions with offenders, observations, and case-related updates.
+4.2.5 - Model output
+The model outputs a 1024-dimensional dense vector embedding, which is a numerical representation of the semantic content of the input text. These embeddings are used to compute similarity scores between entries - i.e. between a user query and stored notes - as part of a semantic search process within a hybrid retrieval system.
+4.2.6 - Model architecture
+The model used is mxbai-embed-large-v1, a pre-trained transformer-based language model developed by Mixedbread AI. It is designed to generate dense vector embeddings from text data. The model is used in our tool as-is, without any further training or fine-tuning.
+Type of model: Transformer-based encoder model for text embeddings.
+Methods and optimisation: The model was pre-trained and fine-tuned by the original developers using contrastive learning techniques. These optimisations aim to ensure that similar meanings are encoded into similar vector representations.
+Feature weighting: No explicit manual feature weighting has been applied by us.
+Further resources:
+- Model card and documentation:
+https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1
+This model is integrated into a hybrid semantic search system, where it is used to generate embeddings from free-text entries in the Delius Contact Log. These embeddings are then compared to user queries to support retrieval of relevant information based on semantic similarity.
+4.2.7 - Model performance
+The model was tested using a labelled dataset of Delius contact notes, annotated by probation practitioners for five common search terms. Additional synthetic datasets were used to assess handling of misspellings.
+The metrics used to measure performance are:
+- F1 Score (primary metric): Balances precision (how many results are correct) and recall (how many of the correct results were found).
+- MAP@60 (ranking quality): Measures how relevant the top 60 results are to the user’s query.
+These were calculated using cosine similarity between search terms and text chunks.
+Data was sampled to reflect diversity in author, date, and contact type. No personal data was exported. All processing occurred within secure MoJ platforms. Performance variation by search term was noted.
+Key findings:
+- Hybrid models outperform other approaches
+- Synonym/acronym dictionaries improve F1
+- Semantic search improves handling of misspellings
+- Search performance varies by term
+We carried out a comprehensive ethics assessment in line with the MoJ AI and Data Science Ethics Framework. This involved a thorough model bias evaluation and assessment of equality impacts.
+No external or third-party performance testing has been conducted to date.
+4.2.8 - Datasets and their purposes
+Pre-trained model:
+The semantic search system uses the pre-trained model mxbai-embed-large-v1, developed by Mixedbread AI. This model was trained and optimised externally, using publicly available corpora that include large-scale web and book text. The precise training datasets are not published by the developer but are consistent with those used for modern instruction-tuned language models. MoJ has not performed any fine-tuning or additional training on this model.
+Evaluation and validation datasets (internally developed):
+- Contact log dataset:
+A dataset of nDelius Contact Log entries was annotated by probation practitioners for five high-impact search terms: accommodation, domestic abuse, police, safeguarding, and alcohol/drugs. This was used for validation and performance testing (F1 and MAP@60). A larger dataset of nDelius Contact Log entries was used to test for model bias over a wider range of search terms.
+Synthetic misspelling dataset:
+Designed to assess model robustness to name-based typos and variants, especially in search terms involving named individuals. Used for testing semantic model behaviour under real-world input errors.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+User inputs: the search terms probation practitioners key into the search box.
+4.4.2 - Sensitive attributes
+Search terms may contain names or other specific personal attributes that probation practitioners are trying to search for within an offender’s record.
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+User interaction and searches are made and stored in a user audit log which is kept securely and only accessed by authorised digital and data staff. The Delius Digital team are responsible for the data. Data on contact log searches has been collected for 3 years and is stored in line with business retention rules.
+4.4.5 - Data sharing agreements
+N/A - Data is all held internally.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+DPIA nDelius Contact Log Search Beta - completed June 2025
+DPIA nDelius - completed Sept 2024
+5.2 - Risks and mitigations
+The model does not use protected characteristics like gender or ethnicity directly. Semantic search works by scoring the strength of association between words i.e. some words are more associated with men than women and vice versa. This means that demographic indicators could have an impact on the relevancy score the model assigns to a contact depending on association with the search term. We found that differences do not consistently or disproportionately affect a single demographic group and potential impacts are mitigated as searches are limited to a single offender’s contact log, we are retaining the option for probation practitioners to manually search the contact log, literal matches are returned with semantic search only identifying additional results and the tool is subject to ongoing monitoring.
+Contents

@@ -1,0 +1,179 @@
+DEFRA: Local Authority Waste Collection Cost Groupings
+A tool that categorises local authorities into groups based on shared factors influencing the cost of waste collection.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 August 2025
+Organisation:
+Department for Environment, Food and Rural Affairs
+Organisation type:
+Ministerial department
+Function:
+Environmental protection
+Capability:
+Discovery
+Task:
+Clustering
+Phase:
+Private Beta
+Region:
+UK
+Date published:
+27 August 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Local Authority Waste Collection Cost Groupings Model
+2 - Description
+The tool groups local authorities based on key factors that influence waste collection costs. It produces two distinct sets of groupings: one for residual waste and another for dry recycling. These groupings are used to estimate an efficient cost per tonne for waste collection across different types of authorities.
+3 - Website URL
+https://www.gov.uk/government/publications/epr-for-packaging-how-local-authority-payments-are-calculated
+4 - Contact email
+EPRCustomerService@defra.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Environment, Food and Rural Affairs
+1.2 - Team
+Circular Economy - Fees and Payment Calculator Team
+1.3 - Senior responsible owner
+Deputy Director for Science and Analysis in the Circular Economy Directorate
+1.4 - Third party involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Local Authority Waste Collection Cost Grouping model categorises UK local authorities into two sets based on factors influencing their waste collection costs.
+Residual Collection Costs: The first set groups local authorities with similar residual waste collection costs.
+Dry Recycling Collection Costs: The second set groups local authorities with similar dry recycling collection costs.
+Each local authority appears in both sets.
+Process Overview:
+Feature Selection: The model uses a Feasible Solutions Algorithm to identify the best regression model with up to five terms, allowing for interactions between variables. Variables significantly related to collection cost-per-tonne are selected for grouping.
+Clustering Method:
+Consensus K-Means Algorithm: The model runs the k-means algorithm 100 times to build a co-association matrix.
+Hierarchical Clustering: This matrix is then processed through hierarchical clustering to finalise the groupings.
+Specifics:
+Recycling and Residual Groups: The same process is applied to both groups, but with different selected variables.
+K-Means Clustering: The model identifies nine clusters using the Hartigan-Wong algorithm.
+Hierarchical Clustering: The “average” method is used.
+Manual Adjustment: A 10th cluster is manually created based on prior knowledge, including highly rural local authorities.
+2.2 - Benefits
+There are three main benefits of using this tool.
+Firstly, by finding similar local authorities we can estimate what their efficient costs should be by comparing to authorities that have similar driving factors.
+Secondly, due to limited actual cost data, by using this tool to group similar local authorities together, DEFRA are able to estimate efficient costs for authorities it does not have data for.
+Thirdly, the tool makes groupings easily interpretable, and allows local authorities to validate the group they have  compared to.
+2.3 - Previous process
+This is a model that supports the Local Authority Packaging Costs and Payments model (LAPCAP). This is a model that is used to deliver packaging Extended Producer Responsibility (pEPR) which is a new policy. Therefore there is no legacy process that this has replaced.
+A previous set of groups had been devised by Waste
+and Resources Action Programme (WRAP) using a more rudimentary method.
+2.4 - Alternatives considered
+The main alternative that was considered was using a regression model. This method would have used the identifcal first steps of the current method. However, rather than simply taking the variables and using them for clustering, we would have stopped there and simply used the regression model we have created. This method might have had more predictive power, however groupings was the chosen method as it aligns with previously known metrics in the waste industry , namely the WRAP deprivation-rurality metrics.
+Alternatives to consensus k-means were trialled including k-means, k-prototypes and hierarchical clustering. Consensus k-means was chosen because of the seed sensitivity of the other tested algorithms and the predictive power of consensus k-means.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The groupings model is embedded within the Local Authorities Payments Costs and Performance Model (LAPCAP). It assigns local authorities to groups based on shared factors that influence waste collection costs. Each group is used to estimate an efficient collection cost per tonne, calculated as the median value within that group. These grouped outputs are then used to inform LAPCAP, which estimates the cost of efficiently collecting packaging waste across local authorities.
+The outputs from LAPCAP feed into a third model, PROFIC, which sets base fees, the per-tonne charges applied to producers for different types of packaging materials. These fees are published at regular intervals throughout the year, prompting updates to the groupings and models each time. Formal fees, which determine the final payments to local authorities and charges to producers, are produced annually. In the first year of implementation, the total funding allocated through this process was just under £1.5 billion.
+The information generated by the groupings model is used internally by analysts and policymakers to support funding decisions and fee-setting mechanisms. The tool itself is not accessed or interacted with by the general public.
+3.2 - Human review
+The groupings model is run separately to the LAPCAP model. Therefore, before model outputs are put into LAPCAP, they are reviewed by a human. This is done via both sense checks i.e. are local authorities grouped with similar local authorities based on prior knowledge. As well as more rigorous model checks, i.e. sensitivity tests. All changes to the groupings code are quality assured by another analyst before the changes are merged into the full model.
+Groupings are reviewed by a human using a visualisation app that was created in-house, which visualises various elements of the groupings. This visualisation app allows DEFRA to view changes compared to previous groupings, such as, where each local authority lies inside their group and the population for each grouping factor, as well as SHapley Additive exPlanations (SHAP) visualisations which guide DEFRA staff on what factors dictate why each local authority were grouped they are.
+3.3 - Frequency and scale of usage
+The groupings model is updated regularly throughout the year, although there is no fixed schedule for these changes. As previously mentioned, the outputs from this model feed into the LAPCAP model, which in turn informs a third model known as PROFIC. PROFIC is responsible for setting base fees, the per-tonne charges applied to producers for different packaging materials.
+Illustrative base fees are published at regular intervals during the year, prompting a re-run of both the model and the groupings each time. However, formal fees, the final amounts paid to local authorities and charged to producers, are only produced once annually. In the first year of payments, the total funding allocated through this process was just under £1.5 billion.
+The outputs of the groupings model are shared internally only, meaning the tool is not accessed or interacted with by the general public.
+3.4 - Required training
+No specific training is required to use the algorithmic tool. All analysts in the team who have the access to modify the model are experianced operational researchers. Furthermore, regular information sharing sessions between analysts are run whenever someone new is picking up this particular part of the model.
+3.5 - Appeals and review
+An appeals process exists for the decisions assisted by the tool, specifically the outputs of the full LAPCAP model. The appeals process can be found here
+https://www.gov.uk/government/publications/packuk-extended-producer-responsibility-packaging-appeals-process
+.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+All of the data is stored on Amazon Web Service servers, where it is loaded into R which is run on a cloud based server within Defra. Our modelling is also connected with GitHub, which allows for version control - however our GitHub repository is not publicly accessible and there are no plans to make it publicly accessible.
+4.1.2 - System-level input
+Local authority factors that are determined to have an effect on collection costs including scheme data (containing information on the waste collection schemes that local authorities run), deprivation and rurality data. Also, for a limited number of authorities, actual collection costs. These come in two forms: RFIs (Requests for Information, the local authorities for which we have actual collection costs) and Welsh actuals.
+4.1.3 - System-level output
+The groupings model output are, for each local authority, an assignment to two groups: A residual collection group and a recycling collection group.
+4.1.4 - Maintenance
+The model is consistently being working on and improvements are continuously being made. There is an agreed programme of improvements and adjustments which will continue over future years. This includes changes to the groupings model.
+4.1.5 - Models
+Feasible Solutions Algorithm. Consensus k-means (using hierarchical clustering).
+Tier 2 - Model Specification
+4.2.1. - Model name
+Local Authority Waste Collection Cost Groupings Model
+4.2.2 - Model version
+LAPCAP V6.0.0. This is the version that is used for year 1 payments.
+4.2.3 - Model task
+Assign Local Authorities to two groups (one for residual waste, one for recycling) with local authorities with similar drivers of collection costs
+4.2.4 - Model input
+For all local authorities: scheme data and data on factors that drive collection costs. For some local authorities: actual collection costs.
+4.2.5 - Model output
+An assignment of 2 groups for every local authority
+4.2.6 - Model architecture
+Feature selection is carried out using a Feasible Solutions Algorithm. This searches for the best regression model with up to 5 terms, where interactions between variables are allowed. The variables that are determined to have a significant relation to collection cost-per-tonne are then used in the groupings of local authorities. No weightings are applied to these factors.
+The groups are used using the consensus k-means algorithm. In detail this means that we build a co-association matrix using outputs of 100 runs of the k-means algorithm. This co-association matrix is then passed through a hierarchical clustering model to give our final local authority groupings.
+The same process is used for both recycling and residual groups, although the variables selected are different.
+For k-means we find 9 clusters, using the Hartigan-Wong algorithm. For hierarchical clustering we use the “average” method. It is to be noted that there is a 10th cluster which we manually create, which is based on prior knowledge of the waste system. This includes highly rural local authorities.
+4.2.7 - Model performance
+For accuracy we check the R-squared of the model. This is the difference between the predicted costs given by the groupings and the predicted cost given by the regression, so not a perfect measure. However, we do not actually want to model actual costs, we want to estimate efficient costs, so cannot simply maximise this (this would also run into the issue of overfitting).
+We carry out sensitivity testing on our results to ensure that small modelling changes will not cause drastically different model outputs. Most importantly we check the model is not sensitive to random seed.
+We also output box-plots of which group the local authorities we have actual cost data for (known as request for information’s or RFIs) are in and the spread of RFIs cost per tonne within a group - to ensure we have enough RFIs per group and to spot outliers. Further we plot the group assignments over a map of the UK. This is to ensure that local authority groups are consistent with prior knowledge. I.e. rural authorities or LAs with similar collection methods are grouped together.
+We have also created a visualisations app which produces a number of visuals for the groupings. This allows us to sense check the groups. However, this app is purely inward facing.
+Finally, we get a full independent review from GAD (Government Actuaries Department) to ensure our modelling is robust.
+4.2.8 - Datasets and their purposes
+mysociety harmonised UK wide rurality data - rurality/urban data used for local authority characteristics. It is used as a factor in groupings.
+mysociety harmonised UK wide index of multiple deprivation data - Deprivation data used for LA characteristics. It is used as a factor in groupings.
+WLGA actual cost data - Actual cost data for Welsh local authorities. Used to determine which variables to use in groupings but not used to estimate costs.
+Scheme Data - Data for the waste collection schemes run by every local authority. This is used to generate multiple local authority characteristics which are used as factors in groupings.
+RFI actual data - Actual collection cost data for local authorities, run on a survey created by DEFRA. These are used to determine which variables to use and later (outside of this model) to calculate group cost per tonnes.
+2.4.3. Development Data
+4.3.1 - Development data description
+mysociety harmonised UK wide rurality data (https://pages.mysociety.org/uk_ruc/downloads/uk_ruc_xlsx/latest) - rurality/urban data used for LA characteristics.
+mysociety harmonised UK wide index of multiple deprivation data (https://pages.mysociety.org/composite_uk_imd/datasets/uk_index/latest). Deprivation data used for LA characteristics.
+WLGA actual cost data - Actual cost data for all Welsh local authorities.
+Scheme Data - Data for the waste collection schemes run by every local authority.
+RFI actual data - Actual collection cost data for LAs, collected by a DEFRA survey. This is a sample of all local authorities.
+4.3.2 - Data modality
+Each of the data sets are tabular data containing both numerical and categorical data
+4.3.3 - Data quantities
+The data set that we use to fit the model contains 357 rows of data (one for each local authority, not including waste disposal authorities (WDAs)). For the residual groupings we fit on a data set with 13 columns, and for dry recycling we fit on a data set with 15 columns.
+We fit our regression model using a data set containing 60 rows and 20 columns for residual and 21 columns for recycling.
+We do not use a separate data set for validation. Instead we use k-fold validation where k = 5.
+4.3.4 - Sensitive attributes
+There are no sensitive attributes used in the development datasets, such as personal data, protected characteristics or variables that are known proxies for protected characteristics.
+4.3.5 - Data completeness and representativeness
+For the data set containing information on all local authorities there is no missing data.
+The RFIs (the LAs we have actual cost data for) were chosen based on previously recognised groupings methodology, thus providing assurance that they will be representative of the population of LAs. The data the LAs provided to us was fully quality assured by multiple members of the team to insure that it was correct.
+4.3.6 - Data cleaning
+The main data cleaning steps involve ensuring data sets are joined correctly. There are a number of local authority identifiers that help us do this.
+In addition, we also normalise all numerical variables and one-hot encode all categorical variable - this is the process of changing one categorical variable into a number of 1/0 numerical variables. i.e. the factor of country, instead of being one variable is now 4 variables (England, Scotland, Wales and Northern Ireland), where a local authority has a 1 in that variable if it is in that country.
+There is a number of cleaning approaches that are done to the scheme data before it is seen by the groupings model. These cleaning processes condense and generalize information from the scheme data. To see more information on this see documentation on the LAPCAP model.
+4.3.7 - Data collection
+The RFI data collection process involves the team identifying local authorities we need data from and obtaining the required data through third-party contractors. This data is collected in form of a spreadsheet that contains detail on the specific costs of a waste collection service.
+The scheme data has been collected by WRAP. This is suitable for our model as it is reliable data on the waste systems that each local authority employs. These are important in order to determine waste collection costs.
+4.3.8 - Data access and storage
+Development data is stored and accessed via a cloud-based object storage service, with access controls limited to only named individuals within the development team.
+4.3.9 - Data sharing agreements
+LA Cost (RFI) data was collected under an agreement that it would not be published in a way that would make individual local authorities identifiable, due to commercial sensitivity.
+WLGA cost data was shared under the agreement that Welsh Government are consulted on its use and publication.
+All other data is open source.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+No data is collected for groupings once the tool is deployed. The tool outputs a spreadsheet which contains a list of group assignments. This is static and not re-ran unless changes to the grouping methodology or input data have been changed. These assignments of groups are stored for different versions of the model to allow future comparisons.
+4.4.2 - Sensitive attributes
+N/A
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+The only operational data that is being stored are QA logs whenever another modeller makes changes to the groupings model.
+4.4.5 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+A Data Protection Impact Assessment has been completed and approved for the wider model and policy area. This is not publicly available due to data sensitivities.
+5.2 - Risks and mitigations
+There is the risk that a local authority may be miscategorised due to inaccurate data. This is mitigated by robust verification and validation, including sharing the characteristics we have for each local authority and allowing them to contest if they believe they are incorrect. Furthermore there is the risk that the groupings model creates perverse incentives that contradict environmental goals. For example, if a local authority changed their scheme from multi-stream to comingled (which is a worse collection stream in terms of recyclability) they may see an increase in payment. To mitigate this robust verification and validation is carried out.
+Contents

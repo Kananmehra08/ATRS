@@ -1,0 +1,231 @@
+DSIT: GOV.UK One Login - Liveness & Likeness Checks
+A verification tool that uses an matching algorithm to match the users image with a trusted ID and ensures that they are present during the process.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer vision
+Task:
+Image segmentation
+Phase:
+Production
+Region:
+Wales
+and
+England
+Date published:
+16 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+GOV.UK One Login - Genuine Presence Assurance Algorithm
+2 - Description
+The purpose of this algorithmic tool is to verify once that the user matches the image from a trusted ID document such as a passport, that the user is genuinely present during enrolment and that the authentication is taking place in real-time.
+As part of completing the app identity proving journey, the citizen will capture a selfie and short video via their smartphone camera. The genuine presence assurance algorithm will be used to confirm that the user matches the photo on their presented ID document, and that they are a real, live user.
+This tool is used to introduce anomaly detection into the identity proving journey that would not otherwise be possible due to the remote nature of the identity proving journey; this forms part of the GOV.UK One Login fraud detection capability.
+3 - Website URL
+https://www.sign-in.service.gov.uk/
+4 - Contact email
+govuk-sign-in@digital.cabinet-office.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Government Digital Service, Department for Science, Innovation & Technology
+1.2 - Team
+Mobile Team, Digital Identity Directorate
+1.3 - Senior responsible owner
+Director, Digital Identity
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+iProov
+1.4.2 - Companies House Number
+07866563
+1.4.3 - External supplier role
+The supplier has integrated with the GOV.UK One Login app in order to provide the end-to-end identity proving journey. A key part of this is the genuine presence assurance capability (provided entirely by supplier, iProov) which forms a key part of ensuring that a genuine user is accessing government services.
+1.4.4 - Procurement procedure type
+G-Cloud Call-off Contract
+1.4.5 - Data access terms
+The supplier has access to data that is shared by a citizen in order to complete the identity proving journey; this includes personal information (name, DOB, address) and document information.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+In order to strengthen a remote identity proving journey, the genuine presence assurance capability will complete facial matching and liveness detection; this ensures that the user completing the journey matches the image on the ID document that has been submitted, and that they are a living person, completing the identity proving journey in real-time. This part of the journey requires the user to take a selfie and record a short video with prescribed movements, using their smart-phone camera
+This part of the journey can be broken down into the following three steps:
+1. Facial detection and extraction - this involves detection of the face in the photo zone of the ID document and extracting it
+1. Facial matching - comparing the face in the document with the selfie the users has taken to ensure that they are the same person
+1. Liveness detection - ensures that the person carrying out the journey is live and is not presenting a static photo or a video recording.
+2.2 - Scope
+The purpose of this tool is to ensure that genuine users are undertaking the identity proving process, and can therefore gain access to the service they are intending to use.
+In order to use the GOV.UK One Login identity proving journeys, a user must be directed from a service they are trying to gain access to (i.e. identity proving must be triggered by a government service, and cannot be triggered directly by a user). When they are directed to One Login, there are a number of different routes that they can use to prove their identity; either via the app (which is the process being described here), via the web (which employs a different journey to the one being described here), or face to face (via the user’s local post office).
+This use of the genuine presence assurance capability also helps to protect against fraud in a remote setting.
+2.3 - Benefit
+Key benefits include:
+- making the identity proving journey faster and more secure for citizens with photo ID documents
+- improving the accuracy of the identity proving journey
+- providing additional fraud detection controls to prevent counterfeit documents being used in the identity proving journey
+Without this tool,  users would have to use alternative methods of proving their identity with may have lower success rates (e.g. the web route, which leverages knowledge based verification questions), or take a longer time to complete (e.g. proving their identity in person at the post office).
+2.4 - Previous process
+There were no previous process; the liveness & likeness algorithm has been in place since the GOV.UK One Login app went live.
+2.5 - Alternatives considered
+The other alternatives available rely on manual inspection of documents, which is not scalable based on the volume of transactions that GOV.UK One Login will process when all services are onboarded.
+One Login provides alternative identity proving methods for those who cannot, or do not chose to use the app verification route. Users can use the web route to verify their identity (which does not involve the use of the liveness & likeness algorithm) or can prove their identity in-person at a local post office.
+The user is able to use whichever identity proving route they deem most appropriate and convenient, and each route will allow the user to gain access to their desired service if they have the right identity documentation.
+Tier 2 - Decision making Process
+3.1 - Process integration
+This algorithmic tool forms part of a wider assessment to ascertain that a person is who they say they are. The genuine presence assurance capability provides a key component of the overarching decision to verify an identity and issue a citizen with a reusable identity. The genuine presence assurance algorithm helps us to reach a verification decision - this is either a positive decision (whereby the document image matches the selfie submitted, and liveness is detected), or a negative decision (whereby the document image and selfie do not match, and/or liveness is not detected).
+People use GOV.UK One Login when they need to access UK government services online that require identity verification or secure sign-in. They would be routed down this process when trying to access a government service such as;
+Checking your driving licence details
+Applying for a Disclosure and Barring Service (DBS) Check
+Accessing Right to Work, Right to Rent, or criminal record checks
+Applying for Universal Credit, student loans, or tax services (future rollout).
+3.2 - Provided information
+The tool provides users attempting to verify their identity with a clear outcome, typically a negative result if verification fails. When a decision-maker is involved in the verification process, they receive both the outcome (positive or negative) and, in the case of a negative result, an accompanying reason code. Where available, automatically extracted data may also be included to support the decision.
+3.3 - Frequency and scale of usage
+The tool is used for all app-based identity proving journeys; the app makes up approximately 70% of monthly journeys, which equates to an average of 100,000 unique journeys per month.
+3.4 - Human decisions and review
+The default decision-making process is fully automated, especially for liveness and likeness checks using the GOV.UK ID Check app or security questions.
+However, for individual services such as driving licence checks conducted via the ID Check app, if the automated check fails (for example the document scan or face match isn’t successful), a manual review process is available. A human reviewer can step in to assess the results and decide whether to approve or reject the identity verification.
+3.5 - Required training
+The tool is entirely operated by a 3rd party supplier, with the results passed back to the GOV.UK One Login service.
+The tool is designed to be user freindly and straight forward. Guidance is avalible to users on how to caputure an image of themselves to submit and are pointed to further information if their attempt fails.
+Fraud operations analysts can request additional information about potentially suspicious journeys to aid their investigations.
+3.6 - Appeals and review
+When a user is presented with a GOV.UK One Login with a negative liveness/likeness check they are presented with guidance on what to try next, and how to contact GOV.UK One Login support via webchat, phone, or email.
+The contact team will help the user troubleshoot their issue by checking their attempt, and suggesting next steps.
+For those that are unable to use the tool they will be offered another route to prove their identity such as answering security questions or verifying at a Post Office using Yoti if they are eligible.
+In most cases, the system relies on retries or alternative methods rather than escalating through formal appeals.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The high-level architecture for the GOV.UK One Login App is as follows:
+1. User device layer - where the journey is initiated (once a user has selected the app journey for identity proving). This includes:
+a. image capture module
+b. real-time feedback module
+c. local preprocessing
+Backend server layer - the core processing environment for the main components of the identity proving service:
+a. image processing and preprocessing
+b. document analysis and classification
+c. text and data extraction and parsing
+d. template matching and document authenticity checks
+e. biometric verification (where the genuine presence assurance capability is used)
+f. anomaly and fraud detection
+Database and storage layer - including document storage and audit logs
+API layer - that connects the end user device and One Login services to third party services
+Orchestration and workflow management layer
+Security and compliance layer
+Analytics and reporting layer
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The tool outputs are reviewed on a quarterly basis to understand False Positive & False Negative rates for the period and propose amendments to improve the service.
+4.1.4 - Models
+Express Liveness: Quick, passive multi-frame face capture to detect simple spoofing attempts (photos, masks, replayed videos).
+Dynamic Liveness: Projects subtle light patterns onto the user’s face to confirm live presence and fend off sophisticated attacks, including deepfakes, injection attacks, and AI-generated spoofing.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Dynamic Liveness
+4.2.2 - Model version
+SDKs always up to date using semantic versioning (major.minor.patch), with clear lifecycle policies
+4.2.3 - Model task
+Compare the selfie with the image extracted from the ID document to determine a match
+Analyse the video for liveness
+4.2.4 - Model input
+Selfie and video captured by user during the identity proving journey within the app
+4.2.5 - Model output
+Match / no-match
+Liveness detected / no liveness detected
+4.2.6 - Model architecture
+Convolutional neural networks
+4.2.7 - Model performance
+Ingenium Biometrics undertook  certified testing of  iProov’s Dynamic Liveness model and achieved:
+0.00% Imposter Attack Presentation Accept Rate (IAPAR) meaning no spoofing attack succeeded in over 10,000 tests
+0.14% False Reject Rate (FRR) — very low rate of mistakenly rejecting legitimate users
+0.021% False Accept Rate (FAR) — minimal risk of unauthorised acceptance
+FIDO2 (Fast IDentity Online 2) is an open standard for user authentication considers this a global benchmark. Around the test pool, 10,000+ trials were run across multiple demographic groups to evaluate fairness and robustness.
+4.2.8 - Datasets
+This is proprietary information about how they train and teach their models. It is assumed they use multiple facial data sets especially of individuals from different ethnic groups and data sets of spoof attempts.
+4.2.9 - Dataset purposes
+Facial data sets to train their models.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+GOV.UK One Login App User Data - This is the data that is passed to the third party supplier to carry out liveness & likeness checks
+4.3.2 - Data modality
+Image & video
+4.3.3 - Data description
+Selfie images are taken by the user to be compared with the image from their identity document.
+Video data is used to establish liveness (i.e. a real, living person is completing the identity verification journey)
+4.3.4 - Data quantities
+One video selfie (few seconds long)
+You’ll be asked to centre your face and remain still while the app displays a light pattern on your screen (this is iProov’s Dynamic Liveness check).
+This selfie is actually a short video (not a single photo), usually 3–5 seconds, capturing dozens of frames for anti-spoofing and deepfake detection.
+One photo of your identity document
+For example: a passport, driving licence, or BRP (biometric residence permit).
+This is a still image, either scanned from the chip (NFC) or taken by the phone’s camera.
+4.3.5 - Sensitive attributes
+Image data (from which gender, ethnicity and age can be estimated, however these estimations do not form part of the GOV.UK One Login identity verification process).
+4.3.6 - Data completeness and representativeness
+The app-bases identity proving journey could be used by any citizen wishing to prove their identity and access a service; the app journey will require complete information (a successful selfie, a video, and a comparator image from an identity document) in order to provide an outcome.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Data is collected as the user goes through the identity verification process within the GOV.UK One Login app.
+This data is collected and processed for the purposes of proving an individual’s identity only; the data is retained by the third party provider for 30 days only.
+4.3.9 - Data cleaning
+Pre-processing of the image or video data is carried out by the supplier:
+1. Face Detection & Alignment
+Automatically locates the face in each frame and normalises it (e.g. centering, rotating to correct head tilt).
+Ensures consistency across frames before analysis.
+Image Quality Assessment
+Assesses brightness, contrast, focus, glare, occlusion, and shadowing.
+Blurry, overexposed, or underexposed images may trigger a request to retry or are filtered out from model inference.
+Lighting & Reflection Normalization
+Especially important in Dynamic Liveness: the system pre-processes the light pattern reflections on the user’s face to match them against the expected challenge.
+Helps detect signs of spoofing or video injection by verifying whether the reflection patterns behave naturally.
+Anti-Spoofing Signal Isolation
+Filters out signals indicative of screen reflections, printed images, or digital overlays (e.g. someone holding up a tablet or photo).
+Looks for signs of depth, movement, and subtle optical cues that distinguish real faces from fakes.
+Frame Selection
+From a short video, only the best-quality and most informative frames are selected for model input.
+Reduces false negatives (rejecting real users) and increases resistance to spoofing.
+Encryption & Secure Channel Wrapping
+All image and video data is encrypted before transmission to the cloud for processing.
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+Access:
+Designated employees of third party supplier will have access to GOV.UK One Login data for specific purposes such as to investigate identity verification failures, for security and fraud prevention and To audit the system or improve it.
+Storage:
+Facial Image data - 30 days
+Biometric profile - 30 days
+Markers of estimated gender, age, race - 30 days
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+GOV.UK One Login Data Protection Impact Assessment (v3.4) - approval data - June 2023
+GOV.UK One Login Threat Intelligence and Counter Fraud Function (v1.0) - approval date - October 2024
+5.2 - Risks and mitigations
+Ensuring Access for Everyone
+Risk: Not all users have access to the technology or environment required to complete a successful biometric check, such as a compatible smartphone, good lighting, or the ability to hold still for a video capture.
+Mitigation: We offer alternative routes to verify identity, including answering security questions or visiting a Post Office. Clear on-screen guidance helps users complete the process smoothly, and we continue to test the system for compliance with accessibility standards.
+Avoiding Incorrect Rejections
+Risk: Some users may be incorrectly rejected during the liveness or face match checks due to lighting, camera quality, or individual facial features.
+Mitigation: Our system allows users to retry if an attempt fails. We also support a fallback to manual checks or alternative methods if automated verification cannot be completed. We monitor rejection rates closely to identify and fix issues.
+Protecting Privacy and Biometric Data
+Risk: The use of biometric video data raises important privacy and security considerations.
+Mitigation: We conduct Data Protection Impact Assessments (DPIAs) and follow strict UK GDPR standards. Video data is processed securely, access is tightly restricted, and retention periods are limited to what’s necessary for verification. We are transparent with users about how their data is used.
+Reducing the Risk of Bias or Discrimination
+Risk: Biometric systems can perform unevenly across different demographics, such as age, ethnicity, or disability, potentially leading to unfair outcomes.
+Mitigation: iProov’s system is independently tested and certified (e.g. FIDO Face Verification, iBeta Level 2 PAD) for performance across diverse user groups. We regularly review data to check for bias and take corrective action where needed.
+Maintaining Service Availability
+Risk: If the biometric service is unavailable due to downtime or technical issues, users may be unable to continue with their journey.
+Mitigation: We monitor system performance closely and ensure appropriate user messaging is in place when issues arise. Where needed, we guide users toward alternative identity routes or offer support via helplines and live chat.
+Contents

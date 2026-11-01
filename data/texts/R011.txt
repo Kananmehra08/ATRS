@@ -1,0 +1,250 @@
+DESNZ: Warm Homes: Local Grant
+The Warm Homes: Local Grant (WH:LG) service provides users with guidance on whether they are eligible for the Warm Homes: Local Grant, and allows local authorities (LAs) to download referral data for citizens that could be eligible.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 March 2026
+Organisation:
+Department for Energy Security and Net Zero
+Organisation type:
+Ministerial department
+Function:
+General public services
+and
+Housing and community amenities
+Phase:
+Public Beta
+Region:
+Great Britain
+Date published:
+30 March 2026
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Apply for the Warm Homes: Local Grant to improve a home
+2 - Description
+The Warm Homes:Local Grant Eligibility Checker is an online tool that enables members of the public to quickly assess whether they meet the eligibility criteria for the scheme. When an individual is identified as eligible, the tool securely refers them to their Local Authority, who will then progress their application.
+The tool is being used to streamline the delivery of the scheme by providing a consistent, accessible eligibility check and helping Local Authorities connect with eligible individuals more efficiently.
+3 - Website URL
+https://www.gov.uk/apply-warm-homes-local-grant
+4 - Contact email
+eligibilitycheckersupport-cai@energysecurity.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+The Department for Energy Security and Net Zero
+1.2 - Team
+The Consumer Advice and Information Team
+1.3 - Senior responsible owner
+Deputy Director of Consumer, Advice and Information
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Softwire Technology Limited
+1.4.2 - Companies House Number
+03824658
+1.4.3 - Third party role
+A third-party supplier has been engaged to support the development, build, and deployment of the algorithmic tool. They were responsible for creating the technical solution, implementing the eligibility logic, and ensuring the service met the required performance and security standards. The same supplier now provides ongoing maintenance, support, and continuous improvement to ensure the tool remains accurate, reliable, and up to date.
+1.4.4 - Procurement procedure type
+The third-party supplier was contracted via a G-Cloud 14 framework call-off procedure, in line with government procurement guidelines
+1.4.5 - Third party data access terms
+The third party is granted limited access to data strictly for the purposes of developing, maintaining, and supporting the service. Access is provided under contractual data protection obligations, with controls in place to ensure data is accessed only when necessary and handled in accordance with GDPR and departmental security requirements.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Flow for members of the public:
+1. User navigates to the questionnaire area of the site.
+1. This user answers questions about their home and their personal circumstances.
+1. The website will determine in which Local Authority the user’s property resides.
+1. The website compares these answers to WH:LG eligibility criteria as well as whether the Local Authority is currently accepting referrals to determine whether the user can be automatically referred to a Local Authority or Consortium for the WH:LG grant.
+1. If the user is not determined to be eligible, they are not allowed to submit a referral through the service. They can contact their Local Authority directly for further advice.
+1. If the user is determined to be eligible, the website will ask contact details from them and this will be sent to the Local Authority.
+Flow for members of Local Authorities managing the WH:LG grant:
+1. User receives an email when new referrals have been submitted.
+1. User navigates to the referral management portal.
+1. User enters a username and password, as well as 2FA.
+1. User can view referrals submitted per month, as well as per LA if the user manages referrals for multiple Local Authorities.
+1. User can view the contact details and get in touch with the referral submitter to begin delivering the WH:LG grant.
+WH:LG does not assist with the grant delivery itself, only matching eligible users with Local Authorities.
+Flow for DESNZ staff:
+1. User navigates to the DESNZ staff portal
+1. User enters a username and password, as well as 2FA.
+1. User can view all Local Authority staff currently set up to view submitted referrals.
+1. User can add new Local Authority staff and give them immediate access to all referrals submitted so far.
+2.2 - Benefits
+These include:
+- Automated portal for members of the public to check their eligibility for the WH:LG grant
+- Local Authority can be automatically determined from the user’s address, simplifying the process of finding contact details for the user’s Local Authority.
+- Grant deliverers can view all referrals submitted in a month in a single document, with contact details clearly laid out
+- DESNZ staff can automatically manage access to referrals
+- New Local Authority staff can see all historic data.
+2.3 - Previous process
+N/A
+2.4 - Alternatives considered
+Alternatives not considered as this tool was adapted from the similar tool for delivering the previous HUG2 grant, only requiring minor changes to questions
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+This tool will be used for:
+- Helping to inform members of the public whether they are eligible for the WH:LG grant
+- Local Authorities will use the tool to help determine how they utilise the WH:LG grant funds
+3.2 - Human review
+Local Authorities will review information submitted. They can feedback to DESNZ if the output is not as they expect.
+When users are told that they are ineligible, they are asked to contact their Local Authority if they disagree. The Local Authority members will review this request and pass to DESNZ if the tool appears to be incorrect.
+3.3 - Frequency and scale of usage
+Tool is used daily by Local Authorities to administer grants. Members of the public submit around 2,000 referral requests a month across all Local Authorities.
+3.4 - Required training
+Local Authorities are sent an information pack upon onboarding detailing how to log in and use the service. Members of the public do not require training
+3.5 - Appeals and review
+Service advice: No formal appeal (advice only). Use the feedback form for service improvements.
+Scheme decisions: Follow the scheme administrator’s complaints/appeals route (e.g., Ofgem/LA guidance).
+EPC rating disputes: Contact the original EPC assessor, then their accreditation body if unresolved.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The application is written in the programming language C# utilising the ASP.NET library.
+The code is deployed using Docker to EC2 servers hosted in the UK. This is managed via AWS ECS.
+The public referral entry portal and private Local Authority portal are kept separate.
+User authentication is managed with AWS Cognito.
+The code is available across two repositories:
+- WH:LG main
+https://github.com/UKGovernmentBEIS/desnz-warm-homes-local-grant
+- WH:LG local authority portal
+https://github.com/UKGovernmentBEIS/desnz-warm-homes-local-grant-portal
+4.1.2 - System-level input
+Information about the user and their property.
+- Postcode
+- Address
+- Local Authority
+- Contact Details
+- Income band
+We also retrieve an EPC for the user for the address details they enter.
+4.1.3 - System-level output
+The user will be told whether the tool determines them eligible for the WH:LG.
+Local Authorities will receive monthly listings for requests submitted by users.
+4.1.4 - Maintenance
+Support work completed ad-hoc in response to issues.
+4.1.5 - Models
+The WH:LG Eligibility Checker does not use machine learning or AI-based models. Instead, it operates on a rule-based decision engine that applies eligibility criteria defined by the Warm Homes: Local Grant scheme. These rules are derived from government policy and include factors such as:
+Property characteristics (e.g., EPC rating, off-gas grid status, tenure type)
+Household income band
+Location-based criteria (e.g., Lower Super Output Area status, Index of Multiple Deprivation)
+Scheme-specific conditions (e.g., local authority participation in the programme)
+The tool uses deterministic logic to assess whether a user may be eligible for the grant. There are no predictive, statistical, or foundation models involved. All decisions are transparent and based on predefined conditions rather than probabilistic outputs.
+Tier 2 - Model Specification
+4.2.1. - Model name
+WH:LG Eligibility Rules Engine
+Self‑hosted (DESNZ Digital PaaS on AWS). Built and maintained by Softwire as Data Processor on behalf of DESNZ (Controller). GOV.UK Notify (Cabinet Office) is used for optional email communications; ResQ provides assisted digital phoneline support.
+4.2.2 - Model version
+v1.0 (initial public launch targeted 1 April 2025).
+Versioning is managed through DESNZ/Softwire change control and documented in the service repository. Infrastructure and rules migrated and updated from the prior HUG2 Eligibility Checker.
+4.2.3 - Model task
+A deterministic, rules‑based engine that evaluates household and property information against Warm Homes: Local Grant (WH:LG) eligibility criteria and, where appropriate, produces a referral to the relevant Local Authority (or delivery partner) for follow‑up.
+4.2.4 - Model input
+Structured form inputs collected via the public website or through the assisted digital phoneline (agent enters the same form with the caller’s consent):
+Identity & contact: Name, email address (optional for sending plan), phone number
+Property: Full address (UPRN via OS Places), EPC rating and EPC date, tenure type
+Context & eligibility proxies: Off‑gas status (where relevant), LSOA/IMD status, household income band, receipt of specified means‑tested benefits or ECO4 Flex Route 2 criteria
+Notes: Equality, Diversity and Inclusion (EDI) questions are optional and collected anonymously (not linked to individuals; outside UK GDPR scope)
+4.2.5 - Model output
+Eligibility outcome: Eligible / Not eligible for WH:LG referral
+Referral package (for eligible households): Referral ID, timestamp, and a CSV record shared securely to the Local Authority portal for case progression
+User‑facing next steps: Plain‑English summary of result and guidance; optional email copy via GOV.UK Notify if the user requests it
+4.2.6 - Model architecture
+Type: Deterministic rules‑based system (no machine learning)
+Logical design:
+A curated set of policy rules specified by DESNZ is applied uniformly to user inputs to determine eligibility.
+Rules cover three pathways (any one may qualify):
+IMD postcode in deciles 1–2
+Income proxies (specified means‑tested benefits or ECO4 Flex Route 2)
+Income threshold (gross annual household income < £36,000 or below the applicable “after housing costs” level)
+Baseline conditions include: located in England, privately owned (owner‑occupied or private rented), low‑income household, EPC D–G.
+Gas‑heated homes are now in scope; PRS eligibility applies with specific funding rules (one fully‑funded property, 50% co‑funding for additional properties; dependent on tenant circumstances).
+Weighting/prioritisation: None. Rules are transparent and equally applied; there is no feature weighting or statistical optimisation.
+Operational platform: DESNZ Digital PaaS on AWS (containers on AWS ECS, secure storage on AWS S3 for referral CSVs, AWS Cognito for authentication/MFA, and Lambda for email domain whitelisting at sign‑up).
+Access control: Local Authority portal protected by MFA and whitelisted email domains; corporate device use is recommended for administrators.
+Data protection: Database not publicly accessible; encryption at rest and in transit; DPIA screening completed; privacy notices published on GOV.UK.
+External links (internal/public resources):
+WHLG Privacy Notice (DESNZ) – GOV.UK link (per DPIA reference)
+Service high‑level design and pen test (HUG2 → WHLG migration) – SharePoint references within DPIA
+OS Places, EPC datasets, IMD/LSOA references within service logic
+4.2.7 - Model performance
+Readiness & validation approach:
+Rule validation against synthetic test cases and anonymised historical patterns from HUG2 to confirm correct outcomes across typical and edge scenarios.
+UAT with policy leads and service team; review against DESNZ scheme guidance to confirm alignment.
+Key metrics (rules‑based system):
+Correct application of rules (accuracy): % of cases where eligibility outcomes match policy ground truth
+Completeness: all required inputs collected or safely handled (e.g., “don’t know” choices and clear caveats)
+Auditability: decision timestamps and referral IDs generated; referral CSV created deterministically; portal downloads monitored
+Privacy, security, fairness:
+No ML profiling; identical rule logic for all users; EDI questions anonymous
+Encryption (at rest/in transit), MFA, whitelisting, and minimal personal data collection for advice/referral only
+GOV.UK Notify used for emails; processing in UK/EEA with UK adequacy safeguards
+Findings:
+Rules engine is transparent, maintainable, and auditable.
+Migration from HUG2 retained proven infrastructure; prior pen test indicates baseline security posture (new pen test not required under unchanged infra per DPIA notes).
+Third‑party performance results: Not applicable (no external ML model provider; system is deterministic rules‑based).
+4.2.8 - Datasets and their purposes
+Policy & rules source (development): DESNZ WH:LG policy documentation and statutory guidance (defines eligibility pathways and baseline conditions).
+Operational data (runtime):
+User‑provided form inputs (household, property, contact details for referral and communications)
+Open/official references used by the service logic or to enrich inputs:
+OS Places API (address → UPRN; Local Authority matching; accuracy checks)
+EPC register data (rating, date)
+ONS LSOA / IMD status (deciles 1–2)
+Validation & testing data (non‑production):
+Synthetic cases covering eligibility paths, edge conditions, and error handling
+Anonymised historical context from HUG2 used to confirm stable behaviour after migration
+No training / fine‑tuning: As a rules‑based engine, the model does not use training datasets, prompt engineering, or RAG.
+2.4.3. Development Data
+4.3.1 - Development data description
+The datasets used for developing and evaluating the Warm Homes: Local Grant (WH:LG) Eligibility Checker include anonymised user journey data, referral records, and aggregated feedback from voluntary user surveys. Data is collected via the WH:LG online eligibility checker and, with consent, via phoneline agents. Energy Performance Certificate (EPC) data is accessed under a formal Memorandum of Understanding (MoU) with DLUHC.
+4.3.2 - Data modality
+The primary data types are tabular (user journey analytics, referral records, survey responses), text (open-ended feedback), and structured property data from EPC records. No image, audio, or geospatial data is used beyond address and UPRN.
+4.3.3 - Data quantities
+The service expects around 100,000 completions, with 13 core data types collected per referral (e.g., name, address, UPRN, EPC rating, income band, contact details, tenure type). Additionally, up to 11 anonymised equality, diversity and inclusion (EDI) data items may be collected via Microsoft Forms.
+4.3.4 - Sensitive attributes
+No special category personal data is processed or shared. Optional EDI data (e.g., ethnicity, race, age, ability, gender, sexuality) is anonymised at the point of collection and not linked to individuals. No criminal convictions or offences data is processed.
+4.3.5 - Data completeness and representativeness
+Mandatory fields and address validation (via OS Places API) help ensure completeness. Some groups (e.g., non-homeowners) may be out of scope.
+4.3.6 - Data cleaning
+Data is cleaned to remove incomplete or duplicate entries, and all feedback is anonymised before analysis. Address validation is performed using Ordnance Survey APIs, and mandatory fields are enforced in the user journey.
+4.3.7 - Data collection
+Data is collected directly from individuals via the online eligibility checker and, with consent, via phoneline agents. Data is stored in a secure database and archived in AWS S3. Data is collected solely for the purpose of eligibility checking, referral, monitoring, and evaluation, and is not repurposed for unrelated uses.
+4.3.8 - Data access and storage
+Data collected by this service is hosted on the Department for Energy Security and Net Zero (DESNZ) Digital Platform-as-a-Service (PaaS) in Amazon Web Services (AWS). All data is stored on secure UK-based servers in a non-publicly accessible database, with encryption applied both at rest and in transit.
+Access to data is strictly limited to authorised project team members and approved Local Authority users. Access is managed using AWS Cognito, which enforces multi-factor authentication and restricts logins to whitelisted email domains. Only members of the Local Authority to which a referral was submitted, and users managing referrals on behalf of that organisation, can access the relevant data.
+Data is retained for the duration of the grant or funding period, and for up to two years after the funding period ends, unless consent is withdrawn earlier. User interaction logs are stored for 30 days. After the retention period, all data is securely deleted.
+There are no additional provisions for sensitive data beyond the standard security and access controls described above.
+4.3.9 - Data sharing agreements
+A formal Memorandum of Understanding (MoU) exists between the Department for Energy, Security and Net Zero (DESNZ) and the Department for Levelling Up, Housing and Communities (DLUHC) for sharing EPC data. Data sharing agreements are also in place with Local Authorities and Combined Authorities for referral processing. All data sharing is subject to strict security, confidentiality, and data protection requirements, and no data is shared outside the EEA without equivalent protection.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+User inputs for their information, OS Places API will find their address based on first line of address and postcode.
+4.4.2 - Sensitive attributes
+Potentially sensitive information:
+- Name
+- Phone number
+- Contact email
+- Country
+- Address
+- Local Authority
+- Income range
+These are only made accessible to Local Authorities with approval from DESNZ
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+User interaction logs are stored for 30 days.
+Data is stored in UK servers. It can only be accessed by members of the Local Authority to which the referral was submitted, and another users managing referrals on behalf of the organisation.
+Data is stored for the duration of the grant.
+There are no extra provisions for sensitive data.
+4.4.5 - Data sharing agreements
+All Local Authority users must sign a DSA in order to access user submitted data.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+A Data Protection Impact Assessment (DPIA) has been completed for the Warm Homes: Local Grant (WHLG) Eligibility Checker. The assessment confirms that the service only collects the personal data needed to check eligibility and create referrals for Local Authorities or their delivery partners. All data is stored securely, handled in line with data protection legislation, and shared only for the purpose of progressing a user’s referral. Users are clearly informed about how their information will be used before they submit it via the privacy notice on the service. No special category personal data is processed as part of the eligibility checker, and any optional Equality, Diversity and Inclusion questions are anonymised at the point of collection.
+5.2 - Risks and mitigations
+The tool does not include all eligibility cases, and will sometimes tell users they are ineligible when they are eligible. The tool will inform the user that they can contact their LA directly if they disagree, but not all will do this which could lead to some users not receiving the grant. This decision was taken to reduce the number of questions answered by all users.
+The tool stores a large amount of personal information. This would be damaging in case of unauthorised access. We mitigate this by splitting referrals to different files, and keeping full database access to few individuals holding security clearance.
+Contents

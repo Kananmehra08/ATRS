@@ -1,0 +1,144 @@
+HMRC: Logo Detection and Classification Toolkit (LDK)
+This is a tool to detect unauthorised uses of HMRC's logo.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+HM Revenue & Customs
+Organisation type:
+Non-ministerial department
+Function:
+Economic affairs
+Capability:
+Computer vision
+and
+Discovery
+Task:
+Anomaly detection
+Phase:
+Production
+Region:
+UK
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+Name
+Logo Detection and Classification Toolkit (LDK)
+Description
+The Logo Detection and Classification Toolkit is an innovative machine learning solution developed in-house by HMRC civil servants. It uses open-source deep-learning technology and was built through collaboration between HMRC’s Data Science and Cybersecurity teams. The project provides fraud analysts with a user interface to combat misuse of HMRC and HMG trademark logos by third-parties. This proactive approach prevents customers from being misled into paying for services they can use for free, safeguards public trust in the digital age and demonstrates our commitment to innovation.
+Website URL
+N/A
+Contact email
+atrs-team@hmrc.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+HM Revenue and Customs
+1.2 - Team
+Data Science Services
+1.3 - Senior responsible owner
+Principal Data Scientist
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Logo Detection and Classification Toolkit comprises of three different modules. The first consists of involving Google and Bing search engines to look for URLs that are hosting HMRC and HMG trademark logos using Chromedriver with Selenium WebDriver from which the programme excludes legitimate URLs (listed in an allowed domain list), the second module consists of webscraping the suspicious URLs and saving snapshot images on local disk. The final stage consists of running the deep learning engine that scans for trademark logos using the You Only Look Once model version 2. The constructed network comprises of 23 stages with over than fifty million parameters. Using a knowledge transfer approach, we chose to train only the last two stages of the network in order to keep the number of training data to its minimum. There are two splits in the data, the training and the validation sets, the former comprises of 1088 images and the latter of 449 images. Also the images have been tagged to notify the location and type of each logo. This information is streamed into the training process to learn about the model parameters such as: weights and biases. Results were saved in a separate file to initialise the parameters when applying the model in production. We chose to create a graphical user interface for production, which is based on flask webserver that communicates with a TensorFlow serving server, which in turn communicates with the built model. The user interface also implements system send event messages to communicate back end messages with the user. Findings are reported in a file for necessary actions.
+2.2 - Scope
+The Logo Detection and Classification Toolkit is designed with the intent to detect third parties who are misusing HMRC and HMG trademark logos.
+2.3 - Benefit
+The project was successfully deployed in October 2021.  Key results include: process completion time reduced from 3 days to 3-4 hours; findings were improved by fivefold from previous search methods; 10-20-URLs containing misused logos by third-parties are taken down monthly - these are either fraudulent sites or ones that imply false association claims; enhanced protection of HMRC’s and HMG’s brand integrity and customer trust; and finally an increased interest from other departments with at least one seeking to adopt the system for the same purpose, demonstrating potential use for wider application across government agencies.
+2.4 - Previous process
+The Cybersecurity team employed a manual process, which involved internet scanning with third-party software and individual URL verification, requiring one employee working for three days monthly. This labour-intensive approach proved time-consuming and ineffective against the increasing sophistication of fraudulent activities. Recognising the need for improvement, HMRC sought an efficient, automated solution to protect its brand integrity, support the digital channel shift, and safeguard customers.
+2.5 - Alternatives considered
+The literature review process proved that YOLO deep learning models are very effective in object detection and localisation mechanisms, hence its adoption.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The user runs the Logo Detection and Classification Toolkit product. When a logo is detected then action is taken either by contacting the hosting company or to take down the URL, which can include legal action against the internet provider.
+3.2 - Provided information
+The tool brings to attention unauthorised usage of HMRC logos, which will then normally trigger the follow up work.
+3.3 - Frequency and scale of usage
+The Logo Detection and Classification Toolkit is used once a month, on average it webscrapes about 400 URLs.
+3.4 - Human decisions and review
+The review is made by the analyst measuring the level of satisfaction of the product via False Positives and Negatives. If there are many of incorrect cases, the analyst will report to the Data science team to look at possible faults and errors in the programme. There are times when we include more cases in the training and validation sets to re-train the model and increase its performance.
+3.5 - Required training
+The users are trained on how to operate the LDK product by taking them step by step on its use and everything that should be considered when using it. Users also receive a User Manual that shows them how to operate the model and what to do in case of an error.
+Users are explained the potential risks of using the tool such as potential viruses that may be loaded on the computer from risky URLs and the actions that need to be taken to address these.
+3.6 - Appeals and review
+If the data analyst feels that results are not good or the model performed poorly, they will inform the developer about this issue to review.
+HMRC Cybersecurity team follows a legal procedure to take down suspicious URLs once they have been identified and organisations can appeal as part of these legal processes.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Logo Detection and Classification Toolkit runs on a Linux environment using a backend TensorFlow serving models server makes it easy to deploy new algorithms and experiments, while keeping the same server architecture and APIs. As well as a Flask webserver, a web application built using the Flask web framework and is a tool used to create web applications in Python. The user interacts with the web interface through a set of command and actions. For instance, they would have the option to amend the allowed list, view the log files, run diagnostic searches and also to execute the main modules: 1) Logo search via Bing/Google, 2) Webscraping URLs and 3) Deep Searches. Results are handed over to the analyst and are accessible via a command bar.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The model weight and biases are regularly updated, every six month, by bringing new cases for both training and validation sets to fine tune model parameters and increase its performance. Also there will be some instances where the end users would require additional  functionalities to be implemented.
+4.1.4 - Models
+This tool uses YOLO version 2, convolutional neural network as the core engine.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Logo Detection and Classification Toolkit (LDK)
+4.2.2 - Model version
+2.4
+4.2.3 - Model task
+Logo search via Bing/Google,
+Webscraping URLs, and
+Deep Searches.
+4.2.4 - Model input
+The model input is the trademark logos that the Cybersecurity team at HMRC is willing to protect.
+4.2.5 - Model output
+A CSV file that contains all URLs that need to be taken down, once verified.
+4.2.6 - Model architecture
+This tool uses YOLO version 2, convolutional neural network as the core engine. The model has been trained over 70 epochs approximately using batch size of 32 images and applying Adam optimisation technique.
+4.2.7 - Model performance
+The model performance is measured via the F1 score across all the logos. We are protecting a total of eight logos and the F1 accuracy is over 97% across the board when tested on a holdout dataset that contains about 800 random images with random logos. The test set is balanced with the logo types, almost 100 images per logo.
+4.2.8 - Datasets
+Training and validation sets containing images with their corresponding annotation files. Finally a test set to measure the performance.
+4.2.9 - Dataset purposes
+The training and validation data are used to train the model; however, the test set is used to measure the model performance.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Training, validation and test sets.
+4.3.2 - Data modality
+Other
+4.3.3 - Data description
+The dataset contains images of logos (overlaid on top of random images) that we are protecting.
+4.3.4 - Data quantities
+Training set size = 1088 images; validation set size = 499 and test set size = 800
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+N/A
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The machine vision community has been quite good for providing open source data. The team originally downloaded COCO dataset from which they decided to pull images and place them on a canvas of size 832x832 pixels. The next step was to make use of trademark logos and overlay one or many logo on each image. Afterwards, they used the LabelImg python library to tag these images by logo type, for example HMRC images are tagged as HMRC-1 , HMRC-2, …, HMRC-7, however, the HMG logo is tagged as HMG-1. Recently the data collection has been collected via the webscraper engine as it creates snapshot of 832x832 dimensions per design.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+Both the Data Science and Cyber security teams have access to this data. These individuals have personal login credentials and two factor authentication for these accounts.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The Logo Detection and Classification Toolkit is supporting the Cybersecurity team to take down 10 URLs on average per month. Cybersecurity is identifying a number of websites that misuse HMRC/HMG logo, some innocently, others not so innocently to help add credibility to their services by attempting to suggest they are affiliated to HMRC.
+Some of the sites we identify are low value services using the logo again to add credibility. These can include call connection sites and other services customers can undertake for free on GOV.UK.
+Logo Scraper Results from 06/03/2024:
+Total Scraped = 215
+False Positives (No Logo present) = 66
+Number of cases where the scraper has detected a logo = 149
+Actual Logo Infringement cases = 13
+Fraudulent sites = 0
+Confirmed new cases = 13
+5.2 - Risks and mitigations
+There are times when the algorithm generates a certain number of False positives and False negatives due to unseen patterns in the data that is being analysed. To overcome this circumstance, we tend to re-train the model every six month on new data that it has failed to recognise and use the new set of weights and biases in production. The algorithm does not take down the sites automatically, it generates a list of URLs for the analyst to take them down manually instead. The analyst will go through the generated list and go through each URL  one at a time to validate the level of risk associated to them. For instance the legitimate URLs would be added into the Allowed list to avoid checking them every time, otherwise, if the URL is dodgy and misusing HMRC/HMG trademark logos, the site will be taken down immediately. The tool has been put to test over a year where the user was reviewing the output against what they used to generate manually and that was a reassurance plan that was conducted at the time, which proved its success.
+To ensure HMRC don’t have to rely on this tool only, the public can still ensure that phishing websites, emails and phone calls can be reported separately via the
+HMRC website
+.
+Contents

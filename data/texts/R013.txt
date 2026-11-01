@@ -1,0 +1,238 @@
+DWP: Child Maintenance Service (CMS) - Predictive Analytics Compliance
+This tool is used by the Child Maintenance Service to support caseworkers in the reduction of payment breakdowns of compliant cases in the Child Maintenance Collect and Pay service.
+Updates to this page
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Last updated:
+13 July 2026
+Show all updates
+13 July 2026
+Record updated to provide more detailed information in sections 3.6 and 5.1
+30 October 2025
+First published.
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Ministerial department
+Function:
+General public services
+and
+Social protection
+Capability:
+Forecasting
+Task:
+Trajectory and trend prediction
+Phase:
+Production
+Region:
+UK
+Date published:
+30 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Child Maintenance Service (CMS) - Predictive Analytics Compliance
+2 - Description
+The Child Maintenance Service (CMS) enables and supports the payment of child maintenance for separated families. One part of this is the Collect and Pay service where the Child Maintenance Service facilitates the payment between paying and receiving parents.
+The Child Maintenance Service experience a number of challenges with payment compliance. A large proportion of the Paying Parent cases managed by CMS do not pay the agreed amount or pay late (deemed “non-compliant”). This is further compounded by the ongoing payment breakdown of compliant cases, resulting in child maintenance not being paid to receiving parents. This not only affects the finances, well-being and relationships of separated families but also creates a growing administrative burden for CMS due to the additional operational overhead of processing non-compliant cases.
+Machine learning has been implemented to help operational caseworkers take proactive steps to keep cases compliant and deliver an improved service to the customers. The tool uses historic operational transactional information to predict whether a compliant paying parent is at risk of financial non-compliance, enabling operational prioritisation and proactive treatment to keep money flowing to children and reduce operational failure demand.
+3 - Website URL
+N/A
+4 - Contact email
+N/A
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Work & Pensions
+1.2 - Team
+DWP - Digital Modernisation & Efficiency - Children
+1.3 - Senior responsible owner
+Deputy Director -  DWP Digital: Children & Families
+Director - DWP Child Maintenance Service
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Tata Consultancy Services Limited
+1.4.2 - Companies House Number
+BR007627
+1.4.3 - External supplier role
+Tata Consultancy Services Limited (TCS) supported a multi disciplined DWP team and provided technical expertise in the design, build and assurance of the tool. TCS are also supporting the live service of the training and inference pipelines.
+1.4.4 - Procurement procedure type
+Call-off from a framework
+1.4.5 - Data access terms
+In providing application development and live support outcomes, the supplier does not have access to the live environment data and therefore does not have any direct access to personal data relating to the buyer’s customers. However, in instances where the supplier requires information to resolve incidents or problems, this information is made available to the supplier by the authority (for example logs, screenshots).
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Child Maintenance Service handles a high volume of citizen change of circumstances which manifest as work items that caseworkers process to support the case through its lifecycle, some of these changes have a material impact on the case which can lead to a reduced customer service and potential payment breakdowns.  The Predictive Analytics Service uses current and historical data from the Child Maintenance Operational System (CMS2012) to predict the probability of payment breakdown occurring along with an explanation of why. This is used to support the caseworker in identifying the best actions to take to maintain case compliance.
+Monthly case data is provided to the service from Children data platform, the data contains the historical operational changes and payment details for a paying parent. An AWS Sagemaker batch pipeline performs data preparation and non-compliance risk predictions are created using a trained XGBoost model. Prediction explainability is performed using SHAP.
+The prediction output is classified as High, Medium and Low probability cases which are then published to the CMS2012 System where the prediction is presented to caseworkers to support case progression. The risk score, explanation and potential actions to maintain compliance are presented to caseworkers to review to help support the progression of the case. Caseworkers have the ability to provide feedback on the usefulness of the prediction and explanations which supports the evaluation and improvement of the service.
+2.2 - Scope
+The tool has been designed to support Child Maintenance Operations to reduce the number of payment breakdowns by anticipating non-compliance and drive targeted, tailored interventions to improve compliance, address service failings, reduce operational failure demand and provide a better service to its customers.
+2.3 - Benefit
+The key benefit for the tool is to use data to enable the identification of the non-compliance risk of a compliant caseload  (~100000 cases), which supports operational colleagues prioritise their workload to maintain case compliance and deliver a better outcome for their customers. Currently work is prioritised based upon time-based service level agreements for each work item to be progressed, the Predictive Analytics Service augments this existing capability with a holistic outcome-based view of the case which caseworkers use to support the existing work management processes. The benefits identified are:
+Service Benefit: A reduction in payment breakdowns and failure demand. The introduction of a new approach to work management.
+Caseworker Benefit: Provision of a holistic view of the case, the ability to focus on influencing factors of the case to maintain compliance.
+Customer Benefit: Proactive customer contact to maintain compliance, a reduction in complaints and a better customer experience.
+2.4 - Previous process
+Caseworkers review the case fully before taking action. This is a time consuming process which requires caseworkers to navigate through multiple CMS2012 screens to gather the information that will support their decision making.
+2.5 - Alternatives considered
+Alternatives algorithms tested were;
+Naive Bayes
+Logistic Regression
+K-Nearest Neighbours
+Support Vector Machine
+Decision Tree
+CatBoost
+Bagging Decision Tree
+Boosted Decision Tree
+Random Forest
+Voting Classification
+The XGBoost classifier was selected for use. This was based upon the complexity, outcome and run time considerations.
+XGBoost was also the most consistent in accuracy over various data compared to other algorithms tested. Although, the variation in accuracy between algorithms was quite small for all tree-based methods.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Child Maintenance caseworkers are presented with non-compliance risk predictions, supported with explanations based on the model features. The prediction information provides a holistic view of the case and identifies key features which contribute to the risk. This supplements the caseworkers knowledge on the Child Maintenance Case Management process and operational guidance, the caseworkers investigate the ongoing changes and behaviour of the case and identify actions to be performed.
+3.2 - Provided information
+The service shares the non-compliance predictions for high/medium/low probable Cases. The prediction for each case consists of the risk Score, risk Level (high/medium/low), risk creation and expiry dates, potential actions and information supporting the prediction. This information is presented to the caseworker using the CMS2012 System.
+3.3 - Frequency and scale of usage
+The tool is used at the start of each month to predict the risk of non-compliance, around 100,000 cases are processed by the model and presented to the CMS2012 System. The tool is currently live and in production and was rolled out wider set of caseworkers in March 2025. It is being used by an operational caseworker team consisting of 40 plus caseworkers.
+3.4 - Human decisions and review
+The tool provides a number of data features split into potential actions and information.  The caseworker will check the potential actions  - for example Open Work Items  - to see what outstanding actions are on the case and will take appropriate action on these. Using the information data features as a guide they will review the cases fully to see what other actions are required and to support their decision making on next steps, contact required with the customer or other positive actions to support the customer in remaining compliant. The tool does not make the decision for the caseworker on how to manage the case but provides information that the caseworker verifies before confirming the appropriate action.
+3.5 - Required training
+Users  have received instructions to follow and have been supported with regular checkpoints (daily moving to two times per week) to discuss the cases and how to use the data features as part of a live assurance phase. An upskilling package has been developed for users, along with updated instructions and communications.
+3.6 - Appeals and review
+The Predictive Analytics information is providing background information to the Case to support Caseworkers decision making. It is not making the decision on behalf of the Caseworker.
+A customer or their representative has the right to appeal against a decision on a child maintenance calculation. An appeal is a formal process handled by HM Courts and Tribunal Service (HMCTS), which is part of the Ministry of Justice. An independent tribunal will take a look at the CMS’s decision and change it, if necessary. A response should be prepared for the tribunals service if the appeal cannot be resolved and it continues.
+All appeals, when the original decision was made on or after the 28 October 2013, must be lodged directly with HM Courts and Tribunal Service (HMCTS) and not the Child Maintenance Service (CMS). CMS will still be responsible for carrying out all action on the case and will need to provide all information requested by HMCTS. They will also be required to establish client confidentiality.
+Customers have the right to submit a claim for judicial review at anytime and in relation to any matter related to their case.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The system employs a batch-oriented machine learning pipeline on AWS Sagemaker, leveraging monthly data increments from the Child Maintenance data platform.
+Training pipeline
+1. Training data preparation,
+1. Data quality check,
+1. Model training using XGboost,
+1. Evaluation using evaluation dataset against predefined metrics
+1. Register successful models for inference batch pipeline
+Inference pipeline
+1. Inference data preparation
+1. Data quality check
+1. Inference and compliance explanation, Feature importance is used to explain predictions, Predictions for each case is prepared as JSON messages
+1. Feature attribution and bias checks
+Prediction distribution
+The JSON messages are consumed by a serverless function, to publish the messages into an event platform.
+CMS2012 event adapters subscribes to these messages, consuming and displaying them in CMS2012 User interface.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+To ensure system reliability, we track key metrics such as pipeline execution time for steps, and requests processed by serverless functions, alerts are configured to notify the responsible team when performance thresholds are exceeded.
+To ensure the model’s effectiveness, key performance metrics are evaluated monthly. Additionally feedback from caseworkers is collected to understand the operational performance of the service.
+The solution has been engineered to allow quick redeployment of the Sagemaker pipeline and serverless functions.
+4.1.4 - Models
+Compliance predictions (Classification model)
+XGBoost
+Explanation for compliance
+SHAP
+Tier 2 - Model Specification
+4.2.1 - Model name
+Child Maintenance Compliance Model
+4.2.2 - Model version
+New model is trained every month.
+4.2.3 - Model task
+This model was trained to identify compliant cases where the paying parent is categorised as high/medium/low risk and might become non-compliant due to missing an upcoming payment. This model will create a list of such probable “non-compliant” cases which need attention from the caseworkers to maintain compliance.
+4.2.4 - Model input
+Extract files from the Child Maintenance Data Platform. These are monthly extracts containing all the monthly transaction details, service request details and other relevant case information
+4.2.5 - Model output
+A risk score and corresponding categorisation against all the cases indicating how much probable it is for missing a payment.
+4.2.6 - Model architecture
+The model is trained using a supervised machine learning process using decision trees. It uses an XGBoost Algorithm to determine the risk scores of different cases.
+The model has been tuned by evaluating the aucPR with a binary logistic objective. The model is trained currently with 1500 rounds of regression. The primary objective has been to optimise the precision as much as possible and thus to reduce the number of false positives. The max depth of the tree has been set to 9.
+XGBoost have been selected as the preferred algorithm after an extensive test on other supervised models (for example Linear Regression, CatBoost, Random Forest)
+4.2.7 - Model performance
+Every month the model is tested on a validation dataset which is 10% of the entire data present, which is a separate set of data not used during the training phase. Validation of the model is completed at the time of the model’s creation.
+The results presented here come from data collected for May 2025.
+Accuracy: 0.86
+Precision: 0.79
+As described earlier, precision has been chosen as the main metric for evaluating the model and any new model is not accepted and registered unless the Precision value is >=0.62
+The model’s performance was not specifically broken down by demographic or other characteristics. No additional characteristics were identified as relevant that warranted separate performance tracking.
+4.2.8 - Datasets
+Child Maintenance Service caseworkers use the CMS2012 System for storing and processing Child Maintenance Case data. There is an existing Child Maintenance Data Platform which ingests CMS2012 data on a daily basis.
+Monthly extracts from the Data Platform are fed into the training model for predicting the non-compliant cases. The extract files are below:
+Master Case - Latest details about the groups of cases belonging to the same paying parent.
+Case - Latest details of individual cases for each Master Case.
+Master Case Rolling Last Quarter - Details about the amount that was due and the amount that was paid in the last 3 months.
+Method of Payment - Details about the Paying parent’s current method of payment and the previous Method(s) of Payments
+Receiving Parent - Non Personal Data about the Receiving Parent
+Qualifying Children - Non-personal Data about each of the Child(ren) in the Master case
+Service Request - Data of all the Service Requests raised by the Parents in the span of last 1 month
+Paying Parent Communications - Details of all the letters/ calls the Paying Parents had exchanged with CMG in last 1 month
+Receiving Parent Communication -  Details of all the letters/ calls the receiving parents had exchanged with CMG in last 1 month
+Transactions - Details of all the payments made / refunded by the Parents in the last 1 month
+Liabilities - Details of all the amounts that were due and allocated over last 1 month.
+These above extracts are consumed, consolidated and engineered before training. Multiple new features have been created out of the extracts to get better insights. This have been done using Python data engineering skills with domain knowledge expertise.
+4.2.9 - Dataset purposes
+10% of the dataset was used for the validation set and the remaining data was divided into train and test sets using a 80/10 split. No augmented data was used in validation.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Child Maintenance Case and Transaction Data
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Broad groups that data belong to can be represented as follows:
+1. Case features - case data related to paying party, qualifying child age groups, employment status, number of cases, liability amount.
+1. Payment method - current and historic changes.
+1. Rolling quarter - Quarterly compliance status of the case, paid vs due.
+1. Service request - Some examples of a service request are change of circumstances, employment change, liability change, number of changes.
+1. Communications - Types of inbound and outbound communications, for example telephony/letter, number of communication.
+1. Financial Transactions - Payment history, liabilities and balances.
+4.3.4 - Data quantities
+Compliance Model: A total of around 200,000 records were used, the records were labelled using the rolling quarter compliance data. (47% positive/non-compliant; 53% negative/compliant)
+4.3.5 - Sensitive attributes
+Data does not contain sensitive attributes.
+4.3.6 - Data completeness and representativeness
+Data is sourced from an internal Child Maintenance Service, data is structured and there are no missing data. Same data sources are used for training and inference, the data is representative with the target.
+4.3.7 - Source data URL
+The dataset utilises data from an internal Child Maintenance source
+4.3.8 - Data collection
+All the data used to create the dataset comes from the Child Maintenance data platform sourced from CMS2012.
+4.3.9 - Data cleaning
+Structured dataset from controlled data source, Children data platform is used.
+Data preparation techniques such as one-hot encoding, pivoting, binning and grouping are performed on data to ensure that the data is in suitable format for model algorithm.
+Aggregation is used to summarise transactional and numerical data using functions such as sum, mean, standard deviation.
+These techniques are used to process the data and create new features to improve the performance of the model.
+4.3.10 - Data sharing agreements
+There were no data sharing agreements required for the development of this system as all data is within the Child Maintenance data domain.
+4.3.11 - Data access and storage
+The dataset is accessed by data engineers within DWP Digital - Children.
+Retention period for training dataset is 1 year.
+Data is stored in AWS S3 as CSV files, Data at S3 is encrypted using DWP encryption pattern.
+Child Maintenance caseworkers will not have access to the raw data and will only handle the predictions being generated from the model presented in CMS2012 UI.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The Digital Enterprise Security Risk assessment was completed on December 2023.
+The overall risk position is as follows. 1 Very Low risk, which is a service provider reliance risk.
+The service is utilising well established processes.
+Agents can continue to work without the AI enrichment if required.
+DPIA Part 2 was completed on 13-Dec-2023.
+The Data Protection Officer (DPO) looked at whether the model was fair in that was it proportionate, appropriate and adequate. The training data that is used to train the machine learning model is proportionate in that it is highlighting priority cases which would be looked at anyway under business as usual (BAU). It is appropriate in that Agents will not be doing anything different and it is adequate as you are not doing anything that is unexpected specifically for this work.
+Equality Assessment (EA):
+The Equality Assessment was completed on 30/4/2024 and updated on 20/02/2025 and again 11/11/2025. The cases selected as having risk of non-compliance will not be resulting in a decision that has a legal or similarly significant effect on the individual. This is because it will not be affecting an individual’s status or legal rights as it is not assessing any benefit and likewise it will not impact on an individual’s circumstances, behaviour or choices.
+The process is highlighting those individuals that may fall unnecessarily into debt or increasing debt and will therefore allow Caseworkers to review those cases at an earlier stage as part of their standard business processes.
+There are no changes to legislation, the customer journey or the activities taken on a case. The Predictive Analytics Service will support Child Maintenance Services by highlighting which Cases to action first to stop payments breaking down, as it takes less work to keep these Cases on track (or maintain compliance) than it does to get payments re-established once they have broken down.
+This fits within DWPs official functions and the process does not exclude or discriminate against individuals. There is no impact on any protected characteristic.
+The Public Sector Equality Duty (PSED) protected characteristics (age, disability, gender reassignment, pregnancy and maternity, race, religion or belief, sex, sexual orientation, marriage and civil partnership) are not impacted by the use of predictive analytics. There are no key features the model predicts on and the machine learning has been trained to reduce/eliminate any bias from the prediction.
+5.2 - Risks and mitigations
+Risks associated with the service are:
+Accuracy
+There is a risk that the AI being used to predict cases that are likely to default is not accurate and identifies incorrect cases assigning the wrong case with a risk score.
+Therefore, agents may be prioritising the wrong cases and could result in a breach to the accuracy principle as we cannot be sure they are correct
+Mitigation- The agent will always be presented with the risk score and casefile to determine whether this information is accurate and able to prioritise their caseload accordingly.
+Service provider reliance risk (very low risk)
+Mitigation - Data is reproducible from Child Maintenance Data Platform, the Predictive Analytics Service allows quick deployment by making use of server less technology.
+Contents

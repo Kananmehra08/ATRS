@@ -1,0 +1,168 @@
+DSIT: GOV.UK site search
+GOV.UK site search is the search engine for GOV.UK. It enables users to search for information and services on GOV.UK by entering a search query to view results that are relevant to their query.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Discovery
+Task:
+Recommender systems
+Phase:
+Production
+Region:
+UK
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+GOV.UK site search
+2 - Description
+GOV.UK site search (the search engine on GOV.UK) is powered by a Google search product called Google Vertex AI Search. This product uses algorithms to determine which search results are returned, in what order. This allows users to search using natural language queries, queries that reflect the way that people actually speak. GOV.UK is a government website where the majority of available information for public consumption is stored, the site search algorithm provides users a function to search across the entire GOV.UK for the information that is relevant to them and what they need.
+3 - Website URL
+https://www.gov.uk/
+- The search input box is on the homepage of GOV.UK and can be found via the magnifying glass icon drop down on any GOV.UK page.
+4 - Contact email
+govuk-site-search@digital.cabinet-office.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+GOV.UK , The Government Digital Service
+1.2 - Team
+GOV.UK Site Search Team
+1.3 - Senior responsible owner
+Deputy Director GOV.UK App and AI
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Google UK Limited manage Google Vertex AI search that powers GOV.UK site search.
+1.4.2 - Companies House Number
+03977902
+1.4.3 - External supplier role
+Google UK Limited manage Google Vertex AI search that powers GOV.UK site search. This means that they are responsible for the maintenance, performance and optimisation of the tool.
+1.4.4 - Procurement procedure type
+The contract was awarded following a procurement process that went through the Crown Commercial Service’s Big data & analytics framework (Lot 2). Following the invitation to tender a call off contract was awarded to Google UK limited in November 2023.
+1.4.5 - Data access terms
+That data is processed in accordance with GDPR.
+That the data shared with Google for the purposes of retrieving and ranking search results shall be used for no other purposes.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+A user enters their search into the search box on GOV.UK. The user’s search query (along with other relevant data e.g. user filter selections) is sent to Google Vertex AI search (VAIS) by secure API. VAIS processes the request using models to understand the query’s intent, retrieve relevant results, and rank the results. Several factors determine what content should be retrieved and in what order that content should be ranked. Factors such as: keyword matching, content popularity, and semantic similarity. The final ranking is also impacted by rules that GOV.UK have configured in VAIS to define which GOV.UK content types are generally most and least important to users. VAIS sends the results back to GOV.UK via secure API. GOV.UK renders this data on the frontend as search results for the user to view.
+2.2 - Scope
+GOV.UK site search is a search engine product on GOV.UK. It exists to make it easy for users to find information, pages and services on GOV.UK. It is a public facing product that enables users of GOV.UK to search the content of the GOV.UK website to find pages that are relevant to their GOV.UK visit.
+It is only designed to support users to search for content on GOV.UK. It does not enable users to search through content on other websites e.g. local government websites or devolved administration websites, although where there are links to this content on GOV.UK it will surface them.
+There is a 50 character limit to search requests, queries can be submitted as words, phrases or questions to provide a list of webpages output.
+2.3 - Benefit
+VAIS generates search results with a high degree of relevance, which is the biggest driver for using this search engine product to power GOV.UK site search.
+It enables semantic search: the ability for search engines to ‘understand’ a user’s intent when they search for something, and return relevant results. This enables users of GOV.UK site search to search using natural language queries (queries that reflect the way that people actually speak) and get highly relevant results. It is effective at handling misspellings or synonyms - so users do not need to know exact government terminology to get highly relevant results.
+2.4 - Previous process
+Prior to using VAIS, GOV.UK site search was powered by an open source search engine that had been customised by GOV.UK. This customisation included the introduction of a Learning to Rank model that used an algorithm to improve the relevancy of results.
+2.5 - Alternatives considered
+Other products were considered. Most of these products used some kind of algorithmic ranking, but VAIS was considered to be the product that would be best suited to GOV.UK’s requirements.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Users engage GOV.UK site search to find government information and services. This is one of the key ways users find information on GOV.UK; the others being browsing the site or using external search engines. The site search is designed to speed up the process of users finding the information they need and finding the relevant content first time without having to search multiple pages.
+In so far as site search influences users’ decision making, it would be what pages are shown as being relevant for their query, and therefore, worth clicking on. So, for example, if a user searches for “apply for universal credit”, the top pages that appear in search results are likely to be what a user clicks on (most users click on one of the top three results).
+So the ranking of what appears where in search results does impact user decision making. However, other than providing an ordered list of results, GOV.UK site search doesn’t do anything else to ‘push’ users towards clicking on particular results.
+3.2 - Provided information
+Site search provides an ordered list of search results with a page title and page description for each result. The human can then decide which web page looks like the potential page they were searching for in the returned list.
+3.3 - Frequency and scale of usage
+We only collect data on how users interact with search from users that consent to analytics tracking. From this data we can see that there are 3-4 million uses of search each month. The real volume is likely to be higher than this (because of users opting how of analytics tracking).
+3.4 - Human decisions and review
+Although the order of search results in site search influences the pages that users visit, we can see through analytics data that users do not always click on results. In c. 1 in 4 searches users will refine their search (search more than once by rephrasing their query), and in c. 20% searches users will search but will not click on a result. This behaviour indicates that users are viewing results and making their own decisions about the usefulness of those results.
+3.5 - Required training
+The development team - The GOV.UK team working on site search has worked closely with the product team at Google to understand, deploy and configure VAIS.
+3.6 - Appeals and review
+At the bottom of the site search page - as is the case with all pages on GOV.UK - there is a user feedback form so users can share feedback on the site search page.
+The GOV.UK have regular interactions with Google to provide them feedback on the Google Vertex AI Search product.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Attached
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+GOV.UK runs continuous monitoring on the performance of site search, which includes monitoring the technical performance of the product, and the quality of search results. If any significant degradations in quality are found they are either addressed internally or fed back to VAIS.
+4.1.4 - Models
+Google Vertex AI search is proprietary technology so we don’t have a full list of models that feature in the tool.
+At the time of ATRS publication Google Vertex AI search uses the family of Gecko embedding models for the purpose of powering semantic search. The model is based on a neural network architecture.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Google Vertex AI Search
+4.2.2 - Model version
+2024
+4.2.3 - Model task
+The model’s task is to ingest the user’s search query, process it, retrieve documents from GOV.UK data that are relevant to that search query, rank those documents in order of relevance to the user’s query, and return data on those documents so that they can be displayed as a list of search results on GOV.UK.
+4.2.4 - Model input
+User search query text, and query parameters i.e. what filters the user has selected
+4.2.5 - Model output
+A ranked list of search results, and total count of results retrieved
+4.2.6 - Model architecture
+Google Vertex AI search is proprietary technology so we don’t have a full list of models that feature in the tool.
+At the time of ATRS publication Google Vertex AI search uses the family of Gecko embedding models for the purpose of powering semantic search. The model is based on a neural network architecture.
+4.2.7 - Model performance
+The GOV.UK Search team have used a number of metrics to evaluate the performance of the search engine. These metrics include:
+Technical metrics on search availability, latency and error rates.
+Performance metrics on click through rate, position of clicks and judgement list scores.
+These metrics enable us to monitor that the VAIS is returning search results to GOV.UK, without a perceptible delay for users, and that the results returned are of a high level of relevance.
+4.2.8 - Datasets
+GOV.UK content data: public data on the content that is on GOV.UK
+Events data: anonymised data from users that have consented to analytics tracking about their interactions with site search.
+4.2.9 - Dataset purposes
+Events data is used to train the model; to provide signals on what content data is popular with users.
+GOV.UK content data is the dataset that the model retrieves and ranks to provide relevant search results for user queries.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+GOV.UK content data, GOV.UK user event data
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+GOV.UK content data is the data of the text of the documents published on GOV.UK. Events data is data about how users (that have consented to analytics tracking) interact with GOV.UK site search.
+4.3.4 - Data quantities
+Content
+Approximately 697K records of GOV.UK content (15 metadata attributes and unstructured HTML content) in total.
+Events
+Approximately ~70MB/157K records of raw GA4 Search events (7 attributes) and 0.7GB/8M records of raw GA4 View Item events (8 attributes) daily.
+4.3.5 - Sensitive attributes
+Some GOV.UK content data contains information on people e.g. names and titles, but this is all publicly available.
+Google analytics data collected by GOV.UK is anonymised, so events data is not traceable to individuals. GOV.UK redacts query strings that look like personal data, based on pattern matching, to prevent personal data being held by GOV.UK or Google.
+4.3.6 - Data completeness and representativeness
+We send the majority of GOV.UK content data to VAIS. But there are some document types that we do not send because they are not useful for users in a search engine context e.g. the GOV.UK homepage, or similar navigation pages. A list of these document types ignored can be found here:
+https://github.com/alphagov/search-api-v2/blob/main/config/document_type_ignorelist.yml
+Our event data only represents the user behaviour of users that have consented to analytics tracking.
+4.3.7 - Source data URL
+Content data:
+https://content-api.publishing.service.gov.uk/#gov-uk-content-api
+Event data is not openly accessible.
+4.3.8 - Data collection
+Content data is captured when GOV.UK publishers publish, update, and delete content from GOV.UK.
+Event data is captured by Google Analytics 4 as part of the dataset that GOV.UK collects to improve site performance. No additional events data is captured specifically for search.
+4.3.9 - Data cleaning
+Content
+Once content is approved for publishing onto GOV.UK it is added to the GOV.UK Publishing queue where appropriate records are indexed and their attributes corresponding to the GOV.UK Search schema collected for search capabilities.
+Events
+GA4 processed data is filtered for appropriate events and only appropriate attributes are carried forward for import.
+4.3.10 - Data sharing agreements
+The conditions of the data sharing we do with Google Vertex AI search is covered by the contract GOV.UK has in place with Google for the use of this product.
+4.3.11 - Data access and storage
+Content
+The ~697K content records are continually added, updated or deleted from Google’s VAIS platform as published via the publishing queue
+Events
+Google VAIS requires 90 days of Events data for optimal training/tuning and events data will remain securely stored in the VAIS datastore for training/tuning until after 90 days when they are purged. Quota limits on event storage is 40 billion events per VAIS environment/instance
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Data Protection Impact Assessment was completed and signed off before the migration to Vertex in November 2023. It continues to be updated and reviewed.
+5.2 - Risks and mitigations
+The key risk for GOV.UK Search is using an algorithmic model for site search whereby that the model doesn’t provide relevant results for user search queries. The impact of this risk would be that citizens would be using site search to find information and services on GOV.UK, but search results would not reflect the most useful information and services for their query. This could result in time wasted for users if they have to find more relevant information by searching in other ways, or it could mislead users on the action they need to take.
+We mitigate this risk by monitoring the relevance of results. We do this through judgement lists where we compare an ideal set of results to the results the search engine is producing. We also monitor user behaviour through metrics like click through rate, and exit rate from search, so we can see quickly if user behaviour is changing as a result of a degradation of search results. If we detect a degradation in results relevance we work with Google to identify the root course and remediate it.
+Contents

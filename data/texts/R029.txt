@@ -1,0 +1,281 @@
+DSIT - Parlex
+Parlex is parliamentary intelligence tool that enables civil servants to more efficiently search and understand parliamentary activity.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Sentence and text generation
+Phase:
+Beta/Pilot
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Parlex
+2 - Description
+Parlex is a parliamentary intelligence tool that makes the vast archive of parliamentary proceedings more accessible and meaningful for government professionals. The tool combines semantic search capabilities with AI-assisted analysis to help users efficiently navigate and understand complex parliamentary discussions and positions.
+How it is used
+Enables intelligent search across parliamentary records
+Provides contextual understanding of parliamentary discussions
+Surfaces relevant historical debates and contributions
+Connects related parliamentary activities and positions
+Synthesises information from multiple sources into coherent insights
+Why it is being used
+Parliamentary records contain valuable insights but are challenging to navigate effectively
+Traditional keyword searches often miss conceptually related content
+Understanding parliamentary context requires extensive manual research
+Policy professionals need efficient access to comprehensive parliamentary information
+Historical parliamentary positions provide important context for current decision-making
+This tool exists to bridge the gap between the wealth of parliamentary knowledge and the practical needs of government professionals, making parliamentary intelligence more accessible and actionable.
+3 - Website URL
+https://ai.gov.uk/projects/parlex/
+4 - Contact email
+parlex@cabinetoffice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Science, Innovation and Technology
+1.2 - Team
+Incubator for AI
+1.3 - Senior responsible owner
+Director of the Incubator for Artificial Intelligence (i.AI)
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+What can Parlex do?
+Parlex provides a semantic search interface for Parliamentary data, such as Hansard, Legislation, Caselaw and Parliamentary Questions.
+A set of research tools allow a user to interrogate the data by specifying topics, parliamentarians and debates.
+A daily readout feature allows a user to receive a daily summary of the days parliamentary activity, by subscribing to particular topics.
+Generative AI allows a user to generate ad-hoc cited summaries of results from their research.
+How it works
+The two key technologies underpinning Parlex are semantic search and generative AI.
+Semantic Search
+Each day we index parliamentary documents (such as those from Hansard) into our ElasticSearch cluster. During this process, we also embed of text content of the documents.
+Embedding the text as vectors enables us to perform semantic search against the index of documents, using the ‘kNN’ algorithm. We query the data using the embedding of the a user’s search query. The results from these queries are then ranked by the relevance to the user’s query.
+Generative AI
+A large language model (LLM) is prompted with the results from search queries and paired with context, such as information about parliamentarians, and a user’s role / task, to provide a useful summary with citations sourcing items returned from the original search.
+Generative AI allows us to summarise and present search results in a concise format, grounded in data from parliamentary datasets.
+2.2 - Scope
+As a versatile search and insights tool, Parlex serves a variety of use cases. Some of the key use cases we have identified during development include:
+Private Offices use Parlex for:
+- Analysing parliamentary contributions, to facilitate ministerial briefings.
+- Staying up to date on policy falling within their ministerial remit.
+- Debate preparation.
+Parliamentary Policy Teams use Parlex for:
+- Understanding of themes of debate on policy.
+- Interrogating debates, to ask more informed questions on contributions or topics.
+- Sourcing quotes from parliamentarians to reference in communications.
+Bill Teams use Parlex for:
+- Understanding parliamentary sentiment towards a bill and policy.
+- Identifying themes and making sure policy is representative of views.
+2.3 - Benefit
+Parlex addresses a fundamental challenge in government work: the need to efficiently process and understand vast amounts of parliamentary information. Without such a tool, policy professionals must spend significant time manually searching records, potentially missing important context and connections. By combining semantic search with AI-assisted analysis, the tool transforms raw parliamentary data into actionable insights, enabling more informed and efficient government work.
+Key benefits:
+Time and Efficiency - Reduces research time from hours to minutes by intelligently searching vast parliamentary records.
+Resource Optimisation - Allows policy professionals to focus on analysis rather than information gathering.
+Enhanced Understanding - Reveals connections between related parliamentary discussions that might be missed through traditional research. Provides comprehensive context about parliamentarians’ historical positions
+Improved Decision Support - Enables evidence-based planning through access to parliamentary history.
+Research Quality - Ensures consistent coverage of parliamentary records through semantic search. Reduces the risk of missing relevant content that traditional keyword searches might overlook and provides verifiable sources for all insights through links to original parliamentary records
+2.4 - Previous process
+Parliamentary staff read datasets like Hansard, identifying relevant proceedings for their areas of interest and assimilate and distill using manual methods, for their task at hand.
+2.5 - Alternatives considered
+https://hansard.parliament.uk/
+Users can access the Hansard search interface through parliament.uk, but its search functionality is limited.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The algorithmic tool functions as a search and analysis system for parliamentary data. It is integrated into the information retrieval process through the following steps:
+Query Processing: The system takes a user’s search query and converts it into vector embeddings to enable semantic search.
+Data Search: Using a k-nearest neighbours (kNN) algorithm, the system searches through Hansard and other parliamentary data to find relevant content. The kNN algorithm compares the query’s vector embeddings with those in the database.
+Result Ranking: Search results are ranked according to their relevance scores, which are determined by the kNN algorithm’s similarity calculations and vector embedding matches.
+Result Enhancement: A generative AI component (LLM) processes the search results to:
+Create summaries of the retrieved information
+Add context about parliamentarians and their roles
+Include relevant user information
+Within the wider decision-making process, the tool serves as an information retrieval system. Users:
+Review the search results and summaries
+Evaluate the relevance of the information
+Make decisions based on the retrieved information
+The tool’s primary function is to improve access to parliamentary information, while users maintain responsibility for interpreting and acting on the information provided.
+3.2 - Provided information
+The information is presented through a user interface where users can:
+View and sort search results
+Choose whether to use AI summaries
+Access original source documents
+See the relevance ranking for each result
+All AI-generated content is clearly highlighted to distinguish it from direct parliamentary records.
+The two modalities of the tool output are:
+Search Results:
+Ranked lists of parliamentary content based on relevance to the query
+Each result includes source document, date, and relevance score
+Direct text excerpts showing where the search terms or related concepts appear
+Links to original parliamentary records
+Optional AI Generated Content:
+Summaries of search results that combine multiple sources
+Contextual information about parliamentary contributors
+Contextual information about the user and their role (optionally provided)
+3.3 - Frequency and scale of usage
+The tool is used on a daily basis. It has ~400 registered pilot Civil Service users across a variety of government departments and roles.
+3.4 - Human decisions and review
+The tool serves as an enhancement to current research tools and processes. Parlex does not function in a decision-making capacity. Instead, it retrieves information from existing public parliamentary sources and APIs, presenting it to users. It is the responsibility of Parlex users to verify and validate the findings, just as they would with current methods. Whenever Parlex makes statements regarding what is said or inferred from Parliamentary proceedings, these should be backed by evidence and sources. This enables users to directly validate information when needed.
+The UI highlights AI generated content with a surrounding pink outline border, to distinguish AI content. The about page of Parlex discusses the fact that generated summaries should never be used as definitive sources. It suggests that users verify information with original contributions. Parlex is intended to be used as a starting point, not a definitive source, in a similar fashion to a Google search. The about page also highlights the fact that Parlex is a tool for parliamentary research, akin to an advanced search engine for parliamentary data. It is not intended to predict the outcome of bills, policies, or elections. The page specifically brings attention to the fact that the quality of results depends on data quality, model accuracy, and query precision. Parlex may not capture nuances in debate, such as tone and broader political context.
+3.5 - Required training
+The Parlex home page showcases UI cards for each of the main features and use cases, serving as the core guidance for use of the tool. These cards outline each feature using the following format:
+Name
+Description
+What is it?
+When should I use it?
+Additionally, each feature comes with an example of potential usage, which you can use to pre-populate and demonstrate the feature.As mentioned in 2.3.4, Parlex also features an about page which details further usage and limitations guidance.
+3.6 - Appeals and review
+Parlex offers various feedback mechanisms, including feedback dialogs for all AI-generated outputs and search results. There is also a general feedback form available in the navigation pane, along with an email option for reporting bugs, issues, and feature requests.These features are available to all users of the tool.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Data Ingestion Layer
+- Combination of Parliamentary API integrations and web scrapers to collect parliamentary data
+- AWS Lambda functions running on cron schedules for daily data collection and daily readout emails
+- Sliding window mechanism to ensure comprehensive data capture
+- Data pipeline for loading into Elasticsearch cluster
+Processing and Embedding
+- Microsoft Azure-hosted Large Language Model (LLM) for generating embeddings
+- Field-specific embedding generation for data models; i.e. Question and Answer texts for Parliamentary Questions
+- Elasticsearch cluster for storing and indexing processed data
+Generative Services
+- Azure LLM instance handles text generation tasks including:
+- Content summarisation
+- Context integration from user information
+- Parliamentary metadata incorporation (constituency, party, role)
+- Context management system for maintaining relevance
+Application Stack
+Frontend: Streamlit application
+Backend: FastAPI service handling with RESTful API endpoints for service communication
+- Elasticsearch query routing
+- Azure LLM API interactions
+Search Infrastructure
+- Elasticsearch indices optimised for parliamentary content
+- Vector search capabilities using embedded field data
+- Query processing for both direct and semantic search
+- Results ranking and relevance scoring
+4.1.2 - Phase
+Beta/Pilot
+4.1.3 - Maintenance
+As we’re currently in a pilot phase, we’re continually refining and developing the tool. We are in regular contact with end users about use cases and provide multiple mechanisms for feedback, including regular demo sessions.
+4.1.4 - Models
+GPT-4o (Internal Azure Instance)
+Tier 2 - Model Specification
+4.2.1 - Model name
+GPT-4o (hosted on the Azure OpenAI service)
+4.2.2 - Model version
+2024-08-06 00:00:00
+4.2.3 - Model task
+Generate summaries from search results and additional context.
+Embed text for semantic search.
+4.2.4 - Model input
+A list of search results, context about the results such as a relevant parliamentarian, context about the user’s role and details about the desired task.
+4.2.5 - Model output
+A summary of the input, adapted to the sub-task.
+4.2.6 - Model architecture
+https://openai.com/index/gpt-4o-system-card/
+4.2.7 - Model performance
+We are currently in the process of performing user research and evaluation.
+Our evaluation is part of the current Test & Learn work in DSIT.
+4.2.8 - Datasets
+We have not trained a core model or fine tuned a model.
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Parlex processes data from the following API sources:
+Hansard (https://hansard-api.parliament.uk/swagger/ui/index#!/Search/Search_SearchContributions)
+Members (https://members-api.parliament.uk/index.html)
+Written Parliamentary Questions (https://questions-statements-api.parliament.uk/index.html)
+Data models are ingested directly from these APIs into our Elastic Search cluster, along with embeddings of selected text fields utilised in our semantic search features.
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+We use data provided by parliament.gov including historical and current Hansard data. We also use Parliamentary Questions.
+4.3.4 - Data quantities
+Parlex has access to historical data for each dataset.
+Hansard (2020 - Today)
+Written Parliamentary Questions (2014 - Today)
+4.3.5 - Sensitive attributes
+Parlex doesn’t handle sensitive datasets. The following describes the contents of the datasets used:
+Hansard contains the proceedings of Parliament and the views expressed in both the House of Commons and the House of Lords.
+Written Parliamentary Questions includes the questions posed to Members, along with the relevant answers.
+Members provides detailed public information from the Parliament website about each Member’s profile, including their name, title, gender, party, constituency, and historical roles.
+4.3.6 - Data completeness and representativeness
+The data is reflective of what’s available via the Parliament APIs, but isn’t complete with respect to the entire history of Parliamentary proceedings.
+4.3.7 - Source data URL
+https://developer.parliament.uk/
+4.3.8 - Data collection
+The existing APIs and data are collected for Parliamentary transparency and public access. They are also used by professionals in Parliamentary and policy roles.
+4.3.9 - Data cleaning
+We do not editorialise the underlying data used in Parlex, it is indexed into our database as it provided by the Parliamentary APIs.
+4.3.10 - Data sharing agreements
+We use public datasets and APIs under the open parliament licence (https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/)
+4.3.11 - Data access and storage
+Staff: All staff in i.AI are minimum SC cleared, with several with DV. This includes all of our cloud platform team.
+Cloud Hosting: All of our cloud processing is done inside of the Cabinet Office provided AWS and Azure environments which are used for all of our OFF-SEN data hosting. All of our applications, databases and networking runs in the London AWS data centre for all our work loads. We have role based permissions to control who can access what.
+Network Security: We operate a universal firewall for all our application endpoints where we have individually whitelisted only government IPs (individual and ranges). This allow list can be restricted further depending on the sensitivity of the workload.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The Department for Science, Innovation and Technology has completed a Data Protection Impact Assessment (DPIA) screening and determined that a full DPIA is not required. Cabinet Office completed a full DPIA.
+5.2 - Risks and mitigations
+Technical Risks
+Search Accuracy
+Risk: Semantic search may miss relevant parliamentary content or return irrelevant results
+Mitigation:
+- Regular evaluation of search accuracy using test queries
+- User feedback collection on search result relevance
+AI Generation Quality
+Risk: Generated summaries may be inaccurate or miss crucial context
+Mitigation:
+- Clear labelling of AI-generated content
+- Source links provided for all summarised content
+- Regular quality checks of generated outputs
+Data Risks
+Data Freshness
+Risk: Parliamentary data may become outdated or miss recent proceedings
+Mitigation:
+- AWS Lambda functions run daily updates
+- Sliding window approach catches missed content
+- Monitoring system for ingestion failures
+Data Accuracy
+Risk: Scraped or API-sourced data may contain errors
+Mitigation:
+- Cross-referencing between data sources
+- Error logging and manual review process
+Operational Risks
+System Performance
+Risk: High user load or complex queries may impact response times
+Mitigation:
+- Content caching where appropriate
+- Rate limiting on API endpoints
+User Experience Risks
+Result Comprehension
+Risk: Users may misinterpret search results or generated summaries
+Mitigation:
+- Clear presentation of result sources
+- Distinction between original and generated content
+- User guidance and documentation
+Query Understanding
+Risk: System may misinterpret user intent
+Mitigation:
+- Query preprocessing to improve understanding - could we ask an LLM to interpret request? Could introduce additional bias
+- User feedback mechanisms
+Contents

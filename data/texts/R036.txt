@@ -1,0 +1,177 @@
+Cafcass: Genesys ChatBot
+A chatbot to assist website and telephone users find information faster.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+17 December 2024
+Organisation:
+Ministry of Justice
+Organisation type:
+Agency or public body
+Function:
+Social protection
+Capability:
+Computer linguistics
+Task:
+Bot interaction and conversation
+Phase:
+Production
+Region:
+England
+Date published:
+17 December 2024
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Genesys Chatbot
+2 - Description
+Website users access the chat service through an icon via the Q&A dialogue on the website. Users will enter a question into the chat service and then the service refers to its library and responds appropriately.  It is being used to allow users who prefer to communicate directly through the website to get answers to their questions, and where the tool cannot find an answer the tool connects directly with a call centre agent.
+3 - Website URL
+https://help.mypurecloud.com/articles/about-bots/
+4 - Contact email
+cafcass.it@cafcass.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Children and Family Court Advisory and Support Service (Cafcass)
+1.2 - Team
+Cafcass Call Centre Team
+1.3 - Senior responsible owner
+Senior Business Services Manager.
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Genesys
+Kerv Experience Limited
+1.4.2 - Companies House Number
+Genesys - 02207062
+Kerv Experience Limited - 03925996
+1.4.3 - External supplier role
+Genesys develop the product.
+Kerv are Cafcass’s implementation and support partner.
+1.4.4 - Procurement procedure type
+The Genesys chatbot function was procured for by Cafcass using the Crown Commercial Service Further Competition Network Services 2 framework.
+Further information about this framework can be found at:
+https://www.crowncommercial.gov.uk/agreements/RM3808#:~:text=21/04/2022:%20Our%20latest%20on-demand%20customer%20webinar:%20%E2%80%98Network%20Services%202%20buyer%E2%80%99s
+1.4.5 - Data access terms
+The solution handles only information that is in the public domain. Both Genesys and Kerv have access to this information.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Genesys Dialog Engine Bot Flows and Genesys Digital Bot Flows uses a natural language understanding (NLU) engine that can interpret and process information the customer provides as input.
+It is a conversational method of communicating with customers. which responds to natural questions about Cafcass services and directs customers to the most likely answer based on the question asked.
+If the bot cannot respond, because it cannot source information from its data source for the question or if the customer is not satisfied with the information provided the option to speak directly with a customer service agent is provided.
+2.2 - Scope
+Website users access the chat service through an icon on the Q&A dialogue on the website.
+Users enter a question into the chat service and then the service refers to its library and responds appropriately. It is being used to allow users who prefer to communicate directly through the website to get answers to their questions, and where the tool cannot find an answer the tool connects directly with a call centre agent.
+The Chatbot only answers questions about Cafcass and directs customers towards information.
+The tool does not make any decisions and it does not carry out any actions.
+2.3 - Benefit
+This algorithmic tool allows users to self-service, meaning they can obtain information 24/7 and not need to speak to a human to receive an answer.
+This, in turn, helps reduce the queue length times for the customer service team as well as ensuring that users receive responses that are consistent. Another benefit for customers is allowing them to choose communication method.
+2.4 - Previous process
+Users had only the option to either search the website for information or contact the call centre to ask an agent questions.
+2.5 - Alternatives considered
+The Genesys chatbot was used because it was included as a feature in the Genesys Cloud Contact Centre software used by the Cafcass Contact Centre.
+Doing nothing, that is, not having a chatbot was also considered.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Instead of a customer calling up the contact centre to ask questions the tool can signpost to information that may help them answer their queries without the need to engage a contact centre staff member. The tool helps the customer with linking them to publicly available URLs of information that may help them answer their question but it does not take part in deciding if the customers questions have been answered.  It provides help only.
+If a customer is not satisfied with the information provided then the option to speak directly with a customer service agent is provided.
+A customer can always engage the customer service agent straight away when clicking into the chatbot interaction by saying they don’t want to speak to the chatbot. This option is provided at the start and is always available through the interaction.
+3.2 - Provided information
+The tool provides responses in text format calling upon Cafcass webpages and their corresponding guidance to the user for review. This is shared with the user as a text response and contains a response in a natural language way with links to the content. No images, videos or graphs are provided only text based responses and URL links to content.
+If a call is transferred to a customer service agent the agent is aware of the searches that have been made by the customer but relies on the customer to confirm verbally what information they would like before providing advice.
+3.3 - Frequency and scale of usage
+c. 2,500 queries per month
+3.4 - Human decisions and review
+When the tool provides the responses to the user, it is up to the user to decide if there response has provided them with a satisfactory link to answer their question they were asking. They can either ask further follow up questions to obtain further links that may help them answer their questions or ask new questions.
+It is left to the human to decide if their answer has been satisfactory answered and the tool makes no decisions on completion of the user query. The tool responses are reviewed on a monthly basis to review quality and understand ways in which answers could be improved.
+If a call is transferred to a customer service agent the agent will attempt to answer the customers query by providing them with answers and links to locations on the Cafcass website where information about their query can be found.
+3.5 - Required training
+End users require no training and no advice is provided on the website.
+Call centre staff receive face-to-face online training in the administration of the tool from internal trainers who have been trained by Kerv, the Genesys re-seller used by Cafcass, who are fully informed about the capabilities of the system.
+3.6 - Appeals and review
+If a customer is not satisfied with the information provided then the option to speak directly with a customer service agent is provided.
+Customers of the chatbot are asked, once their query is answered, if the response answered their question in a ‘Yes’ ‘No’ way.  The responses provided here are reviewed monthly with the aim to improve responsiveness.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+https://help.mypurecloud.com/articles/key-concepts-of-dialog-engine-bot-flows-and-digital-bot-flows/
+The Genesys Chatbot leverages a Retrieval-Augmented Generation (RAG) architecture, securely deployed within an Amazon Web Services (AWS) environment. The system is designed to handle user queries relating to Cafcass information.
+Key components of the architecture include:
+Data Ingestion: Data ingestion of the data held on the Cafcass public facing website into the AWS environment is conducted using the Genesys Architect tool. The data is embedded and transformed into vector embeddings using Amazon Lex.
+Generative AI Integration: The retrieved documents are processed using Genesys’ Digital Engine Bot Flows integrated via AWS Lex. Genesys Digital Engine Bot summarises the retrieved information and generates a user-friendly response, which is then presented to the user.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The tool is inspected by the Cafcass team monthly in relation to questions that have been asked and the responses provided on a monthly basis.
+A weekly release schedule (feature and security) is provided by the developer (Genesys).
+4.1.4 - Models
+Natural Language Understanding (NLU) utilising Amazon Lex.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Genesys Dialog Engine Bot
+4.2.2 - Model version
+2.12.644.0
+4.2.3 - Model task
+Genesys Dialog Engine Bot Flows and Genesys Digital Bot Flows uses a natural language understanding (NLU) engine that can interpret and process information the customer provides as input, to provide a output answer including guidance were possible.
+4.2.4 - Model input
+Text based questions in English
+4.2.5 - Model output
+Summary of relevant guidance and documentation available in the Dialog Engine Bot database.
+4.2.6 - Model architecture
+Natural Language processing (NLP) utilising Amazon Lex.
+4.2.7 - Model performance
+Query Answer Success Rate - 64%.
+This is a user figure based on their satisfaction on the provided response.
+4.2.8 - Datasets
+The underlying model is Amazon Lex and Genesys functionality updates inline with Amazon Lex. The Cafcass information used by the model uses a knowledge database within Genesys.
+4.2.9 - Dataset purposes
+Genesys Digital Bot has received large amounts of training data, fine-tuning and configuration to create its base model. The model is not open source, proprietary to Genesys.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Chatbot Knowledge Base
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Cafcass operational information which is in the public domain and available on the Cafcass website is used to inform and assist customers. This includes: documents, policies and, webpages.
+4.3.4 - Data quantities
+A knowledge base with 113 data sets containing over 1,300 web-page and document links.
+4.3.5 - Sensitive attributes
+N/A - all information is in the public domain and no sensitive data is included.
+4.3.6 - Data completeness and representativeness
+The data within the knowledge base comprises the complete data set on the Cafcass website.
+Monthly review of content are made to ensure ongoing correctness of information. Review of the chatbots answers are carried out.
+4.3.7 - Source data URL
+https://www.cafcass.gov.uk/
+4.3.8 - Data collection
+All information used is held on the Cafcass website - information is not used from any other source.
+4.3.9 - Data cleaning
+Data is updated with new information when there are organisational updates.
+4.3.10 - Data sharing agreements
+N/A - all information is Cafcass information.
+4.3.11 - Data access and storage
+The data used is published on the Cafcass website.
+Edit rights for the Cfacass website are provided to selected members of staff who access the web-engine using SSO using their Cafcass identity.  Publish rights are allocated to a smaller team of individuals within the Cafcass Communications Department.
+Chatbot changes are conducted by Cafcass Call Centre staff who access the chatbot system using SSO using their Cafcass identity.
+No sensitive data is used.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+A Data Protection Impact Assessment (DPIA) has been completed and approved (review held May 2024).
+Residual risk considerations: “The technology only provides responses to customer questions to allow easier self-serve and provide a range of communication channels.”
+Overall residual risk rating: LOW.
+5.2 - Risks and mitigations
+The main risks are:
+hallucinations,
+data becoming out of date, and
+inaccurate outputs.
+reporting concerns about children
+How we are mitigating against these risks:
+- to mitigate against the model hallucinating we are giving it access to our complete record of internet data, so it’s less likely to make up things. If an answer cannot be found in the database an offer to speak directly with an agent is made.
+- we currently have access to all of the data on the internet, however new information might be published in the future. To make sure that the database is updated there are scheduled reviews of questions asked and responses provided.
+- it is possible for the chatbot to return the wrong response to the user. To mitigate this, we are planning to create some user documentation where we will share tips and tricks on how to use the chatbot. Users are able to speak directly with a customer service agent when there is a doubt about the information returned.
+- links to local council services are provided so that referals can be made to the correct organisations.
+Contents

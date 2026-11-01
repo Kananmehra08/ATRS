@@ -1,0 +1,128 @@
+Newcastle City Council: Magic Notes
+A digital solution designed to help adult social care professionals quickly and securely record case notes, improving efficiency and accuracy in service delivery.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Local authority
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Sentence and text generation
+Phase:
+Private Beta
+Region:
+North East
+Date published:
+16 December 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Magic Notes
+2 - Description
+Magic Notes is a digital solution designed to help adult social care professionals quickly and securely record case notes, improving efficiency and accuracy in service delivery.
+3 - Website URL
+https://magicnotes.ai/
+4 - Contact email
+ascis.sit@newcastle.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Newcastle City City Council
+1.2 - Team
+Adult Social Care and Prevention Directorate
+1.3 - Senior responsible owner
+Assistant Director Prevention - Adult Social Care
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Beam UP Limited
+1.4.2 - Companies House Number
+10637337
+1.4.3 - Third party role
+Beam UP Limited provided technical development and deployment support for Magic Notes
+1.4.4 - Procurement procedure type
+Proof of concept pilot followed by 12 month negotiated contract 009205 Newcastle Social Care and Prevention Magic Notes Project
+1.4.5 - Third party data access terms
+Third party data access terms
+BEAM UP Ltd. (Magic Notes) is provided with controlled access to personal and special category data recorded by Newcastle City Council Adult Social Care staff using the Magic Notes web application. This access is strictly limited to the processing, transcription, and summarisation of audio recordings for the purpose of generating case notes. BEAM does not integrate Magic Notes with other council systems, and all data processing is carried out in compliance with data protection legislation. Access is restricted to authenticated council staff via Single Sign-On, and BEAM retains data only for a limited period (up to 120 days) before deletion. All BEAM staff and sub-processors are subject to contractual and technical controls, including CyberEssentials Plus certification, to ensure data security and appropriate use. Data access is granted solely for the duration of the 12-month project extension and is subject to ongoing oversight by the council.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Magic Notes allows social care staff to input, store, and retrieve case notes securely. It is designed for use by Newcastle City Council’s Adult Social Care team. The tool streamlines documentation, supports compliance, and integrates with existing case management systems.
+The tool uses machine learning models for speech-to-text transcription (Deepgram, with OpenAI Whisper as fallback) and for generating text summaries (OpenAI large language model). These models are used solely for transcribing and summarizing recorded conversations; no rule-based or statistical models are used for decision-making, and data is not used for further model training by vendors.
+2.2 - Benefits
+Improved accuracy and timeliness of case notes, reduced admin burden, enhanced data security, and better service outcomes.
+2.3 - Previous process
+Previously, case notes were recorded manually on paper or in disparate digital systems, leading to inefficiencies and risk of data loss.
+2.4 - Alternatives considered
+Magic Notes was chosen for its tailored fit to adult social care local needs and integration capabilities.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Magic Notes does not automate decisions. Instead, it enables Newcastle City Council Adult Social Care staff to record and securely transcribe conversations with residents, carers, and providers using a council-issued device. The tool generates a draft summary and transcript of each conversation, which staff review and edit as needed. These summaries are then copied into the council’s Eclipse case management system as official case notes. The outputs from Magic Notes inform case management decisions, such as care planning, assessments, and follow-up actions, by providing accurate and timely records of interactions. Staff retain full responsibility for reviewing, interpreting, and acting on the tool’s outputs, ensuring that professional judgment remains central to all decisions
+3.2 - Human review
+All case notes are reviewed by the practitioner; they are responsible for the decision making and content: They must review the transcript and make any manual amendments necessary before pasting the information into Eclipse as it is important that what Magic Notes provides is checked so that any omissions or errors are addressed, as the output from Magic Notes should not be considered a final product until the practitioner undertakes a thorough review.
+3.3 - Frequency and scale of usage
+Magic Notes is used daily by Adult Social Care staff as part of routine casework. The project covers up to 6,000 hours of recorded conversations over a 12-month period, supporting regular use across multiple teams.
+3.4 - Required training
+All users are approved for access to Magic Notes and receive clear, documented instructions and verbal training. This training is provided either online or in-person at the start of their access to the product.
+3.5 - Appeals and review
+If a person ojects to the use of Magic Notes the practitioner will not use the tool and revert back to traditional recording methods i.e., pen and paper: A person’s access to care and support will not be affected.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Magic Notes does not automate decisions. Instead, it provides a secure web-based platform for Adult Social Care staff to record conversations with service users using council-issued devices. Audio recordings are uploaded to BEAM’s UK-based cloud infrastructure, where they are transcribed and summarized by AI models (Deepgram, OpenAI). Staff receive a draft summary and transcript for review, which can then be edited and entered into the Eclipse case management system. Access to Magic Notes is controlled via Single Sign-On and multi-factor authentication, ensuring only authorized staff can use the tool. All data is processed and stored within the UK or EEA, with strict retention and deletion policies enforced. Sub-processors are contractually bound to process data solely for Magic Notes’ purposes, and the system is certified to CyberEssentials Plus standards for security.
+4.1.2 - System-level input
+The system-level input for Magic Notes consists of audio recordings of conversations between Adult Social Care staff and people accessing or seeking to access adult social care services, captured via the Magic Notes web application on council-issued devices. These audio files may include spoken information such as names, addresses, dates of birth, health and care details, and other personal or sensitive data discussed during the interaction. The expected input format is digital audio (e.g., WAV or MP3), accompanied by metadata such as recording time, device, and authenticated user credentials.
+4.1.3 - System-level output
+The system-level output of Magic Notes is a draft transcript and summary of each recorded conversation between Adult Social Care staff and service users. This output is delivered in structured text format, accessible via the Magic Notes web application. Staff can review, edit, and then copy or download the transcript and summary for integration into the council’s Eclipse case management system. The output is designed to support accurate, timely, and comprehensive case notes, and is not used for automated decision-making or further processing by sub-processors.
+4.1.4 - Maintenance
+Magic Notes is subject to continuous operational review and a formal evaluation at the end of the project period with monthly and indept quarterly oversight. There is no local model re-training schedule, as AI models are managed externally and not retrained on council data. Security and compliance are maintained through regular oversight and certification
+4.1.5 - Models
+Magic Notes uses machine learning models for speech-to-text transcription (Deepgram, with OpenAI Whisper as fallback) and for generating text summaries (OpenAI large language model). These models are used solely for transcribing and summarising recorded conversations; no rule-based or statistical models are used for decision-making, and data is not used for further model training by vendors.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Audio recordings of conversations between Adult Social Care staff and people using or seeking to access adult social care service, captured via the Magic Notes web application on council-issued devices.
+4.4.2 - Sensitive attributes
+Magic Notes processes sensitive personal data, including names, addresses, dates of birth, health information, racial or ethnic origin, sexual orientation, criminal offence data, and financial details. All data is handled in compliance with UK GDPR and the Data Protection Act 2018. Staff obtain verbal consent before recording, and data is stored securely on UK/EEA-based infrastructure, accessible only to authorized council staff. Data is retained according to council policies and deleted after the retention period. Sub-processors are contractually restricted to processing data solely for Magic Notes’ purposes, with robust security measures in place.
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+Magic Notes stores sensitive operational data, including audio recordings, transcripts, and summaries, which are only accessible to authorized council staff via secure authentication. BEAM retains this data for up to 120 days before deletion; final records are stored in the council’s Eclipse system according to retention policies. Data is protected through encryption, strict access controls, and contractual restrictions on sub-processors, with responsibility shared between BEAM UP Ltd. (during processing) and Newcastle City Council (for long-term storage).
+4.4.5 - Data sharing agreements
+There are data sharing agreements in place for the Magic Notes project between Newcastle City Council Adult Social Care & Prevention Directorate and BEAM UP Limited. Data is shared only with BEAM and its approved sub-processors (such as AWS, Azure, OpenAI, Kinde, Google Cloud Platform, Fastly, and Eleven Labs) for the sole purpose of delivering and supporting the Magic Notes tool. All sub-processors are contractually required to process data only for this project, with strict controls on access, retention, and use. Data is stored in the UK or EEA, not used for model training, and is retained by BEAM for a maximum of 120 days. Case records are retained by the Council according to statutory schedules. Individuals are informed at the start of meetings and can object to recording at any time.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+A Data Protection Impact Assessment (DPIA) for the BEAM Magic Notes project was completed and approved on 08 October 2025. The DPIA identified privacy and security risks related to the use of Magic Notes in Adult Social Care, with key mitigations including strict access controls, contractual restrictions on data use, and user training. The DPIA is reviewed by the DPO, with ongoing monitoring and a full evaluation planned at the end of the 12-month project. The DPIA is not currently published online
+5.2 - Risks and mitigations
+Key Risks and Mitigations for Magic Notes
+Privacy and Data Security:
+There is a risk of personal and sensitive data being leaked or accessed without authorisation, especially through sub-processors. This could lead to significant breaches of privacy and loss of trust.
+Mitigation: Security controls are in place, including Cyber Essentials Plus accreditation, contractual restrictions, and all data is processed in the UK/EEA. The council’s Information Security team has reviewed the system, and only approved staff have access.
+Inaccurate or Unfair Outcomes:
+Incorrect transcriptions or summaries could result in miscommunication, unfair outcomes, or misrepresentation—particularly for people with strong accents or atypical language.
+Mitigation: BEAM reports 98% transcription accuracy, templates are co-designed and tested, and staff must check all outputs for accuracy before they are added to records.
+Loss or Misplacement of Transcripts:
+There is a risk that transcripts could be lost in transport or sent to the wrong person, leading to privacy breaches.
+Mitigation: The product has been robustly tested to ensure transcripts reach the correct destination, and all access to the Eclipse system is auditable.
+Lack of Training or Inconsistent Use:
+If staff are not properly trained, this could result in data breaches or poor-quality records.
+Mitigation: Comprehensive training and clear documentation are provided, with ongoing support and regular audits by the project team.
+Objection to Recording:
+Individuals may object to their session being recorded, raising concerns about consent and autonomy.
+Mitigation: If anyone objects, recording is immediately stopped and deleted, and traditional note-taking methods are used instead.
+Use of Data for AI Training:
+There is a risk that personal data could be used to train AI models without consent.
+Mitigation: BEAM and its sub-processors are contractually prohibited from using data for model training, and this is regularly assured.
+Expansion Risks:
+As the project expands, inconsistent use could increase risk of breaches or poor-quality information.
+Mitigation: The project team provides oversight, regular audits, drop-in sessions, and a feedback mechanism to ensure adherence to process and continuous improvement.
+Contents

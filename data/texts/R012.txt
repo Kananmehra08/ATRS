@@ -1,0 +1,195 @@
+UKHO: Tidal Harmonic Analysis and Prediction
+A tool to analyse tidal data, calculate harmonic constants and generate astronomical tidal predictions at coastal locations in the UK and overseas.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Organisation:
+Ministry of Defence
+Organisation type:
+Agency or public body
+Function:
+General public services
+and
+Public order and safety
+Capability:
+Forecasting
+Task:
+Event prediction
+Phase:
+Production
+Region:
+International
+Date published:
+30 October 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Tidal harmonic analysis and prediction
+2 - Description
+A tool to undertake Harmonic tidal analysis of water level / tidal height and currents / tidal streams data. Algorithms are used in this analysis in order to produce the tidal harmonic constants. These harmonic constants are then used in order to calculate the tidal predictions.
+3 - Website URL
+N/A
+4 - Contact email
+customer.services@ukho.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+UK Hydrographic Office
+1.2 - Team
+Scientific Analysis Group Tides
+1.3 - Senior responsible owner
+Tides Technical Lead
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Chersoft
+Laserscan
+National Oceanography Centre (NOC)
+1.4.2 - Companies House Number
+03861633
+03194236
+11444362
+1.4.3 - Third party role
+Code development, software development, Graphical User Interface (GUI), Commercial Off-The-Shelf (COTS) software.
+1.4.4 - Procurement procedure type
+Single source
+1.4.5 - Third party data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The purpose of the tool is to analyse tidal data, calculate harmonic constants and generate astronomical tidal predictions at coastal locations (usually ports & harbours) in the UK and overseas.
+Tidal analysis and prediction involves the application of science and technology to analyse and predict astronomically-forced sea surface heights and horizontal streams (currents) for a given location and time. It includes collecting observations using appropriate platforms (tide gauges and current meters and the like).
+The predictions are published annually in the ADMIRALTY Tide Tables (globally), as well as in ADMIRALTY Digital Publication TotalTide, the website EasyTide and a Tidal API (both UK-only). Predictions are also sold and licensed to commercial companies for re-publishing in a variety of publicly-available resources (books, websites etc.).
+2.2 - Benefits
+This tool and analysis provides provision of accurate tidal predictions to a large variety of end users; Royal Navy, Commercial Maritime, Professional, Public.
+2.3 - Previous process
+N/A
+2.4 - Alternatives considered
+N/A
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The algorithms are built into the software tools and services used in daily business as usual (BAU) functions.
+More specifically, the tidal harmonic analysis algorithms are built into the software used to undertake the harmonic analysis of tidal observations.
+The tidal prediction algorithms are inbuilt to an internal Tides Database, as well as the commercially available tidal prediction software (ADMIRALTY TotalTide).
+The tool supports harmonic analysis of tidal observations, and the computed predictions support a variety of maritime planning and navigation operations.
+In simplest terms, the whole process of tidal analysis and prediction ultimately produces tidal predictions, tide tables, website predictions and the like. This allows users to look at this data and make decisions which enable them to safely act within a coastal zone  which is affected by tides, be that a safe walk along the beach, through to berthing a super tanker.
+3.2 - Human review
+The ‘review’ forms a part of the whole ‘quality control’ of the harmonic analysis and prediction process.
+That is to say that the harmonic constants derived from the harmonic analysis of tidal observations are then used to re-predict the timeseries from which they were initially derived. This allows for the calculation of ‘residuals’, i.e. the difference between the predicted vs. observed values, allowing for an understanding of how reliable the analysis and, ultimately the resulting predictions, are in terms of a robust and accurate fit.
+3.3 - Frequency and scale of usage
+UKHO undertakes routine analysis of tidal observations when new tidal data is captured and made available ‘in the field’. Many tide gauges are permanently recording tidal observations, and so the data is generally analysed in ‘regular periods’ ranging from one month, or a number of months’ up to one year, or a year and several months, and so on.  The results (harmonic constants) are then databased and ultimately daily predictions are published in the annual series of ADMIRALTY Tide Tables, TotalTide, EasyTide and the Tidal API. This is how the data is accessed (thence ‘interacted by citizens’).
+3.4 - Required training
+To undertake this task requires a specialist role within UKHO; these individuals have a background in Oceanography, Physics, Mathematics, Marine Sciences as well as recieve in-house training.
+3.5 - Appeals and review
+There is no formal appeals process. Any user feedback on UKHO tidal products and services is channelled through UKHO Customer Services; see
+https://www.admiralty.co.uk/contact-us
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Tidal Harmonic Analysis consists of a modular approach where the output of one process forms the input to another.
+1. first step is a data input layer, which accepts time series data from various sources (e.g. tide gauges, Acoustic Doppler Current Profilers (ADCP)). It supports multiple formats including text, CSV, and custom formats used in tide gauge and current meter instrumentation.
+Quality control of the data is undertaken at this stage, assessing the data for outliers, spikes, gaps and general errors, cleaning it to ensure a reliable dataset is passed on to the next stage. This involves visualising the observed curve, helping to make editing the data easier.
+second step is the core analysis engine. This is the key set of algorithms used in the harmonic analysis of the observed time series described in (1) above. This step implements harmonic analysis algorithms to ‘decompose’ observed data into the tidal constituents, using a least-squares fitting to estimate amplitudes and phases of tidal components.
+third step is a ‘predicted (computed) versus observed’ assessment of the data, calculating various statistics of how good a fit the prediction is compared to the timeseries of observations used in the analysis, i.e. the ‘residuals’. The prediction is calculated using the harmonic constants derived from stage (2) above. If the fit is not good, there are certain reiterations that can be undertaken, involving the selection / removal of certain harmonic constituents, in order to improve the fit.
+the predictions are assured then the calculated constants are committed to the database and used thereafter to calculate and publish the predictions in the various ADMIRALTY products.
+4.1.2 - System-level input
+Tidal analysis input
+Tidal height and stream observations
+Tidal Prediction input
+Calculated harmonic constants from the analysis
+4.1.3 - System-level output
+Tidal analysis output
+Tidal harmonic constants
+Tidal Prediction output
+Tidal predictions
+4.1.4 - Maintenance
+Well-established anlsysis and prediction algorithms.
+No specific maintenance and review schedule in operation.
+4.1.5 - Models
+Well-established analysis and prediction algorithms as defined in various literature on the subject of harmonic tidal analysis and prediction.
+2.4.2. Model (analysis)
+4.2.1. - Model name
+Tidal Analaysis Software Kit (TASK)
+4.2.2 - Model version
+TASK Version 2.0.0
+4.2.3 - Model task
+To calculate tidal harmonic constants from a time series of water level heights or horizontal currents.
+4.2.4 - Model input
+Time series data from various sources (e.g. tide gauges, Acoustic Doppler Current Profilers (ADCP)). It supports multiple formats including text, CSV, and custom formats used in tide gauge and current meter instrumentation.
+4.2.5 - Model output
+Tidal harmonic constants that can be used to predict either the tidal heights or tidal streams (currents).
+4.2.6 - Model architecture
+Tidal harmonic analysis involves least squares fitting techniques, specifcally a Gauss-Siedel or Pivotal Condensation iterative method of solving a system of linear equations. The method chosen depends on the quality of the input data, length of gaps, and reflects on the number of individual harmonics that are being attempted to be resolved.
+Primary reference: Murray, H. D. (1964). Harmonic Analysis of Tides. International Hydrographic Review, 41(1), 91–101.
+The software is publicly accessible and available for purchase. See
+https://knowledge-software.noc-innovations.com/what-is-task
+4.2.7 - Model performance
+COTS software; all testing and validation of the performance of the software is part of the COTS development.
+In terms of the suitability and reliability of the calculated harmonic constants from an analysis, the iterative process of undertaking a ‘predicted (computed) versus observed’ assessment of the data deals with this. Specifically, calculating various statistics of how good a fit the prediction is compared to the timeseries of observations used in the analysis, i.e. the ‘residuals’. The prediction is calculated using the harmonic constants derived from an analysis. If the fit is not good, there are certain reiterations that can be undertaken, involving the selection / removal of certain harmonic constituents, in order to improve the fit.
+4.2.8 - Datasets and their purposes
+See Murray, H. D. (1964). Harmonic Analysis of Tides. International Hydrographic Review, 41(1), 91–101, for the model development.
+‘Real world’ time series data from various sources (e.g. tide gauges, Acoustic Doppler Current Profilers (ADCP)) is used within the tool to undertake the analysis.
+Tier 2 - Data Specification: ADMIRALTY TotalTide (1)
+4.2.1. - Model name
+ADMIRALTY TotalTide
+4.2.2 - Model version
+Published annually. Currently v25 (2025)
+4.2.3 - Model task
+To calculate tidal predictions using the harmonic constants derived from the analysis of a time series of water level heights or horizontal currents.
+4.2.4 - Model input
+Tidal harmonic constants and Mean Sea Level above Chart Datum (Zo). In addition, associated astronomical terms all form part of the prediction algorithm.
+4.2.5 - Model output
+Tidal prediction timeseries (for example 10 minute or hourly heights or rates and direction of the tidal stream (current).
+Predictions of the time sand heights of high and low water.
+Predictions of the maximum flood and ebb tidal streams (currents), and their directions, along with times of slack waters (zero or near-zero rates).
+4.2.6 - Model architecture
+The classical tidal prediction equation / algorithm is shown below:
+Technical references on harmonic analysis and prediction:
+Pugh: Tides, Surges and Mean Sea Level: Pugh, D.T. 1987. Tides, surges and mean sea-level: a handbook for engineers and scientists. Wiley, Chichester, 472pp.  e-print available here
+Pugh, David T. (2004). Changing Sea Levels: Effects of Tides, Weather and Climate. Cambridge: Cambridge University Press. ISBN: 9780521532181.
+Pugh, David T. and Woodworth, Philip L. (2014). Sea-Level Science: Understanding Tides, Surges, Tsunamis and Mean Sea-Level Changes. Cambridge: Cambridge University Press. ISBN: 9781107028197.
+United Kingdom Hydrographic Office (UKHO). Admiralty Manual of Tides. London: Hydrographic Department, Ministry of Defence, 1995.
+e-print of the 1941 Edition, reprinted in 1961 is available here.
+Godin, Gabriel (1972). The Analysis of Tides. Liverpool: Liverpool University Press. ISBN: 9780853231993.
+Canadian Hydrographic Service (1994). Canadian Tidal Manual. Ottawa: Fisheries and Oceans Canada. Available online at:
+http://www.psmsl.org/train_and_info/training/reading/canadian_manual.php
+Parker, Bruce B. (2007). Tidal Analysis and Prediction. Silver Spring, MD: National Oceanic and Atmospheric Administration (NOAA), Center for Operational Oceanographic Products and Services (CO-OPS). Available online at:
+https://tidesandcurrents.noaa.gov/publications/Tidal_Analysis_and_Predictions.pdf
+National Oceanic and Atmospheric Administration (NOAA). Our Restless Tides: A Brief Explanation of the Basic Astronomical Factors Which Produce Ocean Tides. Silver Spring, MD: NOAA, Center for Operational Oceanographic Products and Services (CO-OPS). Available online at:
+https://tidesandcurrents.noaa.gov/restles1.html
+Full list attached
+Architecture
+Tidal Prediction Algorithm
+Tidal Prediction Equation
+4.2.7 - Model performance
+COTS software; all testing and validation of the performance of the software is part of the COTS development.
+In terms of the suitability and reliability of the calculated tidal predictions, the iterative process of undertaking a ‘predicted (computed) versus observed’ assessment of the data via the harmonic analysis previously described deals with this. Specifically, calculating various statistics of how good a fit the prediction is compared to the timeseries of observations used in the analysis, i.e. the ‘residuals’. The prediction is calculated using the harmonic constants derived from analysis. If the fit is not good, there are certain reiterations that can be undertaken, involving the selection / removal of certain harmonic constituents, in order to improve the fit.
+4.2.8 - Datasets and their purposes
+Tidal harmonic constants and Mean Sea Level above Chart Datum (Zo). In addition, associated astronomical terms all form part of the prediction algorithm.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+For harmonic analysis, the input data is timeseries data from various real-world sources (e.g., tide gauges, Acoustic Doppler Current Profilers (ADCPs)).
+4.4.2 - Sensitive attributes
+N/A
+4.4.3 - Data processing methods
+Quality control of the data is undertaken at the data input stage, assessing the data for outliers, spikes, gaps, general errors, and cleaning it to ensure a reliable dataset is passed on to the next stage. This involves visualising the observed curve allowing for editing of the data.
+4.4.4 - Data access and storage
+Tidal observations are stored as permanent records.
+The calculated harmonic constants are also stored on a database until such time that a new analysis at a particular location is undertaken.
+At that point the existing harmonics are updated (replaced) by the new set.
+4.4.5 - Data sharing agreements
+UKHO has numerous Bilateral Agreements with several National Hydrographic Offices, allowing for the sharing of hydrographic data; tidal data forms part of this data sharing.
+UKHO has several Port Agreements with UK Port Authorities which allow for data sharing in the same way.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+UKHO Internal Safety Cases are in place for the procedures so described in this ATRS template.
+They are not publicly accessible.
+5.2 - Risks and mitigations
+Tidal predictions are provided for average weather and meteorological conditions.
+There are numerous advisory notes in the ADMIRALTY Tide Tables and ADMIRALTY TotalTide which advise users of the possible sources which may cause deviations in the observed water level compared to the published predictions on any given day.
+General ‘rule of thumb’ corrections to the water level height based on the actual pressure on any given day compared to the average pressure for a region are given in these advisory notes.
+Contents

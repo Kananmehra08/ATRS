@@ -1,0 +1,154 @@
+Health Research Authority: Proportionate Review Toolkit
+A toolkit presented as a PowerPoint questionnaire to help Research Ethics Committee applicants determine whether their project would be eligible for proportionate review.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Health and Social Care
+Organisation type:
+Agency or public body
+Function:
+Health
+Capability:
+Management
+Task:
+Rule-based classification
+Phase:
+Production
+Region:
+UK
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+Proportionate review toolkit
+2 - Description
+Applicants are asked when booking their project for Research Ethics Committee (REC) review, whether the project is eligible for proportionate review. This is a toolkit to help REC applicants determine the answer to this, and respond to the booking question correctly.
+3 - Website URL
+https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/
+4 - Contact email
+contact@hra.nhs.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Health Research Authority
+1.2 - Team
+HRA Approvals Directorate
+1.3 - Senior responsible owner
+Head of Approvals Operations
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The tool is an interactive PowerPoint application representation of an existing written guidance document called Proportionate Review Suitability Guidance. The applicant works through the presentation by clicking links on the various slides that lead through branched outputs. All potential questions and outputs are captured in the slide deck and the wording matches the Proportionate Review Suitability Guidance.
+2.2 - Scope
+The Proportionate Review Service (PRS) provides an accelerated, proportionate review of research that raises no material ethical issues and this tool helps applicant understand if they are eligible.
+Applicants are asked when booking their project for Research Ethics Committee (REC) review whether the project is eligible for proportionate review. This is a toolkit to help Research Ethics Committee review applicants to determine the answer to this and respond to the booking question correctly. It only applies to UK applicants applying for NHS REC review.
+The results of the tool point the applicant down a pathway for review and has no influence the decision of the Research Ethics Committee.
+The pathway chosen by the applicant is recorded when submitting their application but the detail of the output of the tool is not required with their submission as there is no further review to check if the correct pathway has been selected and Research Ethics Committee review the application submitted rather than if it was appropriate for the pathway.
+2.3 - Benefit
+Applicant uncertainty about whether their project is eligible for proportionate review led to a significant number of applicants answering this question incorrectly when booking their application. This led to delays in processing applications and additional work for both HRA staff and the applicant. Providing this toolkit has improved this problem by reducing the number of incorrect bookings.
+2.4 - Previous process
+Data analysis showed that applicants struggled to follow the written Proportionate Review Suitability Guidance. Review and approvals at Approvals Operations Division and 4 Nations Operational Group (UK wide) decided that a tool approach would increase compliance with the guidance which has been shown in subsequent data. Before this tool there was just online, written guidance pages.
+2.5 - Alternatives considered
+PowerPoint was chosen due to ease of creation and use as there is a high likelihood of people having the software and being familiar with it. There is also a text only version available on the website for accessibility and the original written guidance.
+https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/proportionate-review-toolkit/
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool is available on the HRA website (
+https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/proportionate-review-toolkit/#:~:text=interactive%20PowerPoint%20version)
+) and a link to this page is included in a specific question relating to Proportionate Review in the booking pathway that all applications that this applies to must follow.
+When answering the Online Booking System questions applicants are asked if their application is suitable for Proportionate Review or not. There is no requirements to submit the outcome of the tool as proof of use in the REC application process.
+The link to the PR tool is attached in the Question Specific Guidance for this question.
+3.2 - Provided information
+The tool provides the same level of information as the written guidance it is based off by presenting it in an interactive tool. It presents questions on each screen to the user and answers to questions in clickable boxes to enable users to select the answer to the question, when pressed this takes the user to further questions with further boxes to be clicked depending on their answer. This takes the user through the relevant question pathways and only asks the questions required. When the user gets to the end of the questions they are presented with the recommended next step.
+3.3 - Frequency and scale of usage
+10898 page views over the last 12 months (November 20 2023 – November 20 2024)
+28,969 ‘events’ over the last 12 months (November 20 2023 – November 20 2024) which can include clicks, though as there are lots of links on the page we cannot currently identify which link was clicked.
+3.4 - Human decisions and review
+The tool provides a decision on which pathway a research application should follow. The human using the tool will be prompted an answer at the end of using the tool. It is up to the human to be content they have answered the questions correctly and honestly and will then be required to undertake an action based on the tool output. When the application is submitted it undergoes human review that checks if the application is suitable for this pathway.
+3.5 - Required training
+Those deploying the tool have expertise in the relevant area but no specific training.
+Those using the tool do not require training, they are provided guidance on how to use it at the start and each question in the tool contains question specific guidance.
+Those that review the tool outcomes undergo training and Quality Control processes for their role and are supported by work instructions.
+3.6 - Appeals and review
+Any query for the tool outcome can be submitted to HRA’s queries line at ‘
+queries@hra.nhs.uk
+’, which is then reviewed by a senior advisor.
+If a user struggles in knowing how to answer or feels there answer does not fit, then they can choose to contact the HRA for further advice.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The tool is an interactive PowerPoint application representation of an existing written guidance document called Proportionate Review Suitability Guidance. The applicant works through the presentation by clicking links on the various slides that lead through branched outputs. All potential questions and outputs are captured in the slide deck and the wording matches the Proportionate Review Suitability Guidance.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The outcomes of the tool is reviewed continually by members of the Approvals Operations team to ensure  the percentage of Proportionate Review applications submitted are correctly based on the proportionate review toolkit. Any alterations to the tool are monitored for any deviation in REC application performance.
+The tool itself does require regular updates since it was issued as the guidance it is based on has not changed.
+There is an annual review of the tool to check if there is a need to update it. If it requires updating that would be undertaken by a Subject Matter expert in house and it would be user tested.
+4.1.4 - Models
+Interactive branching with a decision tree.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Proportionate Review Toolkit
+4.2.2 - Model version
+2024
+4.2.3 - Model task
+To take the user inputted answers and present the relevant next question based on the answer to the previous question.
+4.2.4 - Model input
+The tool takes users inputs to answers provided to the questions posed.
+4.2.5 - Model output
+The tool provides the relevant next question or final recommendation.
+4.2.6 - Model architecture
+Interactive branching with a decision tree.
+4.2.7 - Model performance
+User testing has been undertaken internally and externally to validate the outputs of the model to ensure it performs as designed.
+4.2.8 - Datasets
+Proportionate Review Suitability Guidance
+4.2.9 - Dataset purposes
+To implement the rules behind the different question outcomes.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Proportionate Review Suitability Guidance
+4.3.2 - Data modality
+Text
+4.3.3 - Data description
+Written guidance on Proportionate Review Suitability
+4.3.4 - Data quantities
+17kb, 25 pages, 6487 words
+4.3.5 - Sensitive attributes
+None
+4.3.6 - Data completeness and representativeness
+N/A - Complete dataset
+4.3.7 - Source data URL
+https://www.hra.nhs.uk/approvals-amendments/what-approvals-do-i-need/research-ethics-committee-review/applying-research-ethics-committee/proportionate-review-toolkit/
+4.3.8 - Data collection
+No data is collected by the tool or HRA.
+4.3.9 - Data cleaning
+N/A - No cleaning activities were required.
+4.3.10 - Data sharing agreements
+There is no output submitted.
+4.3.11 - Data access and storage
+The tool is a locked Microsoft PowerPoint Slide Show (.ppsx) presentation so cannot be edited by users.
+All access to HRA’ Microsoft 365 environment is governed by conditional user access policies, reinforced by Multi factor authentication.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Head of Approvals Operations undertook an assessment of the tool on the 16/11/22 and found no concerns nor any findings raised.
+5.2 - Risks and mitigations
+There is a risk that if the tool is not answered correctly by the applicant it could send the application down the proportionate review route that is not appropriate for the type of application. This is mitigated by the fact that the proportionate review route has a kick out sending it to the correct route if on review the application is not deemed suitable. The overall figures of these types of applications and hence compliance with the tool are monitored monthly.
+Contents

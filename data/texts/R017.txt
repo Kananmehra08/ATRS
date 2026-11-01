@@ -1,0 +1,157 @@
+BDUK: Project Gigabit Voucher Eligibility Engine
+An algorithm to assess whether a UK premise is eligible for a Project Gigabit Voucher.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 April 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Agency or public body
+Function:
+Housing and community amenities
+Capability:
+Planning
+Phase:
+Production
+Region:
+UK
+Date published:
+11 June 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+Project Gigabit Voucher Eligibility Engine
+2 - Description
+The algorithm ascertains which premises in the UK are eligible for a Project Gigabit Voucher.
+Project Gigabit is the government’s Broadband Rollout Infrastructure Programme (more information can be found here:
+https://www.gov.uk/guidance/project-gigabit-uk-gigabit-programme).
+.) The Gigabit Broadband Voucher Scheme is a microgrants scheme which facilitates the delivery of a fibre connection to unconnected premises within the UK.
+This eligibility is calculated through the algorthm by running every premise in the UK through the algorithm daily, applying a series of logic statements to the data.
+This is done to ensure the Project Gigabit Voucher scheme complies with Subsidy Control laws and meet BDUK’s policy objectives in delivering project Gigabit.
+3 - Website URL
+https://www.gov.uk/government/publications/gigabit-broadband-voucher-scheme-information/gigabit-broadband-voucher-scheme-information
+4 - Contact email
+gigabitvoucherteam@bduk.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Building Digital UK (BDUK), arm’s length body of DSIT
+1.2 - Team
+Voucher Product Team
+1.3 - Senior responsible owner
+Director of Strategy
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+SoftServe Inc.
+1.4.2 - Companies House Number
+SoftServe 02812196
+Google 660412
+1.4.3 - External supplier role
+SoftServe Inc. provide the dev-ops work to turn BDUK’s design and architectural diagrams into code and a cloud process to produce the algorithm and its required outputs.
+1.4.4 - Procurement procedure type
+SoftServe Inc were procured by BDUK through a open invitation to tender on one of the UK Government’s technical frameworks. This was done through fair and open competition. SoftServe, having won the contract, are commissioned through this contract to deliver specific work to BDUK. This is how SoftServe were commissioned to run the eligibility algorithm.
+1.4.5 - Data access terms
+SoftServe helps maintain BDUK’s core Data Services & Architecture and accordingly has access to our data. Softserve are tasked to regularly assess the security posture of all solutions provided, addressing any vulnerabilities or risks promptly to ensure continued compliance and protection. As such, they have access to the entirety of BDUK’s Google Cloud Platform estate, comprising personal and commercially sensitive data, as well as datasets up to and including OFFICIAL-SENSITIVE-.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Voucher Eligibility Engine is run within Google Cloud as part of BDUK existing tech infrastructure.
+This is done by taking Ordnance Survey’s Premises Base and cross comparing it against other datasets.
+This is done through SQL code, written, versioned and maintained internally within BDUK.
+This produces a daily list of premises, known as the ‘Go List’, which specifies which premises are eligible for vouchers.
+2.2 - Scope
+The tool is used to verify premises that are eligible for voucher subsidy, and nothing else. This is done for every property in the country. Distinctions can be made between properties (e.g. a business property vs. a residence). Vouchers require a beneficiary to be present at the property, this can be a citizen or a business.
+2.3 - Benefit
+This tool allows BDUK to comply with subsidy control laws. The algorithm allows BDUK to comply without having to undertake a time consuming manual processes, this reduces costs and allows BDUK staff to focus on decisions that cannot be automated. This in turn speeds up the voucher delivery process, which speeds up connections for the beneficiary.
+2.4 - Previous process
+Previous to the the automated algorithmic check, BDUK had to manually verify the eligibility of premises. This was extremely cumbersome and resource intensive, as well as open to error.
+2.5 - Alternatives considered
+The eligibility check algorithm produces a yes/no output, it was found that using a simple SQL code on the BDUK database was the most direct solution. No other solutions were found to meet the cost and delivery requirement.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The algorithm outputs a ‘Go List’ which produces a Boolean check per premise on whether it has eligibility for a voucher. This check is fed into the software that helps run the vouchers scheme, and unlocks the ability to progress the voucher further through the  process.
+This eligibility is required to trigger the beginning of BDUK’s voucher subsidy process, and allows telecommunications suppliers to propose voucher projects, which are a collection of premises with eligibility.
+There are other checks & balances, as well as manual reviews of projects, to ensure vouchers are being delivered to time and to budget, within legal subsidy control rules. Eligibility is the first check, and the gateway to the subsequent steps of the process. It is run at the beginning of the process, at the point of this check, so each voucher’s eligbiility is based on the day it is issued. Subsequent checks include reaching out to the residents of the premises that could be the recipients of subsidy.
+3.2 - Provided information
+The output is just an eligibility true or false - true is required to progress the voucher. This information is surfaced to telecommunications suppliers within the voucher software.
+3.3 - Frequency and scale of usage
+This tool is used to calculate the elgibilility for each voucher. BDUK processes on average approx. 4270 vouchers per month across the UK.
+3.4 - Human decisions and review
+The eligibility is the beginning of a series of reviews and checks carried out by BDUK’s voucher operations team. Subsequent reviews involve checking the commercial viability of a proposed vouchers project, which will contain multiple UPRNs. There are also additional checks throughout the voucher process to ensure the voucher is helping provide a fibre gigabit connection.
+The output ‘Go List’ of the eligibility check feeds into BDUK’s voucher process, and that list restricts what is eligible within the process. Any premise that’s eligible can then go through the process, but there is no guarantee that the premise will definitely receive a voucher due to the subsequent additional checks.
+3.5 - Required training
+There is no training required by decision makers, as the data is provided to them as a list within the software they use to manage the vouchers. There is training for this platform, and training on what eligibility means, but the running of the tool is not done by decision makers.
+Technical teams running the tool and developing the tool document this, and have training to ensure the tool is maintained and improved. The algorithm’s outputs, and their generation, are maintained by BDUK’s technical teams
+3.6 - Appeals and review
+There is a mechanism for challenging the eligibility of a premise, which can be done by telecommunications organisations.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The voucher eligibility engine is run within Google Cloud, using existing Cloud Functions to filter Ordnance Survey’s Premises Collections through a series of data checks. This is deployed using SQL code.
+These checks disqualify certain premises for eligibility, and leave at the end a list of premises that have passed each check.
+This list is then sent via API to BDUK’s key voucher management tools, including its funding platform.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The management of the tool is maintained by BDUK’s technical teams.
+It is updated as per policy decisions within BDUK, and this is version controlled and maintained by BDUK’s technical teams.
+4.1.4 - Models
+The model and algorithm are based on simple rule based SQL checks, run through Cloud Functions within the Google Cloud Platform. These checks verify the premise by checking whether it sits in particular datasets, and then output a true/false eligibilty + reason code if the premise is ineligible.
+This SQL code is maintained by the technical teams in BDUK.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Voucher Eligibility Engine
+4.2.2 - Model version
+VEC 2.09
+4.2.3 - Model task
+Produce the Voucher Go List
+4.2.4 - Model input
+Ordnance Survey Premises List
+4.2.5 - Model output
+Voucher Go List
+4.2.6 - Model architecture
+The model and algorithm are based on simple rule based SQL checks, run through Cloud Functions within the Google Cloud Platform. These checks verify the premise by checking whether it sits in particular datasets, and then output a true/false eligibilty + reason code if the premise is ineligible.
+This SQL code is maintained by the technical teams in BDUK.
+4.2.7 - Model performance
+The model’s performance is monitored through the length of time required to calculate the compute. Manual checks are carried out via user acceptance, unit and negative testing to ensure the outcomes are operating as intended.
+The model and algorithm outputs a true/false with binary checks, and therefore we do not need to weight certain parameters, as a premise needs to pass every check to receive eligibility.
+4.2.8 - Datasets
+BDUK uses a range of data to do these checks, from sensitive commercial data collected from telecommunicatiosn suppliers to publicly available data on the nature of a premise.
+4.2.9 - Dataset purposes
+This data is collected in accordance with BDUK’s purpose to deliver Project Gigabit.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Ordnance Survey Premises List + Internal BDUK data
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Premise based telecoms data that describes the infrastructure, existing or planned, at a premise.
+4.3.4 - Data quantities
+Millions of rows.
+4.3.5 - Sensitive attributes
+The build plans provided by telecommunications suppliers are commercially sensitive, as they could reveal to competitors where they’re planning to invest in infrastructure.
+4.3.6 - Data completeness and representativeness
+Complete list of Unique Property Reference Numbers in UK; internal commercially sensitive BDUK data mapping the telecommunications market and its build plans.
+4.3.7 - Source data URL
+https://www.ordnancesurvey.co.uk/products/addressbase-premium;
+other data not available
+4.3.8 - Data collection
+Ordnance Survey’s data is collected through their address base premium product.
+BDUK collects a variety of datasets in order to deliver Project Gigabit. The main collection is the Open Market Review. More information on this can be found here:
+https://www.gov.uk/government/publications/project-gigabit-uk-subsidy-advice/open-market-review-omr-and-public-review-pr-subsidy-control-classification-guidance.
+4.3.9 - Data cleaning
+The data is joined by UPRN to form an understanding of what is happening at a particular premise. Data is transformed for formatting and database management purposes.
+4.3.10 - Data sharing agreements
+Ordnance Survey’s data is collected through paid license. Other data is collected through data sharing agreements with telecommunications suppliers.
+4.3.11 - Data access and storage
+The data is stored in BDUK’s instance of the Google Cloud Platform. No personally sensitive data is stored as part of this algorithm, nor is the data personally identifiable. Commercially sensitive data is stored as part of BDUK’s existing contractual arrangements with telecommunications suppliers.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+No personal data is processed by this tool. This has been assessed by BDUK’s Data Protection Officer. A DPIA has been completed to ensure all risks are mitigated and to be transparent.
+5.2 - Risks and mitigations
+The key risks with using this tool is the risk of the tool incorrectly calculating eligibility due to poor criteria, or of poor data producing incorrect outcomes. This is mitigated by BDUK team actively monitoring and managing the BDUK’s voucher scheme.
+Contents

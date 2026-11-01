@@ -1,0 +1,175 @@
+DESNZ: Warm Home Discount Eligibility - Energy Cost Modelling
+Models to help determine household eligibility for the Warm Home Discount Scheme (a one-off £150 discount on winter energy bills).
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+2 March 2025
+Organisation:
+Department for Energy Security and Net Zero
+Organisation type:
+Ministerial department
+Function:
+Environmental protection
+and
+Housing and community amenities
+Capability:
+Forecasting
+Task:
+Trajectory and trend prediction
+Phase:
+Production
+Region:
+UK
+Date published:
+2 March 2025
+ATRS version:
+v3.0
+Tier 1 Information
+Name
+Warm Home Discount Eligibility - Energy Cost Modelling
+Description
+The Warm Home Discount (WHD) scheme provides eligible low-income households across Great Britain with a £150 rebate off their winter energy bill. It is targeted at households in fuel poverty and ultimately provided to:
+1. low-income pensioners, determined by receipt of the Guaranteed element of Pension Credit. This Group is known as Core Group 1, and,
+2. those on means tested benefits living in a home which has been assessed as being relatively high cost to heat. This group is known as Core Group 2 and operates in England & Wales only.
+The energy cost modelling is used in determining eligibility for Core Group 2. The modelling produces estimates of the energy costs for all 27 million households in England & Wales, which are used to assess if the property has “high” energy costs.
+Since 2022/23, the WHD energy cost modelling has helped the department determine eligibility for the Core Group 2 element of the scheme at scale. The use of the modelling and wider data matching processes have meant that, in 2022/23 and 2023/24, over 90% of the ~3 million rebates each year were issued automatically, with no action required by the recipient.
+Website URL
+General scheme information:
+https://www.gov.uk/the-warm-home-discount-scheme
+Information specific to the energy cost modelling (may be updated for future scheme years):
+https://www.gov.uk/government/publications/warm-home-discount-eligibility-statement-england-and-wales-2023-to-2024-scheme-year-onward
+Contact email
+supplierobligationsPMO@energysecurity.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+The Department for Energy Security and Net Zero
+1.2 - Team
+Warm Homes & Fuel Poverty team
+1.3 - Senior responsible owner
+Deputy Director Warm Homes & Fuel Poverty
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The energy cost modelling produces predictions of household energy costs for 27 million properties in England & Wales. The estimated energy costs are based on a regression model which takes the observed relationship between energy costs and the three property characteristics: property type; property age and property floor area, for a sample of properties. This relationship (/formula) is then applied to the property type, age and floor area of each of the 27m properties in England & Wales to produce energy cost predictions for each individual property. Where there are values missing in the property characteristics data, an imputation model is applied, which estimates what the energy costs would be using imputed characteristics.
+2.2 - Scope
+For WHD Core Group 2, the estimated energy costs are matched (using property address) with benefits data held by the Department for Work and Pensions (DWP). Households that are found to be in receipt of a qualifying means tested benefit and “high” estimated energy costs are eligible. The definition of what constitutes a “high” energy cost is set each year in a published Eligibility Statement and is largely determined by the WHD scheme’s spending envelope for that year.
+Further matching between the household benefit records and energy supplier customer data is used to instruct suppliers to issue energy bill rebates directly to their customers. This data matching between DWP and energy supplier data also identifies bill payers eligible for the Core Group 1 element of the scheme (where the high cost element is not part of the eligibility criteria).
+2.3 - Benefit
+The energy cost modelling enables the department to determine eligibility for the scheme at scale. This is vital, given that there are around 27 million households in England & Wales.
+By replacing the Broader Group with Core Group 2 (see following section for the previous process), comprising households identified through data matching, most households are identified and awarded rebates automatically. In 2023/24, over 90% of the total 3 million rebates were issued automatically, with no action required by the recipient. This removes some of the barriers the Broader Group has posed to customers, particularly vulnerable customers, who may not be aware of the support available and may not be in a position to apply. The changes remove the first-come, first-served nature of the Broader Group application processes and give greater certainty to eligible households that they will, in the vast majority of cases, receive the rebates each scheme year if they remain in the same property and continue to receive one of the qualifying benefits.
+Previously there was no “high energy cost” element to the eligibility, therefore the introduction of Core Group 2 improved the targeting of the rebate to those low income households with the highest estimated energy costs. This improved the fuel poverty targeting, where fuel poverty is defined as those households on a low income and living in a property that has a low energy efficiency.
+2.4 - Previous process
+The current Core Group 2 eligibility process described here replaced the WHD Broader Group. Under the WHD Broader Group, households on a low income were required to apply to their energy supplier who would determine if the applicant was eligible based on standard criteria or the energy supplier’s own criteria. Suppliers were only required to provide a certain number of discounts under the Broader Group. These were provided on a first come first served basis.
+2.5 - Alternatives considered
+A non-algorithmic alternative was to continue with the existing WHD scheme, where energy customers would continue to apply to their energy supplier for the WHD rebate and rebates would be allocated on a first come first served basis (rather than rebates issued automatically with an assessment of those with the highest energy costs, which the algorithm supports).
+The Government developed and refined the models for predicting household energy costs in the years leading up to the implementation of Core Group 2, working with University College London in 2018 and the Office for National Statistics in 2019 and 2021 to provide quality assurance and improve the methodology. In designing this model and selecting the property characteristics data (held by the Valuation Office Agency) as the primary source for the data, the Government has been guided by the following principles: accuracy, transparency, coverage, robustness, consistency and fairness. More information can be found in the Government Response to the Consultation and Final Impact Assessment, published in 2022 (
+https://www.gov.uk/government/consultations/warm-home-discount-better-targeted-support-from-2022)
+Tier 2 - Decision making Process
+3.1 - Process integration
+For WHD Core Group 2, each year the estimated energy costs for the 27 million households in England & Wales are provided to Department for Work and Pensions (DWP) who match the energy costs (using property address) with the benefits data they hold. Households that are found to be in receipt of a qualifying means tested benefit and are living in a property with “high” estimated energy costs are eligible for the £150 rebate on their energy bill.
+Further matching between the household benefit records and energy supplier customer data is used to instruct suppliers to issue energy bill rebates directly to their customers. This data matching between DWP and energy supplier data also identifies billpayers eligible for the Core Group 1 element of the scheme (where the high cost element is not part of the eligibility criteria).
+3.2 - Provided information
+The estimated energy costs and addresses for the 27 million properties in England & Wales are produced by the modelling in DESNZ and are handed over to DWP. Additional variables are provided to support the delivery of the scheme, for example, a variable that flags if the energy cost was derived using imputed data so that the household can be informed their ineligibility was based on incomplete data.
+3.3 - Frequency and scale of usage
+The Warm Home Discount scheme runs each winter therefore a household’s eligibility is assessed annually. Eligibility is based on a household’s circumstances at a given point in time (the “qualifying date”) usually in the August preceding the winter. On the qualifying date the citizen must have been in receipt of a qualifying benefit and (for Core Group 2) living in a property that has been estimated as relatively high cost to heat.
+DESNZ modelling of energy costs for 27 million households takes place during the preceding March-August. The data matching to millions of benefit recipients by DWP takes place in August-September with a subsequent “mop up” data matching process (to catch any backdated claims, for example in November-December).
+3.4 - Human decisions and review
+The energy cost estimates are produced by a team in DESNZ who review the outputs each year and undertake various checks for accuracy e.g. compare to the previous year and sense check the distribution of the results. The modelling is signed off each year by senior analysts at DESNZ.
+When the dataset is handed over to DWP, checks are performed to make sure all the records were received and that the matching process has produced the expected number of matches.
+DESNZ also contracts out a helpline for the WHD scheme, where operators can use a separate calculator to determine eligibility for members of the public who did not receive the rebate automatically, or for those whose ineligibility decision was based on incomplete or missing data.
+3.5 - Required training
+Those responsible for the energy costs modelling must be working as analysts in government, trained to operate the modelling tools, which includes familiarity with the datasets used, proficient in the programming language “R” and have undertaken appropriate training, in quality assurance of models, for example.
+3.6 - Appeals and review
+There is an online eligibility checker which the general public can use to check if they are likely to be eligible for the Warm Home Discount rebate, and a dedicated helpline the public can use to confirm their eligibility or challenge their “ineligible” decision using alternative data. The eligibility checker and the phone number for the helpline are available via the WHD pages on gov.uk during October-March each year (
+https://www.gov.uk/the-warm-home-discount-scheme)
+.
+Households who are likely to be eligible for a rebate but were not identified as eligible through the automated process (e.g. their benefit record was not matched to an energy supplier customer record or an energy cost estimate) are written to and invited to call the dedicated helpline if they believe they should be eligible, or wish to check. In some cases the helpline operator cannot locate an energy cost estimate for the caller’s property, or the customer does not agree with the property characteristics used for their estimated energy costs. In these cases the helpline can use alternative property characteristics data from the property’s Energy Performance Certificate (EPC) or Land Registry record to determine eligibility.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The model takes inputs from data stored on SQL containing various features of properties in England & Wales. Properties are mainly identified and joined by Unique Property References Numbers (UPRNs). A log-linear regression model is built in R using energy costs from the English Housing Survey (EHS) dataset, with a very small proportion of data gaps filled using geographical nearest neighbours and a random forest. Intermediary datasets are regularly exported for quality assurance and recording purposes.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The DESNZ modelling to predict energy costs is reviewed each year and updated to use the most recent data available, where appropriate.
+4.1.4 - Models
+The prediction of household energy costs employs a regression model to determine the relationship between property characteristics and energy costs while an imputation model supports the prediction of those costs where some/all of the required property characteristics are missing.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Warm Home Discount energy cost score predictor
+4.2.2 - Model version
+Version 3
+4.2.3 - Model task
+Estimate energy costs for properties in England & Wales
+4.2.4 - Model input
+Inputs to the regression model come from the English Housing Survey (EHS) and Valuation Office Agency (VOA) databases. These provide data on energy costs and property characteristics respectively. Supplementary datasets are used as input to the nearest neighbours and random forest imputation model. These include Ordnance Survey (OS) data, Office for National Statistics (ONS) data, and EPC data (where available).
+4.2.5 - Model output
+The ultimate model output is a txt file containing UPRNs, addresses, energy cost scores and relevant data flags. There are a number of intermediary outputs used for quality assurance and recording purposes.
+4.2.6 - Model architecture
+The central model is a log-linear regression, used to calculate continuous energy cost scores based on three banded property characteristics: property type, age and floor area. The continuous energy cost scores are ranked, with a ‘high cost threshold’ later applied as a cut-off point above which properties are eligible for WHD. This threshold is calculated based on the available budget for the given scheme year.
+Around 1% of properties have a characteristic missing in the VOA data. Two features are imputed using a nearest neighbours algorithm, where property characteristics are estimated based on a geographical nearest neighbour, identified using its coordinates. The floor area characteristic is imputed using a random forest model which takes as input various property features from supplementary datasets. The random forest is used to calculate the probability of the floor area belonging to a particular band, and the probability is applied to the relevant regression coefficient.
+The regression model was chosen as a good balance between the accuracy of its outputted rankings and relative model transparency. The imputation process was chosen for its performance and the recommendation of an external review to perform the process probabilistically.
+4.2.7 - Model performance
+Initial results suggested that approximately 4 in 5 properties (with characteristics imputed where necessary) were assigned an energy cost score within 25% of the true cost. The model performance has generally been considered holistically, with the imputation and regression processes combined and evaluated on the test data.
+It is difficult to establish accurate metrics for the proportion of properties that are ‘correctly’ classified as high or low cost because the threshold that defines what constitutes a ‘high cost’ property is only set after the cost scores are calculated and finalised, hence the testing stage is already complete. Classification metrics depend on where the high-cost threshold is set, which is based purely on the size of the allocated budget rather than any specific definition of what constitutes ‘high’ energy costs, and it is not optimised to improve model performance. Performance is also likely to change between scheme years, given budgetary changes and changes to spending assumptions.
+4.2.8 - Datasets
+Datasets used to create the regression model were:
+- VOA data used to provide property characteristics for 27m properties.
+- EHS data used to provide energy costs for creating the regression model.
+With supplementary data for the imputation coming from various sources, including:
+- Ordnance Survey
+- Office for National Statistics
+- EPCs
+4.2.9 - Dataset purposes
+VOA property characteristics mapped to EHS energy costs formed the dataset that was 10-fold cross-validated, with each random fold treated as test dataset in turn.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Datasets used to create the regression model were:
+- Valuation Office Agency (VOA) data used to provide property characteristics for 27m properties.
+- EHS data used to provide energy costs for creating the regression model.
+With supplementary data for the imputation coming from various sources, including:
+- Ordnance Survey
+- Office for National Statistics
+- EPCs
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+The datasets all relate to different characteristics of a property.
+4.3.4 - Data quantities
+All data used for model development needed to have good coverage over all the properties in England & Wales. This limited the number of datasets that could be used for model development. The VOA dataset contained around 27m records, with three features used to create the model. The supplementary datasets were of a similar size. The EHS data contained a representative sample of around 11k properties.
+4.3.5 - Sensitive attributes
+The English Housing Survey (EHS) dataset contains a considerable amount of personal data, however the only variables used in modelling are the unique reference numbers and data related to fuel costs. The VOA and supplementary datasets only contain data on the features of a property.
+4.3.6 - Data completeness and representativeness
+The VOA dataset is around 98.5% complete, with respect to the three property characteristics used in the modelling. The remaining characteristics are imputed. The EHS dataset used for creating the regression model is specifically designed to be representative.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The EHS dataset is a detailed collection of data on people’s circumstances and details of their property. It is commissioned by the Ministry of Housing, Communities and Local Government, and consists of a household interview and physical property inspection.
+Valuation Office Agency (VOA) collects this data on property characteristics for Council Tax valuation purposes in England & Wales.
+4.3.9 - Data cleaning
+Basic data cleaning and pre-processing is performed, such as de-duplication and the banding of continuous variables.
+4.3.10 - Data sharing agreements
+VOA: A Data Sharing Agreement (DSA) is in place that sets out the data sharing arrangements between the VOA and DESNZ, in relation to the Warm Home Discount scheme 2022/23 - 2025/26. This DSA is reviewed on an annual basis.
+EHS: A Memorandum Of Understanding (MoU) is in place, regarding the sharing of data from the English Housing Survey and associated research between the Ministry of Housing, Communities and Local Government (MHCLG) and DESNZ. DESNZ and MHCLG are independent data controllers and will each be responsible for compliance with the Data Protection Principles under the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018 (DPA 2018) and Article 8 of the European Convention on Human Rights in relation to the Data.
+Ordinance Survey: The processing of Ordnance Survey data is enabled by the Public Sector Geospatial Agreement.
+ONS: The processing of the National Statistics UPRN Lookup (NSUL) data is enabled by the Open Government Licence v3.0.
+EPC: EPC data is available on the online register for all properties in England and Wales with an EPC, except where the owner has opted out from appearing on the register. DESNZ’s access to and processing of data derived from EPCs is enabled by Section 35 of the Digital Economy Act.
+There are also Data Sharing Agreements in place related to the wider scheme, for example between DESNZ and the contractor providing the WHD helpline function, as well as between DESNZ and the contractor developing the digital tools that support the scheme delivery.
+4.3.11 - Data access and storage
+DESNZ analysts access the relevant datasets and process the energy cost data in a Cloud Based Analytical System (CBAS), and access permissions to the data in CBAS are restricted to named individuals. These analysts have received the appropriate data protection and handling training, including UK GDPR and ‘responsible for information’ training.
+The energy cost dataset is provided to data engineers at DWP for use in delivering the WHD scheme. DWP load the energy cost data into its secure SAS Centric data warehouse. Access to the data is restricted and business-case controlled. DWP are responsible for deleting the dataset received from DESNZ by the end of the relevant scheme year (i.e. end of March each year).
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+An Impact Assessment (IA) detailing the WHD policy options for 2022 onwards was published both at the consultation stage and at the final stage, accompanying with the Government response to the consultation. Both IAs can be found here:
+https://www.gov.uk/government/consultations/warm-home-discount-better-targeted-support-from-2022.
+A Data Protection Impact Assessment (DPIA) exists internally in DESNZ for the WHD scheme as a whole. This covers the processes described in this document as well as the wider scheme including data sharing and processing undertaken by DESNZ, DWP, their respective contractors and also energy suppliers.
+DESNZ has also undertaken an Equalities Impact Assessment internally, covering the changes made to the WHD scheme in 2022 which includes the use of the energy costs data in determining eligibility.
+5.2 - Risks and mitigations
+The Warm Home Discount reform final impact assessment sets out the main risks considered in the proposal to use energy cost modelling for establishing eligibility (available here, in section 9.1 (p.40):
+https://www.gov.uk/government/consultations/warm-home-discount-better-targeted-support-from-2022).
+.) These included the risks around using a regression approach to predicting high cost and also the risk of challenge based on data inaccuracies.
+Contents

@@ -1,0 +1,274 @@
+Cabinet Office: Civil Service Verbal and Numerical Tests
+Online tests that are commonly used in recruitment as part of a sift to assess aptitude, potential and whether a person meets the requirements
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Cabinet Office
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Analysis
+Task:
+Multivariate analysis
+Phase:
+Production
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Civil Service Verbal and Numerical Tests
+2 - Description
+These tests use a computer adaptive test (CAT) algorithm to determine the sequence of questions in a psychometric test that is completed by job seeking applicants through Civil Service Jobs, including when the test should stop.
+The CAT approach is used in order to deliver more accurate assessment and a better user (candidate) experience because the test is fitted to their capability and uses fewer questions than does a traditional type of testing approach
+3 - Website URL
+https://www.gov.uk/guidance/preparing-for-the-civil-service-verbal-and-numerical-tests
+4 - Contact email
+onlinetests@cabinetoffice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Cabinet Office, Government People Group (GPG), Resource Policy and Practice (RPP), Online Tests and Assessments Service.
+1.2 - Team
+Occupational Psychology Service
+Resourcing Policy and Practice
+Recruitment Directorate
+Government People Group
+1.3 - Senior responsible owner
+Director of Recruitment
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Talogy
+1.4.2 - Companies House Number
+Company number 03840112
+1.4.3 - External supplier role
+Cabinet Office procured access to a self authoring tool referred to as True Talent, which allows the building and delivery of psychometric testing. True Talent contains a computer adaptive test (CAT) functionality, which we have adopted for the delivery of the Civil Service Verbal and Numerical Tests.
+The CAT functionality is wholly owned by Talogy.
+1.4.4 - Procurement procedure type
+CCS managed framework (DPS) - open procurement
+1.4.5 - Data access terms
+Cabinet Office Security Management Plan
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+When a job applicant applies for a role on Civil Service Jobs they may be required to complete either the Civil Service Verbal or Numerical Tests, this is determined by the job recruiter when setting out the job posting.
+Once the job applicant has completed their job applicant, they will then be invited to take the corresponding test that the job holder has requested, the applicant then commences the test and they are served the test content.
+The test is based on a computer adaptive test (CAT) which dynamically adjusts question difficulty based on a test-taker’s performance. It uses algorithms to estimate the individual’s ability and then presents questions tailored to that estimated ability level. This means each person receives a unique set of questions, with the difficulty increasing after correct answers and decreasing after incorrect ones. At the end of the test, the test computes the results and notifies the job applicant if they have passed the test or not.
+2.2 - Scope
+The purpose of the CAT functionality is to improve the accuracy of the test, reduce item exposure to test takers as a group and to reduce the time needed to complete the test (by serving only necessary test content)
+2.3 - Benefit
+Key benefits:
+-more accurate measurement of test taker aptitude
+-less question/item exposure, reducing risk of loss of control over the content in a public space
+-quicker test completion for a job applicant
+2.4 - Previous process
+Previous to these tests, we used third-party off the shelf verbal and numerical tests which also used CAT functionality.  This functionality has been used in the Civil Service Jobs service since February 2017
+2.5 - Alternatives considered
+Psychometric tests that are static and unaltering tend to be long, expose the entire bank of questions and risk loss of control over the content in a public space, and tend to take longer to complete than CAT tests.
+The benefits of such a CAT test are discussed in the benefits section above.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The CAT functionality determines the difficulty level of question items that are served to a test taker, and also determines a degree of confidence in the true ability of a test taker using a process known as a stopping rule. This is a statistic calculated based on the standard error of measurement.
+Once the stopping rule has been accomplished, the test taker session is ended and the final test score is calculated.
+This test score is used to sift the job applicant.
+3.2 - Provided information
+The test which uses CAT functionality calculates a score based on correct response key information and the resultant “raw score” is compared to a pre-existing benchmark of test takers and converted to a percentile score.
+This score is passed via an API to the Civil Service Jobs system and compared to a decision rule that our service has defined for evaluating the score.  If the score is below a certain value it is classed as a “not passed the test” and the applicant is rejected in their job application. If the score is higher than the cut-score, the applicant is further considered by a decision maker, who is the vacancy holder or hiring manager.
+3.3 - Frequency and scale of usage
+The CAT functionality is used approximately 230,000 times per year
+3.4 - Human decisions and review
+The Occupational Psychology Service determined:
+-the correct response to a test question
+-the CAT processing rules
+-the benchmark scores
+-the total score cut-score that results in a pass or fail on the test
+The use of the CAT functionality/tests is conducted on an annual basis
+3.5 - Required training
+Trained Cabinet Office Psychometricians oversee the functioning of the Civil Service Verbal and Numerical Tests.
+Talogy is contracted to maintain the CAT functionality.
+Users (job applicants) are explained how the test will be performed via guidance and on screen information. The user is then provided with a test question which does not contribute to the final score to allow the user to understand the test and how it works prior to being scored.
+3.6 - Appeals and review
+All Complaints and appeals are handled directly by the recruiter. All aspects of the test can be appealed, test takers (job applicants) must approach the corresponding recruiter to request an appeal.
+Appeals and Complaints will be escalated to senior management team if unresolved.
+If the ICO is involved regarding the appeal and standard Cabinet Office process applies.
+If the complaint is handled by Government Recruitment Service or by a Department, the CO will follow their complaint procedure.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The user (job applicant) navigates CS Jobs and clicks a link to take a test when they are prompted to, they are  then pushed to a third party online test platform, and gain access to a test (the model), they complete the test, their data is stored in the platform, and data parameters are sent to GRID via an API, a UK Government database, and score parameters are pushed to CS Jobs which then assign the result based on the data received.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The test is reviewed and maintained on a cycle of 2 years.
+The test hosting platform is maintained by a third party supplier through a set of key performance indicators, governed under a Cabinet Office contract.
+CS Jobs uses a contract third party applicant tracking system which is maintained by a third party supplier through a set of key performance indicators, governed under a Cabinet Office contract.
+4.1.4 - Models
+1-parameter logistic (1PL) model, also known as the Rasch model is a type of item response theory (IRT) model that assumes test items only differ in a single parameter: difficulty. Response Theory measurement model using Computer adaptive testing module
+Tier 2 - Model Specification
+4.2.1 - Model name
+1-parameter logistic (1PL) model
+4.2.2 - Model version
+Version one
+4.2.3 - Model task
+The model checks test taker response against a response key and based on the correctness of their response, and the difficulty parameter for the item, assigns them a a next question
+4.2.4 - Model input
+The CAT model’s input comprises three structured layers:
+Item-level inputs
+Each item in the pool is represented by the triplet (a, b, c), reflecting its discrimination, difficulty, and guessing parameters. Items also carry associated metadata such as content domain, identifier, author, exposure control limits, and calibration source.
+The item pool is stored in a relational database, indexed by difficulty, content category, and statistical information. This structure allows the CAT algorithm to rapidly retrieve candidate items during live administration.
+Candidate-level inputs
+The key dynamic input is the response vector X representing each candidate’s sequence of responses (1 =correct, 0 = incorrect). A prior distribution for ability (θ ~ N(0, 1)) is assumed for the Bayesian estimation of ability.
+Each candidate’s estimated ability (θ̂) is updated iteratively using the Expected A Posteriori (EAP) method, where the posterior distribution is proportional to the product of the prior and the likelihood:
+f(θ∣X)∝f(θ)×∏i=1kP(Xi∣θ)f(θ | X) ∝ f(θ) × ∏_{i=1}^{k} P(X_i | θ)f(θ∣X)∝f(θ)×i=1∏kP(Xi∣θ)
+The EAP estimate is then:
+θ^=∑θf(θ∣X)∑f(θ∣X)θ̂ = \frac{∑ θ f(θ | X)}{∑ f(θ | X)}θ^=∑f(θ∣X)∑θf(θ∣X)
+This computation uses a grid of 33 quadrature points spanning θ = –4 to +4, ensuring adequate numerical precision.
+System-level inputs
+Operational parameters include:
+• The initial ability estimate (θ₀ = 0),
+• Item-selection algorithm (Most Informative or Randomesque exposure control),
+• Stopping criterion (posterior standard error < 0.20 or fixed maximum length),
+• Optional content constraints ensuring domain balance.
+These inputs together define the behaviour of the adaptive testing engine.
+4.2.5 - Model output
+The model outputs several layers of data for each examinee and administration:
+Primary outputs
+• Estimated ability (θ̂) – continuous score derived from the EAP posterior mean.
+• Posterior standard error (SEθ) – standard deviation of the posterior distribution, indicating measurement precision.
+Secondary outputs
+• The ordered list of administered items with associated parameters.
+• Response patterns, raw scores, and test length.
+• Item information values and cumulative test information function.
+• Exposure rates and content balance metrics.
+• Reliability indices (e.g. marginal reliability, correlation between true θ and θ̂).
+At the reporting layer, θ̂ values are transformed into scaled ability scores using a linear transformation, and these may be categorised into performance bands or percentile ranks as required.
+4.2.6 - Model architecture
+The model uses two algorithmic approaches:
+i) A computer adaptive test (CAT) dynamic selection of content to present to the test taker which selects items to present to the test taker based on their live performance against previous items on the test, which is based on,
+ii) item response theory parameters for each test item.  The model uses the 1 parameter item response theory (IRT) approach, focused only on item difficulty.
+Thus, items presented are more difficult if the response to previous items are answered correctly, and they are equal or easier if the response to a previous item is incorrect.
+4.2.7 - Model performance
+The CAT system employs a set of well-documented and interpretable algorithms. The same algorithmic framework also underpins the Theta Scorer Enhancement specification used by Talogy’s engineering team to translate the Excel EAP routines into production C# code:
+Item Response Model:
+3-Parameter Logistic (3PL) model defining item characteristic curves.
+Ability Estimation:
+Expected A Posteriori (EAP) method with Gaussian prior, computed using numerical integration across 33 quadrature points.
+Item Selection Algorithm:
+Maximum Information criterion, choosing the item that maximises the Fisher Information function:
+Ii(θ)=(Dai)2(1−Pi(θ))Pi(θ)[Pi(θ)−ci]2I_i(θ) = (D a_i)^2 \frac{(1 - P_i(θ))}{P_i(θ)} [P_i(θ) - c_i]^2Ii(θ)=(Dai)2Pi(θ)(1−Pi(θ))[Pi(θ)−ci]2
+Exposure Control:
+Randomesque selection, in which the algorithm identifies the top n most informative items and selects randomly among them, reducing overuse of specific items. In some validation studies, the Sympson–Hetter method was also trialled, assigning each item a target exposure rate and using a probabilistic acceptance rule.
+Stopping Rule:
+Test terminates when either (a) posterior SEθ < 0.20 or (b) a fixed maximum number of items is reached (to ensure operational predictability).
+All computational procedures were cross-checked against formulae published in Bock & Mislevy (1982) and the EAP Scoring Guide by Louis-Charles Vannier (Pearson). Calculations were replicated in Microsoft Excel to confirm numerical accuracy.
+Validation and Auditing Model performance was evaluated using:
+▪ Reliability (r²) between true θ and estimated θ̂ in simulation runs, consistently > 0.85.
+•	Reliability, measured as the correlation between true θ and estimated θ̂ in simulation runs, consistently exceeded 0.85.
+▪ Item exposure distributions, ensuring no single item exceeded its prescribed exposure limit.
+▪ Fairness metrics, comparing estimation bias and SEθ across demographic subgroups, confirming equivalence.
+Each simulation run produced detailed logs for audit review, enabling replication of any adaptive sequence given the same random seed and item pool. The CAT simulator includes a “validation mode” that allows psychometricians to replay simulations and visualise reliability, item frequency, and average test length.
+Through these checks, the CAT model meets the ATRS requirements for algorithmic transparency: every algorithmic step — from data input to ability output — is both explainable and reproducible.
+4.2.8 - Datasets
+The original CAT system was developed in 2015 by Talogy technical experts and under the guidance of Dr Alan D. Mead, an internationally recognised expert in adaptive testing and psychometrics.
+Dr Mead’s prior work includes contributions to the adaptive Uniform CPA Examination (AICPA), the US Department of Labor’s CAT-GATB, and multiple large-scale adaptive certification programmes. His approach integrates psychometric precision with algorithmic transparency. Each computational step within the models used can verified independently and the mathematical steps can be traced through simulation.
+These verification steps were first implemented in Excel as part of the ‘Theta Scorer Enhancement – 2PL and 3PL’ project and subsequently replicated in C# within the operational engine.
+Dr Mead’s involvement ensured that the Civil Service CAT system adhered to best practice across all stages:
+▪ Construction of a pre-calibrated item pool under a 3-Parameter Logistic (3PL) IRT model
+▪ The use of Bayesian Expected A Posteriori (EAP) ability estimation
+▪ Adoption of algorithmic exposure controls (Randomesque and Sympson–Hetter methods)
+▪ Verification through Monte Carlo–based simulation using over 100,000 synthetic examinees per validation run
+The CAT model was developed using a combination of empirical pilot data and large-scale simulation. The initial development used an adaptive vocabulary item pool of 123 items with fully specified 3PL parameters (discrimination a, difficulty b, guessing c). Each item’s parameters were estimated from previous administrations and checked against target distributions to ensure suitable variation across the ability spectrum.
+For validation and algorithmic testing, extensive simulation datasets were generated to model the behaviour of the adaptive engine under realistic operating conditions.
+Each dataset contained 100,000 synthetic test-takers, each defined by a true ability (θ) drawn from a standard normal distribution (N(0, 1)) and a corresponding vector of item responses simulated probabilistically from the 3PL model:
+P(Xij=1∣θj,ai,bi,ci)=ci+(1−ci)11+e−Dai(θj−bi)P(X_{ij} = 1 | θ_j, a_i, b_i, c_i) = c_i + (1 - c_i)\frac{1}{1 + e^{-D a_i(θ_j -b_i)}}P(Xij=1∣θj,ai,bi,ci)=ci+(1−ci)1+e−Dai(θj−bi)1
+where D = 1.702 is the logistic scaling constant.
+This approach enabled the team to observe the full operating characteristics of the model across a wide range of abilities, item parameters, and test lengths.
+To prevent overfitting and to verify generalisability, the data were divided into structured phases:
+▪ Calibration set (≈ 70%) – used for estimation of item parameters through marginal maximum likelihood estimation (MMLE).
+▪ Validation set (≈ 20%) – used to test algorithmic stability and simulate adaptive administration.
+▪ Testing set (≈ 10%) – reserved for out-of-sample assessment of reliability, item exposure, and classification accuracy.
+Each full simulation generated output logs of item selection order, posterior ability estimates, and item exposure rates.
+Output files averaged 10 to 20 MB per 100,000 simulated test-takers, providing a rich empirical basis for performance auditing and fairness analysis.
+4.2.9 - Dataset purposes
+Calibration phase
+Calibration data (from pilot testing or legacy administrations) were used to estimate the 3PL item parameters using marginal maximum likelihood estimation (BILOG or equivalent routines). Items with unstable or extreme parameter estimates were reviewed or removed.
+Simulation phase
+Simulations were conducted using the R packages ltm and catR, and in-house Perl scripts following Dr Mead’s code for adaptive administration.
+Each simulation generated:
+▪ A set of simulated true abilities
+▪ Corresponding adaptive test sessions under defined algorithms
+▪ Ability estimates and standard errors
+This enabled the estimation of the system’s expected reliability, average test length, and classification consistency under different configurations.
+Validation and testing phases
+Validation datasets were used to examine the robustness of ability estimation, item exposure, and fairness across demographic subgroups.
+Testing datasets, including held-out simulation runs and operational field trials, confirmed that results from independent samples aligned with the theoretical expectations of the 3PL/EAP model.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+The test platform receives pseudonymised identity details from the platform for CS Jobs, including the instruction about which test to serve to the job applicant.  The test platform records response information and generates a set of scores. These scores are sent to the Cabinet Office GRID database, and high level scores are sent back to CS Jobs for application processing purposes
+talk about the operational data - what data do we send to the saas product
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Pseudonymised id, test type data, response data (item completion), scale and test scores
+4.3.4 - Data quantities
+Verification through Monte Carlo–based simulation using over 100,000 synthetic examinees per validation run
+4.3.5 - Sensitive attributes
+No sensitive information is collated or retained in the third party supplier platform
+4.3.6 - Data completeness and representativeness
+The completeness of both simulation and empirical data is very high. Simulation data are inherently complete, with no missing values. In live administrations, non-responses are coded as incorrect, following psychometric convention, ensuring unbiased ability estimation.
+Missing data during calibration were handled by marginalisation within the EAP framework, which integrates over the prior distribution to maintain estimation stability even when specific response data are sparse. The simulations were also complete when it comes to ability coverage and drew true θ values from a standard normal distribution (θ ~ N(0, 1)) covering the full range from –4 to +4. This ensures the adaptive algorithm was tested at every ability level.
+Representativeness was achieved via the Civil Service and how they approached the test development. Details can be provided by the Civil Service teams.
+4.3.7 - Source data URL
+N/A Not open source
+4.3.8 - Data collection
+Only test completion data is collated. This is used to generate a test score
+4.3.9 - Data cleaning
+No data cleaning occurs
+4.3.10 - Data sharing agreements
+Agreement was put in place on 17 June 2024 with Talogy
+4.3.11 - Data access and storage
+Access to data is available to Talogy as the online test platform supplier, GRID users within Cabinet Office, and Hiring Managers via the CS Jobs ATS.
+Data is retained for X
+departments are joint data controllers with GPG and Talogy is acting as the data processor.
+As part of the processing of applications, personal data may be stored on Cabinet Office IT infrastructure, and shared with data processors who provide email, and document management and storage services, it may be transferred and stored securely outside the UK. Where that is the case it will be subject to equivalent legal protection through an adequacy decision or the use of Model Contract Clauses.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+A DPIA has been in place in its current form since April 2021, recently updated to reflect new senior responsible owner.
+The DPIA relates to the overall service and does not specifically reference the CAT functionality.
+An equality analysis was conducted in early 2018, which referenced the CAT functionality of the third-party supplier tool: “In development, the tests were comprehensively designed to remove biases and tested for fairness. IBM has published evidence that the CAT tests reduce score differentials for BAME and non-BAME and between males and females. The reasons for this effect are unclear, but are likely influenced by the adaptive and untimed nature of these tests. Adaptive, untimed tests are demonstrated to reduce test anxiety amongst test takers who are inclined to experience test anxiety”.
+5.2 - Risks and mitigations
+Performance of the contracted supply is reviewed monthly, which includes assurance the models are working correctly.  No issues were identified. Some standard risks associated with the use of such models and mitigations are listed below:
+Bias and Fairness
+If the item bank is not well-balanced across demographics, the model may favor certain groups. Cultural or linguistic biases in test items can disadvantage non-native speakers or underrepresented populations.
+Mitigation: Group differences analyses for various protected groups, in terms of effect sizes has been carried out. In most cases there no effect sizes. There is work planned to reevaluate this.
+Overfitting to Item Difficulty
+The 1PL model assumes all items discriminate equally, which may oversimplify real-world data. This can lead to misclassification of ability, especially if items vary widely in quality.
+Mitigation: During the 2023 analyses the initial Rach model was retested alongside 1PL, 2PL, and 3PL models.
+Limited Diagnostic Insight
+The 1PL model only estimates item difficulty and person ability.
+It does not account for guessing behaviour or item discrimination, which are captured in more complex models (2PL, 3PL).
+Mitigation: During the 2023 analyses the initial Rach model was retested alongside 1PL, 2PL, and 3PL models.
+Data Quality Dependency
+The model’s accuracy depends heavily on the quality and volume of response data.
+Sparse or noisy data can lead to unreliable ability estimates.
+Mitigation: This risk is highlighted in the technical manual and many item cleaning/removal and cleaning/removal exercises took place
+Security and Cheating Risks
+In online CAT environments, item exposure and test security are major concerns.
+Repeated use of the same items can lead to memorisation and unfair advantages.
+Mitigation: Item exposure constraints are in place, including whether very similar items were presented. Generally, most participants were not exposed to more items than necessary, a candidate could only see the same item once, probabilist approach was used in terms of which items were shown. Hence, item exposure and security constraint were imposed and checked, minimising the risk for item memorisation and unfair advantages.
+Transparency and Interpretability
+Adaptive tests can feel opaque to users: Why did I get certain questions? How was my score calculated? This can reduce trust in the system if not well explained.
+Mitigation: This is explained to the candidates that in the event of a correct response a more difficult item would be provided. In case of in correct response a more ready item would be provided. This allow for the accurate calculation of the person’s ability.
+Technical and Infrastructure Challenges
+CAT systems require: real-time scoring and item selection; robust backend infrastructure; secure data handling and privacy compliance.
+Mitigation: The system is designed i in accordance with the NCSC “Security Design Principles for Digital Services”, “Bulk Data Principles”, “Cloud Security Principles”. Furthermore, the system will be online and fully functioning 24 hours per day and 7 days a week, excluding planned downtime.
+Contents

@@ -1,0 +1,246 @@
+DfE: Student Loans Forecast Modelling Pipeline
+Produces forecasts for the Department of Education's expenditure on, and the repayments it expects to receive from, higher education and further education student loans in England.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+27 February 2025
+Organisation:
+Department for Education
+Organisation type:
+Agency or public body
+Function:
+Education
+Capability:
+Forecasting
+Task:
+Trajectory and trend prediction
+Phase:
+Production
+Region:
+England
+Date published:
+27 February 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Student loan forecasts modelling pipeline
+2 - Description
+This tool produces forecasts for the Department of Education’s expenditure on, and the repayments it expects to receive from, higher education and further education student loans in England. These forecasts are used in financial planning, policy development and to value the loans that have been issued in its annual accounts
+3 - Website URL
+https://explore-education-statistics.service.gov.uk/find-statistics/student-loan-forecasts-for-england
+4 - Contact email
+he.modelling@education.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Education (DfE)
+1.2 - Team
+Student Finance Modelling Unit
+1.3 - Senior responsible owner
+Deputy Director of Student Finance Policy
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The forecasts produced by this tool are produced across multiple models, as follows:
+Student entrants model – this model forecasts the number of full-time English domiciled undergraduate entrants eligible for tuition fee loans in England. The growth rates from this forecast are used in the student loan outlay and repayment models to estimate the future growth in English domiciled loan borrower numbers.
+Student loan outlay model – this model produces forecasts of expenditure on higher education ICR loans issued to undergraduate and postgraduate students.
+Student loan earnings model – this model produces forecasts for the future earnings of higher education Income Contingent Repayment (ICR) loan borrowers.
+Student loan repayments model – this model produces forecasts for the future repayments that will be made by higher education ICR loan borrowers.
+Advanced Learner Loans model – this model produces forecasts for loan outlay and repayments that will be made on Advanced Learner Loans, which are available for some further education courses.
+Detailed methodologies for all of these models is available here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england
+2.2 - Scope
+Student loans are issued by and administered by the Student Loans Company (SLC) on behalf of the Government and the devolved administrations in the UK. The Department for Education produces forecasts for its outlay on, and the repayments it expects to receive from, the English student loans that it is responsible for. These forecasts are audited by the National Audit Office (NAO) annually and are subject to the Department for Education’s quality assurance framework for business critical models. The forecasts are scrutinised and cleared by quarterly internal Models and Funding Boards before they are used in financial planning, policy development and to value the loans that have been issued in its annual accounts.
+2.3 - Benefit
+Student Finance represents a significant proportion of DfE’s budget, and the student finance modelling pipeline provides essential figures for DfE’s financial planning and policy development.
+2.4 - Previous process
+N/A
+2.5 - Alternatives considered
+The majority of the modelling pipeline is a micro-simulation model. This approach was chosen due to the way loans generate interest throughout their repayment period, the path of an individual’s earnings, rather than their total earnings over the repayment period, has a significant effect on the amount of the loan the borrower will repay.
+An alternative would be aggregate statistical modelling. This approach would involve modelling the total repayments across the entire population of borrowers rather than modelling individual repayment paths. While it would have been computationally simpler and faster, it was ruled out because it lacks the granularity required to account for how different earnings trajectories affect interest accrual and repayments over time. Aggregate models could miss the nuances of individual earnings variability, which significantly impact the amount repaid and the loan balance at the end of the repayment term.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool generates financial metrics that are used for financial planning and policy development, as well as for valuing loan assets. Although the model produces forecasts at an individual level, no decisions are made for loan borrowers based on the model outputs. The model is run for budgeting purposes, in response to changes in macroeconomic forecasts or student number forecasts and to test out policy scenarios.
+3.2 - Provided information
+The tool produces a range of annual aggregated financial metrics across a specified period.
+3.3 - Frequency and scale of usage
+Model outputs are submitted to quarterly departmental Funding Boards, where they are used to inform financial planning. Twice a year model outputs are also shared with the Office for Budget Responsibility to inform their fiscal outlook reports. Model outputs are also regularly used to inform student finance policy development.
+3.4 - Human decisions and review
+Model outputs are never used to make automated decisions. All outputs are sense-checked and quality assured before feeding into outputs such as costing notes, or passed to policy and finance teams.
+3.5 - Required training
+All DfE employees carry out mandatory training on data protection awareness. Each sub-model includes user guides and documentation, and new users are trained by experienced analysts in their use.
+3.6 - Appeals and review
+No decisions on individual loan borrowers are made using the model outputs, so this is not applicable. Outputs can be checked by analytical leads for each sub-model, and these analysts are available to answer any questions on the modelling from stakeholders.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Detailed methodology is provided here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england.
+The Student Finance model is a series of connected models, largely coded in R. Growth rates from the student entrants model feed into the Outlay Model where they are combined with borrower-level data from SLC to predict future loan expenditure. These outlay forecasts create input data for the Earnings Model, which predicts annual lifetime earnings for loan borrowers. These earnings forecasts are combined with loan balance data from Student Loan Company and the outlay forecasts to predict future repayments in the Repayments Model. Cashflows generated by the Repayments Model are fed into an RShiny app that calculates various financial metrics. Outlay and repayment outputs are delivered to finance and policy colleagues, as well as the Office for Budgetary Responsibility.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The tool is continuously reviewed and developed. Quarterly models boards take place to scrutinise and approve any updates. The model is rolled forward to a new financial year annually.
+4.1.4 - Models
+The forecasts produced by this tool are created across multiple models, including: Student entrants model, Student loan outlay model, Student loan earnings model, Student loan repayments model and advanced learner loaned model. The Student entrants model is a linear regression model, while the rest of the pipeline is based on micro-simulation. Various techniques are used for making predictions, including linear regression, logistic regression and k nearest neighbour matching. In the context of this modelling pipeline, ‘micro-simulation’ refers to a technique that simulates individual-level behaviour to generate forecasts. Instead of modelling aggregate outcomes, micro-simulation models the characteristics and behaviour of individual borrowers over time.
+Tier 2 - Model Specification: Student entrants model (1/4)
+4.2.1 - Model name
+Student entrants model
+4.2.2 - Model version
+3-18-6
+4.2.3 - Model task
+DfE’s higher education (HE) student entrants model forecasts the number of England-domiciled, full-time undergraduate student entrants to UK providers. These are all student entrants, whether eligible for a student loan or not. The model then forecasts a subset of these student entrants as the population eligible for tuition fee loans from Student Finance England (SFE). The model assumes a constant proportion of loan-eligible entrants, based on the latest estimated proportion of loan-eligible entrants in HESA’s Core Student Record (2021/22). Growth rates for loan-eligible entrants are then applied to the latest year of outturn Student Loans Company (SLC) data in the student loans outlay model (2022/23), which inform the department’s financial accounts regarding student loan outlay via SFE. The forecasts are also used by the Office for Budget Responsibility (OBR) in their Economic and Fiscal Outlook which forecasts public spending, including student finance over a five-year period.
+4.2.4 - Model input
+The model uses the ONS National population projections as inputs to generate future entrants forecasts:
+https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationprojections/bulletins/nationalpopulationprojections/2021basedinterim
+4.2.5 - Model output
+The model forecasts full-time undergraduate English domiciled entrants to UK higher education institutions (HEIs), and EU domiciled entrants to English HEIs. The model also forecasts additional students of formerly designated Alternative Providers (APs) registered as Approved (fee cap) in the Office for Students (OfS) registration. From these, the model forecasts a subset defined as the eligible loan population (ELP) which are those entrants who are eligible for tuition fee loans from the Student Loans Company.
+4.2.6 - Model architecture
+Bounded linear regression underlies most of the entrant forecast model. Detailed methodology is available here:
+https://explore-education-statistics.service.gov.uk/find-statistics/student-loan-forecasts-for-england
+4.2.7 - Model performance
+The number of entrants forecast in the first forecast-year are compared to equivalent outturn when it is published. Results of these comparisons are available in the published methodology:
+https://explore-education-statistics.service.gov.uk/find-statistics/student-loan-forecasts-for-england
+4.2.8 - Datasets
+ONS population estimates in England.
+UCAS undergraduate January applicant figures.
+UCAS undergraduate June deadline applicant figures.
+UCAS end of cycle report of acceptances.
+HESA Student Record.
+4.2.9 - Dataset purposes
+The above datasets are used to train the model.
+Tier 2 - Model Specification: Outlay model (2/4)
+4.2.1 - Model name
+Outlay model
+4.2.2 - Model version
+1_19_019
+4.2.3 - Model task
+The student loan outlay model forecasts loan amounts that the Department for Education expects to pay higher education students (and their providers) via the Student Loans Company (SLC).
+4.2.4 - Model input
+Model input data consists of current and historical anonymised data on individual loan borrowers from the Student Loans Company. Individual-level data on loan borrowers were provided by SLC in April 2023 providing nearly complete information on student loans up to and including 2022/23.
+4.2.5 - Model output
+The model produces a table of forecasted students allocated loans according to announced loan caps or Office for Budget responsibility RPIX (retail price index excluding mortgage interest payments) forecasts.
+4.2.6 - Model architecture
+The model is a micro-simulation model and uses sampling of historic borrower data to generate future students and loans. Detailed methodology is published here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england
+4.2.7 - Model performance
+Total outlay forecasts are compared to published SLC outlay figures each year. Results are published here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england#content-section-2-content-10
+4.2.8 - Datasets
+OBR RPIX forecasts
+Student entrants forecasts
+Historical SLC borrower data
+4.2.9 - Dataset purposes
+Future borrowers and outlay are generated by sampling from the historical SLC borrower data. Entrants forecasts are used to determine the number of future borrowers, and RPIC forecasts are used to scale future outlay amounts.
+Tier 2 - Model Specification: Earnings model (3/4)
+4.2.1 - Model name
+Earnings model
+4.2.2 - Model version
+e95992b3
+4.2.3 - Model task
+The earnings model predicts annual earnings for all existing and future student loan borrowers.
+4.2.4 - Model input
+Input data consists of a table containing rows for each member of the population of past and future loan borrowers, including information about borrowers’ loan amounts, their courses, and various other information about them.
+4.2.5 - Model output
+For each individual the model produces scaled annual PAYE and self-assessed earnings, from the current year or the borrower’s latest statutory repayment due date onwards.
+4.2.6 - Model architecture
+The underlying methodology of the earnings model is based on k-nearest neighbour sampling. A detailed methodology is available here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england
+4.2.7 - Model performance
+Earnings forecasts from prior years can be compared to actual earnings that subsequently become available in the SLC administrative data. Details of this are published here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england#content-section-3-content-13
+4.2.8 - Datasets
+SLC administrative data
+Longitudinal Education Outcomes
+HMRC administrative earnings data
+ONS Average Weekly Earnings
+4.2.9 - Dataset purposes
+SLC administrative data, Longitudinal Educational Outcomes and HMRC administrative earnings data are used in training and validation. SLC administrative data is used in testing. ONS average weekly earnings data is used to adjust earnings between 2014-15 earnings values and nominal terms.
+Tier 2 - Model Specification: Repayments model (4/4)
+4.2.1 - Model name
+Repayments model
+4.2.2 - Model version
+5534a838b6da08952f4f5af5ba720da6fd91073b
+4.2.3 - Model task
+This model forecasts the repayments that the Department expects to receive on student loans expenditure.
+4.2.4 - Model input
+The main data sources used in the model are:
+SLC administrative data – provides details of borrowers and the loans they take out. Used for modelling migration, repayment frictions and repayments made directly to the SLC.
+Office for National Statistics (ONS) life tables – data on deaths.
+Office for Budget Responsibility (OBR) macroeconomic forecasts – forecasts of earnings growth, the Bank of England base rate, RPI and RPIX.
+Student entrants model – forecasts of entrant numbers.
+Outlay model – forecasts of student loan outlay.
+Earnings model - forecasts of student loan borrower’s future earnings.
+4.2.5 - Model output
+Repayment forecasts for individual loans are aggregated together to estimate totals for the whole student loan population.
+4.2.6 - Model architecture
+The model is a micro-simulation model. It is primarily rule-based, but includes stochastic modules for forecasting overseas repayments, voluntary repayments and repayments frictions, largely based on logistic regression. Detailed methodology is published here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england
+4.2.7 - Model performance
+Comparisons are made between forecast repayment totals (one or two years ahead) for individual years and actual outturn data published by SLC. Details are published here:
+https://explore-education-statistics.service.gov.uk/methodology/student-loan-forecasts-for-england#content-section-3-content-14
+More extensive back-testing was also carried out during the development of the model to assess its performance.
+4.2.8 - Datasets
+OBR economic determinant forecasts
+Historical SLC borrower data
+4.2.9 - Dataset purposes
+Historical SLC borrower data is used to train models predicting voluntary, overseas and repayment frictions. OBR forecasts are used for calculating future repayments.
+Tier 2 - Data Specification: Earnings model training data (1/2)
+4.3.1 - Source data name
+Earnings model training data
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Historic annual earnings and characteristics of student loan borrowers
+4.3.4 - Data quantities
+The early career dataset contain about 17 million earnings records for around 5 million individuals. The long-term dataset contains about 43 million earnings records for around 5 million individuals.
+4.3.5 - Sensitive attributes
+Individual anonymous IDs are associated with annual PAYE and self-assessed earnings data.
+4.3.6 - Data completeness and representativeness
+Datasets are always ensured to be complete before being processed by the model – no missing values are permissible. Early career data contains records for all historic student loan borrowers so is representative of the target population. Long-term data contains records for 10% of the UK population, so represents a wider population than the target population.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Student Loan Company (SLC) data is collected for administrative purposes by SLC. Additional earnings data is sourced from Longitudinal Education Outcomes data, which is a dataset created for assessing the effectiveness of educational policies. Additional earnings data comes from HMRC where it is collected for administrative purposes.
+4.3.9 - Data cleaning
+Compilation of data into earnings model training data is carried out by Student Finance Modelling Unit analysts prior to use in modelling.
+4.3.10 - Data sharing agreements
+A memorandum of understanding exists between DfE and HMRC concerning the long-term data. A data sharing agreement exists between DfE and SLC concerning the early career data.
+4.3.11 - Data access and storage
+Only analysts within DfE’s Higher Education Analysis division have access to the dataset. Access is restricted via protected file share folders.
+Tier 2 - Data Specification: Period of study (2/2)
+4.3.1 - Source data name
+Period of study
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Data on borrower’s courses, loans, and characteristics are compiled into this table.
+4.3.4 - Data quantities
+About 12 million rows, representing periods of study for each individual.
+4.3.5 - Sensitive attributes
+Individual anonymous IDs are associated with data around Higher Education and Further Education courses that individuals have studied and the amount of loans taken out.
+4.3.6 - Data completeness and representativeness
+Data is fully representative of individuals that have taken out loans.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Student Loan Company (SLC) data is collected for administrative purposes by SLC. Additional earnings data is sourced from Longitudinal Education Outcomes data, which is a dataset created for assessing the effectiveness of educational policies. Additional earnings data comes from HMRC where it is collected for administrative purposes.
+4.3.9 - Data cleaning
+Compilation of data into earnings model training data is carried out by Student Finance Modelling Unit analysts prior to use in modelling.
+4.3.10 - Data sharing agreements
+A data sharing agreement exists between DfE and SLC regarding this data
+4.3.11 - Data access and storage
+Only analysts within DfE’s Higher Education Analysis division have access to the dataset. Access is restricted via protected file share folders.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+There are no impact assessments for this tool. Information Assets linked to the tool are assessed every six months and statements of compliance submitted to DfE’s data compliance team.
+The data is all pseudonymised, so is not directly identifiable.
+5.2 - Risks and mitigations
+A RAG-rated risk register is maintained and discussed by DfE’s HE funding board. Key analytical risks relate to:
+Delivery of robust timely data from SLC - this is mitigated by DfE analysts carrying out stringent quality assurance on delivered data and frequent liaison with the SLC delivery team.
+Resource currently is not sufficient to complete the core work and carry out sufficient robust QA - this is being mitigated by strengthening QA processes, recruitment plans, working with stakeholders to identify pipelines of work in advance and potential bottlenecks.
+Contents

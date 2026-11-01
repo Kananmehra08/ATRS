@@ -1,0 +1,3 @@
+metric,baseline_mean,baseline_sd,grounded_mean,grounded_sd,median_diff,wilcoxon_p,effect_r_rb
+clarity,2.028,0.2,2.495,0.181,0.5,<0.001,1.0
+verifiability,1.841,0.187,2.414,0.227,0.583,<0.001,1.0

@@ -1,0 +1,178 @@
+DWP: Whitemail Insights and Vulnerability Scanner
+A service that reads circa 25,000 scanned documents/letters received from citizens per day and flags people who may need urgent assistance as a result of a vulnerability; it also builds Management Information(MI) trends over time against a set of themes.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+27 November 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer vision
+Task:
+Image recognition and text generation
+Phase:
+Production
+Region:
+England and Wales
+Date published:
+27 November 2025
+ATRS version:
+v4.0
+Other tags:
+BART
+1. Summary
+1 - Name
+Whitemail Insights and Vulnerability Scanner
+2 - Description
+The Whitemail Insights and Vulnerability Scanner are two intelligent solutions with separate purposes:
+Vulnerability Scanner: This AI tool has been trained using Large Language Model (LLM). It analyses the content and context of “Whitemail” (physical post/mail for which we have no automatic handling rules - loosely everything that is not a DWP-issued form) to identify a potentially vulnerable customer. The solution also provides the rationale for identifying a vulnerable customer using DWP’s prescribed themes, for example mental health, suicide, etc.
+Whitemail Insights: This AI tool classifies Whitemail into core themes enabling the operations team to direct the incoming scanned mail to concerned Benefit Lines with increased efficiency. The tool has been trained using LLM (Large Language Model) to classify scanned mail.
+3 - Website URL
+N/A
+4 - Contact email
+N/A
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Work & Pensions
+1.2 - Team
+Directorate for Digital Modernisation & Efficiency
+1.3 - Senior responsible owner
+Head of Digital Channels
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Accenture (UK) Limited
+1.4.2 - Companies House Number
+4757301
+1.4.3 - Third party role
+The Garage is a partnership between DWP and Accenture resources to create innovative solutions to resolve DWP challenges.
+On this piece of work, the developers were mainly Accenture resources, lead by an Accenture Delivery Lead, working under DWP Project Managers
+1.4.4 - Procurement procedure type
+Open competition against a framework call off
+1.4.5 - Third party data access terms
+All 3rd parties involved have had suitable clearances.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Vulnerability Scanner processes a scanned image of inbound post/letters, and based on the words, identifies whether a customer is potentially vulnerable. The Scanner also indicates the relevant theme for vulnerability, e.g. financial hardship. This includes the capability to convert hand-written content to a machine readable format thus making it comprehensible for analysis.
+It then creates daily list of all potentially vulnerable customer references, that is passed to trained staff and is devoid of any Personally Identifiable Information (PII).
+It also generates general volume based trend information against a set of common themes see section 2.4.1.1
+2.2 - Benefits
+Reduced time in manually sorting out mail, particularly those that require immediate attention. Increased transparency in information leading to timely and targeted/specialist support to claimants.
+2.3 - Previous process
+The existing business-as-usual casework processes are still in place. This is a new and additional service - it does not replace any existing services.
+2.4 - Alternatives considered
+The following alternatives were considered in consultation with DWP’s subject matter experts:
+Embeddings methods for classification: Gensim ; Sentence-transformers
+Rule based classification: Regex
+Transformer-based zero-shot classification: BART-large-MNLI;  RoBERTa-MNLI; Flat-t5 (with prompt-based zero-shot classification)
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+This system does not make benefit entitlement decisions or influence benefit entitlement decision-making. It simply reviews documents based on the words in the given document and creates am actionable short-list of potentially vulnerable people. This list includes a reference to the original source scanned image that a human can call up, review and then decide whether an intervention is appropriate or not.
+The Whitemail Insights solution simply provides the label corresponding to one of the nine themes that a given document is associated with (e.g. document 12345 has the label “change of address” based on the information provided by the customer).
+The Vulnerability Scanner outputs a report of “potentially” vulnerable customers and associated themes (for example, suicide & self harm, domestic violence & abuse, drugs & alcohol misuse). Since no personal information is included, each scanned document has a unique ID that can be used to trace the customer record in systems separate from the two AI tools.
+For Whitemail Insights, DWP Agents have a quick sight of the label associated with a given document and relay it to the concerned Benefit Line. The tool has been and will continue to be reviewed and enhanced/tuned to better serve the classification requirements posed by the diversity on content received as Whitemail.
+For the Vulnerability Scanner tool, an analytics team assesses the daily report of potentially vulnerable customers output by the tool, before relaying it to corresponding Benefit Lines or teams providing targeted support to vulnerable citizens. The tool is currently undergoing iterative improvements to serve the needs surfacing from end user feedback on an ongoing basis.
+3.2 - Human review
+Procedurely speaking, DWP staff handling the claim or engaging with a potentially vulnerable customer are expected to assess each document and the situation on a case-by-case basis. The department’s numerous Benefit Lines follow overarching and claim-specific standards to provide effective service to their customers and these standards are not influenced by inputs from the two tools.
+3.3 - Frequency and scale of usage
+Both tools are performing in Production with no interaction by the public or DWP staff.  Authorised DWP staff only get the label associated with a given Whitemail document (for Whitemail Insights tool) and a daily report of customers identified as “potentially” vulnerable. No PII data is present on the outputs. The scale of the operation can be ascertained from the fact that the tools scan circa 25,000 documents on a daily basis.
+3.4 - Required training
+N/A
+3.5 - Appeals and review
+N/A The output of this does not positively or negatively affect the award of benefit, or magnitude of any benefit payment(s).
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The platform rendering capabilities to the two solutions is hosted on Amazon Web Services. Scanned post received from the Digital Mail Unit is first checked to ensure compatibility. Following that, the text is converted to machine readable format. Any personal data on each document is then redacted and passed for scanning by the Vulnerability Scanner. If the document identifies a “potentially” vulnerable customer, it is passed to the relevant queue for outputting a report listing all documents identified as those from a customer requiring support and associated theme (suicide, self harm, drugs and alcohol issues and so on.).
+If the document does not indicate vulnerability, it is then relayed to the Whitemail Insights solution and labelled according to the relevant document category/theme (for example Change of Address, Change of Bank).
+The entire infrastructure has end-to-end encryption with internet access removed to avoid any external intervention. The system components can only connect securely to underlying services, further enhancing security..
+4.1.2 - System-level input
+Scanned “Whitemail” which is physical letters / post sent to DWP,  for which we do not have automated handling rules.
+4.1.3 - System-level output
+One report with anonymised data of potentially vulnerable customers classified against each of the 8 vulnerabilities.
+Another report providing volumes of non-structured Whitemail classified against each of the 9 themes.
+4.1.4 - Maintenance
+Training is required when fine-tuning a response and or dealing with a change (for example a new form type) however it is otherwise not retrained.
+4.1.5 - Models
+The model deployed was BART (Bidirectional and Autoregressive Transformer).  BART is a pre-trained sequence-to-sequence transformer model able to do zero-shot classification.
+Tier 2 - Model Specification
+4.2.1. - Model name
+For both Whitemail Insights and Vulnerability Scanner Tools, the department is using BART (by Facebook AI).
+4.2.2 - Model version
+N/A
+4.2.3 - Model task
+Read, analyse and classify:
+(a) Theme/Topic to provide prompt information on why a claimant has written to DWP.
+(b) A “potentially” vulnerable customer and the relevant theme so they can get prioritised and specialist support deployed if deemed necessary by the DWP staff handling their claim.
+4.2.4 - Model input
+All scanned Whitemail received from claimants on a daily basis.
+4.2.5 - Model output
+The model(s) output:
+(a) A daily report of DWP benefit customers that might need urgent / specialist support based on the information provided by the customers in the scanned mail.
+(b) Classification label for every Whitemail document to help provide a speedier response as required.
+4.2.6 - Model architecture
+bart-large-mnli is a transformer-based sequence-to-sequence (encoder–decoder) model built on BART-large and fine-tuned for Natural Language Inference (NLI) using the MNLI dataset. It learns to classify pairs of sentences (premise, hypothesis) as entailment, contradiction, or neutral through supervised cross-entropy optimization. The model uses self-attention and learned weights across 24 transformer layers (~406M parameters) without any manually assigned feature weighting or rules. Its architecture enables zero-shot classification by converting labels into hypotheses and evaluating entailment probabilities.
+The original BART paper: “BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension” (Lewis et al.) -
+https://arxiv.org/abs/1910.13461
+Hugging Face’s BART model docs: description of architecture and usage -
+https://huggingface.co/facebook/bart-large-mnli
+4.2.7 - Model performance
+The model was evaluated for deployment readiness through a multi-stage validation process combining synthetic, real, and production-like data.
+During development, at least 15 synthetic documents per theme, publicly available examples, and two redacted production letters were used to test classification performance and calibrate label synonyms and confidence thresholds. Evaluation employed standard classification metrics - precision, recall, and F1-score - to measure consistency and balance between false positives and false negatives. It was made sure that the model performed without failure to the test data set. Once deployed in a controlled production environment, daily manual review of model outputs was conducted to validate predictions and further refine thresholds.
+All testing and tuning used redacted or synthetic data to protect sensitive information, ensuring privacy and compliance. The resulting model demonstrated stable performance across themes, with improved precision following iterative threshold adjustments.
+4.2.8 - Datasets and their purposes
+Both solutions were built using synthetic data generated using baseline data.
+(a) for Whitemail Insights Tool: Baseline redacted data from the Document Repository System (DRS - holds records of mail received from citizens and compliant with Data Retention policies).
+(b) for Vulnerability Scanner: Baseline from dummy letters and documents with no PII/Protected charactersitics or Variables. The dummy letters and documents were acquired from the Advanced Customer Support, the team that leads DWP on all matters pertient to vulnerable customers across policy and practice.
+Use of synthetic data was considered necessary to assess the solutions’ performance at scale.
+2.4.3. Development Data
+4.3.1 - Development data description
+Both solutions were trained and tested using synthetic data developed using baseline data from the Document Repository System (DRS - holds records of mail received from citizens and compliant with Data Retention policies). Use of synthetic data was considered necessary to assess the solutions’ performance at scale. The baseline data extracted from DRS was redacted (removal of PII/protected characteristics) prior to generating synthetic data from it.
+4.3.2 - Data modality
+Text
+4.3.3 - Data quantities
+N/A
+4.3.4 - Sensitive attributes
+The data input to and output by the models did not contain any PII or protected characteristics or proxy variables.
+4.3.5 - Data completeness and representativeness
+The two tools were trained and tested using scanned mail with both handwritten and digitally typed content. The underlying platform has the capability to convert handwritten text to a machine readable format with high precision. The quality of the scanned image is one factor deemed important for adequate processing/analysis of the text. Having said, the scanned documents received (daily) exhibit the optimal resolution quality required for the two tools.
+4.3.6 - Data cleaning
+Dummy Data on every test document was redacted in the first instance to ensure any PII or protected charateristics being analysed and in turn, added to the classification labels in Production would be removed. The entire journey of data from receipt through to analysis and output is encrypted end-to-end.
+4.3.7 - Data collection
+N/A
+4.3.8 - Data access and storage
+N/A
+4.3.9 - Data sharing agreements
+N/A
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Scanned mail routed to the AI platform via DWP’s existing secure Integration layer (API)
+4.4.2 - Sensitive attributes
+None.
+All scanned documents are redacted at the earliest stage to minimise the inclusion of personal data and protected characteristics in any analysis or classification.
+While large language model–based systems are not without limitations, this solution is consciously designed to reduce bias and ensure that vulnerability scanning is carried out in a consistent and structured way, focusing only on information relevant to the individual being assessed.
+The full data journey, from receipt to analysis and output, is encrypted end-to-end.
+4.4.3 - Data processing methods
+The data is anything that citizens provide on their mail, which is scanned, indexed and sent to the Whitemail Insights and Vulnerability Scanner for afore-mentioned outputs. Again, each Whitemail document is, as far as possible, redacted in an end-to-end encrypted environment before being analysed and classified.
+4.4.4 - Data access and storage
+Only authorised DWP staff, who need information as part of their role have access to the classification data output by the two tools. As above, all identified PII is removed from data before analysis. Any data used to classify documents is also deleted and only the output of the model is relayed to authorised people who need that information as part of the role(s).
+The solution is hosted in a secure AWS platform, with no connectivity to or from the internet and all services communicate via private link. The security of the solution has been reviewed by DWP Digital Security Risk Management and no vulnerabilities were identified.
+The maintenance of the platform is controlled by The Garage, Live Service and DevOps teams who are all vetted.
+4.4.5 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+In addition to numerous internal reviews and assessments:
+DPIA (Data Protection Impact Assessment)
+Equality Analysis
+Govt Internal Audit Agency (GIAA) External assessment
+5.2 - Risks and mitigations
+As afore-mentioned, the tools were subjected to exhaustive governance by various long-standing departmental functions that assessed performance and security readiness, as well as compliance with standards/ethics around service delivery and protection of citizens’ personal information. No key risk was identified at any stage throughout the development and post-live phases.
+Contents

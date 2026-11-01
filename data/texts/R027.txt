@@ -1,0 +1,178 @@
+Natural England : AI4Peat
+Mapping upland peat surface features for  peat drainage and damage using deep learning and aerial imagery.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Organisation:
+Department for Environment, Food and Rural Affairs
+Organisation type:
+Agency or public body
+Function:
+Environmental protection
+Capability:
+Computer vision
+Task:
+Object detection and description
+Phase:
+Production
+Region:
+England
+Date published:
+30 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+AI4Peat: Mapping upland peat drainage and damage
+2 - Description
+This tool produces a map of artificial drainage channels (grips), erosional channels (gullies), exposed eroded peat edges (haggs) and restoration efforts (grip dams) on the upland peatland regions of England. 80% of England’s peatlands are in a degraded condition resulting from historical draining of the land and land-use change. Restoring this carbon rich ecosystem is a priority to meet net zero targets. Peat is restored by damming drainage channels to re-wet the soil. To date there is no national record of the location of peatland drainage features or the location of previous restoration efforts. Computer vision methods can replace the time intensive and costly process of mapping these features manually and additionally provide a tool to prioritise future restoration efforts.
+3 - Website URL
+https://naturalengland.blog.gov.uk/2025/03/19/ai4peat-innovative-use-of-ai-to-map-and-restore-our-precious-peatlands/
+4 - Contact email
+enquiries@naturalengland.org.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Natural England
+1.2 - Team
+AI4Peat, Data Science Services, Chief Scientist Directorate
+1.3 - Senior responsible owner
+Data Science Services Principal Scientist
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The project uses both semantic segmentation models (FPN) for identifying and mapping geographic featurs such as grips, gullies and haggs and an object detection model (YOLOv8) to identify the location of dams. Pre-trained models from the ultralytics (for dams) and PyTorch (grips, gullies, haggs) libraries were trained using existing mapped peatland features. A small subset of this training data was manually digitised in order to improve the geospatial accuracy of the features. The training datasets were converted to rasters and broken down into 50 m x 50 m binary image tiles and paired with corresponding 12.5 cm aerial photography and LiDAR tiles. In total the training dataset was comprised of 200K image tiles with grip labels, 62K image tiles with gully labels,  40K image tiles with hagg labels and 2.1k image tiles with dam locations. The training dataset was split into 70% train, 20% validate and 10% test. Model hyperparameters were optimised using the Optuna library and all model experiments were logged with Mlflow. The best performing models were run over paired aerial photography (12.5 cm resolution Aerial Photography for Great Britain) and LiDAR (1 m resolution DTM, detrended and resampled to 12.5 cm resolution) 50 m x 50 m tiles. Model raster outputs are converted into vector format and geometry is simplified to reduce file sizes. More detailed information is available in the England Peat Map technical documentation
+https://publications.naturalengland.org.uk/publication/5075614867128320
+2.2 - Scope
+The purpose of the tool is to produce a national map of upland peat drainage features that will form part of the England Peat map. The map was commissioned to support the 2021 England Peat Action Plan
+https://www.gov.uk/government/publications/england-peat-action-plan
+. This is the first baseline version of such a map and should not be used on it’s own to inform policy but instead be used alongside expert regional knowledge.
+2.3 - Benefit
+Producing national maps from either on the ground field surveys or manually digitising features from aerial imagery would be extremely time intensive. This tool used to produce national maps of peat surface features can also be re-used to produce updated versions as more recent aerial imagery becomes available, providing a means of monitoring restoration efforts at a national scale over time. The map can also help support the quantification of peatland degradation and the greenhouse gas benefits of restoration which is used for financing restoration projects e.g. The Peatland Code
+https://www.iucn-uk-peatlandprogramme.org/peatland-code/how-it-works
+.
+2.4 - Previous process
+Prior to using machine learning and aerial imagery to map peatland drainage features no national-scale map existed. Drainage feature mapping was carried out on smaller scales by manually digitising features with GIS software. The spatial coverage of mapped features is limited and not evenly distributed. There are spatial differences in the accuracy of mapped features depending on the reason for features being mapped and the accuracy needed at the time. Mapped regions produced previously are not stored centrally and are not always publicly available making evidence-based decisions at a national scale difficult.
+2.5 - Alternatives considered
+A pilot study using ArcGIS was used to test the feasibility of the project. This involved testing models on different resolution datasets of both aerial imagery and satellite data. Natural England tested training models from scratch and using pre-trained models and tested different model architectures. Natural England trained the models using aerial imagery only and then using aerial imagery with LiDAR. We also trained the model using ground-truth labels in their raw format and a combination of raw format plus a subset that had been manually digitised to improve the geospatial accuracy.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The models identify drainage and restoration features in upland peatlands from aerial imagery and LiDAR to produce a map of such features. The tool does not perform decisions but provides a map to support decision making processes by peatland stakeholders. Examples include helping to quantify carbon emissions from degraded peatlands, improving identification of peatland damage for targeted peatland restoration and potentially tracking restoration efforts over time if there are future iterations of the map.
+3.2 - Provided information
+The tool output is map layers for each feature that are available to download in various formats with the additional England Peat Map layers found at Natural England’s Open data portal and the England Peat Map Portal
+https://england-peat-map-portal-ncea.hub.arcgis.com
+3.3 - Frequency and scale of usage
+The tool has been run once to produce a national map of upland peat drainage features. The tool could be re-used each time the national aerial imagery is updated (currently 3-4 year timescale) to provide updated maps that can track restoration efforts. The number of views and downloads of the map are not tracked.
+3.4 - Human decisions and review
+After each training round the models are logged and accuracy metrics recorded. Natural England ran inference with the models on 11 1 km2 regions that were distributed across all of the major moorlands to check the outputs were sensible. With these small test regions Natural England also visually inspected the outputs after carrying out the post processing (converting the model output rasters to vectors) to test the major post-processing parameters; these included 1) the model confidence value above which raster pixels are accepted as a feature, 2) the distance tolerance used for smoothing feature outlines which is performed to reduce the pixelated nature of the outputs and hence file sizes and 3) the area threshold for the exclusion of features below a certain size to reduce noise in the datasets.
+3.5 - Required training
+The outputs are accompanied with a user’s guide and technical documentation see
+https://england-peat-map-portal-ncea.hub.arcgis.com
+which detail the map attributes and limitations associated with the outputs. To re-run the tool documented code is housed in an open GitHub repository which also details the libraries and compute needed to reproduce the outputs. To use the code users would need an account with Defra’s DASH platform and permissions to set-up large compute sizes. Users would need to be familiar with running code in a Databricks notebook or undertake training to allow this.
+3.6 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Datasets and code are hosted on Defra’s DASH cloud computing platform. The workflow uses Databricks notebooks to carry out all steps of the pipeline see
+https://github.com/naturalengland/EPM
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The tool provided a one-off map for publication. The tool would be reviewed in the event of future updated maps being commissioned.
+4.1.4 - Models
+The object detection model for dam detection uses a YOLOv8 model.
+The segmentation model for grip, gully and hagg detection uses a Feature Pyramid Network (FPN) architecture with ResNet34 backbone
+Tier 2 - Model Specification
+4.2.1 - Model name
+YOLO
+4.2.2 - Model version
+v8
+4.2.3 - Model task
+Detects peat drainage dams in aerial imagery
+4.2.4 - Model input
+12.5 cm aerial photography of Great Britain with training data comprised of bounding boxes in vector format
+4.2.5 - Model output
+Bounding boxes of predicted dams
+4.2.6 - Model architecture
+YOLOv8m object detection model from the Ultralytics library
+https://docs.ultralytics.com/models/yolov8/#overview
+The best performing model based on the mAP50 metric was trained for 53 epochs with:
+· 169 layers
+· 25,856,899 parameters
+· A batch size of 8
+· A learning rate l0 of 0.00012
+· Adam optimiser with weight decay =1.39e-3 and momentum=0.90969
+4.2.7 - Model performance
+Model performance on the train, test and validation datasets respectively are as follows:
+MAP50 = 0.81, 0.71, 0.64,
+Recall = 0.79, 0.62, 0.59
+Precision = 0.85, 0.74, 0.64
+These subsets were split spatially by splitting each 1km grid square where ground truth data existed into 70% training, 20% validation and 10% testing.
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Model Specification: Feature Pyramid Network (FPN) (1)
+4.2.1 - Model name
+Feature Pyramid Network (FPN)
+4.2.2 - Model version
+N/A
+4.2.3 - Model task
+Identify grips, gullies and haggs from aerial imagery and LiDAR, using computer vision semantic segmentation
+4.2.4 - Model input
+12.5 cm Aerial Photography of Great Britain, 1 m resolution LiDAR DTM resampled with nearest neighbour to 12.5cm. For ground truth training data, a combination of line and polygon data. Final model input is 50m stacked aerial imagery and LiDAR tiles along with ground truth tiles (400m x 400m) in array format.
+4.2.5 - Model output
+A confidence score between 0 and 1 of a feature present in each 12.5 x 12.5 cm pixel of a 400x400 array.
+4.2.6 - Model architecture
+For image segmentation, a combination of UNet and Feature Pyramid Network architectures, with a resnet34 backbone, batch size of 16, Jaccard / Dice loss and Adam / NAdam optimiser. The model architectures can be found here from the pytorch segmentation models library:
+https://segmentation-modelspytorch.readthedocs.io/en/latest
+4.2.7 - Model performance
+The following scores are for the grip model: IoU-28%, Recall-40%, Precision-47%, Accuracy-95%, Kappa-37%, F1-39%. the following scores are for the Gully model: IoU-29%, Recall-63%, Precision-33%, Accuracy-86%, Kappa-33%, F1-39%. The following scores are for the Hagg model: IoU-3%, Recall-8%, Precision-6%, Accuracy-93%, Kappa-3%, F1-5%.
+4.2.8 - Datasets
+BlueSkies Aerial Photography for Great Britain 12.5cm RGB imagery sharing overlap with ground truth data. Environment Agency 1m Lidar DTM sharing overlap with ground truth data. Shapefile datasets of grip, gully and hag locations across upland peat inc. West Pennines, Dartmoor.
+4.2.9 - Dataset purposes
+All three datasets as outlined above were chipped up according to the British National Grid index down to 50m. The data was split on the 100m longitude index, with tiles of index 0-6 used for training, 7-8 used for validation and 9 used for testing.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Aerial Photography for Great Britain (APGB), LiDAR derived DTM, Ground-truth labels
+4.3.2 - Data modality
+Geospatial data
+4.3.3 - Data description
+APGB - High resolution (12.5 cm) dataset provided by Bluesky International.
+LiDAR - Environment Agency’s national 1 m resolution DTM dataset.
+Ground truth data - vector line data collated from various peatland partnerships
+4.3.4 - Data quantities
+The segmentation FPN model training dataset includes
+200K 50 m x 50 m tiles for grip identification
+60K 50 m x 50 m tiles for gully identification
+40K 50 m x 50 m tiles for hagg identification
+The YOLOv8 object detection model training dataset incudes
+2.1K 50 m x 50 m tiles for dam identification.
+Each training dataset was split into 70% train, 20% validate and 10% test using British National Grid index integers to split the data to ensure even spatial coverage.
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+There are large areas of moorland that are missing training data, for example the Lake District, Exmoor and Dartmoor and these regions should be interpreted with this in mind. The dam labels do not include enough stone dams and the model struggles to identify these in some regions. These limitations are documented in the technical report.
+4.3.7 - Source data URL
+https://environment.data.gov.uk/dataset/13787b9a-26a4-4775-8523-806d13af58fc
+4.3.8 - Data collection
+Training data was collected from peat partnerships that have already mapped local peatland features for their own uses. For this reason the data is not always fit for model training, for example if crude lines along a feature were mapped rather than finer resolution mapping, faithfully following along the contours of a feature. The data is provided in a line format that then needs to be converted to a polygon in order to be rasterised and stacked with the aerial photography. A uniform buffer is added to the lines which means that the model is trained on uniform width gullies that will not always overlay the features in the imagery accurately. A subset of the training data was improved for training. This involved manually digitising feature outlines using aerial photography and LiDAR as a guide. The models were trained and tested separately on both just the raw labels and the raw and improved labels.
+4.3.9 - Data cleaning
+The 1 m resolution LiDAR dataset was pre-processed by first detrending the dataset to enhance the elevation differences of drainage features relative to the surrounding landscape. We detrended by subtracting the median elevation of pixels within a 100 m radius from each pixel. The detrended LiDAR was next resampled to 12.5 cm resolution using a nearest neighbour algorithm.
+4.3.10 - Data sharing agreements
+The data used in the tool are used under specific data licenses between Natural England and the data owner or under Open Government License.
+4.3.11 - Data access and storage
+All data used by the tool is stored and managed by Defra’s Data Analytics and Science Hub. This can be accessed by members of Defra and ALB’s that have an account.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+N/A
+5.2 - Risks and mitigations
+Model Inaccuracy:
+There is a risk that policy decisions are based solely on the tool outputs.
+This is mitigated by the accompaniment of a user guide that details how the dataset should and should not be used. The accuracy metrics are recorded and published in the accompanying more detailed technical report along with descriptions of the limitations of the dataset.
+Contents

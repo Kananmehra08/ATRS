@@ -1,0 +1,196 @@
+TrustID
+Identity verification and right to work check for job applicants
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+27 November 2025
+Organisation:
+Housing Ombudsman Service
+Organisation type:
+Agency or public body
+Function:
+Housing and community amenities
+Capability:
+Computer vision
+Task:
+Image recognition
+Phase:
+Production
+Region:
+UK
+Date published:
+27 November 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+TrustID
+2 - Description
+​​TrustID performs biometric liveness and facial recognition checks on a live selfie captured by the person being checked, to confirm they are present at the point of capture and that the selfie is of the same person as the photograph in the document submitted for verification.
+​TrustID also confirms that the document is a legitimate valid UK/Irish passport. Verification that the passport is a legitimate document and that the identity matches that of the candidate provides assurance that the individual does indeed have right to work status in the UK.
+3 - Website URL
+https://www.trustid.co.uk/
+4 - Contact email
+enquiries@trustid.co.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Housing Ombudsman Service
+Corporate Services and Change Directorate
+1.2 - Team
+People Team
+1.3 - Senior responsible owner
+Head of People
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+TrustID Ltd
+1.4.2 - Companies House Number
+05953015
+1.4.3 - Third party role
+Software developers of the tool
+1.4.4 - Procurement procedure type
+G-Cloud 12 Framework
+1.4.5 - Third party data access terms
+​​TrustID staff have access to the original facial image capture and uploaded identity documents for a period of 7 days after collection. After this period the images are deleted by TrustID.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+​​TrustID performs biometric liveness and facial recognition checks on a live selfie captured by the person being checked, to confirm they are present at the point of capture and that the selfie is of the same person as the photograph in the document submitted for verification.
+​Face biometrics use automated machine-based checks with manual re-assessment should automated checks fail.  Face match and Liveness (supplier: Acuant Inc– performs an assessment of the selfie supplied by the data subject and compares with the photo found in their passport or ID document.  ​Although Acuant Inc are a US based company the servers that process the face matching data are located in Germany.  When a candidate submits their selfie and passport, TrustID extracts the face from the passport, and sends it and the selfie (i.e., not the data fields) to the Acuant/ReadID server for comparison. Their software attempts a match before returning it to TrustID servers in the UK. If the match is below a certain threshold, the two images are escalated to TrustIDs own Document Analyst team for human review. ​TrustID also confirms that the document is a legitimate valid UK/Irish passport. Verification that the passport is a legitimate document and that the identity matches that of the candidate provides assurance that the individual does indeed have right to work status in the UK.
+​TrustID will then send a copy of the individual’s right to work verification in the form of a status report back to the portal which can be accessed by HOS HR staff (recruitment team only) via the secure portal. Secure login access to this portal is restricted to HR Recruitment staff only. The report will contain an image of the passport document as submitted by the candidate as well as a likeness and verification pass/fail status. The report will be available to download in the portal for 7 days after which it will be deleted by TrustID and will not be able to be downloaded by Housing Ombudsman Service (HOS) staff or recovered by TrustID.  This report will then be downloaded by HOS and saved to the individuals’ personnel file on People HR. Access to this record is limited to members of the HR recruitment team only. A retention period in line with employment records applies – currently length of individual’s employment + 6 years.
+2.2 - Benefits
+The service provided by TrustID collects data from people we want to offer a job to. They will confirm their identity documents by comparing them to a real time facial image capture (‘selfie’) supplied by the subject. This will be done by automated means, facial recognition/matching as opposed to a manual process of attending a face to face interview where documents have to be manually verified. ​​Data subjects have the option of using the digital identity checking service provided by TrustID or they can opt to use a manual checking service.
+2.3 - Previous process
+Prior to the Coronavirus pandemic, such checks were done manually though face to face meeting and validation of identity documents. As part of the Governments response to the coronavirus pandemic, adjustments to right to work checks were introduced on 30 March 2020 which allowed organisations to conduct these checks remotely (via video call). These adjustments will end on 30 September 2022 meaning that another mechanism for conducting these checks which allows for the remote working conditions that the majority of HOS employees will be employed under was adopted.
+2.4 - Alternatives considered
+All employers in the UK have a responsibility to prevent illegal working. This is achieved by conducting simple right to work checks before employing someone, to make sure the individual is not disqualified from carrying out the work in question by reason of their immigration status.
+​The law on preventing illegal working is set out in sections 15 to 25 of the Immigration, Asylum and Nationality Act 2006 (the 2006 Act), section 24B of the Immigration Act 1971, and Schedule 6 of the Immigration Act 2016. As an employer, HOS are legally obliged to take necessary steps to verify an individual’s identity and ensure they have a legitimate right to work in the UK. This is known as the statutory excuse.  A statutory excuse is an employer’s defence against a civil penalty. In order to establish a statutory excuse against a civil penalty in the event that an employee is found to be working illegally, employers must do one of the following before the employee commences employment:
+​1. a manual right to work check
+​2. a right to work check using IDVT via the services of an IDSP (such as TrustID)
+​3. a Home Office online right to work check
+​Conducting any of these checks as set out in this guidance and in the code of practice will provide HOS with a statutory excuse.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Once an individual has been offered a conditional offer of employment they must undertake right to work checks. individuals will be requested to submit their passport for checks prior to a formal offer being provided. ​​Users must access the service and submit Checks using the TrustID web portal or the Application Programming Interface (API). Data is provided direct by the data subject. Data subject uploads an image of their passport document as well as a real time image capture of their face to TrustID’s portal through a link they will receive from HOS via email. The link contains a QR code which the candidate can scan in order to download the portal and carry out the necessary downloads and checks. Each QR code will be specific to the guest link created by HR through the portal but will not be assigned to a specific individual. Data collection will be a one off collection from the data subject for the purposes of conducting an identity and Right to Work check only.​
+TrustID are a certified IDSP meaning their ID check services are compliant with GPG45 standards and can be used for Right to Work checks and also Basic, Standard or Enhanced DBS checks.
+3.2 - Human review
+When a candidate submits their selfie and passport, TrustID extracts the face from the passport, and sends it and the selfie (i.e., not the data fields) to the Acuant/ReadID server for comparison.  Their software attempts a match before returning it to TrustID servers in the UK. If the match is below a certain threshold, the two images are escalated to TrustID own Document Analyst team for human review.
+3.3 - Frequency and scale of usage
+This depends entirely on recruitment activity. The Housing Ombudsman currently consists of just over 500 employees and new recruitment is estimated to be less than 100 individuals per annum.
+3.4 - Required training
+The tool is hosted and supplied by a third party supplier. Teams with access to the data sent by the app through a secure portal have had relevant training to be able to access the data. Users are provided step by step guidance on how to use the tool and how to obtain the final result. A specific privacy notice for use of the tool is issued to the user at the time of collection.
+3.5 - Appeals and review
+When a candidate submits their selfie and passport, TrustID extract the face from the passport, and send it and the selfie (i.e., not the data fields) to the Acuant/ReadID server for comparison. Their software attempts a match before returning it to TrustID servers in the UK.  If the match is below a certain threshold, the two images are escalated to TrustID own Document Analyst team for human review. Users can submit a review request to HOS if they feel the tool has not worked correctly.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+TrustID SaaS System Architecture
+Frontend (Browser-Based Interface)
+Web Client & Mobile App: Users upload identity documents and images.
+Backend Services
+TrustID Cloud: Core identity verification engine hosted by TrustID.
+Application Containers: Each identity check is encapsulated in a container that holds documents, images, and metadata.
+Document Processing:
+OCR for extracting data from documents
+MRZ (Machine Readable Zone) and HRZ (Human Readable Zone) parsing
+External service checks
+Workflow Support
+Submit Applications: Backend systems send complete applications for processing.
+Queued Applications: Backend creates applications with flexible fields; users upload documents via web/mobile.
+Receive Results: Webhooks notify backend systems when results are ready.
+Initiate DBS Checks: Specialised workflow for background checks.
+Security & Data Handling
+Session Management: Secure login/logout via API
+Document Field Trust Levels: Data sources are ranked (e.g., manual input vs. MRZ) for reliability
+Webhook Security: Payloads and retries are managed securely.
+4.1.2 - System-level input
+Photographic ID documents (passport, driving licence, etc.)
+Selfie or live photo for biometric face-matching
+4.1.3 - System-level output
+TrustID will then send a copy of the individuals RTW verification in the form of a status report back to the portal which can be accessed by HOS HR staff (recruitment team only) via the secure portal.
+4.1.4 - Maintenance
+TrustID performs planned maintenance to enhance system resilience and scalability.
+Example: A scheduled update occurred on Saturday, June 7th, 2025, from 12:00 AM to 10:00 AM. These updates are communicated in advance to minimize disruption.
+Real-Time Service Monitoring
+TrustID maintains a Service Status page that shows uptime and performance metrics for all components.
+4.1.5 - Models
+https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/707261/880300837836426-service-definition-document-2024-04-30-1113.pdf
+Tier 2 - Model Specification
+4.2.1. - Model name
+Face matching and liveness detection
+4.2.2 - Model version
+v4
+4.2.3 - Model task
+TrustID performs biometric liveness and facial recognition checks on a live selfie captured by the person being checked, to confirm they are present at the point of capture and that the selfie is of the same person as the photograph in the document submitted for verification.
+4.2.4 - Model input
+User submitted selfie
+4.2.5 - Model output
+Result of the identity verification application (e.g., pass/fail)
+4.2.6 - Model architecture
+Convolutional Neural Networks (CNNs) for facial recognition and liveness checks
+4.2.7 - Model performance
+Model performance is not publicly disclosed by TrustID
+4.2.8 - Datasets and their purposes
+TrustID do not disclose the training datasets they used to train the model, it is assumed they have used datasets like; MIDV-500 / MIDV-2020: Public datasets for mobile identity document video analysis
+FMIDV: Focused on fraud detection in ID documents
+IDNet: A large-scale synthetic dataset with over 837,000 identity document images from U.S. and European sources, designed for fraud detection and privacy-preserving analysis.
+2.4.3. Development Data
+4.3.1 - Development data description
+Unknown - not developed by HOS
+4.3.2 - Data modality
+Unknown - not developed by HOS
+4.3.3 - Data quantities
+Unknown - not developed by HOS
+4.3.4 - Sensitive attributes
+Unknown - not developed by HOS
+4.3.5 - Data completeness and representativeness
+Unknown - not developed by HOS
+4.3.6 - Data cleaning
+Unknown - not developed by HOS
+4.3.7 - Data collection
+Unknown - not developed by HOS
+4.3.8 - Data access and storage
+Unknown - not developed by HOS
+4.3.9 - Data sharing agreements
+​​Unknown - not developed by HOS
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+​Face biometrics
+ID document
+4.4.2 - Sensitive attributes
+Data items on ID documents incl: full name; DOB; nationality; photograph; gender; issuing country; document number; validity period; signature; driving qualifications; address; birth certificate details;  marriage certificate details; national insurance or other national identity number. Various visible characteristics on photographs - e.g. race, ethnicity, religious symbols
+4.4.3 - Data processing methods
+N/A
+4.4.4 - Data access and storage
+TrustID staff have access to the original facial image capture and uploaded identity documents for a period of 7 days after collection. After this period the images are deleted by TrustID.
+HOS will have access to the RTW status report provided by TrustID after they have completed their checks. Access to the report is made available to HOS via a link through TrustIDs secure portal to which login access is limited to HOS People Team Recruitment staff only. This link is valid for a period of 7 days before it expires. The report must be downloaded within this 7 day period. Once downloaded, the report is saved to the candidate’s individual personnel record held on the People HR system. Access to this personnel record is restricted to People Team HR staff only.
+View only access for line managers to see the passport image has been agreed by the DPO based on the following:
+The additional processing of the data (viewing by line manager) is lawful in its own right as the conditions in Art 6(c) apply.  We are obliged by law to ensure the person showing up for work every day is the person we checked identity of;
+The additional processing is compatible with the original purposes for which it is collected and would not be unexpected by the data subject;
+We have applied appropriate technical and security measures to support the processing i.e. we are allowing VIEW only access to a limited audience, direct line manager only; and
+Our existing privacy notice already supports this.
+Current retention of personnel records is length of individuals employment + 6 years. After this retention period the record will be securely destroyed.
+4.4.5 - Data sharing agreements
+This verification report could be shared with third parties if required as below:
+​Home Office, if required to provide as evidence of statutory excuse to avoid a civil penalty or as part of a Home Office audit.
+​Law Enforcement Agencies (including Police/Immigration) if requested as part of a criminal investigation.
+​Solicitors acting on behalf of HOS/data subject, if required as part of legal proceedings involving HOS and/or the data subject
+​The data subject if requested under an Art 15 (GDPR) Right of Access request.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+Full DPIA conducted in October 2022 and under continuous review
+5.2 - Risks and mitigations
+Risk: Data subject is misidentified
+Mitigation: Manual intervention is made in the event of a ‘fail’ verification being indicated.
+Risk: API interface could be exploited and data be exfiltrated.
+Mitigation: Data is encrypted at rest and in transit so if API breach occurs the data extracted from TrustID would be protected by AES 256-bit encryption which is nearly unbreakable via traditional brute force cracking.
+Risk: There is a risk that some potential employees will not wish for their personal data to be processed in this way and will insist on a manual check. This may present an operational risk in conforming to expected timeframes in the recruitment process and mean that an alternative process for manual checks will need to be identified.
+Mitigation: Manual process can be requested
+Risk: There is a risk of a data breach occurring at TrustID or its sub processor leading to loss or unlawful access of personal data or loss of access to services for HOS.
+Mitigation: Data protection clauses in the terms and conditions with TrustID (Clause 14.5) regarding management of data breaches.
+SLA’s incorporated into T&Cs regarding service downtime and restoration.
+Due diligence conducted of security measures undertaken by TrustID to an acceptable standard.
+TrustID have established IT security processes in place including routine PEN testing
+Contents

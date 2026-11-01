@@ -1,0 +1,760 @@
+Money and Pensions Service: Redundancy Pay Calculator
+The Redundancy Pay Calculator is an online tool designed to help individuals who have been or are at risk of being made redundant understand their legal rights, calculate their potential redundancy pay, assess their financial situation, and explore available benefits and support.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Agency or public body
+Function:
+General public services
+Capability:
+Management
+Task:
+Rule-based classification
+Phase:
+Production
+Region:
+UK
+Date published:
+10 February 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Redundancy Pay Calculator
+2 - Description
+Purpose and Usage of the tool:
+The Redundancy Pay Calculator (RPC) is an algorithmic tool designed to help individuals who are being made redundant or at risk of redundancy. It functions as an interactive calculator and guidance system that processes personal information to provide tailored advice and financial calculations.
+How the tool is used:
+Users input personal information including:
+Redundancy date
+Employment start date
+Current salary
+Date of birth
+Location (Northern Ireland residency status)
+Company information (number of redundancies, company status)
+Monthly expenses across various categories
+The tool then processes this information through several sequential steps:
+- Calculates statutory redundancy rights and pay
+- Determines notice period entitlements
+- Assesses eligibility for benefits
+- Analyses financial sustainability based on provided expenses
+- Generates personalised guidance
+Why the tool is being used:
+1. To provide comprehensive support during redundancy by:
+- Helping individuals understand their legal rights
+- Calculating exact entitlements to redundancy pay
+- Assessing financial sustainability
+- Identifying potential insurance coverage
+- Determining benefit eligibility
+To streamline the redundancy process by:
+- Offering a self-service platform for initial redundancy calculations
+- Providing personalised action plans
+- Consolidating relevant information and guidance in one place
+- Enabling users to make informed decisions about their financial situation
+To ensure compliance with legal requirements by:
+- Accurately calculating statutory entitlements
+- Informing users of their legal rights
+- Providing documentation of calculations and entitlements
+The tool serves as a crucial resource for individuals facing redundancy, combining calculation capabilities with practical guidance to help users navigate both the financial and procedural aspects of redundancy.
+3 - Website URL
+https://www.moneyhelper.org.uk/en/work/losing-your-job/redundancy-pay-calculator
+4 - Contact email
+atrs.enquiries@maps.org.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Money and Pensions Service
+1.2 - Team
+Technology and Change
+1.3 - Senior responsible owner
+Chief Digital and Information Officer (CDIO)
+1.4 - External supplier involvement
+No
+2.1 - Detailed description
+Technical Architecture and Data Flow of the Redundancy Pay Calculator (RPC) Tool:
+Please note that the following information reflects the most up-to-date version of the tool and may be subject to change in the future.
+Data Collection Layer
+The calculator operates through a multi-step form that (temporarily) collects:
+Personal Information
+Redundancy date (Month/Year format)
+Employment start date (Month/Year format)
+Annual salary (Numerical value in GBP)
+Date of birth (Day/Month/Year format)
+Geographic location (Boolean check for Northern Ireland residency)
+Company Information
+- Number of redundancies (Numerical value)
+- Company status (Boolean - continuing/not continuing)
+- Redundancy package awareness (Boolean)
+Financial Information
+Monthly expenses broken down into categories:
+- Housing costs (GBP)
+- Household bills (GBP)
+- Food and shopping (GBP)
+- Insurance costs (GBP)
+- Transport costs (GBP)
+- Loan repayments (GBP)
+- Savings/investments (GBP)
+- Entertainment (GBP)
+- Family/pets (GBP)
+Calculation Engine
+Statutory Redundancy Pay Calculation
+Formula components:
+- Service length calculation: End date - Start date (in complete years)
+- Age-based multiplier determination:
+* 0.5 weeks’ pay for each year under age 22
+* 1.0 week’s pay for each year age 22-41
+* 1.5 weeks’ pay for each year age 41+
+- Weekly pay capping at £700
+- Service length capping at 20 years
+- Maximum statutory pay capping at £21,000
+Notice Period Calculation
+- Base calculation: 1 week per year of service
+- Minimum threshold: 4 weeks
+- Contract terms verification prompt
+Financial Sustainability Analysis
+1. Monthly income calculation:
+- Statutory redundancy pay ÷ monthly salary = months of coverage
+1. Expense aggregation:
+- Sum of all monthly expense categories
+1. Sustainability calculation:
+- Redundancy pay ÷ monthly expenses = months of financial coverage
+Eligibility Assessment Engine
+Benefits Eligibility
+Determines eligibility for:
+- Jobseeker’s Allowance (JSA)
+- Universal Credit
+- Council Tax Reduction
+- Support for Mortgage Interest
+Insurance Coverage Check
+Automated prompts for:
+- Mortgage Payment Protection Insurance
+- Payment Protection Insurance
+- Unemployment Cover
+Output Generation
+Legal Rights Summary
+Generates Personalised documentation of:
+- Fair process rights
+- Notice period entitlements
+- Consultation rights
+- Job hunting time allowances
+- Redundancy pay rights
+Financial Summary
+Produces detailed breakdown of:
+- Statutory redundancy pay amount
+- Financial sustainability analysis
+- Monthly budget analysis
+- Benefit entitlements
+Action Plan Generation
+Creates sequential checklist including:
+- Last day documentation requirements
+- Benefit application procedures
+- Insurance claim processes
+- Financial management steps
+System Constraints
+Geographic Limitations
+- Currently non-functional for Scottish taxpayers
+- Separate calculation rules for Northern Ireland residents
+Temporal Constraints
+- Survey completion time: approximately 10 minutes
+- Data input validation for dates within legal redundancy framework
+Calculation Caps
+- Weekly pay: £700
+- Service length: 20 years
+- Maximum statutory pay: £21,000
+Output Delivery
+Format
+- Digital summary document
+- Downloadable action plan
+- Printable rights summary
+- Interactive benefits checklist
+External Integration Points
+- Benefits calculator links
+- Council Tax Reduction application portals
+- Universal Credit application system
+- Job Centre Plus booking system
+This technical description highlights how the RPC functions as a sophisticated calculation and guidance system, processing multiple data points through various algorithmic layers to produce Personalised redundancy guidance and calculations. The system integrates legal requirements, financial calculations, and benefit eligibility rules into a comprehensive support tool.
+Each component is designed to work sequentially, with data validation at each step and specific calculation rules applied based on user inputs. The system maintains compliance with current statutory requirements while providing flexibility for different user scenarios and circumstances.
+2.2 - Scope
+Intended Purposes and Scenarios:
+Primary Purpose:
+To assist individuals who are either being made redundant or at risk of redundancy in understanding their rights, calculating entitlements, and planning their finances
+Designed Scenarios:
+a) Pre-Redundancy Planning:
+- When employees believe they may be at risk of redundancy
+- For understanding potential entitlements before formal redundancy notices
+- To help prepare financially for possible redundancy
+b) Active Redundancy Situations:
+- When formal redundancy has been announced
+- During consultation periods
+- When finalising redundancy arrangements
+c) Post-Redundancy Planning:
+- Calculating how long redundancy pay will last
+- Planning budget adjustments
+- Understanding and applying for benefits
+Specific Use Cases:
+- Calculating statutory redundancy pay
+- Determining notice period rights
+- Assessing financial sustainability
+- Checking insurance coverage
+- Evaluating benefit eligibility
+- Creating financial action plans
+4) Scenarios Not Designed For:
+a. Employment Calculations:
+- Regular salary calculations
+- Bonus or commission calculations
+- Regular employment benefit assessments
+- Standard payroll processing
+b. Legal Scenarios:
+- Providing specific legal advice
+- Handling unfair dismissal claims
+- Managing workplace disputes
+- Processing grievances
+- Calculating tribunal awards
+c. Geographic Limitations:
+- Not currently suitable for Scottish taxpayers (as explicitly stated in the document)
+- May not be applicable for international redundancy calculations
+d. Complex Redundancy Situations:
+- Mass redundancies (over 20 people) requiring different consultation processes
+- Complex contractual redundancy packages
+- Specialised industry-specific redundancy schemes
+- Company insolvency situations
+Financial Planning:
+- Long-term investment advice
+- Pension planning
+- Debt management
+- General financial advisory services
+Benefits:
+- Detailed benefits calculations
+- Processing benefit applications
+- Ongoing benefits management
+- Universal Credit full assessments
+Insurance:
+- Processing insurance claims
+- Calculating insurance premiums
+- Setting up new insurance policies
+These limitations help define the tool’s scope and prevent misuse or misunderstanding of its capabilities.
+2.3 - Benefit
+Key Benefits of the tool:
+Personalised Financial Assessment
+Provides tailored calculations of statutory redundancy pay based on individual circumstances
+Generates Personalised summaries of (fundamental) legal rights
+Delivers customised financial planning based on user’s specific expenses and situation
+Time and Resource Efficiency
+- Completes assessment in approximately 10 minutes
+- Streamlines complex calculations into an easy-to-follow process
+- Consolidates multiple aspects of redundancy planning into a single tool
+Comprehensive Support Framework
+- Combines financial calculations with practical guidance
+- Integrates multiple aspects of redundancy support (legal rights, benefits, insurance)
+- Provides step-by-step action plans for users
+Financial Planning Support
+- Helps users understand how long their redundancy pay will last
+- Assists in budgeting through detailed expense breakdown
+- Identifies potential additional sources of financial support
+Enhanced Access to Information
+- Centralises information about benefits and entitlements
+- Provides direct links to relevant external resources
+- Offers clear explanations of complex legal rights
+Expanded Justification:
+1. Addressing Information Gaps
+- Many individuals facing redundancy may not fully understand their rights
+- Complex calculations of statutory redundancy pay can be difficult to perform manually
+- Users might be unaware of available benefits and support systems
+Supporting Financial Wellbeing
+- Helps prevent financial hardship through early planning
+- Enables informed decision-making about future financial steps
+- Assists users in identifying all potential sources of financial support
+Reducing Administrative Burden
+- Automates complex calculations that would otherwise require manual processing
+- Provides immediate access to information that might otherwise require multiple consultations
+- Streamlines the process of understanding and claiming entitlements
+Promoting Legal Compliance
+- Ensures accurate calculation of statutory entitlements
+- Helps both employees and employers understand their rights and obligations
+- Reduces the risk of errors in redundancy calculations
+Emotional Support Through Information
+- Provides structure and clarity during a potentially stressful situation
+- Empowers users with knowledge and understanding
+- Offers clear next steps and action plans
+Accessibility and Inclusivity
+- Provides free access to important financial information
+- Offers multiple channels for additional support (phone helpline, external resources)
+- Makes complex information accessible to users regardless of their financial literacy
+Proactive Planning Support
+- Enables users to plan ahead if redundancy is anticipated
+- Helps users understand their financial position before making decisions
+- Supports both immediate and longer-term financial planning
+This tool is justified as it addresses a critical need for comprehensive, accurate, and accessible support during redundancy situations, while reducing the burden on both individuals and support services through automation and self-service capabilities.
+2.4 - Previous process
+Description of the Decision-Making Process Prior to Deployment:
+The decision-making process was guided by our constant research, an analysis of existing solutions, and an understanding of the evolving needs of UK citizens who are facing redundancy.
+Research That Informed Deployment of the Tool:
+Market Research and User Feedback: Market, user research and the feedback from our service delivery lines played a crucial role in shaping the development of the Redundancy Pay Calculator.
+Analysis of Competitor Tools: A competitor analysis was conducted, reviewing similar pension calculators from pension providers and other commercial market players.
+Internal Expertise and Collaboration: The decision-making process was also informed by the expertise of the policy and proposition team within the organisation. Leveraging their deep understanding of financial planning, the tool was designed to provide a balance between simplicity and accuracy. Collaboration with regulatory bodies also ensured that the tool met legal requirements and best practices.
+Technology and Digital Transformation Strategy: The decision to refine and iterate the tool has been based on organisations strategies to have impartial tool available for our users.
+2.5 - Alternatives considered
+Based on the documentation provided, I’ll analyse alternative tools that offer similar features to MaPS’s Redundancy Pay Calculator. Here are the main alternatives:
+UK Government Redundancy Calculator
+Website:
+https://www.gov.uk/calculate-your-redundancy-pay
+Features comparison:
+Basic statutory redundancy pay calculation
+Less comprehensive than MaPS’s tool as it doesn’t provide financial planning or benefits guidance
+Focuses solely on legal minimum entitlements
+ACAS Redundancy Calculator
+- Available through ACAS website
+- Features comparison:
+* Calculates statutory redundancy pay
+* Provides basic legal rights information
+* Lacks comprehensive financial planning tools
+* No benefits eligibility assessment
+* No expense planning capabilities
+Unite the Union Redundancy Calculator
+- Available to union members
+- Features comparison:
+* Basic redundancy pay calculations
+* Some legal rights information
+* Limited financial planning tools
+* No comprehensive benefits assessment
+Citizens Advice Redundancy Tools
+- Available through Citizens Advice website
+- Features comparison:
+* Basic redundancy rights information
+* Limited calculation capabilities
+* Benefits eligibility checking
+* No integrated financial planning
+* Separate tools rather than one comprehensive solution
+Key Limitations of Alternatives:
+Scope Limitations:
+- Most alternatives focus only on statutory redundancy pay calculations
+- Few offer comprehensive financial planning tools
+- Limited or no benefits eligibility assessment
+- Separate tools rather than an integrated solution
+Feature Gaps:
+- Lack of Personalised action plans
+- No integrated budget planning
+- Limited or no insurance coverage checking
+- No comprehensive benefits assessment
+User Experience:
+- Multiple tools needed to get the same information
+- Less integrated approach
+- More manual work required by users
+- No single source of information
+Support Features:
+- Limited or no guidance on next steps
+- Few offer comprehensive legal rights information
+- No integrated links to support services
+- Limited personalisation
+The MaPS Redundancy Pay Calculator appears to be unique in offering:
+1. Comprehensive integration of multiple features
+1. Step-by-step guidance
+1. Personalised action plans
+1. Complete financial assessment
+1. Benefits eligibility checking
+1. Insurance coverage assessment
+1. Links to additional support services
+This analysis suggests that while alternatives exist, they generally don’t provide the same level of comprehensive support and integration as the MaPS tool. Users would need to utilise multiple tools and services to achieve the same outcome that MaPS’s calculator provides in one place.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Here is how the Redundancy Pay Calculator (RPC) tool integrates into decision-making process:
+Information Gathering Phase
+The tool collects essential personal and employment data through a survey-style interface
+Users input key data points about their employment situation, personal circumstances, and financial status
+The process takes approximately 10 minutes to complete
+Legal Rights Assessment
+- Processes personal information to determine specific legal entitlements
+- Calculates statutory notice periods based on length of service
+- Identifies consultation rights based on the scale of redundancy (individual vs. collective)
+- Determines eligibility for paid time off for job hunting
+Financial Calculation Components
+- Computes statutory redundancy pay based on:
+* Length of service
+* Age-related pay multipliers (0.5, 1.0, or 1.5 weeks per year)
+* Weekly pay (capped at £700)
+* Maximum service consideration (20 years)
+- Analyses financial sustainability by comparing redundancy pay against monthly expenses
+Benefits and Support Assessment
+- Evaluates eligibility for various benefits including:
+* Job Seeker’s Allowance
+* Universal Credit
+* Council Tax Reduction
+* Support for Mortgage Interest
+Influence on Decision-Making:
+Advisory Role
+- The tool provides information but does not make final decisions
+- Outputs are recommendations, not directives
+- Users retain autonomy in how they use the information provided
+Financial Planning Support
+- Helps users understand their financial position
+- Projects how long redundancy pay will last based on current expenses
+- Enables informed financial planning decisions
+Rights Awareness
+- Informs users of their legal entitlements
+- Helps users identify potential unfair selection or process issues
+- Supports users in understanding their consultation rights
+Wider Decision-Making Context:
+Pre-Redundancy Phase
+- Tool supports early planning and understanding of rights
+- Enables financial preparation before redundancy occurs
+- Helps identify potential issues in the redundancy process
+During Redundancy
+- Guides users through immediate steps and entitlements
+- Provides structured approach to understanding and claiming rights
+- Supports documentation gathering and benefit applications
+Post-Redundancy Planning
+- Assists with budgeting and financial management
+- Directs users to relevant support services
+- Provides checklist for final day requirements
+Support Network Integration
+- Links to external services and resources:
+* Money Advice Helpline
+* ACAS
+* Jobcentre Plus
+* Benefits calculators
+* Council tax services
+* Mortgage support services
+Complementary Services
+- Works alongside other support mechanisms:
+* Personal advice services
+* Legal consultation
+* Employment support
+* Financial advisory services
+The RPC tool serves as an informative and calculatory aid within a larger decision-making ecosystem. While it provides valuable calculations and guidance, it functions as a support tool rather than a decision-maker, helping users make informed choices about their redundancy situation while directing them to additional resources and services as needed.
+3.2 - Provided information
+Information Output and Presentation:
+Personalised Legal Rights Summary
+Fair process rights explanation
+Minimum notice period calculations (based on length of service)
+Consultation rights based on company size
+Paid time off entitlements for job hunting
+Statutory redundancy pay rights
+Financial Calculations
+- Detailed statutory redundancy pay calculation showing:
+- Number of weeks’ entitlement
+- Pay rates for different age brackets
+- Maximum weekly pay caps
+- Total redundancy payment amount
+- Financial sustainability analysis showing:
+- Monthly expense breakdown
+- Duration redundancy pay will last
+- Comparison of redundancy pay to regular salary
+Benefits and Support Assessment
+- Jobseeker’s Allowance eligibility and amounts
+- Universal Credit information
+- National Insurance Credits status
+- Council Tax support options
+- Mortgage interest payment support details
+- Additional welfare and educational grants information
+Comprehensive Review Summary
+The tool presents a final summary containing:
+- User’s input information verification
+- Complete rights overview
+- Redundancy pay calculations
+- Monthly budget analysis
+- Benefits eligibility summary
+- Last day checklist
+- Relevant contact information
+Presentation Format:
+1. Structured Sections
+- Information is organised into seven clear steps
+- Each section builds on previous information
+- Complex information is broken down into digestible chunks
+Visual Elements
+- Tables for financial breakdowns
+- Clear categorisation of expenses
+- Highlighted key figures and amounts
+Practical Resources
+- Checklists for final day procedures
+- Contact information for relevant organisations
+- Links to external resources and calculators
+Accessibility Features
+- Clear headings and subheadings
+- Well-organised information hierarchy
+- Easy-to-follow progression through topics
+Interactive Elements
+- Online forms for data input
+- Calculators for financial planning
+- Links to additional resources and support
+This comprehensive output enables users to:
+- Understand their legal position
+- Make informed financial decisions
+- Plan their next steps
+- Access additional support as needed
+- Document their redundancy entitlements
+3.3 - Frequency and scale of usage
+The Redundancy Pay Calculator tool is a widely utilised resource, engaging numerous users on a daily basis. Over the course of the reporting period from December 1, 2023, to November 30, 2024, the tool recorded significant user activity. A total of 50k users initiated the tool, while 8.4k successfully completed the process, generating results. This represents a tool completion rate of 16%, indicating the proportion of users who fully navigated the tool and obtained calculated outcomes.
+3.4 - Human decisions and review
+The Redundancy Pay Calculator (RPC) facilitates a structured decision-making process for users facing redundancy. Here is a breakdown of the key decisions taken during the process and the scope of human review:
+User-Driven Decisions
+Input Provision:
+Users provide specific details about their employment and financial situation, such as:
+Date of redundancy.
+Employment start date.
+Salary details.
+Redundancy context (e.g., company size, package availability).
+Selection of Guidance Areas:
+Based on user needs, they can choose to explore:
+Legal rights.
+Financial calculations.
+Insurance coverage.
+Potential benefits entitlements.
+Financial Planning:
+Users input monthly expenses to project how long their redundancy pay will last. They make budgetary decisions informed by the calculator’s outputs.
+Tool-Driven Calculations
+The RPC provides automated outputs based on inputs:
+Statutory Redundancy Pay: Calculation adheres to statutory guidelines, factoring in age, length of service, and weekly pay caps.
+Budget Estimations: Determines how long redundancy funds will sustain the user.
+Human Review Options
+Although the RPC automates calculations, human oversight is embedded at key stages:
+1. Data Verification by Users:
+Users must verify and confirm the accuracy of their input data to ensure correct calculations.
+Consultation with Advisors:
+Users are encouraged to seek human assistance for:
+Understanding their legal rights.
+Reviewing detailed calculations.
+Ensuring that all potential benefits are claimed correctly.
+External Resources and Support:
+The tool provides access to external links for:
+Government benefit calculators.
+Advisory services (e.g., Acas, Jobcentre Plus) for personalised guidance.
+Legal and Financial Advisor Review:
+For significant discrepancies or complex situations (e.g., disputes over redundancy packages or contractual terms), users are directed to consult legal or financial advisors.
+This framework ensures that while the RPC automates routine calculations and initial guidance, human oversight remains integral for critical decision-making and validation.
+3.5 - Required training
+Required Training
+Developers:
+Developers need a solid foundation in both front-end and back-end development to build and maintain the Redundancy Pay Calculator tool. Key requirements include:
+Front-end and back-end skills: Proficiency in languages such as JavaScript, and React is crucial. The preferred infrastructure is Adobe Experience Manager.
+API management and security: Expertise in managing APIs, including authentication and secure access management, is essential for seamless integration and data protection.
+Version control, testing, and DevOps: Developers should be well-versed in version control (e.g., Git), automated testing, and DevOps practices to ensure continuous integration and deployment (CI/CD) pipelines are efficient and reliable.
+Agile practices: Familiarity with Agile methodologies is important. Developers will need to work in sprints, participate in regular scrums, and respond to changing requirements quickly, ensuring iterative improvements and collaboration with cross-functional teams.
+Users:
+The tool is currently live, providing users with clear guidance on how to navigate it, ensuring they understand both its capabilities and limitations. Key features include:
+- Step-by-step digital journey: The tool is divided into sections, with each section on a separate page. Users can easily track their progress through the journey and see what information is required to proceed to the next step.
+- On-page explanations: Each page provides relevant information, explaining terms and variables that may impact the final pension outcome. This helps users make informed decisions and understand the implications of their inputs.
+3.6 - Appeals and review
+Mechanism for review or appeal (available to the public): The results are illustrative and not a final financial determination.
+If users believe the results are inaccurate, they are encouraged to seek regulated financial advice, especially when dealing with complex redundancy situations.
+For users who feel the tool is inaccurate or not functioning as expected, there are multiple ways to provide feedback or seek additional help:
+These feedback channels ensure that any issues with the tool can be promptly addressed while offering users the opportunity to consult a financial advisor if needed.
+Report Issues: If users encounter bugs, errors, or inaccuracies, they can report these issues using one of the following methods:
+Call the free helpline at 0800 011 3797 or use the webchat feature.
+Complete the feedback form available at MoneyHelper’s feedback page (e.g.
+https://www.moneyhelper.org.uk/en/contact-us/feedback).
+.)
+Participate in the navigation survey, which is presented after 120 seconds of using the site.
+Contact staff directly through the contact page for a more detailed issue description (e.g.
+https://www.moneyhelper.org.uk/en/contact-us).
+.)
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+High-Level System Architecture for the tool:
+The Redundancy Pay Calculator tool is a web component built using a programming language, integrated into the MoneyHelper website. This tool guides users through a structured digital journey organised into seven steps to provide a user with a set of recommendations based on their redundancy scenario. Below is a high-level description of its system architecture, summarising key technical features:
+Technology and Computation:
+The tool currently operates as a web application hosted on the MoneyHelper website.
+The computations take place on the server side, leveraging the backend capabilities to perform calculations and deliver results dynamically to the user’s browser.
+The architecture ensures that all data is processed securely and efficiently.
+No data retention takes place.
+Key Technical Features:
+User Input Collection:
+The tool begins by collecting user-specific information, including job tenure, salary, and redundancy details. This data forms the basis for personalised calculations and advice.
+Input fields cover financial data (e.g., salary, redundancy date), company details, and personal circumstances.
+Data Processing and Calculation:
+The RPC uses algorithms to calculate statutory redundancy pay based on the user’s years of service, age, and salary.
+It incorporates current legislative caps (e.g., weekly pay limits and maximum redundancy payment thresholds).
+Output Flow - The core calculation engine utilises these inputs and assumptions to generate outputs in real time.
+The tool computes:
+Estimated Redundancy Pay: Calculates redundancy pay by accounting for user, employment and employer details.
+Once processed, the output is displayed on the front-end interface, allowing users to view their estimated redundancy pay as well as recommendations.
+Users can modify their inputs to re-generate results, facilitating an understanding of how different decisions impact their projected output.
+Guidance and Decision Support:
+Based on the user’s input, the tool generates tailored advice regarding redundancy rights, legal entitlements, and financial planning.
+The output includes step-by-step guides for managing redundancy, including budgeting, exploring benefits eligibility, and assessing insurance coverage.
+Dynamic User Interface:
+The tool provides an interactive experience, guiding users through seven key steps: understanding rights, calculating entitlements, budgeting, and reviewing benefits.
+It ensures accessibility through straightforward navigation and user-friendly design.
+Integrated Budgeting Tool:
+The tool extends its utility by providing users with a monthly budget planner, allowing them to estimate how long their redundancy payments will last given their expenses.
+External System Integration:
+Links to external resources and calculators, such as benefit calculators and budget planners, are embedded to enhance user guidance.
+Integration with government services (e.g., Jobseeker’s Allowance and Universal Credit portals) facilitates direct access to further support.
+Compliance and Security:
+The RPC complies with relevant privacy and data protection laws to safeguard user information.
+In summary, the RPC combines financial calculation tools with legal and practical guidance to support users in navigating the redundancy process effectively. Its architecture is designed to deliver personalised, actionable insights while maintaining user data security.
+Reference Documentation:
+For more detailed information on how the tool works and the information required, please refer to the ‘Redundancy’ section (
+https://www.moneyhelper.org.uk/en/work/losing-your-job/redundancy-pay)
+) and the more general ‘Losing your Job’ section of the MoneyHelper website (
+https://www.moneyhelper.org.uk/en/work/losing-your-job).
+.)
+Code updates are stored into our private GitHub repository and applied on the production environment whilst release notes are taken.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Yearly review to capture variations in legislations or on the other parameters.
+Changes in the legislation, terms or deadlines, statutory payments are reflected in the code updates which are reviewed every year.
+Github code repository is not public.
+The parameters which are affected by regular review are reflected in the following Section 2.4.1.4 and include:
+. Age bands
+. Pay Cap
+. Service Cap
+. Tax Exemption
+. Salary
+. Redundancy date and
+Code updates uploaded on our private GitHub repository.
+4.1.4 - Models
+The Redundancy Pay Calculator (RPC) is a digital tool designed to provide users with a tailored estimate of their statutory redundancy entitlements, guidance on managing their finances during redundancy, and information about potential benefits.
+Below is a detailed breakdown of the RPC’s model and its components, adhering to the UK’s Algorithmic Transparency Recording Standard (ATRS):
+Model Purpose
+The RPC aims to:
+Calculate statutory redundancy pay based on user input.
+Provide financial planning assistance and rights information.
+Offer tailored recommendations on benefits and insurance options.
+Key Assumptions and Parameters
+The model operates under the following statutory assumptions:
+- Age Bands:
+- Under 22 years: 0.5 weeks’ pay per full year of service.
+- 22–41 years: 1 week’s pay per full year of service.
+- 41 years and over: 1.5 weeks’ pay per full year of service.
+- Pay Cap: Weekly pay is capped at £700.
+- Service Cap: Total length of service is capped at 20 years.
+-  Maximum Statutory Pay: £21,000.
+- Tax Exemption: Redundancy pay up to £30,000 is tax-free.
+User Input
+The tool requires users to input:
+- Employment start and end dates.
+- Age at the time of redundancy.
+- Annual salary.
+- Location (Northern Ireland-specific rules are considered).
+- Details about the employer (e.g., number of redundancies).
+Formulas and Calculations
+The statutory redundancy pay calculation follows this formula:
+- Determine eligible years in each age band.
+- Apply the weekly pay cap (£700) and age band multiplier.
+- Sum payments for all years of service within the service cap:
+Guidance and Outputs
+The tool provides:
+- Summary of legal rights (e.g., notice periods, consultation requirements).
+- Financial planning assistance: Breakdown of monthly expenses, duration of redundancy pay coverage.
+- Benefit eligibility: Information on Jobseeker’s Allowance, Universal Credit, and other benefits.
+- Insurance suggestions: Guidance on unemployment and mortgage protection policies.
+Transparency and Fairness
+- The RPC highlights its statutory basis and limitations upfront.
+- Updates are planned to account for regional differences, e.g., for Scotland (from Autumn 2024).
+- Explicit user consent and data handling guidelines ensure compliance with transparency and privacy requirements.
+This model ensures fairness and accessibility by providing users with a comprehensive and legally accurate redundancy roadmap based on their specific circumstances.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Redundancy Pay Calculator (Rule-based model)
+4.2.2 - Model version
+Current version is 6.6.1
+4.2.3 - Model task
+The model estimates an individual’s redundancy pay income based on their current age, salary, job tenure and employer’s details.
+4.2.4 - Model input
+Model inputs include:
+Date of birth, gender
+Age at the time of redundancy.
+Employment start and end dates.
+Annual salary.
+Location (Northern Ireland-specific rules are considered).
+Details about the employer (e.g., number of redundancies).
+4.2.5 - Model output
+The model outputs the user’s predicted redundancy pay; it also provides insights and recommendations.
+4.2.6 - Model architecture
+The model is rule-based rather than machine-learning-based. It uses assumptions and calculations based on user input to project pension outcomes:
+Assumptions:
+Age Bands:
+Under 22 years: 0.5 weeks’ pay per full year of service.
+22–41 years: 1 week’s pay per full year of service.
+41 years and over: 1.5 weeks’ pay per full year of service.
+Pay Cap: Weekly pay is capped at £700.
+Service Cap: Total length of service is capped at 20 years.
+Maximum Statutory Pay: £21,000.
+Tax Exemption: Redundancy pay up to £30,000 is tax-free.
+The architecture of the calculator involves deterministic projections using these predefined assumptions and user inputs.
+4.2.7 - Model performance
+The model’s performance is closely tied to its ability to generate accurate projections based on user-provided information, as well as assumptions about age cap, pay cap, maximum statutory pay, tax exemption. As a financial planning tool, it aims to provide illustrative results that help users make informed decisions about their redundancy situation. The accuracy of the tool’s output is directly influenced by the precision of the data entered by users, and the results are generated instantaneously once inputs are submitted.
+To ensure high-quality, accurate outputs and to validate that the underlying rules and assumptions function as intended, several performance testing practices are applied during both the development and annual maintenance phases.
+Best practices include:
+User Guidance and Input Validation: To assist users in providing accurate and relevant data, the tool features informative prompts and guidance throughout the interface. These messages clarify the significance of specific inputs and help reduce the risk of errors that could lead to inaccurate projections.
+Adjustment Flexibility: The tool enables users to modify key assumptions—such as redundancy date, salary, age—to see how changes affect their projected income. This allows for dynamic testing of various scenarios and ensures that the tool performs well under different sets of inputs.
+Collaboration with the Government Actuary’s Department (GAD): Another part of the performance testing involves the use of test scenarios originally provided by the GAD. These scenarios include pre-defined inputs and corresponding expected outputs, which serve as a benchmark to ensure that the tool is working as intended. These test cases are reviewed and updated as necessary, particularly when there are policy changes (e.g., adjustments to the maximum statutory pay).
+Systematic Testing and Deployment:
+When significant updates are needed—such as those triggered by changes in statutory payment, tax exemption as well as other assumptions—the tool is first refined and tested in a development environment.
+The updated tool is evaluated against the GAD test cases to ensure alignment with expected results.
+Following successful internal testing, the tool undergoes beta testing in a production-like environment to ensure stability and accuracy under real-world conditions.
+Once the beta version consistently meets performance expectations, the final version is deployed to the public.
+By adhering to these practices, the Redundancy Pay Calculator maintains a satisfactory standard of accuracy and reliability, ensuring that users receive relevant, dependable forecasts based on the latest data and assumptions. This thorough approach to performance testing helps guarantee that the tool continues to meet user expectations and regulatory requirements.
+4.2.8 - Datasets
+The dataset utilised for developing and validating the model used by the Redundancy Pay Calculator consists of simulated scenarios consisting of users data with varying combinations of inputs.
+A dataset consisting of 120 various combinations and examples has been used for functional tests, and more than 100 for unit tests.
+In particular, the functional test cases consist of a structured collection of input data and corresponding expected outputs. For instance, given specific input parameters such as redundancy_month/year, salary, date_of_birth_day/month/year, employee_contribution, and residence_in_northern_ireland,number_of_redundancies, company_bankrupt_or_not and knowledge_of_redundancy_package the model is evaluated by comparing its output for redundancy_pay, all of which are rounded to zero decimal places.
+4.2.9 - Dataset purposes
+Simulated test cases for the Redundancy Pay Calculator covered key statutory scenarios:
+Core Variable Testing:
+Employment length (under 2 years to maximum 20 years)
+Age brackets (under 22, 22-41, over 41) affecting payment rates
+Salary levels (below and above £700 weekly cap)
+Company status (continuing/ceasing trading, redundancy scale)
+Regional Considerations:
+- Standard UK cases
+- Northern Ireland variations
+- Scottish exclusions
+Calculation Verification:
+- Statutory notice periods
+- Paid time off entitlements
+- Budget planning scenarios
+- Benefits eligibility
+As a rule-based system implementing fixed statutory formulas, no training or validation datasets were required.
+Testing focused on verifying accurate calculation of legal entitlements and appropriate guidance across different scenarios.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Redundancy Pay Calculator (RPC) Test set - Simulated dataset
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+redundancy_month/year, salary, date_of_birth_day/month/year, employee_contribution, and residence_in_northern_ireland,number_of_redundancies, company_bankrupt_or_not and knowledge_of_redundancy_package
+4.3.4 - Data quantities
+120 full complete scenarios (data containing all the inputs and expected outputs) to analyse functional aspects
+More than 100 combinations for unit tests.
+4.3.5 - Sensitive attributes
+Specifically, the RPC test set cases provide a collection of inputs and their corresponding expected outputs. Sensitive attributes in these test cases include personal data such as date_of_birth and salary, which are proxy variables for age.
+4.3.6 - Data completeness and representativeness
+Data has no missing points, and it moderately represents the target population.
+4.3.7 - Source data URL
+No available public URL
+4.3.8 - Data collection
+This dataset comprises a sample of individuals with varying salary, date of birth, company details, number of redundancies an job start date. This data was obtained directly via numerical simulation.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+No data—personal, sensitive or otherwise—is stored. Data is temporarily stored in the browser during the user’s navigation through the tool, allowing them to move back and forth until they reach the final summary step (customers in this way can evaluate the impact of changes in the input parameters and how these affect the outcome). Once the browser window is closed, the session data is not persisted, and customers cannot return to their previous session.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+As part of our ongoing review of all tools, we have developed a new DPIA model for the Redundancy Pay Calculator. This is based on the data we’ve collected and our latest analytics infrastructure. As a general practice, publicly-exposed tools that might use Personally Identifiable Information (PII) data, require a DPIA assessment.
+A new DPIA model has been completed and approved on the 05th of December 2024 ahead of the publication.
+Key Findings:
+Risk Level: Low, with a review frequency set to every 12 months
+5.2 - Risks and mitigations
+We highlight here some potential risks related to the algorithmic approach used and outline mitigation strategies where applicable:
+1. Unintentional Data Exposure
+- Risk: Even though data is not stored, there remains a minimal risk of exposure through browser history or cached information.
+- Mitigation: The risk is mitigated through the implementation of a session timeout, which restricts the duration of user sessions and ensures that no data is retained once the session concludes. This measure helps to prevent unintended data exposure.
+Lack of transparency
+- Risk: A lack of transparency regarding data processing activities may result in customer distrust and potential non-compliance with GDPR requirements. Ensuring the provision of clear, comprehensive information about how data is processed enhances users’ understanding and confidence in data management practices.
+- Mitigation: The risk is mitigated through the actions outlined in the corresponding section.
+Inability to access services or opportunities
+- Risk: Users may occasionally be unable to access the tool due to temporary service unavailability or cybersecurity concerns.
+- Mitigation: The risk is mitigated by conducting regular assessments of the website’s security measures to detect and resolve any potential vulnerabilities. Additionally, the tool’s activity is continuously monitored to ensure its ongoing security and functionality.
+The DPIA indicates all identified risks have appropriate controls in place.
+Contents

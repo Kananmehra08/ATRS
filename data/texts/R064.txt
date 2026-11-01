@@ -1,0 +1,140 @@
+Greater Cambridge Partnership: Smart Pedestrian Crossing Trial
+Starling's Pedestrian Detector is a camera based, AI powered sensor for signalised pedestrian crossings that runs real-time analysis of all street users.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+15 April 2024
+Organisation:
+Greater Cambridge Partnership
+Organisation type:
+Local authority
+Function:
+Public order and safety
+and
+Housing and community amenities
+Capability:
+Computer vision
+Task:
+Object detection
+Phase:
+Beta/Pilot
+Region:
+East of England
+Date published:
+15 April 2024
+ATRS version:
+v2.1
+Tier 1 Information
+Name
+Pedestrian Detector
+Description
+National and local policies support pedestrians being at the top of the travel hierarchy giving them primacy over other modes. This is further supported by changes to the Highway Code. Local Authorities are working to look at how changes to the urban environment and the application of technologies can support better pedestrian access, encouraging walking and reducing the number of private car trips taken. The GCP is working with the Starling Detector and algorithmic tool as it enables pedestrian crossings to be dynamically responsive to road crossers by predicting demand, understanding the type of users wanting to cross which allows a reduction in waiting times and can create a walking green wave whilst reducing the impact on traffic flows.
+Website URL
+Starling Technologies
+Contact email
+smart.cambridge@cambridgeshire.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Greater Cambridge Partnership
+1.2 - Team
+Smart Workstream at the Greater Cambridge Partnership
+1.3 - Senior responsible owner
+Head of Innovation and Technology
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Starling Technologies, 93 Tabernacle Street, London, United Kingdom, EC2A 4BA,
+1.4.2 - Companies House Number
+12521363
+1.4.3 - External supplier role
+Starling developed the algorithmic tool.
+1.4.4 - Procurement procedure type
+Limited time trial, with the local authority not funding the deployment.
+1.4.5 - Data access terms
+No data from the Local Authority was supplied
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+N/A
+2.2 - Scope
+The tool was designed to:
+Replace existing on-crossing, kerbside, and approaching vehicle detectors with a single device. The existing detectors used 2 types:
+On-crossing detector
+(2 pole mounted radar detectors located on either side of the road that facing the pedestrian crossing area on the road) – Used to extend the red time (up to a pre-set maximum) given to vehicles when a pedestrian is detected on the crossing. The way these are traditionally used is to minimise delay to traffic i.e. if someone is not detected on the crossing when red to vehicles or someone crosses the road quickly it will go back to green for vehicles quicker.
+Microwave Vehicle Detector
+(2 pole mounted radar detectors facing each traffic approach) – Used to extend the vehicle green time (up to a maximum) when vehicles are detected moving towards a crossing i.e. used to ensure traffic keeps flowing.
+Generate vehicle and pedestrian metrics such as counts, average speeds, average wait times, etc.
+Categorise road users into different categories.
+The tool having identified in objects in its field of view, classifies them and then makes decisions to optimise the crossing experience for pedestrians.
+Track individuals across multiple sites
+Identify individuals (All data is processed in real-time with no storage of personal information, ensuring user privacy)
+2.3 - Benefit
+The Starling Detector offers significant advantages in urban mobility and public safety. By consolidating three different types of sensors into a single, more sophisticated unit, it not only reduces overall costs but also enhances the utility of sensors at signalised pedestrian crossings. This integration leads to a richer and more comprehensive data stream, crucial for traffic engineers to understand both vehicle and pedestrian behaviours more deeply. Traditional systems primarily focus on vehicular traffic, providing limited insight into pedestrian dynamics. However, the Starling Detector fills this gap by offering detailed metrics on pedestrian flow, speed, density, and delay. It goes a step further by capturing the unique aspects of pedestrian movement, such as counter-propagating flows, which are essential for a thorough understanding of pedestrian experiences at crossings.
+Moreover, the tool’s ability to use these insights for real-time optimization of signal timings directly contributes to enhancing pedestrian safety and convenience. It addresses key urban planning concerns like sustainability and public health by encouraging walking and other forms of active travel. In a broader context, the Starling Detector aligns with environmental goals by potentially reducing vehicular traffic and contributing to cleaner, more pedestrian-friendly urban environments. Thus, the tool not only improves the efficiency of pedestrian crossings but also plays a pivotal role in fostering safer, more sustainable, and more inclusive urban landscapes.
+2.4 - Previous process
+Previously the crossing used two types of detectors:
+On-crossing detector
+(2 pole mounted radar detectors located on either side of the road that facing the pedestrian crossing area on the road) – Used to extend the red time (up to a pre-set maximum) given to vehicles when a pedestrian is detected on the crossing. The way these are traditionally used is to minimise delay to traffic i.e. if someone is not detected on the crossing when red to vehicles or someone crosses the road quickly it will go back to green for vehicles quicker.
+Microwave Vehicle Detector
+(2 pole mounted radar detectors facing each traffic approach) – Used to extend the vehicle green time (up to a maximum) when vehicles are detected moving towards a crossing i.e. used to ensure traffic keeps flowing.
+2.5 - Alternatives considered
+N/A
+Tier 2 - Decision making Process
+3.1 - Process integration
+Signalised pedestrian crossings are configured by traffic engineers who define the rules that govern the signal priorities and timings. Over the trial period the metrics generated by the sensor will inform the decision-making process of the signals i.e when to cross and when not to cross. The data generated will not be used for any other decision-making processes within the Greater Cambridge Partnership.
+3.2 - Provided information
+The metrics the tool can generate are:
+Counts
+Average velocities
+Delay time
+Densities
+Near miss counts
+Vehicle classifications
+Pedestrian classifications
+3.3 - Human decisions and review
+Prior to the deployment a human defines the user defined objectives (e.g. reduce pedestrian delay time), which will directly influence the decision-making process. During the deployment and setup phase a human inspects the operation of the outputs to ensure correct functionality. During operation humans have access to the metrics and results/intervention data for review.
+3.4 - Required training
+For the trial deployment no training is required to oversee the deployment, use or maintenance of the sensors. A third party with expertise in the signals field has been retained to provide independent validation of the tool.
+3.5 - Appeals and review
+N/A
+Tier 2 - Technical Specification and Data
+4.1 - Method
+The Starling Detector uses YOLOv4 (You Only Look Once, version 4) for object tracking. YOLOv4 is a deep learning model known for its high speed and accuracy in real-time object detection. More details about YOLOv4 can be
+found in its documentation
+.
+4.2 - Frequency and scale of usage
+The tool operates continuously at any deployment site, analysing all vehicles and pedestrians within its visual field of view.
+4.3 - Phase
+Beta/Pilot
+4.4 - Maintenance
+Software maintenance, including necessary updates (e.g., for security), is managed by the Starling team. Hardware maintenance is the responsibility of local councils. Regular maintenance isn’t typically required unless there are specific issues. The tool is remotely monitored and any fault is reported if possible.
+4.5 - Model performance
+YOLOv4, which the Starling Detector utilises, has demonstrated high performance in testing environments. Specifically, it achieved an average precision of 43.5% on the MS-COCO dataset, a standard benchmark in object detection.
+4.6 - System architecture
+Documentation page for YOLOv4
+Github repository for YOLOv4
+4.7 - Source data name
+MS-COCO
+4.8 - Source data description
+The basic training of YOLOv4 uses the MS-COCO dataset, which contains a diverse range of day-to-day objects. For custom models, we use anonymized video footage from our sensors, stored for only 30 days. No personal information is recorded or stored, and real-time operation involves anonymized footage.
+4.9 - Source data URL
+N/A
+4.10 - Data collection
+The YOLOv4 model was initially trained on the MS-COCO dataset, a large-scale object detection dataset. For our custom training, data is collected from trial sites with anonymized video footage, which is deleted after 30 days.
+4.11 - Data cleaning
+We employ a thorough process to ensure the integrity and quality of the anonymised footage collected from our trial sites. This footage undergoes an initial anonymisation phase, where faces and number plates are blurred to protect individuals’ privacy, a critical step outlined in our Data Protection Impact Assessment (DPIA). Following this, the data is further processed to enhance its utility for training our YOLOv4-based object detection system. This includes verifying the consistency and accuracy of the anonymisation technique, ensuring that no personal identifiers remain visible. Additionally, we perform quality checks to remove any corrupted or unclear footage and standardise the format and resolution of the videos to ensure uniformity. This meticulous approach not only safeguards personal privacy as per our DPIA guidelines but also significantly contributes to the robustness and reliability of our object detection model, enabling it to learn from high-quality, representative data.
+4.12 - Data completeness and representativeness
+YOLOv4’s training on the MS-COCO dataset ensures a broad representation of various objects. For our custom training, we strive to ensure representativeness in the collected data, although specifics on data completeness are as per YOLOv4’s standards.
+4.13 - Data sharing agreements
+A DPIA is in place (see 5.1 - Impact Assessment)
+4.14 - Data access and storage
+The data used for training custom YOLOv4 models is stored locally on the detectors for up to one day, after which it will be uploaded to Google Cloud Platform servers. Only the Starling Technologies team has access. It’s stored for up to 30 days after which the footage is automatically deleted.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Please download the following DPIA: www.greatercambridge.org.uk/asset-library/Smart/Starling-Technologies-DPIA-Steps-1-5-DETECTOR-Cambridge-June-2022.pdf
+5.2 - Risks
+See the DPIA above.
+Contents

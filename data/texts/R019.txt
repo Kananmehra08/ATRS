@@ -1,0 +1,138 @@
+OSBC: Interest Calculator
+The interest calculator assists small business owners to calculate the amount of interest due on an overdue invoice.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Business and Trade
+Organisation type:
+Agency or public body
+Function:
+Economic affairs
+Capability:
+Management
+Task:
+Rule-based classification
+Phase:
+Production
+Region:
+UK
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+Interest Calculator
+2 - Description
+The Interest Calculator calculates the amount of interest due on an overdue invoice. This is completed by a representative from a small business that has an outstanding invoice. The representative enters key information, such as date invoice was received, how much is owed, and the tool calculates the amount of interest due. As well as providing the small business representative with guidance this tool allows the business to correctly bill interest on overdue invoices. The calculator has provided small businesses a simple way to calculate the interest due on an overdue invoice and has received excellent feedback from small businesses.
+3 - Website URL
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator/
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator-guidance-page/
+4 - Contact email
+comms@smallbusinesscommissioner.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Office of the Small Business Commissioner
+1.2 - Team
+Communications & Engagement Team
+1.3 - Senior responsible owner
+Head of Communications and Engagement
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Interest Calculator tool works by supporting small businesses to know how much interest and compensation to charge on their unpaid invoices. It works by small business representatives completing one multiple choice (2 options) question followed by a date and then a series of relevant numbers (e.g. contracted payment days, original invoice amount). This allows the tool to calculate how much interest is owed - this is done through a basic mathematical formula.
+2.2 - Scope
+The tool is designed to be used by small businesses who have an overdue invoice to know how much interest they can add on to the invoice as the overdue change. Our Guidance Page outlines how interest is calculated:
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator-guidance-page/
+In theory any business could use the calculator but larger businesses tend to have finance teams who would do the calculations on their payment terms so are unlikely to use it.
+The OSBC’s interest calculator has been designed to comply with the Late Payment of Commercial Debts (Interest) Act 1998. This means that it uses the Bank of England (BoE) base interest rate applicable on 31 December, from 1 January to 30 June, and base rate applicable on 30 June, from 1 July to 31 December, from each year – plus 8% – to determine the statutory interest applicable for the overdue invoice. Therefore we update it twice a year to reflect these dates. We advise users to visit the BoE website to review current and legacy interest rates.
+We are clear on the page that it is a guide, we state “While this gives a fairly accurate figure it should be used as a guide to the amount of interest and compensation you can charge on overdue invoices. If you want a more accurate figure, please carry out a manual calculation.”
+We are the Office of the Small Business Commissioner and we make it clear on our website that all of our tools are designed for small businesses to use. Larger businesses can use our tools but we are clear that they are not designed for them or with them in mind.
+2.3 - Benefit
+The OSBC Vision and Mission is to make the payment environment better for small businesses. The Interest Calculator is part of this mission by making a complicated, and often under used payment practice, easier to understand. The tool supports businesses to know what they can charge without the need for them to use the complicated mathematical formula themselves. The calculator also empowers businesses to address late payments they are experiencing themselves rather than using the OSBC complaints service. The latest data (from the BVA-BDRC) shows the proportion of SMEs reporting cash flow or late payments as being a major barrier holding back business growth has been steadily rising from 11% in 2022, and is currently 19%.
+2.4 - Previous process
+It was clear to the Office of the Small Business Commissioner that Invoice Interest entitlement was an area that small businesses lacked knowledge of and where often not charging what they were entitled to. The tool was developed as an educational and support tool to ensure that businesses had an independent tool that they could trust to work out the interest on their behalf. There was no previous calculator in place.
+2.5 - Alternatives considered
+N/A - No other relevant tools available to undertake this task sufficiently without large development and run costs.
+Tier 2 - Decision making Process
+3.1 - Process integration
+When a business is looking to charge interest on an overdue invoice the business may then use this tool to work out how much interest to add to the initial owed payment.
+After using the interest calculator they can now add the figure provided by the calculator to the reissued invoice when requesting the overdue payment.
+3.2 - Provided information
+The questions are as follows:
+Do you have contracted payment terms? Yes/No [If Yes: What are your contracted payment days from date of invoice as per the contract?]
+What was the date invoice received by respondent? Day/Month/Year
+If the overdue invoice has been paid, what was the date of payment? Day/Month/Year
+How much are you owed for this invoice (include any VAT)? Invoice value (£)
+Button “Calculate Interest”
+From this a figure is calculated. This often helps the business decide if it is worth chasing the invoice and changing interest.
+3.3 - Frequency and scale of usage
+The number of people accessing the Interest Calculator page on the SBC website is approximately 2.8k per month.
+3.4 - Human decisions and review
+It is down to the human to enter their numbers correctly into the tool, the tool makes clear what the equation the calculator uses to formulate an answer. Once the calculator provides an answer, it is down to the human to make the final decision as to if the tool has provided them with the answer they were expecting. The OSBC guidance is clear that this should be used alongside a manual calculation.
+3.5 - Required training
+User guidance is provided with the tool, found here:
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator-guidance-page/.
+This includes frequently asked questions. The guidance is reviewed regularly and updated when necessary.
+3.6 - Appeals and review
+On our “Contact Us” page of the website (
+https://www.smallbusinesscommissioner.gov.uk/contact-us/)
+) we actively encourage anyone having any issues with our site to contact us and provide an email address for them to do so.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Interest Calculator (
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator/)
+) allows website visitors to calculate how much interest they should be charging for late payments on invoices.
+The front-end interface asks for user input and displays results on form submit (e.g. click on the “Calculate interest” button on the page).
+The back-end interface allows SBC to set/change compensation amounts, base rate, statutory rate and historic base rates. Amounts are rounded up to 2 decimals and displayed on the front end.
+The Interest Calculator is a custom implementation on WordPress (the content management system of the SBC website).
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Our casework team use the tool daily alongside doing the manual calculation ensuring daily review of the tools continued correct function.
+The tool is reviewed and updated twice a year to comply with the Late Payment of Commercial Debts (Interest) Act 1998 in relation to the Bank of England (BoE) base interest rate.
+4.1.4 - Models
+((interest rate x outstanding invoice amount) / 365) * number of days overdue) for each period. These results are added to calculate the total figures.
+This is the full extent of the Calculator functionality – there are no machine learning, or other statistical or mathematical models applied / involved.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Interest calculation
+4.2.2 - Model version
+2024-06-01 00:00:00
+4.2.3 - Model task
+The tools task is to calculate the interest owed on an overdue invoice.
+4.2.4 - Model input
+The Date an invoice was due and the money that was owed in pound sterling.
+4.2.5 - Model output
+The amount of interest which can be charged in pound sterling.
+4.2.6 - Model architecture
+There is no advanced model applied. The Calculator uses the formula above to calculate the days overdue and the respective amounts (based on the constants provided in the back-end) and display them on the front-end.
+4.2.7 - Model performance
+The tool works well and works as intended, The tool is well used with no reported tool functionality complaints to date.
+4.2.8 - Datasets
+The OSBC’s interest calculator has been designed to comply with the Late Payment of Commercial Debts (Interest) Act 1998. This means that it uses the Bank of England (BoE) base interest rate applicable on 31 December, from 1 January to 30 June, and base rate applicable on 30 June, from 1 July to 31 December, from each year – plus 8% – to determine the statutory interest applicable for the overdue invoice.
+The tool was initially trailed by our OSBC casework team, alongside doing the manual calculation to ensure the model worked well.
+Now our caswork team use the tool daily alongside doing the manual calculation ensuring daily review of the tools continued correct function.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The OSBC interest calculator can be found here:
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator/
+Guidance on its use can be found here:
+https://www.smallbusinesscommissioner.gov.uk/interest-calculator-guidance-page/
+No impact assessments has been made.
+5.2 - Risks and mitigations
+The main risks are:
+human error e.g. people entering incorrect numbers
+users not reading the guidance before using the tool and therefore using it incorrectly
+How are we mitigating against these risks:
+- to mitigate against incorrect use of the tool we have provided guidance with FAQs
+- on the landing page we have added a user update following our update in 2023
+- We have the following disclaimer: “While this gives a fairly accurate figure it should be used as a guide to the amount of interest and compensation you can charge on overdue invoices. If you want a more accurate figure, please carry out a manual calculation”
+Contents

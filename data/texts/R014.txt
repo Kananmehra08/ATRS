@@ -1,0 +1,219 @@
+HMPPS: Violence in Prisons Estimator
+The Violence in Prisons Estimator helps prison staff to understand the violence risk of offenders in custody.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 April 2025
+Organisation:
+Ministry of Justice
+Organisation type:
+Agency or public body
+Function:
+Public order and safety
+Capability:
+Forecasting
+Task:
+Trajectory and trend prediction
+Phase:
+Production
+Region:
+Wales
+and
+England
+Date published:
+5 June 2025
+ATRS version:
+v3.0
+Tier 1 Information
+Name
+Violence in Prisons Estimator
+Description
+This algorithmic tool helps prison staff to manage violence in prisons.
+The tool produces an estimate of the number of violent incidents that an offender in custody is at risk of being involved in over the next year, based on their age and previous behaviour in custody. These factors were selected due to substantial evidence linking them to incidents of violence in custody.
+Prison staff use the estimate, in conjunction with other data sources, to quickly identify whether an offender is likely to be involved in violence whilst in custody and how frequently. This enables HMPPS staff to prioritise their resources effectively and improve the safety within prisons.
+Website URL
+N/A
+Contact email
+datascience@justice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Ministry of Justice / His Majesty’s Prison and Probation Service (HMPPS)
+1.2 - Team
+Prison Safety
+1.3 - Senior responsible owner
+Chief Data Scientist
+1.4 - External supplier involvement
+No
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+For each offender in custody, the tool provides an estimate of the number of violent incidents that they are at risk of being involved in over the next year. This estimate is based on the offender’s age and any previous incidents they have been involved in whilst in custody.
+For example, if someone has an estimate of 2, this means that, historically, offenders with a similar profile (in terms of age and history of incidents) were involved in an average of 2 incidents in the following year.
+The tool is best understood as a more stable and informative version of an assault rate — it offers a high-level view of risk based on past behaviour and age, but it must be used with caution and in context, not as a definitive measure.
+The tool is an implementation of an Explainable Boosting Machine. It is trained on past data about assaults in custody and the age of individuals involved. These features were chosen based on established evidence linking them to higher risk levels of future custodial violence.
+2.2 - Scope
+The estimates are not used as the sole source for any decision - they are always considered alongside other information, such as the individual’s incident history and other risk assessments.
+This tool has been designed to help prison staff to quickly identify whether an offender is likely to be involved in violence whilst in custody and how frequently, based on their previous involvement in violent incidents and their age.
+It may be used for the following tasks:
+- To help identify which offenders might benefit from further support to manage their risk of violence.
+- To assess the violence risk of new arrivals into custody.
+This helps staff to prioritise further analysis.
+No punitive decisions or automated decisions are taken solely on the basis of the tool’s estimates.
+2.3 - Benefit
+The tool is part of a suite of information that helps to support decision making and managing safety in prisons.
+The tool provides the following benefits:
+- Supports a data-driven violence management process. The tool provides prison staff with a consistent and robust, data-driven way to compare violence levels and risk of their population. This contributes to an evidence base that enables staff to make decisions about how to manage violence, that are based on the data.
+Assists the targeting of support activity. The tool enables activity to be focused on those offenders with the greatest risk of violence.
+Saves staff hours of manual work. The tool saves staff having to trawl through lots of data about offenders to understand the relative risk and greatest violence offenders.
+To help identify which prisoners might benefit from further support to manage their risk of violence.
+Prison staff have said that the tool’s estimates help them to be proactive and target the right groups of prisoners for support and wellbeing sessions, and that they see it as an important part of their toolkit for managing and reducing violence in custody.
+2.4 - Previous process
+Prior to the introduction of the tool, staff had to spend a significant amount of time manually compiling data to identify the offenders with the greatest risk of violence in custody.
+This involved accessing multiple different ‘screens’ of information and manually calculating counts of incidents for each individual offender. There was often not time to produce this analysis for every offender, which meant that some individuals with a greater risk of violence may not have been initially identified, reducing the opportunity for staff to take proactive, preventative action. There was also no uniform way to compare the assessments of violence risk produced by different teams or prisons.
+2.5 - Alternatives considered
+As a non-algorithmic alternative, we considered providing an offender’s custodial assault rate. However, we found that the Violence in Prisons Estimator tool’s estimates (which take into account a slightly broader range of factors such as age and when the most recent violence took place) are more accurate at identifying the risk of future violence. The tool’s estimates for offenders who have recently arrived into custody are also more practically useful than an assault rate, which may be subject to short-term fluctuations that may not accurately reflect long-term behaviour.
+We also considered other modelling approaches (such as mixed effects regression models and other boosted tree models). We determined that the chosen approach (Explainable Boosting Machine) provided the best balance of interpretability and performance.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool’s estimates are presented to prison service staff via a secure application which is managed with role-based access. Staff only have access to information about the offenders that they need to in order to carry out their role.
+Staff may access this secure application in order to review someone’s history for a risk assessment or to look up prison-level trends of violence. They may also access the application to specifically look at the Violence in Prisons Estimator for an offender, for example, if they want to understand the violence risk related to an incoming offender to take proactive and preventative action.
+This application provides a range of information related to violence in prison. The estimates are presented alongside other relevant information about offenders, including the specific details of any violent involvements.
+Therefore, the estimates provide an initial indication of an offender’s level of violence which can then be investigated further and validated within the same application.
+Therefore, the estimates are not used as the sole source for any decision - they are always considered alongside other information, such as the individual’s incident history and other risk assessments.
+The tool’s estimates are also included as part of the Prison Categorisation tool - which staff use to make decisions about what prison category an individual should have. There are a number of different scenarios which may trigger a categorisation decision. The tool’s estimates are not the sole source of information about violence and are considered, in context, alongside lots of other information relating to violent behaviour. There is always a human decision-maker involved in categorisation decisions.
+For example, the Categorisation tool may recommend that an individual who has perpetrated a large number of assaults whilst in custody and has a high Violence in Prisons estimate, should be placed in a higher category prison than an individual who does not have these characteristics. But this recommendation is reviewed by a human decision maker who considers a broad range of information, and so the Violence in Prisons Estimator is never the sole basis for a categorisation decision.
+3.2 - Provided information
+The tool’s estimates are provided as a single number and also broken down into components driven by (a) age and (b) previous violent behaviour.
+Age is included in the model as HMPPS data and research indicates that younger offenders are statistically more likely to perpetrate violence in custody than older offenders.
+There is additional information about the lawful basis for the use of ‘Age’ in this tool in section 2.4.3.5.
+Key ‘flags’ are also presented alongside the estimates, which indicate when the estimate may be less reliable: where an individual is new to custody, or has ‘serious’ assaults in their history. (The definition of a ‘serious’ assault can be found in the published
+Safety in Custody statistics
+. )
+3.3 - Frequency and scale of usage
+The primary application through which the tool is available has around 2,000 users each month. These are predominantly staff who work in prisons, such as those in the Safer Custody teams or Prison Officers. Not all of those accessing the application will directly use the tool.
+Estimates are generated for the prison population in England and Wales.
+Between 01/12/23 and 30/11/24, the Categorisation tool was used for around 50,000 categorisations decisions and 83,000 recategorisation decisions.  The Violence in Prisons Estimator provides one piece of information that is considered alongside lots of other sources. A human decision-maker is always involved in categorisation and recategorisation decisions.
+3.4 - Human decisions and review
+A human decision-maker is involved in every process where these estimates are used.
+The accompanying policy and user guidance states that the tool should not be used as the sole source of information in any decision-making. Access to the tool, its usage, and adherence to the guidance are monitored through established staff management structures.
+The tool helps staff to quickly identify who might be violent in the future and to prioritise further analysis.
+Where the estimates are used in the Categorisation tool, they are presented in conjunction with a wide range of other information and not used as the sole basis for any decision. There is always a human decision-maker involved on any categorisation decisions.
+3.5 - Required training
+Use of the tool is governed by compliance with policy. There is also detailed guidance and policy guidance within the application. Access to the tool, its usage, and adherence to the guidance are monitored through established staff management structures.
+3.6 - Appeals and review
+The estimates are not used as the sole source in any decision-making. However, there are a range of mechanisms whereby offenders can appeal a decision that has been made about them. This includes prisons’ internal complaints system, where offenders may submit formal complaints within the prison. They may also seek assistance from the Independent Monitoring Board (IMB), an independent body that can advocate on their behalf by making recommendations to the prison. Should these avenues be exhausted without resolution, offenders can contact the Prison and Probation Ombudsman (PPO), who reviews complaints independently. For more serious concerns, such as those involving potential breaches of human rights, offenders have the option to apply for judicial review in court or raise a human rights claim.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The tool is deployed as part of an automated workflow managed by Apache Airflow, which orchestrates the entire process. Key technical features of the system include:
+Data compilation: The process begins with the extraction and compilation of relevant data from various prison databases. This ensures that the latest information is available for producing the estimates.
+Data integrity checks: As the data is imported, it undergoes a series of validation tests implemented in Python. These checks ensure that the data meets the required quality and consistency standards before it is used by the model.
+Model loading: The model, which has been pre-trained and stored securely, is retrieved from an Amazon S3 storage location.
+Estimate generation: Once the data is prepared and the model is loaded, the system applies the model to generate estimates for each prisoner.
+Monitoring and metrics: After estimate generation, monitoring metrics, including estimate statistics and a bespoke error analysis check, are generated. These metrics are stored in Amazon S3 for each day the model runs.
+Score storage: Finally, the generated estimates and monitoring metrics are saved back to an Amazon S3 location. This allows for integration into downstream applications.
+This architecture provides a secure, robust, and automated process for generating, validating, and monitoring the tool’s estimates.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+We have ongoing monitoring of the model and generate automated monitoring metrics to check for data or processing errors, significant data drift, or unexplained estimate changes.
+We also have a formal model review scheduled for every 18 months, which involves assessing the data quality, data drift and possible concept drift, assessing the need for the model, gathering user feedback and a decision about whether to retire the model.
+There is also ad hoc ongoing maintenance required to keep the model operational when there are changes to upstream data or infrastructure.
+4.1.4 - Models
+Explainable Boosting Machine
+https://interpret.ml/docs/ebm.html
+Tier 2 - Model Specification
+4.2.1 - Model name
+Violence in Prisons Estimator
+4.2.2 - Model version
+2
+4.2.3 - Model task
+The tool produces, an estimate of the number of violent incidents that an offender is at risk of being involved in over the next year, based on their age and previous violent behaviour in custody.
+4.2.4 - Model input
+For each offender:
+Age
+Days since their last assault incident in custody
+Number of assaults in custody
+Number of assaults in custody in the last 12 months
+Assault rate in custody
+Assault rate in custody in the last 12 months
+Time in custody (years)
+Time in custody in the last 12 months (years)
+4.2.5 - Model output
+An estimate of the number of violent incidents that an offender is at risk of being involved in over the next year.
+4.2.6 - Model architecture
+Explainable Boosting Machine
+(https://interpret.ml/docs/ebm.html)
+4.2.7 - Model performance
+We evaluated the tool using a comprehensive approach, considering its performance, interpretability, and ethical implications. When developing this tool, we deliberately prioritised interpretability and fairness over optimising predictive performance, ensuring the model aligns with our ethical framework and relies primarily on past behaviour for its estimates.
+Evaluation on historic data - We tested the model on historic data from 2019 to assess its ability to make accurate estimates. Specifically, we evaluated:
+- How well the model distinguishes between individuals who do not perpetrate violence and those who do.
+- Its ability to rank individuals based on their history of violence and their likelihood of future violent behaviour.
+This evaluation demonstrated that the model significantly outperforms using an offender’s custodial assault rate as a predictor of future violence risk.
+Inspection of explainability plots - We evaluated how the model makes its predictions, to ensure that its decision-making process is interpretable and justifiable.
+Error analysis - We conducted a detailed error analysis by reviewing cases where the model’s estimates diverge from the actual outcomes. This analysis provided insight into the model’s limitations and assured us that the model behaves as expected.
+Sensitivity analysis - We evaluated the model’s response to variations in its input data, testing that it performs robustly on a series of specific scenarios.
+Ethics and bias evaluation - We carried out a comprehensive ethics assessment in line with the MoJ’s Ethics Framework for Data Science and AI. This involved a thorough model bias evaluation and assessment of equality impacts. As part of this, we checked that the model passed three key ‘tests’:
+The model estimates are not directly dependent on any protected attribute, except for age.
+If two individuals are a similar age and have a similar history of violence, they will have a comparable estimate.
+The model’s predictions are not influenced by indirect characteristics (proxy features) that lead to unjustifiable systematic disparities across different groups.
+These evaluations confirm that the tool’s estimates are only based on an individual’s age and past behaviour in custody.
+4.2.8 - Datasets
+Dataset1 - Snapshot of prison population who were in custody for at least 95% of the year from 2023-01-01
+Dataset2 - Snapshot of prison population who were in custody for at least 95% of the year from 2019-03-05
+4.2.9 - Dataset purposes
+Dataset1 - Training and Cross Validation
+Dataset2 - Testing
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Prison NOMIS
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+Each offender in custody’s age and features describing their custodial assault history (relating only to assaults which have occurred in custody), such as their assault rate.
+4.3.4 - Data quantities
+Model trained on ~45,000 records.
+Nested cross validation performed during training with 5 outer and 3 inner folds.
+Model tested on two test sets with 45,000 and 29,000 records.
+4.3.5 - Sensitive attributes
+Age
+Age is included in the model as HMPPS data and research indicates that younger prisoners are statistically more likely to perpetrate violence in custody than older prisoners.
+Age is a protected characteristic under the Equality Act 2010.
+Under Article 6 of the UK GDPR, processing this data is lawful as it is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
+The tool’s estimates do not directly lead to less favourable treatment for offenders on the basis of their age. They provide a source of information which, when considered alongside other sources, help prison staff to decide what action to take.
+4.3.6 - Data completeness and representative-ness
+Age and violent incidents are recorded with a high level of quality in prisons.
+A modelling decision was made to not train the model on offenders who are in custody for less than 95% of the year after the snapshot. This modelling assumption has been evaluated.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The data is collected as part of core operational prison activities.
+4.3.9 - Data cleaning
+The training data was checked for obvious data entry errors.
+We carry out automated checks on data before it is used in the model.
+4.3.10 - Data sharing agreements
+N/A - Data is all held internally.
+4.3.11 - Data access and storage
+The source data is stored on a secure cloud platform only accessible to the development team, and kept in line with the department’s governance rules for the MoJ Analytical Platform.
+The tool’s estimates are provided to users via an application which is governed by role-based access. This means that users can only access the specific data that they are permitted to for their role.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Data Privacy Impact Assessment completed on 08/02/2024.
+Ethics Assessment completed based on MoJ’s Data Science and AI Ethics Framework.
+5.2 - Risks and mitigations
+Primary risks are:
+- Model misapplication: Using the model for tasks it wasn’t designed for.
+- Data degradation and/or data drift: Changes in the characteristics of input data over time which cause the model’s performance to decline.
+- Concept drift: The relationship between input data and the target outcome changes over time, making the model’s estimates less accurate.
+We have taken and are taking a number of steps to monitor and mitigate these risks, including:
+- Monitoring any work which affects upstream data recording.
+- Implementing automated tests within our data processing pipeline to assess the integrity and accuracy of upstream data.
+- Monitoring the model’s data and estimate distributions each month and investigate any unexpected values that could indicate data quality deterioration, errors or significant environmental changes.
+- Implementing automated checks to notify us about broken data pipelines.
+- Re-evaluating the model comprehensively every 18 months (or sooner, if our monitoring indicates it is required) to assess its ongoing performance.
+- Providing clear documentation and guidelines within the application where users access the scores.
+- Maintaining close working relationships with users and their leaders, through regular meetings with key stakeholder and user groups.
+- Conducting a full user survey every 18 months to audit how users are interacting with the tool’s estimates.
+Contents

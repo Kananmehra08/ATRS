@@ -1,0 +1,161 @@
+DWP: Urgent Journal Messages
+Flagging messages from Universal Credit customers that may indicate a risk of harm.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 October 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Phase:
+Production
+Region:
+UK
+Date published:
+15 October 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Urgent Journal Messages
+2 - Description
+The algorithmic tool is integrated into the Universal Credit Digital Service to flag messages from customers that may indicate a risk of harm. It is used to help staff members prioritise their messages and respond to urgent ones more quickly.
+3 - Website URL
+N/A
+4 - Contact email
+N/A
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Work and Pensions
+1.2 - Team
+Working Age Services
+1.3 - Senior responsible owner
+Working Age Services - Service Owner
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+This algorithm is a machine learning model that predicts whether a message from a customer may indicate a risk of harm based on the words contained in the message.
+The algorithmic tool is integrated into the digital communication channel for Universal Credit. Customers have the choice to communicate with their DWP universal credit agent(s) by completing journal messages on their Universal Credit account.
+The tool is used to help universal credit agents prioritise messages and respond to urgent ones more quickly.
+Based on the words and phrases contained in the message, the algorithm, which is a machine learning model, predicts whether a message may indicate a risk of harm.
+This replaces the previous process which involved adding manual flags to journal messages which took over 24 hours.
+Universal credit agents are able to remove digitally added flags or add manual flags once the message has been reviewed.
+2.2 - Scope
+The tool is used to help quickly identify and flag messages sent using the online messaging system on the Universal Credit account (“the journal”) where contact from a universal credit agent may help mitigate a risk of harm.
+2.3 - Benefit
+The key benefit of the tool is to enable quicker responses to messages from customers. This includes DWP staff intervention that may help a customer experiencing an urgent situation.
+2.4 - Previous process
+The previous process included the manual flagging of journal messages by advanced universal credit agents. This process took over 24 hours. The replacement process is designed to reduce the time taken to respond to urgent messages.
+2.5 - Alternatives considered
+Large language models have been considered but are not currently used. Other machine learning algorithms were considered but logistic regression was chosen because of deployment tooling limitations.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The algorithmic tool produces a flag on journal messages so that they are visible to agents via the online journey in the Universal Credit system. The flag indicates that the message may be urgent and require a quicker response. Unviersal credit agents use this to help prioritise their journal messages.
+3.2 - Provided information
+Universal credit agents review their caseload dashboard periodically and urgent journal messages are highlighted in red as a visual flag for them to take the appropriate action.
+3.3 - Frequency and scale of usage
+This tool is used every day for all journal messages received by universal credit agents. This helps them to prioritise journal messages. The tool is used on around 2 million journal messages every month.
+3.4 - Human decisions and review
+The algorithm flags journal messages that may be urgent. Universal credit agents can use this information to respond to these journal messages as a priority over other journal messages. When a message is recieved the universal credit agent reviews the message and takes the approriate action based on their training/guidance. An agent is always the one to determine the next steps.
+All other journal messages are still reviewed as part of business as usual processes and caseworkers have the capability to exercise their judgement on whether a message is truly urgent, with the ablitlity to flag or unflag to correct the model judgement as appropriate.
+3.5 - Required training
+Maintenance: the tool is maintained by trained data scientists and developers.
+Users in operations: Guidance and learning is updated when any new feature is released that impacts universal credit agents.
+All agents are trained in responding to urgent contact that indicates a risk of harm.
+3.6 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Regular expression searches are used to identify phrases and words in journal messages received from claimants. These are multiplied with weights to predict the probability of the message being urgent. If the weight is over the chosen threshold, the urgent flag is applied to the journal message, marked as being applied by the model. An agent flag can also be applied for retraining purposes. New weights and regular expression terms can be included when the model is retrained.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The recall and precision of the model is monitored in a dashboard. The model can be retrained if recall or precision become unacceptable.
+4.1.4 - Models
+Logistic regression model to predict the probability of journal messages being urgent.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Urgent journal messages
+4.2.2 - Model version
+1
+4.2.3 - Model task
+Predict probability of messages being urgent
+4.2.4 - Model input
+Text of journal message
+4.2.5 - Model output
+Binary urgent flag
+4.2.6 - Model architecture
+Logistic regression
+4.2.7 - Model performance
+Precision: 13.5%, Recall: 84.0% from 9th April 2025 to 8th April 2026 - low precision is expected for this rare outcome
+4.2.8 - Datasets
+Universal credit journal messages, flags from advanced customer support agents
+4.2.9 - Dataset purposes
+Training and testing
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Universal credit journal messages, flags from advanced customer support agents
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+The information included in the data set contains:
+• Journal message text
+• Unique identifier
+• Flags provided by advanced customer support agents following previous manual process
+4.3.4 - Data quantities
+The volumes of data used in model development were:
+• 53,635 urgent journal messages
+• A random sample of 5,354,268 non-urgent journal
+• Messages which included text, unique journal entry ID
+• Urgent flags from advanced customer support agents. The dataset was split for training (80%) and testing (20%).
+4.3.5 - Sensitive attributes
+As journal messages allow Universal Credit claimants to provide information in free text, it is possible they may provide some sensitive information. This is the perogative of the claimant.
+4.3.6 - Data completeness and representativeness
+Advanced customer support agents did not flag all journal messages - only ones containing particular key words. This means that some urgent journal messages without these key words may be represented as non-urgent in the dataset
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Journal message text is collected in the universal credit digital service as journal messages are sent.
+4.3.9 - Data cleaning
+Removal of stop words, punctuation and non-text elements (for example emojis), removal of very infrequent or very frequent words and phrases
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+Data is stored in a secure analytical environment. Access is restricted to universal credit data scientists and other analysts using universal credit data. DWP will retain data in line with the data retention policy post claim closure for research and statistical purposes.
+Role based accesses are enforced to ensure that data scientists and analysts can only access information required for this specific use-case.
+Data Protection Impact Assessments are in place to ensure that data protection risks relating to matters such as sharing and access to sensitive data have been considered.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+An Equality Assessement (EA) and Data Protection Impact Assessment (DPIA) are in place.
+5.2 - Risks and mitigations
+The risk of incorrectly flagging journal messages is partially mitigated by:
+Collecting feedback to improve the model.
+Appropriate training for users of the urgent flags
+Any missed messages will be replied to using business as usual processes.
+The risk that non-standard spelling could produce inaccurate predictions is partially mitigated by:
+The tool being used for prioritisation rather than decision making
+All messages will be replied to using business as usual processes.
+Using just the text, and no context, to journal messages may lead to some inaccurate predictions, however, this reduces the amount of sensitive information that is processed by the tool.
+Contents

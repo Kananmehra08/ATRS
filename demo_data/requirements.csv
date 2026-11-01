@@ -1,0 +1,821 @@
+record_id,condition,req_id,requirement,evidence_quote,auto_quote_match
+R001,baseline,R001-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R001,baseline,R001-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R001,baseline,R001-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R001,baseline,R001-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R001,baseline,R001-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R001,baseline,R001-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R001,baseline,R001-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R001,baseline,R001-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R001,baseline,R001-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R001,grounded,R001-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R001,grounded,R001-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R001,grounded,R001-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,no
+R001,grounded,R001-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R001,grounded,R001-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R001,grounded,R001-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R001,grounded,R001-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R001,grounded,R001-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R001,grounded,R001-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R001,grounded,R001-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R002,baseline,R002-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R002,baseline,R002-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R002,baseline,R002-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R002,baseline,R002-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R002,baseline,R002-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R002,baseline,R002-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R002,baseline,R002-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R002,baseline,R002-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R002,baseline,R002-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R002,baseline,R002-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R002,baseline,R002-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R002,grounded,R002-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,no
+R002,grounded,R002-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R002,grounded,R002-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R002,grounded,R002-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R002,grounded,R002-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R002,grounded,R002-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R002,grounded,R002-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R002,grounded,R002-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R002,grounded,R002-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R002,grounded,R002-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R002,grounded,R002-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R003,baseline,R003-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R003,baseline,R003-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R003,baseline,R003-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R003,baseline,R003-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R003,baseline,R003-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R003,baseline,R003-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R003,baseline,R003-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R003,baseline,R003-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R003,baseline,R003-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R003,grounded,R003-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R003,grounded,R003-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R003,grounded,R003-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,no
+R003,grounded,R003-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R003,grounded,R003-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R003,grounded,R003-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R003,grounded,R003-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,no
+R003,grounded,R003-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R004,baseline,R004-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R004,baseline,R004-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R004,baseline,R004-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R004,baseline,R004-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R004,baseline,R004-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R004,baseline,R004-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R004,baseline,R004-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R004,baseline,R004-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R004,baseline,R004-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R004,baseline,R004-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R004,baseline,R004-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R004,grounded,R004-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R004,grounded,R004-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R004,grounded,R004-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R004,grounded,R004-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R004,grounded,R004-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R004,grounded,R004-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R004,grounded,R004-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R004,grounded,R004-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,no
+R004,grounded,R004-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,no
+R005,baseline,R005-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R005,baseline,R005-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R005,baseline,R005-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R005,baseline,R005-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R005,baseline,R005-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R005,baseline,R005-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R005,baseline,R005-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R005,baseline,R005-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R005,baseline,R005-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R005,grounded,R005-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R005,grounded,R005-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R005,grounded,R005-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R005,grounded,R005-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R005,grounded,R005-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R005,grounded,R005-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R005,grounded,R005-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R005,grounded,R005-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R005,grounded,R005-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R005,grounded,R005-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R005,grounded,R005-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R005,grounded,R005-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R008,baseline,R008-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R008,baseline,R008-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R008,baseline,R008-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R008,baseline,R008-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R008,baseline,R008-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R008,baseline,R008-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R008,baseline,R008-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R008,baseline,R008-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R008,baseline,R008-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R008,baseline,R008-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R008,baseline,R008-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R008,grounded,R008-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R008,grounded,R008-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R008,grounded,R008-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,near
+R008,grounded,R008-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R008,grounded,R008-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R008,grounded,R008-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R008,grounded,R008-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R008,grounded,R008-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R008,grounded,R008-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R008,grounded,R008-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R008,grounded,R008-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R006,baseline,R006-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R006,baseline,R006-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R006,baseline,R006-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R006,baseline,R006-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R006,baseline,R006-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R006,baseline,R006-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R006,baseline,R006-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R006,baseline,R006-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R006,baseline,R006-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R006,baseline,R006-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R006,baseline,R006-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R006,grounded,R006-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R006,grounded,R006-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R006,grounded,R006-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,near
+R006,grounded,R006-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R006,grounded,R006-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R006,grounded,R006-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R006,grounded,R006-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R006,grounded,R006-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,near
+R006,grounded,R006-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R006,grounded,R006-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R006,grounded,R006-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R007,baseline,R007-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R007,baseline,R007-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R007,baseline,R007-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R007,baseline,R007-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R007,baseline,R007-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R007,baseline,R007-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R007,baseline,R007-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R007,baseline,R007-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R007,baseline,R007-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R007,baseline,R007-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R007,grounded,R007-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R007,grounded,R007-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R007,grounded,R007-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R007,grounded,R007-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R007,grounded,R007-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R007,grounded,R007-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R007,grounded,R007-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R007,grounded,R007-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R007,grounded,R007-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R007,grounded,R007-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R007,grounded,R007-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R007,grounded,R007-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R010,baseline,R010-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R010,baseline,R010-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R010,baseline,R010-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R010,baseline,R010-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R010,baseline,R010-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R010,baseline,R010-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R010,baseline,R010-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R010,baseline,R010-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R010,baseline,R010-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R010,grounded,R010-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R010,grounded,R010-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R010,grounded,R010-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R010,grounded,R010-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,no
+R010,grounded,R010-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R010,grounded,R010-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R010,grounded,R010-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R010,grounded,R010-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R010,grounded,R010-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,near
+R010,grounded,R010-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,no
+R009,baseline,R009-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R009,baseline,R009-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R009,baseline,R009-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R009,baseline,R009-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R009,baseline,R009-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R009,baseline,R009-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R009,baseline,R009-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R009,baseline,R009-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R009,baseline,R009-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R009,baseline,R009-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R009,baseline,R009-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R009,baseline,R009-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R009,grounded,R009-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R009,grounded,R009-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R009,grounded,R009-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R009,grounded,R009-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R009,grounded,R009-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R009,grounded,R009-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R009,grounded,R009-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R009,grounded,R009-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R009,grounded,R009-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R009,grounded,R009-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R009,grounded,R009-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R009,grounded,R009-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R011,baseline,R011-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R011,baseline,R011-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R011,baseline,R011-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R011,baseline,R011-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R011,baseline,R011-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R011,baseline,R011-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R011,baseline,R011-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R011,baseline,R011-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R011,baseline,R011-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R011,baseline,R011-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R011,baseline,R011-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R011,baseline,R011-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R011,grounded,R011-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R011,grounded,R011-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R011,grounded,R011-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R011,grounded,R011-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R011,grounded,R011-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R011,grounded,R011-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R011,grounded,R011-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R011,grounded,R011-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R012,baseline,R012-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R012,baseline,R012-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R012,baseline,R012-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R012,baseline,R012-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R012,baseline,R012-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R012,baseline,R012-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R012,baseline,R012-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R012,baseline,R012-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R012,baseline,R012-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R012,baseline,R012-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R012,baseline,R012-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R012,grounded,R012-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R012,grounded,R012-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R012,grounded,R012-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R012,grounded,R012-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R012,grounded,R012-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R012,grounded,R012-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R012,grounded,R012-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R012,grounded,R012-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,no
+R012,grounded,R012-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R012,grounded,R012-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R012,grounded,R012-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R012,grounded,R012-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,no
+R013,baseline,R013-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R013,baseline,R013-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R013,baseline,R013-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R013,baseline,R013-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R013,baseline,R013-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R013,baseline,R013-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R013,baseline,R013-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R013,baseline,R013-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R013,grounded,R013-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R013,grounded,R013-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R013,grounded,R013-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R013,grounded,R013-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R013,grounded,R013-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R013,grounded,R013-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R013,grounded,R013-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R013,grounded,R013-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R013,grounded,R013-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R013,grounded,R013-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R014,baseline,R014-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R014,baseline,R014-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R014,baseline,R014-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R014,baseline,R014-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R014,baseline,R014-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R014,baseline,R014-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R014,baseline,R014-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R014,baseline,R014-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R014,baseline,R014-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R014,baseline,R014-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R014,baseline,R014-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R014,baseline,R014-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R014,grounded,R014-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R014,grounded,R014-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R014,grounded,R014-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R014,grounded,R014-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R014,grounded,R014-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R014,grounded,R014-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R014,grounded,R014-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R014,grounded,R014-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R014,grounded,R014-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,near
+R014,grounded,R014-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R014,grounded,R014-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R015,baseline,R015-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R015,baseline,R015-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R015,baseline,R015-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R015,baseline,R015-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R015,baseline,R015-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R015,baseline,R015-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R015,baseline,R015-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R015,baseline,R015-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R015,grounded,R015-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R015,grounded,R015-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R015,grounded,R015-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R015,grounded,R015-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R015,grounded,R015-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R015,grounded,R015-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R015,grounded,R015-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R015,grounded,R015-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R015,grounded,R015-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R015,grounded,R015-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R015,grounded,R015-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R018,baseline,R018-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R018,baseline,R018-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R018,baseline,R018-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R018,baseline,R018-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R018,baseline,R018-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R018,baseline,R018-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R018,baseline,R018-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R018,baseline,R018-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R018,baseline,R018-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R018,baseline,R018-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R018,baseline,R018-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R018,baseline,R018-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R018,grounded,R018-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R018,grounded,R018-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R018,grounded,R018-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R018,grounded,R018-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R018,grounded,R018-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,no
+R018,grounded,R018-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R018,grounded,R018-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R018,grounded,R018-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R018,grounded,R018-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R018,grounded,R018-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R016,baseline,R016-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R016,baseline,R016-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R016,baseline,R016-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R016,baseline,R016-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R016,baseline,R016-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R016,baseline,R016-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R016,baseline,R016-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R016,baseline,R016-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R016,baseline,R016-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R016,baseline,R016-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R016,baseline,R016-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R016,baseline,R016-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R016,grounded,R016-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R016,grounded,R016-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R016,grounded,R016-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R016,grounded,R016-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R016,grounded,R016-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R016,grounded,R016-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R016,grounded,R016-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R016,grounded,R016-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R016,grounded,R016-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,near
+R016,grounded,R016-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R016,grounded,R016-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R017,baseline,R017-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R017,baseline,R017-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R017,baseline,R017-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R017,baseline,R017-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R017,baseline,R017-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R017,baseline,R017-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R017,baseline,R017-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R017,baseline,R017-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R017,baseline,R017-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R017,baseline,R017-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R017,grounded,R017-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R017,grounded,R017-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R017,grounded,R017-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R017,grounded,R017-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R017,grounded,R017-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R017,grounded,R017-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R017,grounded,R017-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R017,grounded,R017-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R017,grounded,R017-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R017,grounded,R017-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R017,grounded,R017-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R017,grounded,R017-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R019,baseline,R019-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R019,baseline,R019-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R019,baseline,R019-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R019,baseline,R019-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R019,baseline,R019-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R019,baseline,R019-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R019,baseline,R019-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R019,baseline,R019-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R019,grounded,R019-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,no
+R019,grounded,R019-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R019,grounded,R019-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,near
+R019,grounded,R019-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R019,grounded,R019-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R019,grounded,R019-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,no
+R019,grounded,R019-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R019,grounded,R019-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,near
+R019,grounded,R019-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R019,grounded,R019-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R019,grounded,R019-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R019,grounded,R019-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R020,baseline,R020-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R020,baseline,R020-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R020,baseline,R020-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R020,baseline,R020-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R020,baseline,R020-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R020,baseline,R020-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R020,baseline,R020-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R020,baseline,R020-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R020,baseline,R020-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R020,baseline,R020-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R020,baseline,R020-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R020,baseline,R020-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R020,grounded,R020-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R020,grounded,R020-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R020,grounded,R020-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R020,grounded,R020-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R020,grounded,R020-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,no
+R020,grounded,R020-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R020,grounded,R020-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R020,grounded,R020-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,near
+R020,grounded,R020-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,no
+R020,grounded,R020-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R020,grounded,R020-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R020,grounded,R020-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R021,baseline,R021-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R021,baseline,R021-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R021,baseline,R021-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R021,baseline,R021-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R021,baseline,R021-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R021,baseline,R021-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R021,baseline,R021-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R021,baseline,R021-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R021,baseline,R021-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R021,baseline,R021-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R021,baseline,R021-B11,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R021,baseline,R021-B12,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R021,grounded,R021-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R021,grounded,R021-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R021,grounded,R021-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,near
+R021,grounded,R021-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R021,grounded,R021-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R021,grounded,R021-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R021,grounded,R021-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R021,grounded,R021-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R022,baseline,R022-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R022,baseline,R022-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R022,baseline,R022-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R022,baseline,R022-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R022,baseline,R022-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R022,baseline,R022-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R022,baseline,R022-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R022,baseline,R022-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R022,grounded,R022-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R022,grounded,R022-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R022,grounded,R022-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R022,grounded,R022-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R022,grounded,R022-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,no
+R022,grounded,R022-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R022,grounded,R022-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R022,grounded,R022-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R022,grounded,R022-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R022,grounded,R022-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R022,grounded,R022-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R023,baseline,R023-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R023,baseline,R023-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R023,baseline,R023-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R023,baseline,R023-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R023,baseline,R023-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R023,baseline,R023-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R023,baseline,R023-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R023,baseline,R023-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R023,baseline,R023-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R023,baseline,R023-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R023,baseline,R023-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R023,grounded,R023-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R023,grounded,R023-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R023,grounded,R023-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R023,grounded,R023-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R023,grounded,R023-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R023,grounded,R023-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R023,grounded,R023-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R023,grounded,R023-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R023,grounded,R023-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R023,grounded,R023-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R023,grounded,R023-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R024,baseline,R024-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R024,baseline,R024-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R024,baseline,R024-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R024,baseline,R024-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R024,baseline,R024-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R024,baseline,R024-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R024,baseline,R024-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R024,baseline,R024-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R024,baseline,R024-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R024,baseline,R024-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R024,grounded,R024-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R024,grounded,R024-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R024,grounded,R024-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R024,grounded,R024-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R024,grounded,R024-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R024,grounded,R024-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R024,grounded,R024-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R024,grounded,R024-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R024,grounded,R024-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R024,grounded,R024-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R025,baseline,R025-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R025,baseline,R025-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R025,baseline,R025-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R025,baseline,R025-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R025,baseline,R025-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R025,baseline,R025-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R025,baseline,R025-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R025,baseline,R025-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R025,baseline,R025-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R025,baseline,R025-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R025,baseline,R025-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R025,baseline,R025-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R025,grounded,R025-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R025,grounded,R025-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R025,grounded,R025-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R025,grounded,R025-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R025,grounded,R025-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R025,grounded,R025-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R025,grounded,R025-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R025,grounded,R025-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R026,baseline,R026-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R026,baseline,R026-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R026,baseline,R026-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R026,baseline,R026-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R026,baseline,R026-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R026,baseline,R026-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R026,baseline,R026-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R026,baseline,R026-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R026,grounded,R026-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R026,grounded,R026-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R026,grounded,R026-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,no
+R026,grounded,R026-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R026,grounded,R026-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R026,grounded,R026-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R026,grounded,R026-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R026,grounded,R026-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R026,grounded,R026-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R027,baseline,R027-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R027,baseline,R027-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R027,baseline,R027-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R027,baseline,R027-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R027,baseline,R027-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R027,baseline,R027-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R027,baseline,R027-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R027,baseline,R027-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R027,baseline,R027-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R027,baseline,R027-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R027,baseline,R027-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R027,grounded,R027-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R027,grounded,R027-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R027,grounded,R027-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R027,grounded,R027-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R027,grounded,R027-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R027,grounded,R027-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R027,grounded,R027-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R027,grounded,R027-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R030,baseline,R030-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R030,baseline,R030-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R030,baseline,R030-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R030,baseline,R030-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R030,baseline,R030-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R030,baseline,R030-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R030,baseline,R030-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R030,baseline,R030-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R030,baseline,R030-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R030,baseline,R030-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R030,baseline,R030-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R030,baseline,R030-B12,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R030,grounded,R030-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R030,grounded,R030-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R030,grounded,R030-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R030,grounded,R030-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R030,grounded,R030-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R030,grounded,R030-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R030,grounded,R030-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R030,grounded,R030-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R030,grounded,R030-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R030,grounded,R030-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R028,baseline,R028-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R028,baseline,R028-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R028,baseline,R028-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R028,baseline,R028-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R028,baseline,R028-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R028,baseline,R028-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R028,baseline,R028-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R028,baseline,R028-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R028,baseline,R028-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R028,baseline,R028-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R028,baseline,R028-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R028,grounded,R028-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R028,grounded,R028-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R028,grounded,R028-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R028,grounded,R028-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R028,grounded,R028-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R028,grounded,R028-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R028,grounded,R028-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R028,grounded,R028-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R028,grounded,R028-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R029,baseline,R029-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R029,baseline,R029-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R029,baseline,R029-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R029,baseline,R029-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R029,baseline,R029-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R029,baseline,R029-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R029,baseline,R029-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R029,baseline,R029-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R029,baseline,R029-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R029,baseline,R029-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R029,baseline,R029-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R029,grounded,R029-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R029,grounded,R029-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R029,grounded,R029-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R029,grounded,R029-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R029,grounded,R029-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R029,grounded,R029-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R029,grounded,R029-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R029,grounded,R029-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R029,grounded,R029-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R029,grounded,R029-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R029,grounded,R029-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R029,grounded,R029-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R031,baseline,R031-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R031,baseline,R031-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R031,baseline,R031-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R031,baseline,R031-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R031,baseline,R031-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R031,baseline,R031-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R031,baseline,R031-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R031,baseline,R031-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R031,baseline,R031-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R031,baseline,R031-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R031,grounded,R031-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R031,grounded,R031-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R031,grounded,R031-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R031,grounded,R031-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R031,grounded,R031-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R031,grounded,R031-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R031,grounded,R031-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R031,grounded,R031-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R031,grounded,R031-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R031,grounded,R031-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,near
+R032,baseline,R032-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R032,baseline,R032-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R032,baseline,R032-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R032,baseline,R032-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R032,baseline,R032-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R032,baseline,R032-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R032,baseline,R032-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R032,baseline,R032-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R032,grounded,R032-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R032,grounded,R032-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R032,grounded,R032-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R032,grounded,R032-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R032,grounded,R032-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R032,grounded,R032-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R032,grounded,R032-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,near
+R032,grounded,R032-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R032,grounded,R032-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R032,grounded,R032-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R032,grounded,R032-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R033,baseline,R033-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R033,baseline,R033-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R033,baseline,R033-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R033,baseline,R033-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R033,baseline,R033-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R033,baseline,R033-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R033,baseline,R033-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R033,baseline,R033-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R033,baseline,R033-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R033,baseline,R033-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R033,baseline,R033-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R033,grounded,R033-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R033,grounded,R033-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R033,grounded,R033-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R033,grounded,R033-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R033,grounded,R033-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R033,grounded,R033-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R033,grounded,R033-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R033,grounded,R033-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R034,baseline,R034-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R034,baseline,R034-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R034,baseline,R034-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R034,baseline,R034-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R034,baseline,R034-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R034,baseline,R034-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R034,baseline,R034-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R034,baseline,R034-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R034,baseline,R034-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R034,grounded,R034-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R034,grounded,R034-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R034,grounded,R034-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R034,grounded,R034-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R034,grounded,R034-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,near
+R034,grounded,R034-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R034,grounded,R034-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R034,grounded,R034-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R034,grounded,R034-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,near
+R036,baseline,R036-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R036,baseline,R036-B02,The tool should provide adequate provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R036,baseline,R036-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R036,baseline,R036-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R036,baseline,R036-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R036,baseline,R036-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R036,baseline,R036-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R036,baseline,R036-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R036,baseline,R036-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R036,grounded,R036-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R036,grounded,R036-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R036,grounded,R036-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R036,grounded,R036-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R036,grounded,R036-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R036,grounded,R036-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R036,grounded,R036-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R036,grounded,R036-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,near
+R036,grounded,R036-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R036,grounded,R036-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R036,grounded,R036-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R035,baseline,R035-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R035,baseline,R035-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R035,baseline,R035-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R035,baseline,R035-B04,The tool should provide adequate automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R035,baseline,R035-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R035,baseline,R035-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R035,baseline,R035-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R035,baseline,R035-B08,The tool should provide adequate generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R035,grounded,R035-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R035,grounded,R035-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R035,grounded,R035-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R035,grounded,R035-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R035,grounded,R035-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R035,grounded,R035-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R035,grounded,R035-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R035,grounded,R035-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R037,baseline,R037-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R037,baseline,R037-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R037,baseline,R037-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R037,baseline,R037-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R037,baseline,R037-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R037,baseline,R037-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R037,baseline,R037-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R037,baseline,R037-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R037,baseline,R037-B09,The tool should provide adequate allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R037,baseline,R037-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R037,grounded,R037-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R037,grounded,R037-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R037,grounded,R037-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R037,grounded,R037-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R037,grounded,R037-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R037,grounded,R037-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R037,grounded,R037-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R037,grounded,R037-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R037,grounded,R037-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R037,grounded,R037-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R037,grounded,R037-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R037,grounded,R037-G12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R038,baseline,R038-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R038,baseline,R038-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R038,baseline,R038-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R038,baseline,R038-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R038,baseline,R038-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R038,baseline,R038-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R038,baseline,R038-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R038,baseline,R038-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R038,baseline,R038-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R038,baseline,R038-B10,The tool should provide adequate securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R038,baseline,R038-B11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R038,baseline,R038-B12,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R038,grounded,R038-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R038,grounded,R038-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R038,grounded,R038-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R038,grounded,R038-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R038,grounded,R038-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R038,grounded,R038-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R038,grounded,R038-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R038,grounded,R038-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R038,grounded,R038-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R038,grounded,R038-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R039,baseline,R039-B01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R039,baseline,R039-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R039,baseline,R039-B03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R039,baseline,R039-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R039,baseline,R039-B05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R039,baseline,R039-B06,The tool should provide adequate enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R039,baseline,R039-B07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R039,baseline,R039-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R039,grounded,R039-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,near
+R039,grounded,R039-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,exact
+R039,grounded,R039-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R039,grounded,R039-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,near
+R039,grounded,R039-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R039,grounded,R039-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,exact
+R039,grounded,R039-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R039,grounded,R039-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R039,grounded,R039-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R039,grounded,R039-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R039,grounded,R039-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R040,baseline,R040-B01,The tool should provide adequate log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,,n/a
+R040,baseline,R040-B02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,,n/a
+R040,baseline,R040-B03,The tool should provide adequate evaluate classification parity across demographic protected characteristics on a quarterly schedule.,,n/a
+R040,baseline,R040-B04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,,n/a
+R040,baseline,R040-B05,The tool should provide adequate display plain-language explanatory rationale for confidence score calculations to operational users.,,n/a
+R040,baseline,R040-B06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,,n/a
+R040,baseline,R040-B07,The tool should provide adequate retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,,n/a
+R040,baseline,R040-B08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,,n/a
+R040,baseline,R040-B09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,,n/a
+R040,baseline,R040-B10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,,n/a
+R040,grounded,R040-G01,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact
+R040,grounded,R040-G02,The system shall provide human caseworkers with an interactive override mechanism before any automated sanction is finalised.,caseworkers retain the ability to override automated recommendations prior to final sanctions,near
+R040,grounded,R040-G03,The system shall evaluate classification parity across demographic protected characteristics on a quarterly schedule.,demographic classification parity is evaluated on a quarterly basis by the quality assurance team,exact
+R040,grounded,R040-G04,The system shall automatically redact personally identifiable data fields prior to exporting model telemetry to central analytics.,telemetry data is stripped of direct personal identifiers before transmission to central storage,exact
+R040,grounded,R040-G05,The system shall display plain-language explanatory rationale for confidence score calculations to operational users.,operational staff can view plain-language explanations of model confidence factors,exact
+R040,grounded,R040-G06,The system shall enforce role-based access control requiring two-factor authentication for retraining dataset modifications.,changes to training datasets require dual-authorization and multi-factor authentication,near
+R040,grounded,R040-G07,The system shall retain comprehensive model input-output audit trails for a minimum retention duration of seven years.,audit logs and inference records are retained in secure storage for seven years,exact
+R040,grounded,R040-G08,The system shall generate automated alerts when model prediction distribution drift exceeds five percentage points.,monitoring pipelines flag statistical distribution drift exceeding five percent,exact
+R040,grounded,R040-G09,The system shall allow service users to request human review of algorithmic tiering decisions via a dedicated web portal.,citizens may request human review of automated tiering through the online service,exact
+R040,grounded,R040-G10,The system shall securely purge inference feature caches within 24 hours of decision confirmation.,temporary feature caches are automatically cleared within 24 hours of processing,exact
+R040,grounded,R040-G11,The system shall log all risk-assessment scoring decisions with an automated timestamp and unique transaction ID.,all risk-assessment scoring decisions are logged with an automated timestamp and unique transaction ID,exact

@@ -1,0 +1,273 @@
+Maritime and Coastguard Agency: Proview Proctoring Tool
+Tool to ensure adherence to Code of Conduct during online exams.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+2 July 2026
+Organisation:
+Department for Transport
+Organisation type:
+Agency or public body
+Function:
+General public services
+Phase:
+Production
+Region:
+UK
+Date published:
+2 July 2026
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Proview Proctor
+2 - Description
+This AI-powered proctoring tool detects potential malpractice during exams. By using the service, MCA automates certain examinations, reducing the need for examiner involvement in written assessments. It enhances operational efficiency through automated monitoring, removing the need for physical test centres and manual invigilation. This tool also provides detailed audit data. Currently, it is not integrated with any other platforms used within Seafarer Operations.
+3 - Website URL
+https://www.talview.com/en/record-and-review
+4 - Contact email
+exams@mcga.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Maritime & Coastguard Agency
+1.2 - Team
+UK Customer Maritime Services
+1.3 - Senior responsible owner
+Chief Examiner
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Fry-IT Ltd t/a Risr
+1.4.2 - Companies House Number
+Fry-IT Ltd - 04091032
+1.4.3 - Third party role
+Talview is the supplier of Proview which is the record and review proctoring tool MCA will be using with risr/assess. Talview develop and manage the Proview tool.
+1.4.4 - Procurement procedure type
+The requirement has been fulfilled through the Crown Commercial Service’s G-Cloud 14 framework, which is purpose-built for procuring cloud-based services such as hosting, software, and support. As G-Cloud operates as a catalogue-based procurement route, the MCA can only procure services as listed on the Digital Marketplace. Suppliers are not permitted to submit bespoke proposals under this framework but may respond to clarification questions where necessary.
+1.4.5 - Third party data access terms
+Only the minimum amount of data required to confirm identity will be processed as well as the recording and invigilation to ensure the integrity of the examination.
+Name (for identification)
+Photo (for biometric recognition)
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+AI tools are used during the exam to look for instances of cheating/actions that go against the code of conduct in online exams. There are several ways a candidate could go against the code of conduct, and AI can help to identify these. These things are:
+-Biometric identification - Photo of the seafarer is taken which is compared against a passport photograph submitted when the seafarer submits an application. This allows us to ensure the correct candidate is taking the assessment.
+-Face detection - triggered if a second person enters the frame of if another person replaces the original candidate. This ensures the candidate is not using any other person for assistance.
+-Gaze detection - triggered if candidate looks away from screen. This ensures the candidate is focused on the exam and not using other prohibited resources such as books & notes.
+This tool is used in during exams in which there is a need to monitor a candidate’s adherence to a code of conduct but in which there is no other person present, either in person or digitally.
+A candidate will sit an online examination, the result of which will help them achieve either a UK Certificate of Competency or a UK Flag State Endorsement. This allows them to sail on UK Flag Vessels in relevant capacities.
+During the assessment, the candidate is monitored via:
+- Webcam
+- Auxiliary Camera
+- Secure Browser
+- Device Microphone
+The AI tool is then able to identify any suspected malpractice as described in 2.2.1.
+Once an exam has been completed, a member of MCA staff logs on to an external website where the relevant footage can be viewed. As part of this any flags will be identified. The member of staff will review any flags identified by the AI and consider whether actions are against the code of conduct or not. If they are they will escalate for appropriate action. If not, the results of the assessments will be sent to the candidate.
+2.2 - Benefits
+Using a proctoring service with this algorithmic tool allows the MCA to conduct exams without having to use personnel to be present during those exams. This allows us to assess candidates in a way that is efficient whilst being content with exam integrity.
+Historically, these exams would have been in person with an MCA Examiner, but as MCA Examiner are a valuable resource and due to a particularly high failure rate, this exam was established to ensure readiness before they are able to sit an exam with an MCA Examiner.
+2.3 - Previous process
+Until the change to Talview, we were using Constructor’s “Proctor” tool, to detect cheating or other actions that go against the code of conduct.
+2.4 - Alternatives considered
+If we were to use only a recording process, it would eliminate the AI functionality, requiring manual human input instead. This approach increases the likelihood of errors and would be significantly more time-consuming.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+A report is provided at the end of a proctored exam. This is accessed by an internal  Agency Maritime and Coastguard (MCA) exams team staff. The videos are reviewed and details of any deviations picked up by the AI tool and mentioned on the report, with a link to the relevant section of the footage. These sections are given particular attention during review. The exams team will make a decision as to whether the a flag is a genuine breach of the code of conduct or not. If not, the exam result will be sent to the seafarer. If they believe it is, then the footage will be escalted to senior member of the exams team who will confirm if a code of conduct breach has taken place and what further action to take.
+All exams are manually reviewed. No suspected breaches of code of conduct are confirmed without manual intervention.
+3.2 - Human review
+A report is provided at the end of a proctored exam. This is accessed by an internal (MCA) exams team. The videos are reviewed and details of any deviations picked up by the AI tool and mentioned on the report, with a link to the relevant section of the footage. These sections are given particular attention during review. The exams team will make a decision as to whether the flag is a genuine breach of the code of conduct or not. If not, the exam result will be sent to the seafarer. If they believe it is, then the footage will be escalted to senior member of the exams team who will confirm if a code of conduct breach has taken place and what further action to take.
+All exams are manually reviewed. No suspected breaches of code of conduct are confirmed without manual intervention.
+3.3 - Frequency and scale of usage
+We are currently averaging 128 exams per month. If the AI alert rate remains consistent, we would expect AI to be making approx. 2816 decision per month which are then reviewed by a member of MCA staff.
+3.4 - Required training
+MCA users have been trained in the use of the proctoring dashboard and have been provided and explained the meaning of each AI decision so they can accurately interpret if an AI alert is a breach of the code of conduct.
+3.5 - Appeals and review
+Candidates have 10 working days from the date of the exam to appeal the exam result. The appeal could be based on academic issues (disputing the questions/answers) or proctoring (disputing breaches of the code of conduct where identified). The appeals process is detailed in MIN 690. It is also in the email sent to the candidate
+https://www.gov.uk/government/publications/min-690-guidance-on-the-mca-oral-examination-booking-the-issue-of-notices-of-eligibility-noes-and-the-online-oral-examination-processes/min-690-guidance-on-the-mca-oral-examination-booking-the-issue-of-notices-of-eligibility-noes-and-the-online-oral-examination-processes#appeals-process
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Talview’s recorded proctoring system is delivered as a cloud-based Software-as-a-Service platform that enables asynchronous monitoring and review of candidate assessment sessions. The architecture consists of a client-side capture interface, secure cloud-based data transmission and storage hosted on Microsoft Azure, and backend processing services that analyse recorded data and generate reviewer-facing outputs.
+Candidates access the system through a web browser, where the platform captures multiple data streams during the assessment session. These include video from the device camera, audio from the microphone, screen activity where enabled, and contextual metadata such as browser activity, tab switching, and session events. Data is captured locally and transmitted securely, either in near real-time or in buffered segments, to Talview’s backend infrastructure. The client-side component also performs limited checks, such as detecting the presence of a face within the frame and monitoring session continuity signals, to support the integrity of the recording process.
+All data is transmitted using encrypted protocols (TLS 1.2 or higher) and stored within Talview’s cloud infrastructure hosted on Microsoft Azure. The environment is designed with logical tenant segregation to ensure that customer data is isolated. Recorded session data, including media files and associated metadata logs, is stored in structured formats to support efficient retrieval, analysis, and review. Data residency and retention settings can be configured in accordance with customer requirements, including alignment with UK data hosting expectations where applicable.
+Following data capture, backend processing services analyse the recorded session using a combination of pre-trained machine learning models and rule-based logic. The system identifies and tags events such as inconsistencies in face presence, detection of multiple individuals within the frame, anomalies in audio suggesting additional voices, and browser or device activity indicative of potential deviations from expected test conditions. These processes generate risk indicators and timestamped markers within the session but do not result in automated decisions or enforcement actions.
+The outputs of this analysis are made available through a secure reviewer interface, where authorised users can access full session recordings alongside flagged events and supporting evidence. Reviewers are able to navigate through the session using timestamps linked to detected anomalies and are responsible for making all final determinations regarding candidate behaviour. The system is designed to support human-led decision-making rather than replace it.
+Access to the platform is controlled through role-based access mechanisms, ensuring that only authorised individuals can view or manage recordings and associated data. All significant actions within the system, including access and review activities, are logged to provide an auditable record.
+Talview also supports integration with external systems such as applicant tracking systems, learning management systems, and assessment platforms through APIs, enabling controlled and secure data exchange within the customer’s broader technology ecosystem.
+A detailed architecture document is attached along with this Document.
+4.1.2 - System-level input
+The system-level input to Talview’s recorded proctoring tool consists of session-based data captured during an assessment, along with configuration data provided by the customer organisation.
+At the point of session initiation, the system requires only a unique session identifier (string format), which may be generated by the customer or the platform. No personally identifiable information is required to start or conduct the proctoring session.
+During the session, the system captures and processes the following inputs:
+Video data: continuous or segmented video stream from the candidate’s device camera (unstructured data, typically encoded in standard video formats such as MP4/WebM)
+Audio data: recorded audio stream from the device microphone (unstructured data, standard audio formats)
+Screen capture data: screen recordings or periodic screenshots (unstructured image/video data)
+Session metadata: structured log data including timestamps, session duration, browser activity (e.g., tab switches, focus changes), and event markers (structured JSON/log format)
+Device and environment data: structured data such as device type, operating system, browser type, IP address, and network signals
+Configuration inputs: structured settings defined by the customer (e.g., whether video/audio/screen capture is enabled, session rules)
+Where required, additional candidate-related information (e.g., candidate name or identifier) may be provided by the customer as structured data fields, but this is optional and not required for the functioning of the tool.
+All inputs are transmitted securely and stored within Talview’s infrastructure hosted on Microsoft Azure.
+4.1.3 - System-level output
+The system-level output of Talview’s recorded proctoring tool consists of recorded session artefacts and associated analysis outputs that support human review.
+The outputs include complete session recordings comprising video, audio, and screen data, stored as unstructured media files . In addition, the system generates structured outputs in the form of event flags and metadata logs, which identify and timestamp specific events detected during the session, such as inconsistencies in face presence, detection of multiple individuals, audio anomalies, or browser activity deviations.
+The system also generates an integrity score for each session, represented as a categorical classification such as High, Medium, or Low, based on the presence and frequency of detected events and rule-based indicators. This score is intended to assist reviewers in prioritising sessions and does not constitute an automated decision or final outcome.
+All outputs are made available through the Talview reviewer interface, where recordings, flagged events, and integrity indicators are presented in a synchronised and navigable format. Data can also be exported in structured formats such as CSV or Excel for audit, reporting, or integration purposes.
+4.1.4 - Maintenance
+Talview’s recorded proctoring tool is subject to ongoing maintenance and periodic review processes covering both system performance and underlying analytical models. The platform operates within a controlled software development lifecycle, where updates to features, security controls, and system components are deployed in a scheduled and monitored manner.
+The machine learning models used within the system, including those supporting face detection, audio signal analysis, and event flagging, are based on pre-trained models. Talview does not use customer data, candidate session data, or any data generated through customer usage of the platform for training or retraining its AI or machine learning models. Model training activities are conducted centrally using curated and controlled datasets that are independent of customer environments.
+Model performance is reviewed periodically, including evaluation of detection accuracy, false positive and false negative rates, and overall system behaviour. Where improvements are required, updates or retraining are performed in a controlled manner using approved datasets. There is no automatic or continuous retraining of models within live customer deployments.
+In parallel, the system undergoes regular operational monitoring, including infrastructure health checks, security updates, and performance management within the Microsoft Azure environment. Any changes to models or system functionality are subject to internal validation and testing prior to release.
+This approach ensures that the system remains stable and predictable, while maintaining strict separation between customer data and model development activities, and preventing the use of customer data in AI model training.
+4.1.5 - Models
+Talview’s recorded proctoring tool utilises a combination of rule-based logic and machine learning models to analyse recorded assessment sessions and generate review indicators.
+The machine learning components primarily consist of computer vision and audio analysis models. Computer vision models are used for functions such as face detection, face presence consistency, and identification of multiple individuals within the camera frame. These models process video data to determine whether a face is present, whether the same face persists throughout the session, and whether additional faces appear. Audio analysis models are used to detect anomalies in the audio stream, such as the presence of background Noise.
+In addition to machine learning models, the system applies rule-based logic to interpret session behaviour. This includes evaluating structured metadata such as browser activity (e.g., tab switching, window focus changes), session interruptions, and device-level signals. These rules generate event flags when predefined conditions are met.
+The tool combines outputs from these machine learning models and rule-based systems to generate event indicators and an overall integrity classification (e.g., High, Medium, Low). These outputs are intended to support human review and are not used to make automated decisions.
+The system does not use large foundation models or generative AI models as part of the recorded proctoring workflow. All models operate within a defined scope focused on signal detection and event flagging.
+All models are pre-trained and deployed in a controlled manner. Talview does not use customer data or candidate session data to train or retrain these models.
+Tier 2 - Model Specification
+4.2.1. - Model name
+Talview’s recorded proctoring tool utilises a combination of self-hosted machine learning models and rule-based systems. The models deployed within the platform are not exposed as individually branded or externally marketed models; instead, they are internally developed or integrated components designed for specific detection tasks within the proctoring workflow.
+The computer vision capabilities, such as face detection and multi-face identification, are implemented using pre-trained models that are self-hosted within Talview’s infrastructure on Microsoft Azure. These models may be derived from established open-source architectures (for example, convolutional neural network-based face detection models), but are deployed, managed, and executed within Talview’s controlled environment rather than via third-party APIs.
+Similarly, audio analysis functions rely on self-hosted signal processing and machine learning models that detect patterns such as the presence of multiple voices or anomalous background audio. These models operate within Talview’s backend services and do not depend on external API providers.
+In addition to machine learning components, the system includes rule-based engines that evaluate structured session metadata (such as browser activity and session events). These are internally defined and maintained within the platform.
+No external foundation model providers or third-party AI APIs are used as part of the recorded proctoring decision-support workflow. All models are executed within Talview’s controlled infrastructure, ensuring that data processing remains within the defined hosting environment on Microsoft Azure.
+4.2.2 - Model version
+Talview’s recorded proctoring tool utilises self-hosted machine learning models and rule-based systems that are internally managed and version-controlled. As these models are not consumed via external APIs or third-party model providers, there are no publicly defined version identifiers associated with an external provider.
+Model versioning is maintained internally within Talview’s development and deployment processes. Each model iteration is tracked through internal version control mechanisms, with updates applied as part of controlled release cycles. These versions are not externally exposed but are documented within Talview’s internal systems for auditability and change management.
+For components derived from pre-trained open-source architectures, Talview incorporates them into its own managed environment and does not rely on externally hosted model endpoints. As such, externally published version numbers are not directly referenced in production use.
+All deployed model versions are fixed within a given release and do not change dynamically during customer usage. Any updates to model versions are subject to internal validation, testing, and controlled deployment procedures.
+4.2.3 - Model task
+The models within Talview’s recorded proctoring tool are designed to analyse recorded assessment session data to identify and flag events that may indicate deviations from expected test conditions.
+This includes processing video data to detect face presence and the occurrence of multiple individuals, analysing audio streams to identify additional voices or anomalies, and evaluating session metadata to detect behaviours such as browser switching or session interruptions. The models and associated rule-based logic generate timestamped event indicators and an overall integrity classification (e.g., High, Medium, Low) to support human review of the session.
+4.2.4 - Model input
+The models within Talview’s recorded proctoring tool take as input unstructured media data and structured session metadata captured during an assessment session.
+This includes video frames (image data extracted from recorded video streams), audio signals (waveform data from microphone input), and structured metadata such as timestamps, browser activity events, and device-related information (typically in JSON or similar structured formats). These inputs are associated with a session-level unique identifier rather than directly with personal data.
+4.2.5 - Model output
+The models within Talview’s recorded proctoring tool produce structured event indicators and classification outputs derived from analysis of session data.
+This includes timestamped flags (structured data, typically in JSON or database record format) indicating detected events such as face absence, multiple face detection, audio anomalies, or browser activity deviations. In addition, the models contribute to an overall integrity classification for the session, represented as categorical values such as High, Medium, or Low.
+These outputs are linked to the corresponding session identifier and are used to support human review rather than to make automated decisions.
+4.2.6 - Model architecture
+Talview’s recorded proctoring tool uses a combination of machine learning models (computer vision and audio signal analysis) and rule-based systems to analyse recorded assessment sessions and generate review indicators.
+The computer vision models are designed to process video frame data extracted from recorded sessions. These models are based on convolutional neural network (CNN)-type architectures commonly used for object and face detection tasks. They operate by identifying facial features within individual frames and tracking face presence across the duration of the session. This enables detection of conditions such as absence of a face, presence of multiple faces, or inconsistencies in face continuity.
+Audio analysis is performed using signal processing techniques and machine learning models that evaluate audio patterns within the recorded stream. These models assess characteristics such as overlapping speech, background noise, and the presence of multiple voices. The approach is based on pattern recognition rather than speech-to-text transcription, and is limited to identifying anomalies in the audio environment.
+In addition to machine learning components, the system applies rule-based logic to structured session metadata. This includes predefined rules that evaluate browser activity (such as tab switching or loss of window focus), session interruptions, and device-level signals. These rules are deterministic and trigger event flags when specific conditions or thresholds are met. For example, repeated or prolonged browser focus loss events may be prioritised as higher-risk indicators within the session.
+The outputs from the machine learning models and rule-based systems are combined to generate timestamped event flags and contribute to an overall integrity classification (e.g., High, Medium, Low). The integrity classification is derived from the aggregation and relative weighting of detected events, where certain event types (such as confirmed multiple face detection) may carry greater significance than lower-risk signals (such as brief focus changes). The exact weighting and thresholds are defined within Talview’s internal configuration and are subject to controlled updates.
+4.2.7 - Model performance
+Talview’s models used within the recorded proctoring tool are evaluated through a controlled validation and testing process prior to deployment. This process is conducted using curated, non-customer datasets that are designed to represent a range of expected usage conditions, including variations in lighting, device types, background environments, and user behaviour.
+Model evaluation includes testing of computer vision components for face detection and multi-face identification, as well as audio analysis components for detection of multiple voices or anomalous audio patterns. Performance is assessed using standard internal metrics such as detection accuracy, precision, recall, and false positive/false negative rates, with a particular focus on minimising false positives that may incorrectly flag normal candidate behaviour.
+In addition to model-level evaluation, the combined system (including rule-based logic) is tested end-to-end to validate that event flags are generated appropriately and that timestamped outputs align with recorded session data. Thresholds and rule conditions are reviewed and adjusted during this process to ensure consistent and predictable system behaviour.
+Privacy and data protection considerations are incorporated into the evaluation process by ensuring that customer data and live candidate session data are not used for training or testing purposes. Testing is conducted using controlled datasets, and outputs are reviewed to confirm that the system does not infer or derive sensitive attributes beyond its intended scope of detecting session-based anomalies.
+From a security perspective, models are tested within Talview’s controlled infrastructure hosted on Microsoft Azure, and deployment readiness includes validation of secure data handling, access controls, and isolation between customer environments.
+Fairness considerations are addressed through testing across varied environmental conditions (such as different lighting levels and camera qualities) to ensure consistent detection performance. However, the models are limited to detecting observable session conditions and do not make behavioural or demographic inferences.
+4.2.8 - Datasets and their purposes
+Talview’s recorded proctoring models are developed using a combination of curated internal datasets and publicly available datasets, used exclusively within controlled development environments.
+For the computer vision components (e.g., face detection and multi-face detection), models are initially based on pre-trained architectures that may utilise publicly available image and video datasets commonly used for face detection tasks. These datasets are used at the pre-training stage by the original model developers. Talview integrates these models and, where required, refines them using curated internal datasets consisting of consented and controlled image/video samples to validate and improve detection performance across different environmental conditions.
+For audio analysis components, development involves curated audio datasets that include controlled samples representing single-speaker and multi-speaker scenarios, as well as varying background noise conditions. These datasets are used for training and validation of models focused on detecting audio anomalies, rather than speech content.
+Internal datasets used by Talview are applied for validation and testing purposes, and in some cases for limited refinement (fine-tuning) of model behaviour to ensure robustness across expected usage scenarios such as variations in lighting, device quality, and background environments.
+No customer data, candidate session recordings, or data generated through customer use of the platform is used at any stage for training, fine-tuning, or testing of the models.
+There is no use of retrieval-augmented generation (RAG), prompt engineering datasets, or foundation model fine-tuning, as the system does not rely on generative AI models. All datasets used are aligned to the narrow task of detecting observable session conditions and are handled within controlled environments.
+2.4.3. Development Data
+4.3.1 - Development data description
+Talview’s recorded proctoring tool is developed using a combination of publicly available datasets and curated internal datasets, all of which are used within controlled development environments.
+For computer vision capabilities such as face detection and multi-face detection, the underlying models are based on architectures that are initially trained on widely used public datasets designed for facial recognition and object detection tasks. One such dataset is the FDDB (Face Detection Data Set and Benchmark) dataset (
+http://vis-www.cs.umass.edu/fddb/
+), which supports the development of generalised face detection capabilities across varied conditions.
+For audio analysis, publicly available datasets such as Google’s AudioSet (
+https://research.google.com/audioset/
+) are referenced during model development to support the detection of environmental audio patterns, including multi-speaker scenarios and background noise conditions.
+In addition to publicly available datasets, Talview uses curated internal datasets consisting of controlled and consented image, video, and audio samples. These datasets are used for validation and limited refinement of model performance to ensure robustness across practical usage conditions, such as variations in lighting, camera quality, and background environments.
+No customer data, candidate session recordings, or any data generated through customer use of the platform is used at any stage for training, testing, or refinement of the models. Internal datasets are not publicly accessible due to their controlled nature, but the referenced public datasets provide an indication of the types of data used in the development of the tool.
+4.3.2 - Data modality
+The datasets used in the development of Talview’s recorded proctoring tool consist of multiple data modalities aligned with the specific detection tasks performed by the system.
+For computer vision components, the datasets are primarily image and video data, consisting of facial imagery and frame-based visual data used for face detection and multi-face identification tasks. These datasets may also include time-series image data, where sequential video frames are analysed over time to assess face presence and continuity.
+For audio analysis, the datasets consist of audio data, including waveform-based recordings representing single-speaker and multi-speaker scenarios, as well as varying background noise conditions. These may also be treated as time-series data, where changes in audio signals are analysed over the duration of a session.
+In addition to media data, the system incorporates structured and log data for rule-based components. This includes tabular and time-series metadata such as browser activity logs, session timestamps, device information, and event records, which are used to evaluate session behaviour.
+The internal datasets used for validation and refinement follow the same modalities, including controlled image, video, audio, and structured log data. No text-based, geospatial, graph, or sensor-specific datasets are used beyond standard device and session metadata required for system operation.
+4.3.3 - Data quantities
+Talview’s recorded proctoring models are developed using a combination of publicly available datasets and curated internal datasets; however, precise dataset sizes, including the number of samples, attributes, and total storage size in bytes, are not publicly disclosed due to the controlled and proprietary nature of the development process.
+Public datasets referenced during model development, such as FDDB (Face Detection Data Set and Benchmark) and AudioSet, are large-scale datasets containing thousands to millions of labelled samples. These datasets provide broad coverage of facial imagery and audio events and are used at the pre-training or reference stage for underlying model capabilities.
+Curated internal datasets used by Talview consist of controlled and consented image, video, and audio samples designed to represent typical usage conditions, including variations in lighting, device quality, and background environments. These datasets are comparatively smaller and are used primarily for validation and limited refinement purposes rather than large-scale model training.
+Where data splitting is applied within Talview’s internal processes, datasets are divided into training (where applicable for refinement), validation, and testing subsets to evaluate model performance and generalisation. The relative distribution typically follows standard internal practices to ensure sufficient representation across each stage, with a larger proportion allocated to validation and testing to prioritise model reliability in deployment scenarios. Exact proportions are not externally disclosed.
+No customer data, candidate session recordings, or data generated through customer use of the platform is included in any dataset used for training, validation, or testing.
+4.3.4 - Sensitive attributes
+Talview’s recorded proctoring models are developed using publicly available datasets and curated internal datasets that may contain visual and audio data of individuals, which can inherently include personal data. Such data may indirectly contain attributes that could be considered sensitive or protected characteristics, such as apparent age range, gender presentation, or other visible or audible traits.
+Talview does not intentionally collect, label, or use sensitive attributes or protected characteristics (such as race, ethnicity, religion, health status, or similar categories) as features for model training or evaluation. The models are designed solely to detect observable session conditions, such as face presence, multiple individuals in frame, or audio anomalies, and do not perform classification or inference of demographic or sensitive traits.
+Where publicly available datasets are used, Talview relies on datasets that are broadly used for general-purpose detection tasks and does not augment them with additional sensitive attribute labelling. For internally curated datasets, data is collected in a controlled and consented manner, and no explicit annotation of sensitive attributes is performed.
+Sensitive attributes, where they may be incidentally present in visual or audio data, are not extracted, stored as separate features, or used in model decision-making. Model evaluation focuses on functional performance (e.g., detection accuracy) rather than demographic profiling.
+This approach is aligned with data minimisation principles, ensuring that sensitive personal data is neither purposefully processed nor used to influence model outputs.
+4.3.5 - Data completeness and representativeness
+The datasets used in the development of Talview’s recorded proctoring models are designed to provide sufficient coverage of typical usage scenarios; however, they are not intended to represent any specific demographic population. The focus of these datasets is on capturing variability in environmental and technical conditions, such as lighting, camera quality, background settings, and audio clarity, rather than demographic diversity.
+Publicly available datasets used in model development are generally well-structured and labelled for their intended tasks (e.g., face detection or audio event recognition), with limited missing data due to their curated nature. Similarly, Talview’s internal datasets are created under controlled conditions, which reduces the likelihood of incomplete or missing data within individual samples.
+Where missing or low-quality data points occur (for example, poor lighting in video frames or unclear audio segments), these are either excluded during dataset preparation or explicitly included to test model robustness under suboptimal conditions. This allows the system to be evaluated against real-world variability while maintaining overall dataset integrity.
+The datasets are not constructed to be statistically representative of any protected or demographic groups, as the models are not designed to make inferences about individuals or populations. Instead, representativeness is considered in terms of operational conditions, ensuring that the models perform consistently across a range of device types, environments, and session behaviours.
+Any limitations in representativeness are addressed through ongoing validation and testing across varied conditions, with particular attention to reducing false positives and ensuring stable performance irrespective of environmental differences. No customer data is used to supplement or adjust dataset representativeness.
+4.3.6 - Data cleaning
+Datasets used in the development of Talview’s recorded proctoring models undergo controlled data cleaning and pre-processing steps to ensure consistency, quality, and suitability for model evaluation and refinement.
+For image and video data, pre-processing includes frame extraction from video streams, standardisation of image formats and resolutions, and removal of corrupted or unusable frames. Basic normalisation techniques may be applied to account for variations in lighting and contrast, ensuring that input data is in a consistent format for computer vision models.
+For audio data, pre-processing includes standardisation of audio formats, filtering of excessively noisy or corrupted samples, and segmentation of audio streams where required. This enables consistent analysis of audio patterns while retaining representative environmental variability.
+Structured metadata and log data are validated to ensure consistency in format, completeness of key fields (such as timestamps and event markers), and removal of invalid or duplicate records.
+Where applicable, datasets are reviewed to remove duplicate entries, incomplete samples, or data that does not meet minimum quality thresholds. At the same time, a subset of lower-quality samples (such as low-light video or background noise in audio) may be retained intentionally to support robustness testing.
+No enrichment, augmentation, or labelling is performed to introduce or infer sensitive attributes. All pre-processing activities are conducted within controlled environments, and no customer data is included in these processes.
+4.3.7 - Data collection
+The datasets used in the development of Talview’s recorded proctoring models are obtained from a combination of publicly available sources and curated internal data collection processes, each with a defined and controlled purpose.
+Publicly available datasets, such as FDDB and AudioSet, are originally created for research and development purposes in the fields of computer vision and audio event detection. These datasets are designed to support tasks such as face detection and environmental audio classification and are widely used within the machine learning community. Talview uses these datasets in alignment with their original purpose, specifically for enabling generalised detection capabilities required for analysing video and audio streams in proctoring scenarios.
+In addition to public datasets, Talview utilises internally curated datasets that are collected in controlled environments with appropriate consent. The purpose of this data collection is to support validation and limited refinement of model performance under conditions that reflect real-world usage, such as variations in lighting, device types, and background noise. These datasets are specifically created to test and improve the robustness of detection mechanisms relevant to recorded proctoring.
+Where pre-trained models are incorporated, they are selected based on their suitability for tasks such as face detection and audio signal analysis. These models are not repurposed beyond their original scope; instead, they are applied within the same general domain of detecting visual and audio patterns.
+No datasets are repurposed for objectives that are incompatible with their original intent. In all cases, the data used is aligned with the narrow functional objective of identifying session-based anomalies in recorded assessment environments. Customer data and candidate session recordings are not used in the data collection, training, or refinement processes.
+4.3.8 - Data access and storage
+Access to datasets used for developing Talview’s recorded proctoring models is restricted to authorised personnel within Talview, specifically individuals involved in model development, validation, and system testing. Access is granted based on role and responsibility and is governed through controlled access management processes.
+These datasets are stored within Talview’s secure infrastructure hosted on Microsoft Azure, with logical and access-level segregation to prevent unauthorised access. Responsibility for storage, security, and management of these datasets rests with Talview as the data controller for internally curated datasets and as a data processor where applicable for externally sourced datasets, in accordance with applicable licensing and usage terms.
+Retention of development datasets is managed in line with internal data governance policies. Data is retained only for as long as necessary to support model development, validation, and audit requirements, after which it is securely deleted or archived in accordance with defined retention schedules.
+Where datasets include personal data (such as image or audio data), a number of technical and organisational safeguards are applied. From a technical perspective, data is stored in encrypted form both in transit (using TLS 1.2 or higher) and at rest within Microsoft Azure. Where feasible, datasets are de-identified or handled in a manner that avoids direct association with identifiable individuals. From an operational perspective, strict role-based access controls (RBAC), authentication mechanisms, and activity logging are implemented to ensure that access to datasets is limited, monitored, and auditable.
+No customer data or candidate session recordings are included in development datasets.
+4.3.9 - Data sharing agreements
+Talview does not share development datasets used for building or validating its recorded proctoring models with external third parties for their independent use. Development data, including curated internal datasets, is retained and processed within Talview’s controlled environment.
+Where publicly available datasets are used, they are accessed and utilised in accordance with their respective licensing terms and conditions. Talview does not redistribute these datasets and complies with any restrictions imposed by the original data providers.
+Access to development data is limited to authorised personnel within Talview who are involved in model development, validation, and system testing. Any access is governed by internal policies, confidentiality obligations, and role-based access controls to ensure that data is used solely for its intended purpose.
+Talview does not share development data under the Digital Economy Act, and therefore no entries exist on the DEA Register in relation to this tool.
+In cases where infrastructure providers (such as Microsoft Azure) are involved, they act strictly as data processors providing hosting and infrastructure services. They do not have access to or rights over the development datasets beyond what is necessary to deliver the underlying cloud services, and such arrangements are governed by standard data processing agreements and contractual safeguards.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Once deployed, Talview’s recorded proctoring tool collects data primarily from candidate interactions during assessment sessions, along with configuration inputs provided by the customer organisation and system-generated metadata.
+The primary data source is user input from the candidate’s device, including video captured via the webcam, audio from the microphone, and screen activity where enabled. In addition to media inputs, the system captures session-level metadata such as timestamps, browser activity (e.g., tab switching, focus changes), and device-related information (e.g., browser type, operating system, IP address).
+The tool also receives configuration data from the customer’s systems, either directly through the platform or via API integrations. This includes assessment setup parameters, proctoring settings (e.g., whether video/audio/screen capture is enabled), and a unique session identifier used to initiate and track the session. No personal data is required from the candidate at the point of session initiation.
+Where integrations are implemented, data may be received via API calls from external systems such as applicant tracking systems (ATS), learning management systems (LMS), or assessment platforms. These integrations may provide candidate-related information if configured by the customer, but such data is optional and controlled by the customer organisation.
+All data is collected in real time or near real time during the assessment session and transmitted securely to Talview’s infrastructure hosted on Microsoft Azure for processing and review.
+4.4.2 - Sensitive attributes
+Proview’s operational dataset contains several sensitive personal data attributes collected from candidates during remotely proctored examinations. The most significant is biometric data in the form of candidate face captures, where facial images are recorded via video and matched against a government-issued ID card at regular intervals during the test to verify identity — this constitutes special category data under regulations such as GDPR. Alongside this, the ID card itself is collected during the pre-check process and is sensitive PII by nature. Candidate name and email address serve as personal identifiers used for verification and test invitations, while the candidate’s IP address, though collected for audit log purposes, acts as a known proxy for geographic location. Additionally, audio/video camera feeds and screen recordings are captured throughout the session, which may incidentally reveal physical characteristics, surroundings, and behavioral patterns.
+All sensitive attributes are handled through a layered set of controls: candidates provide explicit click-wrap consent before the session begins and may opt out in favour of alternative examination methods. Data is retained only for the period defined in the client contract and then archived, with the DPO specifically advising that PII must be decoupled from media files during archival until formal deletion occurs. Access is restricted through role-based controls and a ticketing mechanism for special access, with all data encrypted in transit and at rest. The risk of PII misuse is mitigated through an automated ID verification mechanism that minimises human intervention during identity checks. For underage candidates, the suppliers DPO mandates parental consent prior to any data processing. Talview, acting as Data Processor, handles these attributes on behalf of the Client (Data Controller), with data stored in the EU and shared only with contracted proctoring sub-processors under appropriate data protection agreements.xSonnet
+4.4.3 - Data processing methods
+NA, As part of integration we only need identifiers while other are optional. Rest of the proctoring data is processed and collected via our application.
+4.4.4 - Data access and storage
+Talview’s recorded proctoring tool stores operational data generated during assessment sessions. This includes tool inputs such as video, audio, and screen recordings (where enabled), as well as user interaction logs and session metadata, including timestamps, browser activity, device information, event flags, and integrity classifications.
+Access to this operational data is restricted to authorised users based on role and responsibility. This typically includes customer-designated reviewers (e.g., administrators or evaluators) and limited authorised personnel within Talview for support and maintenance purposes. Access is governed through role-based access controls (RBAC) and authentication mechanisms, ensuring that only permitted individuals can view or manage the data
+Operational data is stored within Talview’s cloud infrastructure hosted on Microsoft Azure, with logical segregation between customers. Talview acts as a data processor, with the customer organisation acting as the data controller for candidate-related data. Data retention periods are configurable based on customer requirements and contractual agreements, after which data is deleted or archived in accordance with defined retention policies.
+Given that operational data may include sensitive personal data (e.g., video and audio recordings), Talview implements a range of technical and organisational security measures. Data is encrypted in transit using TLS 1.2 or higher and at rest using industry-standard encryption mechanisms within Azure. Access is logged and monitored to ensure auditability.
+From a privacy perspective, Talview follows a data minimisation approach, requiring only a unique session identifier to initiate sessions. Any additional personal data is provided and controlled by the customer. Sensitive attributes that may be incidentally present in recorded media are not extracted or used as separate analytical inputs.
+Operational safeguards include controlled access provisioning, activity logging, and periodic review of access rights to ensure continued compliance with security and data protection requirements.
+4.4.5 - Data sharing agreements
+Operational data generated by Talview’s recorded proctoring tool is not shared with external third parties for independent use. The data is primarily accessed and used by the MCA, which acts as the data controller, for the purpose of reviewing assessment sessions and making decisions related to candidate evaluations.
+Talview acts as a data processor and processes operational data strictly in accordance with contractual agreements and documented instructions from the customer. Access to operational data within Talview is limited to authorised personnel for purposes such as system support, maintenance, and issue resolution, and is governed by confidentiality obligations and role-based access controls.
+Operational data may be processed by infrastructure providers, specifically Microsoft Azure, which provides cloud hosting services. In such cases, Microsoft acts as a sub-processor and does not have independent rights to access or use the data beyond what is necessary to provide the infrastructure services. These arrangements are governed by data processing agreements and applicable data protection laws.
+No operational data is shared for purposes such as model training, analytics outside the customer’s scope, or third-party commercial use. Data sharing, where applicable (e.g., integrations with ATS or LMS systems), is controlled by the customer organisation and occurs through secure APIs under their configuration.
+Talview does not share operational data under the Digital Economy Act, and therefore there are no entries on the DEA Register associated with this tool.
+The MCA does not share any data produced by the tool with 3rd parties.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+The MCA updated its DPIA concerning Part A examinations involving computer based examinations (April 2026). This DPIA concerns the MCA’s use of risr/assess for exam delivery and analysis and Talview’s Proview proctoring tool.
+5.2 - Risks and mitigations
+There are several general risks identified regarding the use of AI proctoring. We consider the presence of meaningful human involvement through human review of proctoring outputs means this processing falls outside of automated decision making described in Article 22A UK GDPR.
+Risk of Overreliance on AI Proctoring Outputs
+There is a risk that AI generated flags are relied upon without sufficient human verification, leading to unfair exam outcomes.
+Mitigation: All AI flags are reviewed by a human on a candidate by candidate basis, supported by guidance, and the system cannot automatically pass or fail candidates.
+Risk of Denial of Exam Access Through AI Proctoring
+There is a risk that AI proctoring could incorrectly prevent candidates from accessing an examination.
+Mitigation measures: Identity checks are reviewed by a human post exam and are not used by the system to make automated access decisions.
+Risk of Lack of Transparency in the Proctoring Process
+There is a risk that candidates may not fully understand how AI proctoring operates or how exam conduct decisions are made.
+Mitigation measures: Candidates receive privacy information and candidate guides, under go pre-exam checks, provide click wrap consent, are informed of the Code of Conduct, and can appeal examination outcomes.
+Contents

@@ -1,0 +1,137 @@
+DfE: Virtual Assistant for Education Providers and Learners (Davina)
+The virtual assistant is used by customers to retrieve answers to simple queries. Customers are generally education providers and members of the general public.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+4 April 2025
+Organisation:
+Department for Education
+Organisation type:
+Ministerial department
+Function:
+Education
+Capability:
+Computer linguistics
+Task:
+Bot interaction and conversation
+Phase:
+Production
+Region:
+UK
+Date published:
+4 April 2025
+ATRS version:
+v3
+Tier 1 Information
+Name
+Virtual Assistant for Education Providers and Learners (Davina)
+Description
+The virtual assistant is used by customers to retrieve answers to simple queries. Customers are generally education providers and members of the general public. The customer selects a query from a list of options and the virtual assistant provides preprogrammed responses to assist. The tool is being used to attempt to address the more simple queries that reach the customer service team, saving time, resource and funds. This has many of the functions of an FAQ document, but is presented in a conversational manner.
+Website URL
+https://askonline.education.gov.uk/chatbot/davina?regional=true
+Contact email
+programme.improvement@education.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Education
+1.2 - Team
+Programme Improvement
+1.3 - Senior responsible owner
+Head of Customer Success
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The virtual assistant is built on the Microsoft Copilot Studio software (previously Power Virtual Assistants). This allows for paths to be created using flow charts, which become topics. These topics are the question and answer paths that the customer can take when using the tool, allowing for greater control over the content that is being presented. The tool is limited to providing links and text, but functionality can be expanded as required to include videos and images.
+2.2 - Scope
+The tool was designed to provide customers with a precise and efficient method of resolving simple queries, to reduce workloads for customer service teams. The tool provides preprogrammed responses and was not designed to allow customers to input free text. The responses are designed to be presented in a ‘conversational’ manner and this was considered when defining the scope of the tool as topics that couldn’t be presented in a conversational manner, were instead hosted as Help Centre articles. The main customer for this tool are education providers and members of the general public. The customer would use this tool to receive advice about guidance or processes in a conversational manner, reducing the need to look for answers manually in a knowldge hub.
+2.3 - Benefit
+The main benefit is to reduce simple queries from reaching the customer service teams and to provide a simpler customer journey. This has time saving benefits for the customer service teams, allowing the agents to focus their time on more complex queries. The customer benefits from an easier process, which improves customer satisfaction. The tool provides cost savings, as it can prevent customers from contacting the outsourced contact centre, reducing charges that are based on Full Time Equivalent (FTE) staff requirements.
+2.4 - Previous process
+The tool was built to provide answers for common questions found in the Customer Help Centre and the community forums. Prior to the tool, customers would manually search the helpcentre and then contact customer services via phone or email of they had been unsucessful in finding an answer to their query. The tool is designed to allow customers to self serve on simple queries and reduce therefore improve the customer journey and reduce workloads for customer service staff
+2.5 - Alternatives considered
+The preprogrammed chatbot was chosen over AI powered chatbots due to policy decisions and awaiting updates on the policy, as we have been advised to not add generative AI to the chatbot until the department has a specific policy (which is being deafted). The end goal is to incorporate AI and LLM into the chatbot to be able to dynamically answer customer queries. This would allow the customer to input their own prompts and the bot would use the given data to populate and present a response. The planned dataset for this is our Customer Help Centre and Internal Knowledge hub, which will provide the bot with knowledge around policy, guidance, processes and procedures. This will be monitored and expanded to inlcude topics that customers show interest in. The bot will not have access to the wider datasets provided by Copilot studio (such as search engines and public websites) and content will be carefully considered to ensure it is accurate and does not pose a security risk.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The tool provides customers the option of self-serving for simple queries. It provides guidance and information that informs customers decisions on how to troubleshoot and answer queries. The Customer will also need to decide whether to contact support after exhausting the processes within the chatbot. Customers will find the chatbot through the Customer Help Centre ‘chat to our virtual assistant link’. Customer Help Centre Home Page - https://customerhelp.education.gov.uk/hc/en-gb/articles/15529029371538-The-Customer-Help-Centre They will be advised to use the tool from the homepage of the customer help centre or when enquiring about the individual services i.e. Reception baseline assessment. Once they have used the tool, the information will be used to help them complete processes related to topics within the chatbot (Reception Baseline Assessment, Submit Learner Data, Customer Help Portal Troubleshooting, 19+ Queries, young people - Student Support, Eligibility information, DfE sign-in issues). These are regularly expanded to include more topics. If they haven’t found the answer by the end of the chatbot conversation flow, the chatbot will guide them to contact the relevant team, advise on further articles that may help and point them towards the customer help portal.
+3.2 - Provided information
+The tool provides the decision maker guidance links, excerpts of guidance documents and advice on how to proceed with their queries. This information is prepopulated currently, but there are plans to integrate LLM to provide dynamic responses. The user is shown a list of options (Reception Baseline Assessment, Submit Learner Data, Customer Help Portal Troubleshooting, 19+ Queries, young people - Student Support, Eligibility information, DfE sign-in issues). They then choose the option related to their query and further multiple choice questions narrow down their query, until the bot will provide the correct information. The chatbot captures which option the user clicks and then uses this information to inform which conversation flow should be followed. The customer cannot submit their own requests to the chatbot, but a feedback option will shortly be in place, allowing the customer to email their suggestions for services they would like to see included in the bot. The user can save the transcript, restart the conversation and choose options, but will be limited to the pre populated content in the chatbot.
+3.3 - Frequency and scale of usage
+The virtual assistant had 867 views in the past month. With an average of 600 monthly views since launch last year.
+3.4 - Human decisions and review
+Due to the chatbot being limited to preset questions and answers, every decision made by the chatbot has been reviewed by a human at the design stage and the customer is presented with prepopulated paths and outcomes.
+3.5 - Required training
+Microsoft Copilot training suite, DfE Information security Training. No training is in place for end users of the tool.
+3.6 - Appeals and review
+As the chatbot has prepopulated answers and the customer cannot input their own prompts, if the tool is unable to assist the user, it will point towards the best contact method for the customer to contact customer services. E.g. - Provides a firect email for the Portal team within the Portal troubleshooting journey. The toll is desgined to always ask if the customer needs further assistance once they have received key information or reached the end of the journey, so they will always be presented with a contact option if they are unable to find an answer to their query.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The service is hosted on the AskDfE Online section of the Gov.uk website. The data from the tool is input from DfE Copilot Studio, which is a secure version of the microsoft copilot studio suite. The tool provides web links and email addresses for the user, but does not access these (it presents the link for the customer to access). These have all been preprogrammed into the tool manually. Ask DfE Online is a public facing service for hosting Power Virtual Agent (PVA) now Copilot Studio chatbot assistants and surfacing these to external customers. The production site is available at https://askonline.education.gov.uk/ and all components for the service are stored in the S170 subscription. At a high level these comprise of an Azure Web App, Azure SQL Database, alongside others such as KeyVault, App Insights (see detailed list attached). The technical features are using Bot Framework Web Chat ( microsoft/BotFramework-WebChat: A highly customizable web-based client for Azure Bot Services. ) to embed the chatbot built in PVA/Copilot Studio, into a publicly accessible web UI. The code can be found in DevOps at https://dfe-ssp.visualstudio.com/S170-Ask-DfE-Online/_git/Ask-DfE-Online (requires access permissions granting). No personally identifiable information is stored in the tool, and no sensitive data is stored currently.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Tool is reviewed monthly to ensure compliance and information security. Development is ongoing facilitating regular testing prior to new deployments.
+4.1.4 - Models
+Display-Action-Response model
+Tier 2 - Model Specification
+4.2.1 - Model name
+Display-Action-Response model
+4.2.2 - Model version
+Microsoft Live Production version
+4.2.3 - Model task
+Present a customer with a question and options to pick to answer the question. The model will recognise the response and follow the relevant process, repeating until the customer has a resolution
+4.2.4 - Model input
+The option selected bu the user based on the list of options presented to them
+4.2.5 - Model output
+The model output will provide text responses that are relevant to the customers response, with the aim of answering a query or highlighting further support available.
+4.2.6 - Model architecture
+Predefined Responses and Actions. The chatbot uses a flow chart to present options to the customer. The customer selects the correct options and then the bot will present options to resolve the query. The bot can also execute specific actions based on user input, such as launching an email or following a link.
+4.2.7 - Model performance
+Performance is measured through Microsoft copilot studio analytics, which show’s abandoned journeys, completed journeys and engaged/unengaged customers. Unfortunately this is unreliable at this time, as customer cannot be tracked individually, which limits the MI as it is not specific to each customer. Mi is currently collated on a weekly or monthly basis (dependent on the requirements of the service lines) and manually sifted to collate any trends or data insights. Testng of the bot is completed prior to launch to prod, and when every new service line is added. Testing consists of running through each journey in it’s entirety to ensure it is working as expected. Further testing is then completed again once the tool has been depoyed to prod.
+4.2.8 - Datasets
+No datasets are utilised at this stage, but plans are in place to integrate knowledge hubs when generative AI is available. All responses were created by manually inputting the journeys
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+4.3.1 - Source data name
+N/A
+4.3.2 - Data modality
+N/A
+4.3.3 - Data description
+N/A
+4.3.4 - Data quantities
+N/A
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+N/A
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+N/A
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+A Data Protection Impact Assessment has been completed for the complete customer relationship management process called the ‘provider CRM Data Part 1’ this was completed on the 01/24.
+5.2 - Risks and mitigations
+No specific risks identified at this stage. This will be revisited if the bot is updated with further capabilities. The risks are absorbed into our larger customer service risk mitigation. Risks that customer cannot find correct answers, or are given the incorrect information are mitigated through the tool defaulting to providing contact details for customer services in the first instance. Bot technical feedback forms have been used by customers in the past to try to attempt communication, so to mitigate the risk of urgent customer qeuries being missed in this method, more regular checks of the reporting form have been put in place. Automated email notifications are being worked on currently so the customer services team are aware when a new response has been received to the technical feedback form.
+Contents

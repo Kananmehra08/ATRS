@@ -1,0 +1,296 @@
+FCDO: Correspondence Triage
+A tool to triage incoming correspondence for the correspondence team to ensure teams receive and respond more quickly to incoming communications.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Foreign, Commonwealth & Development Office
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Phase:
+Public Beta
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Correspondence Triage
+2 - Description
+This algorithmic tool helps FCDO’s Correspondence team triage incoming Ministerial Correspondence, Treat Official & Member of the Public non-policy enquiries. The tool assigns the case type and predicts several fields for each case, and where applicable, it then enters data onto the correspondence case management system.
+The primary purpose of the triage automation tool is to ensure timely and accurate handling of correspondence by automating time-consuming tasks, such as looking up previous relevant responses, especially during crises.
+The tool may suggest automated responses for repeat enquiries, such as petitions which have all previously received the same reply, and also identify commonly received enquiries that should be referred to other government departments (for example UK Visa enquiries). However it does not write responses. These are still prepared, signed off and released by FCDO employees.
+3 - Website URL
+N/A
+4 - Contact email
+fcdo.correspondence@fcdo.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Foreign, Commonwealth and Development Office
+1.2 - Team
+Parliamentary Office, Private Offices Directorate
+1.3 - Senior responsible owner
+Head of Parliamentary Office
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+CEOX Services Ltd
+1.4.2 - Companies House Number
+11143592
+1.4.3 - Third party role
+Full development of the tool in liaison with FCDO Correspondence Teams and FCDO Information and Digital Directorate.
+1.4.4 - Procurement procedure type
+Framework agreement call-offs. The same supplier had already developed a similar tool to what we required for another government department and this procurement route saved at least 8 months of development time.
+1.4.5 - Third party data access terms
+Names, addresses and email addresses are required to be held/accessed in order to provide a public service. Third party contractors may need to access this when supporting faults/issues, but if so only using their FCDO devices and only when they are security cleared.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The triage automation tool makes use of Microsoft Power Automate Artificial Intelligence (AI) and machine learning techniques. All emails that reach the
+fcdo.correspondence@fcdo.gov.uk
+mailbox are initially handled by the tool.
+Firstly, an algorithm is used for the classification of the correspondence. Secondly, prompting is used for summarising the correspondence and for generating follow up. Finally virtual machines are used to log correspondence on an internal case management system.
+2.2 - Benefits
+The key benefits that the tool delivers include: improved efficiency in processing correspondence, saving several hours of manual work per day for multiple team members. Automated summarisation and flagging, which ensures timely identification of high-priority, high-risk, and high volume crisis correspondence, and the automatic matching of correspondence with the correct drafting teams. These together enable better prioritisation and management of correspondence which frees up team members to focus on more complex tasks. An additional benefit is that corrections to the data entered are not required following human error.
+2.3 - Previous process
+The previous process for triaging and data entering correspondence required the same fields and categories to be identified by members of the Correspondence Team. This work was manually carried out by team members with automation limited to filling in basic details from the correspondence such as the sender’s name.
+2.4 - Alternatives considered
+We explored multiple methods before deciding upon the final approach. The final method was selected because: it required minimal retraining; allowed for custom models for each of the subproblems; is able to handle high volumes at no additional cost, were a crisis event to trigger an extreme influx of email traffic.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Decisions regarding the processing of correspondence by the Correspondence team are made continuously, as new correspondence is received. The triage automation tool integrates into this decision-making process by automating the summarisation, allocation and identification steps that were previously done manually, thereby enhancing efficiency and accuracy.
+3.2 - Human review
+The predictions made by the triage automation tool are monitored by the member of the Correspondence team who has been assigned the correspondence. They are then able to overwrite the predicted case type and/or fields when needed. In addition to this, the performance of the triage automation tool is monitored by a project team.
+3.3 - Frequency and scale of usage
+The triage tool is used automatically each time an email correspondence is received via the FCDO.Correspondence email address. Since go live in March 2024 the mailbox has received an average 30,540 emails per month.
+3.4 - Required training
+Each Correspondence team member using the tool goes through an onboarding process that trains them on how to use the tool and troubleshoot any issues.
+3.5 - Appeals and review
+N/A. All emails are reviewed once they have been triaged by the correspondence tool. This process does not affect individuals right to review or appeal the response provided.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Intelligent Automation Administration App uses Power Automate and AI Builder to classify emails sent into the FCDO Correspondence mailbox and to determine how the email should be handled. When an email enters the Correspondence mailbox it is processed for information, e.g. contact names, etc. It then uses a variety of AI Models (Auto Email Category Classification, Geographical Names, Addressee Minister, Themes Category Classification, Entity Extraction, From Address, Greetings, Sender Ref, Language Detection) to determine how an email should be handled and who it is addressed to.
+4.1.2 - System-level input
+Emails sent to the FCDO Correspondence inbox.
+4.1.3 - System-level output
+Applies a label and a determination as follow up action to be taken, or logs the details on a separate correspondence case management system (eCase) using a virtual machine.
+4.1.4 - Maintenance
+There are automated weekly tests that run within the User Acceptance Testing Environment, which will alert CEOX if an error is found during the RPA Process. Twice a year the Power Platform deploys a major release wave with new capabilities, but Microsoft push out fixes / improvements to the platform weekly.
+4.1.5 - Models
+Geographical Names (Entity Extraction) - Attempts to find cities / countries in the email; Addressee Minister (Entity Extraction) - Attempts to determine the minister the email is addressed to; Entity Extraction - Extracts names, phone numbers, farewells etc from the email; From Address (Entity Extraction) - Extracts the Name and Email Address from the input; Greetings (Entity Extraction): Extracts Greeting messages; e.g. Dear, Hello, To, Hi; Sender Ref (Entity Extraction): Extracts the sender reference number from the input; Language Detection: Detects the main language of the email body to determine if the email is written in a foreign language; Next-Gen Auto-Email Classification - Attempts to determine the subject/type of an email; Analyse Email For Correspondent Details - Extracts names, email and address from the email; Next-Gen Theme Determination - Attempts to understand the theme of an email; e.g. UK-EU relationship, etc; Next-Gen Sub-Theme and Key Term Determination - Attempts to determine a sub theme that relates to the main theme found, also identifies 0-3 key terms based on frequency in the correspondence; Next-Gen Nature of Correspondence Classification - Attempts to classify what is being asked in the correspondence and/or the overall sentiment; No Response Required - Determines whether correspondence does not warrant a response, whether due to offensive language or no policy question asked; Specified Case Type - Identifies if an internal email requests the case to be created with a specific case type
+Tier 2 - Model Specification
+4.2.1. - Model name
+AI Builder:
+- Geographical Names (Entity Extraction)
+- Addressee Minister (Entity Extraction)
+- Entity Extraction
+- From Address (Entity Extraction)
+- Greetings (Entity Extraction)
+- Sender Ref (Entity Extraction)
+- Language Detection
+AI Prompts:
+- Next-Gen Auto-Email Classification (GPT-4.1)
+- Analyse Email For Correspondent Details (GPT-4.1 mini)
+- Next-Gen Theme Determination (GPT-4.1)
+- Next-Gen Sub-Theme and Key Term Determination (GPT-4.1 mini)
+- Next-Gen Nature of Correspondence Classification (GPT-4.1)
+- No Response Required (GPT-4.1)
+- Specified Case Type (GPT-4.1 mini)
+4.2.2 - Model version
+AI Builder Models have no version numbers, AI Prompt Models have a GPT version specified in the field above.
+All models are contained within a Power Platform solution which is versioned; the currently deployed model is 1.0.20251120.1
+4.2.3 - Model task
+Geographical Names (Entity Extraction Find Geographical Names such as cities and countries in email body
+Addressee Minister (Entity Extraction):
+Find Ministers Names within the input provided
+Entity Extraction:
+Extracts important Contact Data from the email such as Names, Addresses, Farewells, URLs
+From Address (Entity Extraction):
+Finds the name and email address from the header of an email message
+- Greetings (Entity Extraction):
+Finds greeting messages at the start of the email body to then be used to find the addressee of the email message.
+- Sender Ref (Entity Extraction):
+Finds the sender reference number from within the subject or email body
+- Language Detection:
+Finds the predominant language in the email body
+- Next-Gen Auto-Email Classification
+Classifies whether an email should:
+- be forwarded and to which department
+- be replied to and with which standard respons- proceed with RPA process
+- Analyse Email For Correspondent Details
+Extracts names, email and address for the correspondent from the email.
+- Next-Gen Theme Determination
+Classifies email body into the best suited Theme (or No Theme)
+- Next-Gen Sub-Theme and Key Term Determination
+Classifies email body into the best suited Sub Theme (or No Sub Theme)
+Identifies 0-3 key terms based on frequency in the correspondence
+- Next-Gen Nature of Correspondence Classification
+Classifies what is being asked in the correspondence and/or the overall sentiment
+- No Response Required
+Determines whether correspondence does not warrant a response, whether due to offensive language or no policy question asked
+- Specified Case Type
+Identifies if an internal email requests the case to be created with a specific case type
+4.2.4 - Model input
+Email Subject or Email Body
+4.2.5 - Model output
+Models:
+- Geographical Names: Found Countries and Cities
+- Addressee Minister: Found Ministers
+- Entity Extraction: Names, Farewells, Addresses, URLs
+- From Address (Entity Extraction): Name and Email Address
+- Greetings (Entity Extraction): Greetings
+- Sender Ref (Entity Extraction): Sender Reference Number
+- Language Detection: Language of the email
+- Next-Gen Auto-Email Classification: Auto Email Category
+- Analyse Email For Correspondent Details: Names, Email, Address
+- Next-Gen Theme Determination: Theme Category
+- Next-Gen Sub-Theme and Key Term Determination: Sub Theme Category and list of 0-3 Key Terms
+- Next-Gen Nature of Correspondence Classification: Nature of Correspondence Category
+- No Response Required: True/False with Reasoning and Citation
+- Specified Case Type: Case Type
+All items are returned in JSON format which is subsequently processed by Power Automate
+4.2.6 - Model architecture
+The level of detail of the Model is abstracted away in the Power Platform. The details of the models that are provided by Microsoft are as follows:
+https://learn.microsoft.com/en-us/ai-builder/prebuilt-entity-extraction
+https://learn.microsoft.com/en-us/ai-builder/prebuilt-category-classification
+https://learn.microsoft.com/en-us/ai-builder/prebuilt-language-detection
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/prompts-overview
+4.2.7 - Model performance
+AI Builder:
+- Auto Email Category Classification:
+- Macro F1: 0.7467
+- Accuracy: 0.7333
+- Geographical Names (Entity Extraction):
+- F1: 0.8512
+- Precision: 0.9389
+- Recall: 0.7784
+- Addressee Minister (Entity Extraction):
+- F1: 0.8346
+- Precision: 0.9464
+- Recall: 0.7464
+- Themes Category Classification:
+- Macro F1: 0.7103
+- Accuracy: 0.7354
+- Entity Extraction:
+- F1: 0.7407
+- Precision: 0.8252
+- Recall: 0.6719
+- From Address (Entity Extraction):
+- F1: 0.7479
+- Precision: 0.8557
+- Recall: 0.6642
+- Greetings (Entity Extraction):
+(Detailed metrics unavailable)
+- Sender Ref (Entity Extraction):
+(Detailed metrics unavailable)
+- Language Detection:
+(Microsoft prebuilt model; Detailed metrics unavailable)
+AI Prompts:
+- Next-Gen Auto-Email Classification: Auto Email Category
+- Accuracy: ~0.6 (after old model was found as ~0.34)
+- Analyse Email For Correspondent Details: Names, Email, Address
+(Detailed metrics unavailable)
+- Next-Gen Theme Determination: Theme Category
+(Detailed metrics unavailable)
+- Next-Gen Sub-Theme and Key Term Determination: Sub Theme Category and list of 0-3 Key Terms
+(Detailed metrics unavailable)
+- Next-Gen Nature of Correspondence Classification: Nature of Correspondence Category
+- Accuracy: 1 (UAT Testing)
+- No Response Required: True/False with Reasoning and Citation
+- Accuracy: 0.9 (UAT Testing for optimisations of No Response Required)
+- Specified Case Type: Case Type
+- Accuracy: 0.95 (UAT Testing)
+4.2.8 - Datasets and their purposes
+The Language Detection AI model is prebuilt by Microsoft and we don’t have access to their dataset.
+All AI Builder Models use custom datasets. These datasets were created using anonymised emails from FCDO’s correspondence mailbox as well as user-created training data.
+The data was used in the development environment to train the models only.
+AI Prompt Models use reference data stored in the system as knowledge to perform determinations and choose a category - e.g. chooses a Sub Theme and 0-3 Key Terms based on the reference data stored under the Sub Theme and Key Terms entities.
+2.4.3. Development Data
+4.3.1 - Development data description
+Auto Email Category Classification: Anonymised emails shorten to the main portion that indicates the Auto-Email category
+Geographical Names (Entity Extraction): User-generated sentences that include Geographical Names such as Countries and Cities
+Addressee Minister (Entity Extraction): Start of anonymised emails that show who the email is addressed to
+Themes Category Classification: Anonymised Emails shorten to the main portion that indicates the Theme category
+Entity Extraction: Anonymised email shortened to include a variety of contact data types
+From Address (Entity Extraction): The name and email address from the header of an email message
+Greetings (Entity Extraction): The greeting messages at the start of the email body to then be used to find the addressee of the email message.
+Sender Ref (Entity Extraction): The sender reference number from within the subject or email body
+Language Detection: Dataset Unavailable (Microsoft Prebuilt Model)
+4.3.2 - Data modality
+Text
+4.3.3 - Data quantities
+As of 21/11/2025:
+Auto-Email Training Records: 454
+Addressee Minister Training Sentences: 95
+Entity Extraction Training Sentences: 322
+From Address Training Sentences: 83
+Geographical Names Training Sentences: 131
+Greetings Training Sentences: 6
+Sender Ref Training Sentences: 31
+Language Detection: Dataset Unavailable (Microsoft Prebuilt Model)
+4.3.4 - Sensitive attributes
+Uncommon  names are used in both the Entity Extraction and From Address models to train the AI to understand and retrieve less commonly found names.
+4.3.5 - Data completeness and representativeness
+The data used for training is a subset of the full data set; e.g. specific sentences that are representative to train the model of what to look for were used, instead of using the full data set that would have information that was not required or useful.
+4.3.6 - Data cleaning
+Before data is put into the dataset to train the AI Model, it is checked for any sensitive data and removed. The data sets are anonymised wherever possible.
+4.3.7 - Data collection
+Original representative emails were collected and the key sentences extracted, so the data sets are representative and accurate.
+4.3.8 - Data access and storage
+Access to Data:
+- IA Administration Super Users:
+- Able to view edit and delete Auto-Email and Theme Training Records
+- Able to view edit and delete Auto-Email and Theme Categories
+- Able to view and edit From Address, Geographical Names, Entity Extraction, Addressee Minister, Greetings and Sender Ref Training Data
+- No Access to Language Detection Training Data (Microsoft Prebuilt Model)
+IA Administration Case Workers:
+Only view  Auto-Email and Theme Training Records
+Only view  Auto-Email and Theme Training Categories
+No Access to From Address, Geographical Names, Entity Extraction, Addressee Minister, Greetings and Sender Ref Training Data
+No Access to Language Detection Training Data (Microsoft Prebuilt Model)
+4.3.9 - Data sharing agreements
+N/A Data is not shared outside of FCDO
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Emails sent into the public and parliamentary facing mailbox
+fcdo.correspondence@fcdo.gov.uk
+4.4.2 - Sensitive attributes
+Limited personal data is retrieved including names, addresses and email addresses. These are required in order to provide a public service and respond to the correspondence. Data is stored on the tool for 60 days and then deleted.
+4.4.3 - Data processing methods
+All emails go through standard FCDO/Outlook spam and firewall processing prior to being processed by the tool.
+4.4.4 - Data access and storage
+Access to Data:
+- IA Administration Super Users:
+- Able to view edit and delete Auto-Email and Theme Training Records
+- Able to view edit and delete Auto-Email and Theme Categories
+- Able to view and edit From Address, Geographical Names, Entity Extraction, Addressee Minister, Greetings and Sender Ref Training Data
+- No Access to Language Detection Training Data (Microsoft Prebuilt Model)
+IA Administration Case Workers:
+Only view  Auto-Email and Theme Training Records
+Only view  Auto-Email and Theme Training Categories
+No Access to From Address, Geographical Names, Entity Extraction, Addressee Minister, Greetings and Sender Ref Training Data
+No Access to Language Detection Training Data (Microsoft Prebuilt Model)
+4.4.5 - Data sharing agreements
+N/A Data is not shared outside of FCDO
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+Initial calculations were done on the expected cost-saving achieved from using the tool vs human sorting of emails.  We also conducted a full benefits assessment and conducted data protection reviews throughout the implementation project, including a Data Protection Impact Assessment.
+Records are only kept for a limited period of time, on the Triage tool, allowing for appropriate case processing and identification of duplicates and identical email campaigns. Treat Official and Parliamentary correspondence is often, however, logged on an interfaced case management system called eCase.  A DPIA has also been conducted for eCase which cites the triage tool as a supporting asset.
+5.2 - Risks and mitigations
+The key risk is that the Robotic process automation does not capture the correct data to create the record in E-Case, i.e. incorrect email or names saved.
+The current mitigation in place is to continue ongoing optimisation and improvement of the RPA. In addition, the RPA will not carry out any full end to end processes, and all information will be peer reviewed by ‘humans’ before submitting a response to a member of the public.
+A second risk is that the Robot Process Automation (RPA) stops working and needs to be reconfigured if changes are made in the process. Correspondence teams may need to return to manual processes if the tool is offline.
+Finally, the next-gen AI models built using AI Prompts are subject to Microsoft’s content moderation filtering. If Microsoft’s model identify the input/outpu of the model as offensive or too sensitive then the model will not return a useful output. To account for this we classify these cases as offensive which can then be review by a user manually. We run the NRR model early on to ensure offensive content is caught as early as possible, so as to not slow down processing time or overuse AI credits.
+Contents

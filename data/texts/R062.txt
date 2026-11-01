@@ -1,0 +1,268 @@
+NHS Blood & Transplant: Organ Offering Scheme Algorithms
+The organ allocation algorithms enable quick processing of data to ensure that every precious organ donated, has the best possible chance of being transplanted successfully by an effective, fair, and transparent means.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+26 June 2025
+Organisation:
+Department for Health and Social Care
+Organisation type:
+Agency or public body
+Function:
+Health
+Capability:
+Discovery
+Task:
+Recommender systems
+Phase:
+Production
+Region:
+UK
+Date published:
+26 June 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Organ Offering Scheme Algorithms
+2 - Description
+The 2005 NHS Blood and Transplant Directions is to “provide an organ and tissue offering and allocation service, ensuring the maximum effective use of organs and tissues; safety of persons and their survival rates; equity and integrity of the organ sharing system”. (
+https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/2151/nhsbt_directions_2005.pdf)
+)
+The Algorithms enable fair, transparent and quick processing of data to ensure every precious organ donated has the best possible chance of being transplanted successfully.
+Algorithm development includes Clinical & patient communities to determine key principles for offering organs to transplants centres for a named patient and is used alongside other clinical and statistical factors.
+Scheme agreed within clinical Advisory Groups and other relevant stakeholders (including patient participation groups).
+Further details at :
+https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/30850/pol200.pdf
+and policy 223 Patient Selection and Organ Allocation Policies Review and Approval (Organs)
+https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/27315/pol223.pdf.
+Each organ has set criteria to determine eligibility and ranking of the recipients to a particular donor, details can be found at
+https://www.odt.nhs.uk/transplantation/tools-policies-and-guidance/policies-and-guidance/
+(Kidney - policy 186; Pancreas - policy 199; Liver - policy 196; Intestinal - policy 193; Heart - policy 228; Lung - policy 230)
+3 - Website URL
+https://www.odt.nhs.uk/transplantation/tools-policies-and-guidance/policies-and-guidance/
+(Kidney - policy 186; Pancreas - policy 199; Liver - policy 196; Intestinal - policy 193; Heart - policy 228; Lung - policy 230)
+4 - Contact email
+enquiries@nhsbt.nhs.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Organ and Tissue Donation and Transplantation (OTDT) Directorate, NHS Blood and Transplant (NHSBT)
+1.2 - Team
+Statistics and Clinical Research develop the rules for the algorithm.
+Digital, Data, and Technology Services implement the rules in to the IT systems.
+HUB Operations use the algorithm to offer organs to transplant centres on behalf of named patients.
+Statistics and Clinical Research alongside the Organ Advisory Groups are responsible for monitoring the algorithm.
+1.3 - Senior responsible owner
+Director of Organ and Tissue Donation and Transplantation
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+For one of the organ allocation algorithms, the UK Living Kidney Sharing Scheme, the Dept. of Computer Science at Glasgow University
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+The Department of Computer Science at Glasgow University in collaboration with the Statistics and Clinical Research team at NHSBT have developed the algorithm for the UK Living Kidney Sharing Scheme to match donor and recipient pairs for transplant.
+1.4.4 - Procurement procedure type
+Collaborative working relationship between NHS Blood and Transplant and Glasgow University
+1.4.5 - Data access terms
+The developed algorithm is embedded within NHSBT IT systems and so no data access to the external supplier is granted.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Following registration of an organ donor, where consent has been obtained for donation, the minimum required personal and special category data from the donor and all recipients actively awaiting an organ are passed from the UK Transplant Registry to our IBM Business Process Management system (BPM), where the Operational Decisions Management (ODM) rules engine determines the eligibility of the recipient to receive the organ from the donor and ranks the eligible patients using clinically agreed algorithms.
+Each organ has set criteria to determine eligibility and ranking of the recipients to a particular donor.  These are detailed, separately for each organ, in the allocation policies:
+https://odt.nhs.uk/transplantation/tools-policies-and-guidance/policies-and-guidance/
+(Kidney - policy 186; Pancreas - policy 199; Liver - policy 196; Intestinal - policy 193, Heart - policy 228; Lung - policy 230)
+2.2 - Scope
+The purpose of the processing is to meet our mandate from the 2005 NHS Blood and Transplant Directions to ‘provide an organ and tissue offering and allocation service, having regard to the need to ensure the maximum and most effective use of organs and tissues; safety of persons and their survival rates; equity and integrity of the organ sharing system’.
+https://nhsbtdbe.blob.core.windows.net/umbraco-assets-corp/2151/nhsbt_directions_2005.pdf)
+)
+An equitable system of allocation is complex, donor and recipient factors mean that not all donor organs are of equal quality, while recipient factors (i.e Blood group, HLA Type, size match) may also complicate allocation attempts. Within the UK, as at March 2024, there were an average of 4-5 organ donors per day, donating approximately 3.5 organs per donor, requiring allocation to  7400 recipients awaiting an organ transplant. To achieve the best use of this scarce resource, development of organ allocation algorithms is required.
+An algorithm is required to apply these rules in a speedily, standard and repeatable way with limit error.
+2.3 - Benefit
+The allocation algorithms enable quick processing of data to ensure that every precious organ donated, has the best possible chance of being transplanted successfully by an effective, fair, and transparent means.
+The algorithms combined with clinical guidance ensure a safe and effective way of offering organs for transplant to patients on the waiting list in a transparent and efficient way.  There are multiple factors to consider through tranplant with the algorithm providing systematic and reproducible results which  clinicians then utilise alongside other clinical, environmental, and situational factors to make an informed decision.
+Ultimately the decision of whether to accept an organ for a named patient is the responsibility of the transplant centre.
+2.4 - Previous process
+Prior to the development of organ offering algorithms, organs were offered to the transplant centre that was closest to the donor hospital to transplant in to a patient of the centres choice. This process was neither equitable or transparent.
+2.5 - Alternatives considered
+The key principles that should underpin a new Organ offering scheme are agreed only after results of multiple statistical analyses have been undertaken. In order to test the effect of each factor considered in the algorithm, simulations were used to inform the design and help decide the weight to put against each factor. Multiple offering scheme variations are produced and at each stage the data are shared with a working group which consists of clinicians, scientists, statisticians, operational managers, and patients/lay representatives, to identify areas for improvements where certain key principles have not been met. Once a scheme has been chosen by the group, the simulated scheme is shared with major stakeholders including the NHSBT Advisory Group and Patient Group, which has representation from each of the transplant centres in the UK, as well as Representatives from patient groups.
+The scheme is the output of all these design and research actions, no other scheme is considered as the evidence and decisions pointed to the scheme in place being the best
+Tier 2 - Decision making Process
+3.1 - Process integration
+The algorithm produces a ranked list of patients that are suitable to receive the organ on offer. This ranking is based on the organ offered on the day, with the highest ranked patient deemed most suitable for that particular organ on offer. Clinicians in Hospital Trust Transplant centres make the final decision as to whether to accept the offer of an organ for the intended patient. If clinicians treating the patient feel it’s not the best match it will then be offered to the next highest ranked patient. With each new organ offered the calculated ranking will change, based on the combination of organ and recipient.  Once a clinician has accepted an organ on behalf of a patient normal clinical processess proceed.
+3.2 - Provided information
+The algorithm produces a ranked list of patients which shows the patient and their relative position in the algorithmic matching.  The clinician or clinical teams then uses this data and other relevant clinical information on the donor and patient to make an informed decison to accept the organ on offer to the patient.
+3.3 - Frequency and scale of usage
+On average in the UK, there are 4-5 organ donors that have consent for donation per day,  donating approximately 3.5 organs per donor.  Around 2000 consented organ donors have their organs offered every year leading to around 8000 organs offered for transplant per year all of which are offered through the allocation schemes.
+3.4 - Human decisions and review
+The final decision on accepting an offer of organ donation is made by clinicians in the relevant Hospital Trust Transplant centres.
+NHSBT undertake regular quality reviews on the outcomes of organ offering schemes, which are undertaken every three months once they are initially implemented and supported by the relevant Organ Advisory Group.  A full quality review of the scheme takes place at 5 years which is fully supported by the wider clinical and patient communitee. Changes are implemented where required as part of this review process for any groups of patients identified as being disadvantaged by the schemes. Regular monitoring is undertaking routinely and reported to the Organ Advisory Groups on a 6-monthly basis to ensure the scheme is performing as expected.  A full review looks to assess the underlying principals of the allocation schemes to ensure they remain relevant.
+3.5 - Required training
+Each Organ Allocation Specialist (OAS) at NHSBT is trained on each individual organ using standard documented proceedures with regular continuous training to ensure their knowledge is up to date.
+New starters receive classroom training, followed by several weeks of intense practical training. Training is undertaken through close supervision by a team manger who reguallarliy reviews their practice and learning requirements.
+3.6 - Appeals and review
+Individuals can challenge the information used and seek human intervention should they have any questions in relation to where they appear on matching runs.
+Please contact a member of the clinical team caring for the patient, NHSBT directly (
+https://www.organdonation.nhs.uk/contact/),
+,) via a patient group, or contacting a charity that is represented at NHSBT.
+All views are listened to and shared by the appropriate means (e.g. to the relevant Organ Advisory Group comprising clinicians, patient and lay reps and other experts).
+Challenges are then balanced against all other factors to ensure clinical relevance, equitable and transparency.
+All challenges are responded to with an explanation as to why they were either declined or accepted.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The National Transplant Database (UK Transplant Registry) is an application that consists of the following key technical components: Oracle Database, IBM Operational Decision Manager (IBM ODM), IBM Business Automation Workflow (IBM BAW).
+All Donor and Recipient (transplant patient) data is captured and stored in the Oracle Database.
+The repository of rules for the Organ Allocation Schemes is held in IBM ODM.
+Organ Allocation Schemes are initiated from the Oracle Database which calls IBM BAW, which fetches the relevant data from the Oracle Database and passes it to IBM ODM.
+IBM ODM executes the appropriate rules for the Allocation Scheme.
+IBM BAW writes the output from the rule execution into the Oracle Database.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+NHSBT undertake regular reviews of organ offering schemes, which are undertaken every three months once they are initially implemented, with a full review of the scheme taking place at 5 years. Changes are implemented where required as part of this review process for any groups of patients identified as being disadvantaged by the schemes.
+The National Transplant Database (UK Transplant Registry) is supported and maintained by NHSBT’s OTDT Product Centre Team.
+4.1.4 - Models
+A detailed description of all models used in the tools can be found in the allocation policies.  These are detailed, separately for each organ:
+https://odt.nhs.uk/transplantation/tools-policies-and-guidance/policies-and-guidance/
+(Kidney - policy 186; Pancreas - policy 199; Liver - policy 196; Intestinal - policy 193, Heart - policy 228; Lung - policy 230)
+Tier 2 - Model Specification
+4.2.1 - Model name
+Organ Offering Algorithms
+4.2.2 - Model version
+Deceased Kidney - September 2019
+Living Kidney - January 2018
+Liver - March 2018
+Pancreas - September 2019
+Intestinal - August 2013
+Heart - October 2020
+Lung - October 2020
+4.2.3 - Model task
+The models are designed to implement a clinically agreed way to prioritise patients on the waiting list with a specific donor, ensuring offers can be made in the quickest and most robust way
+4.2.4 - Model input
+The algorithm takes the clinically relevant information about the donor and recipients as an input
+4.2.5 - Model output
+The algorithm outputs a clinical agreed ordered list of patients suitable to receive the organ on offer from the donor.
+4.2.6 - Model architecture
+A full description of the allocation algorithms can be found in the allocation policies:
+https://odt.nhs.uk/transplantation/tools-policies-and-guidance/policies-and-guidance/
+(Kidney - policy 186; Pancreas - policy 199; Liver - policy 196; Intestinal - policy 193, Heart - policy 228; Lung - policy 230).
+Further information can also be found in published papers:
+Deceased Kidney -
+https://journals.lww.com/transplantjournal/fulltext/2010/02270/a_new_uk_2006_national_kidney_allocation_scheme.4.aspx
+Living kidney -
+https://journals.lww.com/transplantjournal/fulltext/2008/12270/early_experience_of_paired_living_kidney_donation.10.aspx
+Pancreas -
+https://www.amjtransplant.org/article/S1600-6135(22)00375-6/fulltext
+Liver -
+https://www.journal-of-hepatology.eu/article/S0168-8278(24)00203-4/fulltext
+Heart -
+https://www.jhltonline.org/article/S1053-2498(20)31614-4/abstract
+Lung -
+https://thorax.bmj.com/content/thoraxjnl/78/12/1206.full.pdf
+Intestinal -
+https://journals.lww.com/transplantjournal/fulltext/2013/01150/strategies_for_expanding_the_uk_pool_of_potential.34.aspx
+4.2.7 - Model performance
+During the development of all organ allocation schemes a set of principals are agreed by the clinical and patient communties so that we are able to assess the perfomance of the schemes and ensure they are functionning as required.  Further information can be found in published papers:
+Deceased Kidney -
+https://journals.lww.com/transplantjournal/fulltext/2010/02270/a_new_uk_2006_national_kidney_allocation_scheme.4.aspx
+Living kidney -
+https://journals.lww.com/transplantjournal/fulltext/2008/12270/early_experience_of_paired_living_kidney_donation.10.aspx
+Pancreas -
+https://www.amjtransplant.org/article/S1600-6135(22)00375-6/fulltext
+Liver -
+https://www.journal-of-hepatology.eu/article/S0168-8278(24)00203-4/fulltext
+Heart -
+https://www.jhltonline.org/article/S1053-2498(20)31614-4/abstract
+Lung -
+https://thorax.bmj.com/content/thoraxjnl/78/12/1206.full.pdf
+Intestinal -
+https://journals.lww.com/transplantjournal/fulltext/2013/01150/strategies_for_expanding_the_uk_pool_of_potential.34.aspx
+4.2.8 - Datasets
+Data is collected for all patients waiting for a transplant and for all those who have had a transplant in the UK, held in the UK Transplant Registry.
+Data collected enables patients to receive a transplant and ensure an accurate record of all transplants and their follow-up, each data point is assessed and is deemed clinically relevant in monitoring the outcomes for patients who need a transplant for service evaluation and improvement.
+The data includes age, sex, ethnicity, blood group, primary diagnosis, height, weight.  Additionally: for waiting list patients, waiting time and outcome status, for transplanted patients, donor age, blood group, sex, transplant characteristics (cold storage time, quality of donor-recipient tissue match etc.) and both graft and patient outcome.
+All data is provided by the transplant centres in the UK.
+Data quality and completeness for the registry is routinely monitored and clarifications and additional information sought from transplant teams by NHSBT.
+4.2.9 - Dataset purposes
+Further information can be found in published papers:
+Deceased Kidney -
+https://journals.lww.com/transplantjournal/fulltext/2010/02270/a_new_uk_2006_national_kidney_allocation_scheme.4.aspx
+Living kidney -
+https://journals.lww.com/transplantjournal/fulltext/2008/12270/early_experience_of_paired_living_kidney_donation.10.aspx
+Pancreas -
+https://www.amjtransplant.org/article/S1600-6135(22)00375-6/fulltext
+Liver -
+https://www.journal-of-hepatology.eu/article/S0168-8278(24)00203-4/fulltext
+Heart -
+https://www.jhltonline.org/article/S1053-2498(20)31614-4/abstract
+Lung -
+https://thorax.bmj.com/content/thoraxjnl/78/12/1206.full.pdf
+Intestinal -
+https://journals.lww.com/transplantjournal/fulltext/2013/01150/strategies_for_expanding_the_uk_pool_of_potential.34.aspx
+Tier 2 - Data Specification
+4.3.1 - Source data name
+All data is sourced from the UK Transplant Registry maintained by NHS Blood and Transplant
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+NHS Blood and Transplant collects longitudinal data on individual patients listed for or receiving an organ
+transplant. Data at registration (joining the waiting list) and at time of transplant are collected from transplant units and tissue typing laboratories. Follow-up data is collected from transplant units and hospitals where individual patients attend for clinical assessment at three months post-transplant and annually thereafter.
+Full characterisation of a consented potential organ donors is collected by NHSBT’s Specialist Nurses - Organ Donation.
+4.3.4 - Data quantities
+Below describe how the algorithms were developed and the data that were used in the stuides that informed the development of the algorithms.
+Further information can be found in published papers:
+Deceased Kidney -
+https://journals.lww.com/transplantjournal/fulltext/2010/02270/a_new_uk_2006_national_kidney_allocation_scheme.4.aspx
+Living kidney -
+https://journals.lww.com/transplantjournal/fulltext/2008/12270/early_experience_of_paired_living_kidney_donation.10.aspx
+Pancreas -
+https://www.amjtransplant.org/article/S1600-6135(22)00375-6/fulltext
+Liver -
+https://www.journal-of-hepatology.eu/article/S0168-8278(24)00203-4/fulltext
+Heart -
+https://www.jhltonline.org/article/S1053-2498(20)31614-4/abstract
+Lung -
+https://thorax.bmj.com/content/thoraxjnl/78/12/1206.full.pdf
+Intestinal -
+https://journals.lww.com/transplantjournal/fulltext/2013/01150/strategies_for_expanding_the_uk_pool_of_potential.34.aspx
+4.3.5 - Sensitive attributes
+Special category heath data is used in the development of the organ offering algorithms. Patient identifiable information, although captured, is not used in development of algorithms and only used once in production to make offers.
+4.3.6 - Data completeness and representativeness
+Data quality and completeness of the Transplant Registry are routinely monitored with validation and clarification of the information provided from transplant teams undertaken by a dedicated data management team in NHSBT.
+The registry contains information on all donors and recipients that underwent the transplant capturing 100% of the target population.
+4.3.7 - Source data URL
+Due to the sensitivities of the data, this dataset is not open access.
+4.3.8 - Data collection
+NHS Blood and Transplant collects longitudinal data on individual patients listed for or receiving an organ
+transplant. Data at registration (joining the waiting list) and at time of transplant are collected from transplant units and tissue typing laboratories. Follow-up data is collected from transplant units and hospitals where individual patients attend for clinical assessment at three months post-transplant and annually thereafter.
+Full characterisation of a consented potential organ donors is also collected by NHSBT’s Specialist Nurses - Organ Donation.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+The NHS Blood and Transplant Information Security Policy (POL10) covers confidentiality as well as data security.
+Patient confidentiality is maintained within NHSBT through combinations of staff training, terms & conditions as well as system access rights and technical controls to data access with role-based access in place.
+Software security controls manage access based on user role. External authorised user access is via firewalled (E3/EAL4 compliant) with two-factor authentication with full security monitoring in place.
+Information sharing agreements and policies are regularly reviewed and internal assurance provides oversight of use or issues relating to patient data.
+NHS Blood and Transplant complies with the Caldicott principle of using the minimum necessary patient-identifiable data. Pseudonymisation is approved on exception if NHS number or NHS Blood and Transplant identifier is not practicable for patient-follow-up or research purposes.
+All research or new data transfer with third parties is covered via Data Sharing agreements and a rigorous Data Protection Impact Assessment process with review stages separation.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+A Data Protection Impact Assessment has been undertaken for Transplant recipients (DPIA19-0053), Donors (DPIA19-0056), specifically for the organ offering algorithms (DPIA-92), as well as for the statistical software used to design and analyse the data (DPIA19-0038).
+All DPIA’s are actively managed and updated as required.
+5.2 - Risks and mitigations
+There is a risk of errors in the data recorded.
+There is a risk of personal data loss or corruption.
+There is a risk that insufficient organisational measures are in place to ensure appropriate security of personal data.
+There is a risk of inequality in allocation because IT systems fail to reflect latest clinical requirements.
+There is a risk that individuals are not aware of how their personal information is used to allocate organs.
+There is a risk that organ algorithms lead to significant adverse effects for some patients.
+Risks 1,2,3 & 4 are mitigated by quality and control mitigations – through reporting, quality reviews and data interrogation to maintain quality.
+Risk 5 is mitigated by data consent and handling procedures – detailing processing controls, backed up with enforcement, reporting and review.
+Risk 6 is mitigated by patient and clinical participation – Ensuring full participation of stakeholders in the design, development, testing, use and review of the algorithms and on clinical and health outcomes.
+Contents

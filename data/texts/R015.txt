@@ -1,0 +1,161 @@
+DWP: Universal Credit Advances Model
+Risk assessment of Universal Credit Advances for fraud prevention
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Other
+Task:
+Binary classification
+Phase:
+Production
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Universal Credit Advances Model
+2 - Description
+If you need help to pay your bills or cover other costs before you get your first Universal Credit payment, you can apply to get an advance. The amount you can get depends on your circumstances. The most you can get is the amount of your first estimated payment.                                                                                                                                                                                            The UC Advances model is a supervised machine learning classifier designed to risk assess requests for Advances ahead of payment.
+3 - Website URL
+N/A
+4 - Contact email
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Work and Pensions
+1.2 - Team
+Integrated Risk and Intelligence Service
+1.3 - Senior responsible owner
+Head of Integrated Risk and Intelligence Service
+1.4 - Third party involvement
+No
+1.4.1 - Third party
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - Third party role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Third party data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The UC Advances model is designed to risk assess requests for Advances ahead of payment. This approach enables the Department to focus its efforts on reviewing and verifying UC Advances assessed to have the highest risk of fraud.
+The tool is a supervised binary classification machine learning model.
+A risk- based approach minimises impact on the customer experience of legitimate claimants; optimises the use of taxpayers’ money in delivering the fraud control; and optimises the effectiveness of the control at tackling fraud.
+2.2 - Benefits
+New information in current EA : The Department provided 1.3 million UC advances to new UC claimants in 2025 to 2026, with a total value of £700 million. As set out in the Official Statistics, we estimate that for 2025 to 2026 the monetary value of fraud and error on UC advances lies between £20m and £90m
+https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model
+Advances fraud was the subject of a National Audit Office report in March 2020 setting out the challenge of UC Advances Fraud. The machine learning model has been part of the response to this type of fraud and contributed to more than halving the estimated scale of the problem. The persistent nature of the fraud threat requires appropriate controls to tackle Advances fraud risk, such as the Advances fraud prevention model.
+The performance information for 2025 to 2026 demonstrates the model is 2.5 times more effective at identifying fraud risk than a randomised control group sample.
+A random sample of Advances predicted by the model to be low risk are sent to human decision makers to safeguard against confirmation bias and monitor false negatives. This is combined with a random sample of high-risk Advances to produce a single stratified random sample. The proportion of Advances predicted by the model as high risk and confirmed to be fraudulent by a human decision maker is compared to the proportion of Advances in the random sample that are confirmed to be fraudulent. This comparison finds the model to be 2.5 times more effective at identifying Advances that are fraudulent.
+2.3 - Previous process
+DWP mandated all UC claimants to attend face to face appointments where circumstances would be verified before an Advance is paid. However, the model and other data-driven fraud controls have enabled a more efficient targetted approach.
+2.4 - Alternatives considered
+There are multiple fraud controls for Advances and these are complementary rather than alternatives to the tool.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Advance requests identified as high risk by the model are referred to a DWP employee, who reviews all available and relevant information, to decide whether to approve or decline the request. The ultimate safeguard in place is that there is always a human intervention and decision, with no automated decision making by the model.
+A blend of high risk and control group referrals are sent for human intervention to mitigate against human bias. In addition, the DWP employee delivering the intervention does not receive a risk rating in the referral nor are they made aware the referral has been generated by the model.
+A decision to decline an Advance request does not prevent the same claimant from making a further Advance request and does not automatically result in the associated new UC claim being refused. Decisions on eligibility and entitlement for a new UC claim are a separate consideration.
+3.2 - Human review
+The model sends referrals in real time to a human decision maker who reviews all available and relevant information in advance of payment. This prevents incorrect overpayment and the associated debt recovery from the claimant.
+There is a suite of safeguards to minimise the risk of unfair treatment or detrimental impact on legitimate customers, including:
+The protected characteristics of UC Advances claimants are not used to train the model, except for age since this directly affects the financial award.
+A blend of high-risk and control group referrals are sent for human intervention to mitigate against human bias. In addition, the DWP employee delivering the intervention does not receive a risk rating in the referral nor are they made aware the referral has been generated by the model.
+A decision to decline an Advance request does not prevent the same claimant from making a further Advance request and does not automatically result in the associated new UC claim being refused. Decisions on eligibility and entitlement for a new UC claim are a separate consideration.
+Regular effectiveness assessments, including statistical analysis, are conducted to identify any concerns of unfair treatment or detrimental impact on customers.
+We also conduct analysis of any impact on payment timeliness on legitimate Advances requests.
+3.3 - Frequency and scale of usage
+Withheld under FOI Act - S31
+3.4 - Required training
+N/A
+3.5 - Appeals and review
+There is no automated decision making. All payment decisions are made by a human and can be appealed as standard, with no distinct process for the model.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Withheld under FOI Act - S31
+4.1.2 - System-level input
+Real-time UC claim data.
+4.1.3 - System-level output
+Probability of UC Advance being fraudulent.
+4.1.4 - Maintenance
+Regular effectiveness assessments, including statistical analysis, is conducted to identify any concerns of unfair treatment or detrimental impact on customers.
+The Department committed to retraining the model to improve its performance and alignment with the latest Advances fraud risks. The model has been retrained, but further testing is required ahead of the retrained model going live to ensure it works effectively and efficiently. Once the retrained model has been deployed and sufficient data is collected, we will assess its effectiveness. It should be noted that model retraining is an activity undertaken in the normal course of maintaining and improving the model to ensure it remains optimised to identify fraud risk.
+4.1.5 - Models
+UC Advances model - a supervised binary classifier.
+Tier 2 - Model Specification
+4.2.1. - Model name
+Withheld under FOI Act - S31
+4.2.2 - Model version
+Withheld under FOI Act - S31
+4.2.3 - Model task
+The model is designed to classify UC Advances requests as high risk of fraud or not.
+4.2.4 - Model input
+Features using claim characteristics and target variable based on historic Advances outcome data.
+4.2.5 - Model output
+A blend of high risk and control group referrals are sent for human intervention to mitigate against human bias. In addition, the DWP employee delivering the intervention does not receive a risk rating in the referral nor are they made aware the referral has been generated by the model.
+4.2.6 - Model architecture
+Withheld under FOI Act - S31
+4.2.7 - Model performance
+Performance monitoring of the Advances model confirms it is an effective fraud prevention control and more efficient than an untargeted approach. The model is 2.5 times more effective at identifying high risk advances than a control group sample. It has delivered and continues to deliver measurable savings. Therefore, the model enables the Department to reduce fraud and protect the public purse effectively.
+Analysis confirms the payment of Advance requests predicted as high risk by the model and subsequently approved by a human decision maker are not unduly delayed. The median payment delay is 1 day longer compared to Advance requests that are approved automatically, which is in line with the delay experienced by Advance requests that are subject to other fraud controls that are distinct from the model.
+https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model
+4.2.8 - Datasets and their purposes
+Withheld under FOI Act - S31
+2.4.3. Development Data
+4.3.1 - Development data description
+Withheld under FOI Act - S31
+4.3.2 - Data modality
+Withheld under FOI Act - S31
+4.3.3 - Data quantities
+Withheld under FOI Act - S31
+4.3.4 - Sensitive attributes
+See Effectiveness Assessment - statistical analysis pages -
+https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model
+4.3.5 - Data completeness and representativeness
+Withheld under FOI Act - S31
+4.3.6 - Data cleaning
+Withheld under FOI Act - S31
+4.3.7 - Data collection
+Withheld under FOI Act - S31
+4.3.8 - Data access and storage
+Withheld under FOI Act - S31
+4.3.9 - Data sharing agreements
+Withheld under FOI Act - S31
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Universal Credit provides the data as part of an API call to the model.
+4.4.2 - Sensitive attributes
+See Effectiveness Assessment - statistical analysis pages -
+https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model
+4.4.3 - Data processing methods
+Withheld under FOI Act - S31
+4.4.4 - Data access and storage
+Withheld under FOI Act - S31
+4.4.5 - Data sharing agreements
+Withheld under FOI Act - S31
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+It is the Department’s assessment that there are minimal concerns about effectiveness, unfair treatment or detrimental impact on legitimate claimants arising from the Advances model.
+The Department has determined it remains reasonable and proportionate to continue operating the Advances model as a fraud prevention control.
+https://www.gov.uk/government/publications/effectiveness-assessment-including-statistical-analysis-of-the-universal-credit-advances-machine-learning-model-1-april-2025-to-31-march-2026/effectiveness-assessment-of-universal-credit-advances-model
+5.2 - Risks and mitigations
+It is the Department’s assessment that there are minimal concerns about effectiveness, unfair treatment or detrimental impact on legitimate claimants arising from the Advances model.
+The Department has determined it remains reasonable and proportionate to continue operating the Advances model as a fraud prevention control.
+Contents

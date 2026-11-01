@@ -1,0 +1,231 @@
+Met Office: Weather and climate forecasting
+The Met Office forecasting capacity leverages advanced technology, scientific expertise, and a global observation network to provide accurate and reliable weather and climate forecasts for public, commercial, and government use.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 February 2025
+Organisation:
+Department for Science Innovation and Technology
+Organisation type:
+Agency or public body
+Function:
+General public services
+Capability:
+Analysis
+Task:
+Multivariate analysis
+Phase:
+Production
+Region:
+Great Britain
+Date published:
+10 February 2025
+ATRS version:
+3.0
+Tier 1 Information
+1 - Name
+Weather and climate forecasting
+2 - Description
+The Met Office produces weather forecasts to meet customer needs 24x7, 365 days a year. Algorithmic tools are used in producing weather forecasts in several ways:
+Analysing and combining vast amounts of observational data from global sources such as satellites, weather stations, and radar systems to build a picture of the state of the atmosphere at a point in time
+Numerical weather models, which apply complex mathematical equations to simulate atmospheric behaviour and generate predictions of future weather patterns
+Post-processing these predictions to adjust for known model biases and derive user-centric output
+3 - Website URL
+www.metoffice.gov.uk
+4 - Contact email
+enquiries@metoffice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Met Office
+1.2 - Team
+National Capability Research and Development
+1.3 - Senior responsible owner
+Director of National Capability R&D
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+UK Government, Microsoft, HPE, European Centre for Medium-Range weather forecast, UK Universities Global Meteorological Organisations, Momentum,
+1.4.2 - Companies House Number
+1.4.3 - External supplier role
+UK Government: The UK government provides significant funding, enabling the Met Office to invest in advanced supercomputing technology.
+Microsoft: In 2020, the Met Office partnered with Microsoft to develop its next-generation supercomputer infrastructure, hosted in Microsoft’s Azure cloud environment. This collaboration aims to enhance computing power and support climate science and forecasting.
+HPE (Hewlett Packard Enterprise) are Microsoft’s sub contractor for the hosting of the newly upgraded high-performance computing systems.
+European Centre for Medium-Range Weather Forecasts (ECMWF): The Met Office collaborates closely with ECMWF to exchange data, share research, and improve weather and climate models for better medium-range forecasting.
+UK Universities: Several UK universities partner with the Met Office in researching new models and algorithms, contributing to forecasting accuracy, climate science, and meteorological advancements.
+Global Meteorological Organizations: The Met Office is part of international networks like the World Meteorological Organisation (WMO), through which they collaborate with other national weather services and research institutions to share global data and improve forecasting systems.
+1.4.4 - Procurement procedure type
+Both HPE & Microsoft were procured under The Competitive Dialogue procedure under the Public Contracts Regulations 2015 which is a procurement process used for complex contracts where the public sector entity is unable to specify the technical means, legal or financial structure of the procurement project in advance.
+This procedure is particularly suited for large, high-value projects, such as infrastructure, IT systems, or public-private partnerships, where more flexibility and interaction with potential suppliers are necessary to define the best solution
+1.4.5 - Data access terms
+When collaborating with third parties we  agree and implement data sharing agreements
+including, where appropriate, confidentiality, contractual and licensing terms
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Met Office supercomputer is one of the most powerful systems in the world dedicated to weather and climate forecasting. It is hosted on the Met Office’s behalf by Microsoft in two separate data centres. These systems are capable of performing over 14,000 trillion arithmetic operations per second, which is more than two million calculations per second for every person on the planet.
+The supercomputer can hold vast amounts of data. It processes 215 billion weather observations from around the world every day, which are used as the initial conditions for predictions of the future weather ranging from hours to days, months and climate projections to the end of the century.
+2.2 - Scope
+The purpose of the tool is to generate accurate forecasts of the weather across the UK and overseas, understanding the current state via observations data.
+Weather forecasting involves the application of science and technology to predict atmospheric conditions for a given location and time. It includes collecting quantitative data about the current state of the atmosphere, land, and ocean, and using meteorology to project how the atmosphere will change.
+The scope of weather forecasting systems includes short-term “nowcasts” to seasonal forecasts, utilising tools like satellites, radars, and surface weather observations. These systems are essential for various sectors, including agriculture, energy, transport, and construction, as they help mitigate the impacts of extreme weather events
+2.3 - Benefit
+We provide operational forecasts, data, research and consultancy services. Our services are critical to protecting lives, infrastructure and the natural world. Weather forecasting plays a crucial role in reducing weather-related losses and enhancing societal benefits.
+The Met Office is estimated to deliver £56bn of
+benefit over the next decade, delivering a return
+on investment of £18.80 per £1 of public money
+invested in the Met Office.
+The use of weather and climate information and services can deliver  benefits to society by enabling organisations and individuals to make better decisions to stay safe and thrive.
+2.4 - Previous process
+The tool is the current state-of-the-art representation of over 70 years of research and development in numerical weather prediction. The tool has effectively evolved over that time as our understanding of atmospheric and oceanographic science has developed and advances in technology have enabled us to develop ever more sophisticated means to model this science in the real world.
+We are committed to the continuous development of advanced models and the enhancement of our supercomputing capabilities, ensuring we stay at the forefront of forecasting technology. By driving ongoing improvements in science and research, we aim to refine our predictive accuracy, optimise computational efficiency, and deliver cutting-edge meteorological insights that support both public and commercial needs.
+The Parallel Suite project aims to ensure the successful pull through of major changes to the Met Office’s Operational Suite of Prediction and Projection models into the Operational environment and providing operational data flows to downstream products and services.
+A ‘Parallel Suite’ of models is built, tested & verified alongside the current Operational Suite prior to implementation. Once ready, the Suites are swapped, and the Parallel Suite becomes the Operational Suite.
+Parallel Suites are numbered sequentially, with the next suite to become operational being PS46, which is the porting of our existing Operational Suite from the Exeter-based Cray XC40 to the new Generation 1 Microsoft/Cray EX supercomputer.
+2.5 - Alternatives considered
+Several other Numerical Weather prediction (NWP) systems are in use by other modelling centres around the world including the GFS (US), IFS (ECMWF), GSM/MSM (Japan), ARPEGE/AROME (France).
+The Met Office licenses the use of the Unified Model (UM) and currently 10 other NMSs use this as their core modelling tool. It is worthy to note that each different model will generate subtly different output which can be useful in understanding the uncertainty of the atmosphere and the range of possible prediction regimes.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The Met Office’s supercomputing infrastructure is now hosted by Microsoft having been upgraded in 2025. This system has a peak performance of 60 petaflops, over 1.5 mn processor cores,  and 14,261 terabytes of fast storage. The architecture is designed for high energy efficiency, using free air cooling to reduce energy consumption.
+The system is split between two sites for resilience and connected by high-speed networks.
+The  new supercomputer provided by Microsoft Azure, is expected to be among the top 25 supercomputers in the world. This new system is six times more powerful than the previous one and uses a combination of on-premises and cloud-based infrastructure
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+We have a dedicated team of IT specialists maintaining the 24/7 operational use of the tool and a large team of scientists looking at continuous improvements to the scientific algorithms.
+The supercomputing infrastructure, requires regular maintenance to sustain its high performance. Maintenance activities include:
+Corrective Maintenance: This involves addressing issues that have already arisen, such as replacing faulty components or fixing software bugs.
+Preventive Maintenance: Regular checks and updates are performed to prevent potential issues. This includes routine inspections of hardware components, software updates, and system reboots to ensure everything is functioning correctly.
+Adaptive Maintenance: Adjustments are made to the system to accommodate changes in the environment or user requirements. This might involve upgrading hardware or software to improve performance or compatibility with new applications
+Perfective Maintenance: Enhancements are made to improve the system’s performance or functionality. This could include optimising code, improving system configurations, or adding new features
+4.1.4 - Models
+Models are based on physical parameterisation of the atmosphere. The Unified model simulates future atmospheric states based on physical laws. This includes a complex set of mathematical equations representing fluid dynamics, thermodynamics, radiation physics and cloud microphysics.
+Global Models: These models cover the entire globe and provide large-scale weather forecasts. Examples include the Global Forecast System (GFS) and the European Center for Medium-Range Weather Forecasts (ECMWF) model.
+Regional Models: These models focus on specific regions and provide higher resolution forecasts. The UKV model is an example used by the Met Office for detailed forecasts over the UK.
+Ensemble Models: These models run multiple simulations with slightly different initial conditions to account for uncertainties in the forecast. This approach helps quantify the range of possible outcomes and improve forecast reliability.
+Tier 2 - Decision making Process
+3.1 - Process integration
+Outputs from prediction algorithms support the decision making processes of our Operational Meteorologists, enabling them to issue weather forecasts and weather warnings to a range of customers across public and private sector, in the UK and overseas.
+Data Collection and Transmission: Observations are collected from various sources, including automated weather stations, weather balloons, radars, and satellites. These observations measure variables like temperature, pressure, humidity, wind speed/direction, and precipitation. The data is then transmitted in standardised formats for efficient processing.
+Data Assimilation: This is a critical step where observational data is combined with previous forecast data to create a comprehensive and accurate representation of the current state of the atmosphere. This process involves quality control checks to ensure the data’s accuracy and consistency.
+Numerical Weather Prediction (NWP): Supercomputers play a crucial role in this stage. They use complex mathematical models to simulate the atmosphere’s behavior based on the assimilated data. These models are based on physical laws that govern atmospheric changes. The supercomputers perform trillions of calculations per second to predict future weather conditions.
+Model Output: The output from the supercomputers is a set of weather forecasts, which include predictions for various atmospheric variables over different time periods. These forecasts are then post-processed to make them more user-friendly and accessible.
+3.2 - Provided information
+The global model runs 4 times a day, our Operational Meteorologists are presented with global forecasts often covering multiple scenarios at hourly resolution at 10km around the globe up to 7 days ahead. The UK model runs on an hourly cycle and provides output at 1.5km resolution. Observations of the weather are made 24 hours a day, all over the world.
+The main observations are from weather satellites, balloons, landbased instruments, ships, buoys and aircraft. All data for our operational meteorologists is presented in a variety of visualisations tailored to help them carry out their roles most effectively.
+3.3 - Frequency and scale of usage
+Numerical Weather Prediction is run every hour of every day 24/7 by our Operational Meteorlogists to provide the weather forecast. Multiple decisions are made every day by our own staff and these weather forecasts and weather warnings.
+No citizens interact directly with this tool. Outputs are used to generate Met Office products and services provided to the public.
+3.4 - Human decisions and review
+The accuracy of the algorithm’s output is routinely assessed in non-real time to understand ongoing performance and identify opportunities for future improvement.
+For some services, our expert Operational Meteorologists are able to intervene on the output of the tool to adjust the data that is received by the end user, however this is limited to a subset of services with most being delivered automatically from data direct from the tool.
+3.5 - Required training
+Operational Meteorologists go through an extensive training programme at the Met Office and many join the organisation with prior qualifications, knowledge and expertise.
+Training to become an operational meteorologist typically involves obtaining a bachelor’s degree in meteorology, atmospheric science, or a related field. This education includes coursework in physics, differential equations, and other relevant subjects.
+After completing their degree, meteorologists often undergo additional job specific training. This allows them to use the output of the tool to meet individual customer needs which will vary across sectors e.g. aviation, energy, media.
+To become a climate scientist, you typically need a bachelor’s degree in climatology, meteorology, atmospheric science, or a related field. Entry-level positions may require a bachelor’s degree, but research and academic roles often require a master’s or PhD.
+Gaining practical experience through internships or volunteer opportunities can make you a stronger job candidate. Climatologists analyse long-term weather patterns, perform research, and use models to predict future climate conditions.
+The Met Office offers various training programs and courses for technologists
+3.6 - Appeals and review
+Customers can provide feedback on our Met Office services in several convenient ways:
+Website Feedback Tool: Our website features a built-in mechanism for rating forecast accuracy directly on the page.
+Weather Desk Service: For more complex queries or detailed feedback, customers can speak with our experts at the Weather Desk. This service is available by phone.
+These feedback channels help us continuously improve our weather data services to better serve you.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Unified Model (UM)
+4.2.2 - Model version
+OS47 (Operational Suite)
+4.2.3 - Model task
+Generate predictions of the future state of the atmosphere and the associated weather patterns
+4.2.4 - Model input
+Observations of the current atmospheric state
+4.2.5 - Model output
+5-dimensional predictions of the future state of the atmosphere and associated weather patterns
+4.2.6 - Model architecture
+Fortran based scientific emulation of the atmosphere based on scientific first principles of atmospheric physics and fluid dynamics.
+4.2.7 - Model performance
+The current supercomputer went into production use in 2025. It boasts a peak performance of 60 petaflops, which means it can perform 000s trillion calculations per second. This makes it one of the world’s most powerful computers dedicated to weather and climate forecasting. The system includes over 1.5 mn processor cores,  and 14,261 terabytes of fast storage. It is designed for high energy efficiency, using free air cooling to reduce energy consumption.
+The new supercomputer, provided by Microsoft Azure, is expected to be among the top 25 supercomputers in the world and is six times more powerful than the previous system.
+This new system uses a combination of on-premises and cloud-based infrastructure, allowing for more flexible scaling of resources. Microsoft has committed to using 100% renewable energy, and the new system is expected to save 7,415 tonnes of CO2 in its first year of operation.
+Model performance is continuously assessed via a range of accuracy measures which are commonly used across international met services. In particular the root mean square error (RMSE) of common parameters such as mean sea level pressure, geo-potential height, temperature and wind speed/direction at upper levels of the atmosphere are monitored as a rolling overage over time to assess performance of the model in itself and performance against other leading weather modelling centres.
+4.2.8 - Datasets
+The primary dataset used to develop the model consists of meteorological observations gathered over time which provide both the starting conditions for the model, but also the basis of verification of the predictions generated. These will variously consist of surface observations, upper air observations from balloons or aircraft, radar, satellite soundings. A range of meteorological parameters are either measured or derived from these sources which are used to continuously develop the model.
+Automated Weather Stations, Upper Air Observations, Remote Sensing, Marine Observations, Aircraft Observations, Specialised networks.
+A wide range of data sets to feed into  supercomputers for weather forecasting.
+Weather Observations: These come from a vast network of weather stations, balloons, satellites, ships, and even aircraft. These observations measure variables such as temperature, pressure, humidity, wind speed and direction, and precipitation.
+Pan-European Climate Database: This includes a 35-year hindcast and other weather and climate base data used for services like the National Grid for meteorological data for electricity transmission.
+Future Data Supply:We continue to aim to improve the delivery of weather and climate services, ensuring accurate, consistent, and usable data for government, industry, and UK citizens
+4.2.9 - Dataset purposes
+Weather forecasting data sets are developed through a combination of numerical simulations, observational data integration, and statistical techniques. Numerical Weather Prediction (NWP) models use mathematical equations to simulate the atmosphere’s behaviour based on initial conditions derived from observational data.
+The data are used both as input to the model and also as verification of the predictions generated by the model. As new versions of the model are developed, this ongoing verification forms the test-bed of that new model version and performance against the previous model can be assessed.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Global Observations Data
+4.3.2 - Data modality
+Multimodal
+4.3.3 - Data description
+Surface-based Observations
+Automated Weather Stations: Measure temperature, pressure, humidity, wind speed/direction, precipitation
+Manual Observations: Supplementary data from trained observers, can include cloud cover, visibility, and weather type
+Upper Air Observations
+Radiosondes (Weather Balloons): Measure vertical profiles of temperature, humidity, pressure, wind
+Wind Profilers: Provide continuous wind measurements at various altitudes
+Remote Sensing
+Weather Radar: Detects precipitation and its intensity, doppler capability for wind information
+Satellite Observations
+Geostationary satellites: Provide frequent, wide-area coverage
+Polar-orbiting satellites: Offer global coverage with higher resolution
+Measure cloud cover, water vapor, temperature profiles, and more
+Marine Observations
+Buoys and Ships: Provide crucial data over oceans, measure sea surface temperature, wave height, and marine meteorological conditions
+Aircraft Observations
+Commercial aircraft equipped with sensors: Provide temperature and wind data along flight paths, particularly valuable for upper-air data over oceans
+Specialized Networks
+Lightning detection networks, Air quality monitoring stations, Soil moisture and temperature probes
+4.3.4 - Data quantities
+The Met Office utilises a vast array of data sets to feed into their supercomputers for weather forecasting. These data sets come from various sources, including ground-based weather stations, balloons, satellites, ships, and aircraft.
+Observation of the atmosphere results in billions of individual datapoints being generated each and every day from around the world. This translates into 10s of terrabytes of data each day. The Met Office seeks to make use of as much of this data as possible to initialise and subsequently verify model performance
+4.3.5 - Sensitive attributes
+No sensitive attributes are contained within the dataset
+4.3.6 - Data completeness and representativeness
+Completeness of the data depends on location around the globe with some areas very data dense and others data sparse. Data density typically aligns to population density with North America and Europe being particularly strong examples. Satellites data provides coverage over more remote locations
+4.3.7 - Source data URL
+https://www.metoffice.gov.uk/services/data
+4.3.8 - Data collection
+Data is collected from various sources, including automated weather stations, weather balloons, radars, and satellites. These observations measure variables like temperature, pressure, humidity, wind speed/direction, and precipitation. The data is then transmitted in standardised formats for efficient processing.
+The World Meteorological Organization (WMO) is a specialised agency of the United Nations responsible for promoting international cooperation on atmospheric science, climatology, hydrology, and geophysics.The WMO began operations as an intergovernmental organisation within the UN system in 1950.
+The WMO facilitates the free and unrestricted exchange of data, information, and research between its 193 member countries and territories. It collaborates with non-governmental partners and other international organizations on matters related to environmental protection, climate change, resource management, and socioeconomic development.
+https://www.metoffice.gov.uk/weather/learn-about/how-forecasts-are-made/observations/index
+4.3.9 - Data cleaning
+At the Met Office, data cleaning is a crucial step to ensure the accuracy and reliability of weather forecasts. Here are some of the methods used:
+Quality Control Checks: This involves routine inspections of the data to identify and correct errors. Reviewing raw demand data, checking for anomalies, and ensuring that the data is approximately normally distributed.
+Anomaly Detection and Removal: The data is examined for any outliers or anomalies that could skew the results. These anomalies are either corrected or removed to maintain the integrity of the data.
+Seasonal Adjustment: The data is adjusted for seasonal variations to ensure that the forecasts are accurate throughout the year. This involves identifying and accounting for seasonal spikes in variance.
+Data Review and Validation: After cleaning, the data undergoes a thorough review to ensure that it meets the required standards. This includes checking the minimum and maximum values to ensure they are within a reasonable range of the mean.
+These methods help ensure that the data used in weather forecasting is accurate, reliable, and ready for further processing by the supercomputers.
+4.3.10 - Data sharing agreements
+The WMO World Meteorological Organization Unified Policy for the International Exchange of Earth System Data.
+The Met Office have an agreement with Government for Public Weather Services, alongside third-party customer agreements for the provision of our products and services
+https://wmo.int/
+4.3.11 - Data access and storage
+The period over which observational data is retained will vary according to the type and source of that data. The Met Office is responsible for maintaining the Uks national climate record which extends back into the 19th century consisting of land based observations around the UK.
+Other data on a more global scale including satellite will be retained for shorter periods according to its usefulness as reference data. Typically this data is available to internal Met Office staff but is also available to collaborating researchers. Data collected as part of the public task can also be made available on request. Responsibility for storage and retention of this data remains with the Met Office and specifically with a set of information asset owners who decide on retention periods. There is no sensitive data contained within this dataset.
+Our mass storage system, known as the Managed Archived Storage System (MASS), is primarily used by Climate and Weather Science, along with several other operational systems including MetDB. The MASS system stores over 300 Petabytes of data on-premises, representing decades of work.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+The Met Office has comprehensive business continuity plans in place to ensure that its operations can continue smoothly in the event of disruptions. These plans are designed to protect the organisation’s assets, including people, infrastructure, IT systems, reputation, and data.
+The Business impact assessements we undertake contributes to the understanding of what is needed to protect assets within the Met Office whilst also presenting opportunities in how we manage and protect our information. The assessments provide evidence that internal and external requirements are being met, giving a good level of assurance that we are compliant, accountable and that any identified risks are being appropriately managed
+5.2 - Risks and mitigations
+Not limited to Met Office policy and procedure, We ensure that we are compliant with external policies, frameworks and standards to include:
+•	NIST (National Institute of Standards and Technology)
+•	Cabinet Office Minimum Cyber Security Standard
+•	HMG Security Policy Framework
+•	Security Incident Management Minimum Standards
+•	GDPR (General Data Protection Regulation)
+•	DCPP (Defence Cyber Protection Partnership)
+•	Network and Information Systems (NIS) Directive
+Contents

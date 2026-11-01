@@ -1,0 +1,151 @@
+DWP: CMG Return Letters processing
+A computer vision tool used to extract the address and reference number from return letters.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+22 December 2025
+Organisation:
+Department for Work and Pensions
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer vision
+Task:
+Object detection and description
+Text recognition
+Phase:
+Production
+Region:
+UK
+Date published:
+22 December 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+CMG Return Letters processing
+2 - Description
+Child Maintenance Group (CMG) return letter processing is crucial for maintaining the highest degree of accuracy of contact details in CMG.
+Dead Letter Office (DLO) refers to a section within the Department for Work and Pensions (DWP) that handles undeliverable mail. Specifically, it is where mail addressed to individuals who are no longer at that address, or where the address is no longer valid, is processed. This might include situations where someone has moved, or where the address is incorrect or no longer exists.
+Via the DLO, around 5000 return letters are received by CMG every month, investigating a customer address is manual and takes around 20 minutes.
+Automation and optimization of the process will help:
+Citizens to receive accurate correspondence on time and to the right address.
+Citizen details will be updated accordingly in the relevant system(s).
+As part of this automation process, a computer vision algorithm was used to extract the address and reference number from the return letters.
+3 - Website URL
+N/A
+4 - Contact email
+N/A
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+The Department for Work & Pensions.
+1.2 - Team
+The Garage, Cross Boundary Team, DWP Digital.
+1.3 - Senior responsible owner
+Deputy Director - Cross Boundary Team, Strategic Delivery Unit.
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Accenture (UK) Ltd
+1.4.2 - Companies House Number
+4757301
+1.4.3 - External supplier role
+The Garage is a partnership between DWP and Accenture resources to create innovative solutions to resolve DWP challenges.
+On this piece of work, the developers were mainly Accenture resources, led by an Accenture Delivery Lead, working under DWP Project Managers.
+1.4.4 - Procurement procedure type
+Open competition against a framework call off.
+1.4.5 - Data access terms
+All contractors have the standard security clearance (BPSS), with some resources have the higher SC where required.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+In 2021, a computer vision algorithm using open source libraries for extracting address and reference number from CMG return letters was developed. This helped to automate the processing of CMG return letters.
+Computer Vision is a subfield of Artificial Intelligence (AI) that facilitates computers and machines to analyse images and videos. Just like humans, these systems can make sense of visual data and extract valuable information from it (such as identifying specific sections of a document and extracting data from it -  in this case identifying where the address is located in a document and extracting it).
+2.2 - Scope
+Around 5,000 return letters are received by CMG a month due being undeliverable. Previously all returned letters needed to be manually opened and a search carried out for the address, which took around 5 minutes. Suppression of future correspondence and corrective actions took around 20 mins. This was a highly repetitive task.
+To automate this process, the extraction of address and reference number from return letters with a high level of accuracy is a pre-requisite. Hence a computer vision algorithm was developed that can help identify the location of the address in the letter and recognise it accurately.
+Optical Character Recognition or Optical Character Reader (OCR) is the electronic or mechanical conversion of images of typed, handwritten or printed text into machine-encoded text, for example from a scanned document, a photo of a document, a scene photo or from subtitle text superimposed on an image.
+2.3 - Benefit
+Accurate extraction of the address and reference number helps in the automation of a manual process.
+2.4 - Previous process
+The previous process of all letters needing to be manually opened and identifying and marking the associated address as Dead Letter Office (DLO) and investigating the customer address was manual and took around 20 minutes.
+2.5 - Alternatives considered
+N/A
+Tier 2 - Decision making Process
+3.1 - Process integration
+The solution does not make a decision, it extracts the address information from a letter (PDF) and converts it from an image to text and provides the extracted information back to the CMG team.
+3.2 - Provided information
+The solution extracts the address information from the letter (PDF), then converts it from an image into text and provides the extracted information back to the CMG team .
+3.3 - Frequency and scale of usage
+Via the DLO, around 5000 return letters are received by CMG every month. This solution is used on a daily basis, the schedule is 08:00-18:00 - Monday-Friday.
+3.4 - Human decisions and review
+If for any reason we are unable to extract the address, it is reviewed by a human.
+3.5 - Required training
+N/A
+3.6 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The solution receives a returned letter from the CMG team, validates the pdf and extracts images of the address and unique reference number. Then using Computer Vision and Optical Character Recognition (OCR) converts the image to text, updates the metadata with all business exceptions and comparison outcomes and returns metadata to CMG.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+It follows the Garage live service enhancement and maintenance schedules.
+4.1.4 - Models
+Computer vision and OCR techniques.
+Tier 2 - Model Specification
+4.2.1 - Model name
+Computer Vision (OpenCV) and OCR.
+4.2.2 - Model version
+N/A
+4.2.3 - Model task
+It extracts specific regions of interest from the letter -  in this case, the address and reference number.
+4.2.4 - Model input
+CMG Return Letter.
+4.2.5 - Model output
+The address and reference number in the letter.
+4.2.6 - Model architecture
+Computer Vision (OpenCV) and OCR.
+4.2.7 - Model performance
+N/A
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+4.3.1 - Source data name
+N/A
+4.3.2 - Data modality
+N/A
+4.3.3 - Data description
+N/A
+4.3.4 - Data quantities
+N/A
+4.3.5 - Sensitive attributes
+N/A
+4.3.6 - Data completeness and representativeness
+N/A
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+N/A
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Data Protection Impact Assessment (DPIA) and Equality Analysis (EA) complete.
+5.2 - Risks and mitigations
+DPIA - there is a documented risk around the accuracy of the algorithm being used to automate/ extract the address and reference number as the verification of this part may be inaccurate resulting in the wrong address.
+If for any reason we are unable to extract the address, it is reviewed by a human
+The tool is also reviewed and maintained in line with existing Garage service enhancement and maintenance schedules
+The second risk around Automated Decision Making concluded that the processing described does not amount to a decision based solely on automated processing which produces legal effects on data subjects, or similarly significantly affects them.
+Contents

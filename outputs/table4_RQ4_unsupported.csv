@@ -1,0 +1,3 @@
+condition,overall_rate_pct,high_completeness_pct,low_completeness_pct,paired_wilcoxon_p
+baseline,48.1,40.0,56.2,<0.001
+grounded,11.1,10.0,12.2,<0.001

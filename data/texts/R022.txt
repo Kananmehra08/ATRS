@@ -1,0 +1,119 @@
+Care Quality Commission: Fees Calculator Application
+The Fees Calculator Application analyses information supplied by care providers based in England to determine the correct invoice value payable by provider, based on a set of pre-determined rules.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+30 March 2026
+Organisation:
+Department for Health and Social Care
+Organisation type:
+Agency or public body
+Function:
+Health
+Phase:
+Production
+Region:
+England
+Date published:
+30 March 2026
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Fees Calculator
+2 - Description
+Fees Calculator is a model for determining and calculating care provider fees. The tool is used to determine annual fees due by care providers in England registered with the Care Quality Commission (CQC). The tool automates the calculation of fees due, removing significant manual effort.
+3 - Website URL
+Not applicable
+4 - Contact email
+Background workings of the tool:
+Techdesk@cqc.org.uk
+Application of fees policy:
+accounts.receivable@cqc.org.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Care Quality Commission
+1.2 - Team
+Accounts Receivable
+1.3 - Senior responsible owner
+Deputy Director of Finance
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+KPMG
+1.4.2 - Companies House Number
+OC301540
+1.4.3 - Third party role
+KPMG was responsible for designing the system architecture, as well as managing the development and deployment of the Fees Calculator application.
+1.4.4 - Procurement procedure type
+Framework agreement call-off
+1.4.5 - Third party data access terms
+The terms of access to data granted to the supplier are provided through the overarching third party data access terms to the supplier as follows: The supplier will process the personal data only to the extent strictly necessary to carry out activities agreed with CQC to: migrate data to the new platform, check data quality, establish and test functionality.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The Fees Calculator tool is used to determine annual fees due by care providers in England registered with the CQC. It is used solely by the Accounts Receivable team within the CQC Finance function.
+It links to an internal CRM system that stores provider registration details. Using these details, supplied by care providers, the tool then applies the CQC published fee scheme to calculate a fee amount based on the registration details.
+Fee details/information is then transferred to the finance system for an invoice to be issued to the care provider.
+The tool stores historical information to support restrospective billing.
+The tool is wholly reliant and based on information supplied by care providers themselves.
+2.2 - Benefits
+The tool automatically calculates circa 35,000 invoices removing the need for manual effort generating such large document volumes.
+This supports more accurate, timely and consistent invoicing to customers, providing assurance that invoices are based on standardised information and rules.
+2.3 - Previous process
+The previous process (EDQ) involved a manual extract of data from CRM, updated and fed back into CRM. A further extract was done from CRM, converted into the appropriate format and uploaded into the finance system.
+2.4 - Alternatives considered
+The alternative considered was a manual process using spreadsheets. This was deemed to be too labour intensive and unrealistic given the volume of care providers the CQC have to bill each year.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The tool provides details around the annual fee due by Providers, which is used to generate invoice related data. This is transferred to the finance system, which generates the invoices that are sent to Providers.
+3.2 - Human review
+A monthly calculation run is done based upon providers registration/anniversary date. The monthly output is then manually reviewed with the same tool for outlying results.
+The monthly generated output goes through an internal approval process.
+3.3 - Frequency and scale of usage
+The tool is used regularly for the main and supplementary runs.   It is also used for data maintenance/accuracy checking back to the data source (CRM). There is anything between 3,000 and 8,000 documents generated each month using the tool.
+There is zero citizen interaction - it is an internal only tool.
+3.4 - Required training
+Any new starters within the Accounts Receivable team are trained on the tool by existing, experienced users.
+3.5 - Appeals and review
+N/A
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Data from Providers is consolidated in Oracle Siebel CRM, integrated via SSIS into Microsoft Dynamics 365, where it supports fee calculator. Azure Logic Apps and Function apps use this data for automated fee calculations, Invoice Generation and review, producing csv outputs. The corresponding architecture diagram is shown in the last tab.
+4.1.2 - System-level input
+A list of health and social care provider records for which annual fees are due to be calculated.
+4.1.3 - System-level output
+Generate invoice-related data containing the annual fees due from health and social care providers.
+4.1.4 - Maintenance
+The tool has been live for some time, and any issues or enhancements are being handled by the CQC development team as requested by the business.
+Bug fixes and technical updates are handled as required. As no AI models are used, no retraining or periodic model updates are required.
+4.1.5 - Models
+Fees calculator is a rule based engine, this doesn’t use any AI tools/models.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+User input directly into Cyngum CRM system, which is loaded to the Regulatory platform application which in turn updates the Fees calc tool. User input is also undertaken directly into the Regulatory Platform which also updates the Fees calc tool.
+4.4.2 - Sensitive attributes
+The Fees calculator tool does not hold any sensitive attributes or details around protected characteristics.
+4.4.3 - Data processing methods
+Data is copied over as it is updated in Siebel CRM, no rules are applied to fill in any gaps in the core tables updated in the Dataverse/RP/fees calculator.
+4.4.4 - Data access and storage
+All of the data persists within the Fees Calc tool and remains stateful. The CQC is responsible for the storage of the data in the Fees Calc application. Data is retained in line with the CQC records retention schedule. There is no sensitive data stored within the application.
+4.4.5 - Data sharing agreements
+All data is internally held and stored so no sharing agreement is required.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+As the application does not hold sensitive data, a DPIA was not completed.
+5.2 - Risks and mitigations
+Risk: Incorrect invoice values or missing invoices.
+Mitigation 1: Fees are charged in line with legislation in accordance with the CQC fee scheme which is approved by the Secretary of State for Health and Social Care.
+Mitigation 2: Calculations are based on data from the CRM system (key care provider registration data) and all invoice creation is subject to approval prior to onward processing and distribution to customers.
+Mitigation 3: The application does not allow creation or update of data within itself, it is all fed in by upstream systems.
+Mitigation 4: Calculations can only be created by certain roles, managed by segregation of duties, to mitigate the risk of invoicing errors or fraud.
+Mitigation 5: Retrospective checks are in place against income forecasts as part of routine reporting cycle to highlight any emerging issues as soon as possible.
+Risk: Reputational and Financial risk of not using the tool including manual error and not applying statutory rules consistently.
+Mitigation 1: Use of the tool helps mitigate this by providing the ability to raise accurate invoices in large volumes using built in fees rules to ensure accurate and timely invoicing.
+Mitigation 2: We’d need to calculate fees manually which the tool is mitigating against by applying rules consistently.
+Contents

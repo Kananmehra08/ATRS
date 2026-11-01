@@ -1,0 +1,190 @@
+HMPPS: Key Work quality assurance automation
+The model automates the process of assessing the quality of Key Work session case notes.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+25 September 2025
+Organisation:
+Ministry of Justice
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Computer linguistics
+and
+Analysis
+Task:
+Semantic text understanding. Multi-class classification.
+Phase:
+Production
+Region:
+Wales
+and
+England
+Date published:
+30 July 2025
+ATRS version:
+v3.0
+Tier 1 Information
+1 - Name
+Key Work quality assurance automation
+2 - Description
+The aim of the Key Worker role in prisons is to promote rehabilitation and constructive staff- prisoner relationships. The Key Worker will document a summary of their session with the prisoner in a Key Work session case note, these are then used to assess the quality of Key Work and help improve the service delivered.
+The National Offender Management in Custody (OMiC) team had previously manually reviewed a selection of case notes per establishment each month and ranked each case note against the quality assessment scale (1-4). This was resource intensive, prevented month on month improvements (as the OMiC Team are only able to score a small sample of case notes, the sample size was picked to ensure statistically valid annual scores at prison level. This meant the monthly scores that are published aren’t statistically valid and can’t be used to track month to month performance), was subjective and prone to human error.
+We have automated the process of assessing the quality of Key Work session case notes to reduce the manual burden on the National OMiC team and ensure prisons have valid monthly scores for all case notes rather than just a sample. This has been done by using machine learning and text classification techniques. The numerical scores outputted by the model are uploaded onto the HMPPS Performance Hub for users to view each month, along with RAG ratings for each prison based on these scores.
+3 - Website URL
+N/A
+4 - Contact email
+datascience@justice.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Ministry of Justice / His Majesty’s Prison and Probation Service (HMPPS)
+1.2 - Team
+National OMiC Team
+1.3 - Senior responsible owner
+Chief Data Scientist
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The new process extracts a full month’s worth of Key Work session case notes (not just a sample) from the National Offender Management Information System (NOMIS). After importing the case note data, the prediction pipeline uses a named entity recognition (BERT NER) model to identify names in the case notes and removes these by replacing with the word ‘Person’. It then removes gender pronouns with gender-neutral pronouns (e.g. ‘he’ and ‘she’ are replaced with ‘they’). Another model (Longformer) is then used to create numerical ‘embeddings’ for the case note text. These then feed into the prediction model (GBM model), along with the text length and OMiC frequency (whether the session is a Weekly or Fortnightly session - weekly sessions are 45 minutes, and fortnightly sessions are 90 minutes, so we expect to see more content (text length) and evidence of more meaningful discussion in a fortnightly session than we would see for a weekly session), to make a prediction for the quality score of the case note (1-4 or invalid).
+2.2 - Scope
+The tool has been designed to automate the process of scoring the quality of Key Work session case notes each month. These scores can be challenged by prisons if they feel that the score allocated by the model is incorrect, at this point a human will manually review the case note and assign the appropriate score. The scores assigned by the model are used by Functional heads and Custodial Managers within prisons to identify areas of improvement and good practice and inform their local QA process.
+The overall aim is to provide more timely data on the quality of Key Work sessions delivered within prisons, ensuring that any necessary improvements can be delivered more quickly so that prisoners receive the help they need.
+2.3 - Benefit
+The business impact of using the new algorithm are:
+Prisons have valid monthly scores. Using a model enables us to score every Key Work session case note meaning we can provide prisons with statistically valid monthly scores. Prisons can use scores to monitor their KW delivery more effectively and make proactive decisions to improve performance.
+Use the resource of the National OMiC team more effectively. Time currently spent on producing the manual scores and doing management checks can be used to support prisons in delivering key work.
+2.4 - Previous process
+Prior to the introduction of this algorithm, a sample of keyworker case notes were manually reviewed and scored with a quality rating each month by the Offender Management in Custody (OMiC) team within HMPPS. The OMiC team reviewed a sample of case notes every month (2,000 - 4,000), which was a time and resource intensive process.
+2.5 - Alternatives considered
+The BERT NER model was selected after being tested against sPacy and NLTK. NLTK and sPacy had more tendency to either miss named entities in the case notes and not successfully identify them, or mistake other words for named entities. BERT was able to identify most of the named entities, and made fewer mistakes than the other models.
+Using Longformer to create embeddings was selected after comparing model performance of models trained on BERT vs Longformer embeddings. The main advantage of Longformer is that it can process longer sequences, and BERT was unable to fully process some case notes.  Subsequent evaluation showed that models trained on Longformer embeddings performed better.
+Alternative gradient boosting libraries were then tried, specifically Light GBM and XGBoost. They offered no improvement in performance, and the metrics were slightly worse than sklearn. For these reasons, the scikit learn histogram-based GBM was taken forward.
+We also looked at using generative AI capability available through AWS Bedrock, specifically utilising two models from the Anthropic family - Claude Haiku and Claude Sonnet. A ML model was preferred over the GenAI approach because it had a higher agreement rate (how often the approach agrees with the previously scored data) and was cheaper to run.
+Tier 2 - Decision making Process
+3.1 - Process integration
+The algorithm’s scores for case note quality are used to calculate other performance metrics e.g. RAG ratings for each prison which are uploaded to the HMPPS performance hub (internal platform) for prisons to review along with the individual case note scores. No operational decisions are made directly from these scores, they are used to identify prisons where the quality of Key Work could be improved and also good practice, helping to inform local QA processes.
+3.2 - Provided information
+The model outputs are provided to the user as a numerical score from 0 to 4 for each case note. 0 represents an invalid case note e.g. where the entry doesn’t give evidence that a key worker session took place and 4 represents a case note that provides evidence of a good quality key work session.
+3.3 - Frequency and scale of usage
+The model is run once a month on around 80,000 case notes, this run is completed by data scientists so there are no users interacting with the model directly. Users can view the outputs from the model via the HMPPS Performance Hub once the scores have been uploaded there each month.
+For the current metric on the Performance Hub, there are ~1,400 annual users with ~7,400 views in the last calendar year. This does not include how many times a user shared the data onward so includes access demand not total uses or audience. We anticipate a similar level of usage when we switch over to the AI generated metric, this may be higher as we will be scoring every Key Work session case note each month rather than a sample, so the data may be accessed more frequently.
+Functional heads and Custodial Managers then look at the data on the performance hub. They will use the data to identify areas of improvement and good practice and inform their local QA process.
+3.4 - Human decisions and review
+People in the OMiC team have a role in the decisions made about what scores are given to each keywork session case note. Each month, a random sample of case notes is generated and sent to the OMiC Team to review. Additionally the OMiC Team will dip sample the case notes recorded for up to two prisons (minimum of one) each month, focussing on those prisons where a step change in performance is observed (this would also include going back to check where we previously spotted potential gaming).
+There is also a challenge process whereby the scores outputted by the model can be challenged by prisons if they feel that they are incorrect. At this point a human will manually review the case note and assign the appropriate score.
+Functional heads and Custodial Managers use these scores to improve the delivery of Key Work sessions within their prison. For example if there are lots of low scoring case notes the establishment may have a focus on trying to reduce these, or find high scoring case notes to share with key workers as examples of good practice.
+3.5 - Required training
+Users have been provided with documentation to explain that the case note quality scores have been generated using AI. The tool is deployed by data scientists and operational staff do not interact with this directly, they are just able to view the outputs which appear in the same format as when the process was completed manually by the OMiC team.
+3.6 - Appeals and review
+The scores outputted by the model can be challenged by prisons if they feel that they are incorrect. At this point a human will manually review the case note and assign the appropriate score. If a large number of scores are successfully challenged, this will feed into a review of the model.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+The algorithm is deployed as part of an automated workflow managed in part by Apache Airflow, which orchestrates the majority of the process. Key technical features of the system include:
+Data Compilation: The process begins with the extraction and compilation of relevant case note data from various prison databases for the latest month.
+Data Integrity Checks: As the data is imported, it undergoes a series of validation tests implemented in Python. These checks ensure that the data meets the required quality and consistency standards before it is used by the model.
+Data Cleaning: Extracted data goes through a number of processing steps before being passed to the model e.g.  removing names using NER, removing pronouns, creating the embeddings.
+Model Loading: The model, which has been pre-trained and stored securely, is retrieved from an Amazon S3 storage location.
+Score Generation: Once the data is prepared and the model is loaded, the system applies the model to generate scores for each case note.
+Score Storage: Finally, the generated scores are saved back to an Amazon S3 location. This allows for a separate team to access these scores, calculate some additional metrics and upload them onto the HMPPS performance hub for users to access.
+This architecture provides a secure, robust, and (majority) automated process for generating, validating, and monitoring the tool’s estimates.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The model pipeline runs on a monthly basis and is monitored regularly via the generation of automated metrics to check for data or processing errors, significant data drift, or unexplained estimate changes each month. These metrics are calculated based on a random sample of case notes which the OMiC Team manually review each month. The OMiC Team will also dip sample the case notes recorded for up to two prisons each month. There is also a process whereby the scores outputted by the model can be challenged by prisons if they feel that they are incorrect which provides a further review of the model. This human input is collated in a single secure S3 location so that collected data can be used to assess model performance and train model iterations and improvements in future.
+There is ad hoc ongoing maintenance required to keep the model operational when there are changes to upstream data or infrastructure.
+We have a formal model review scheduled for every 18 months, which involves assessing the data quality, data drift and possible concept drift, assessing the need for the model, gathering user feedback and a decision about whether to retire the model.
+4.1.4 - Models
+BERT NER:
+https://huggingface.co/dslim/bert-base-NER
+Longformer:
+https://huggingface.co/allenai/longformer-base-4096
+GBM:
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html
+Tier 2 - Model Specification
+4.2.1 - Model name
+Key Work quality assurance automation
+4.2.2 - Model version
+1
+4.2.3 - Model task
+The model automates the process of assessing the quality of Key Work session case notes to reduce the manual burden on the National OMiC team and ensure prisons have valid monthly scores for all case notes rather than just a sample.
+This is a multi-class classification model with classes from 0 to 4 representing the score given to the quality of the case note. An explanation of what each number represents is given in section 2.4.2.5.
+4.2.4 - Model input
+The features used by the model to make predictions includes the case note text extracted from NOMIS, the OMiC delivery frequency and the text length which is calculated from the free text field.
+4.2.5 - Model output
+The model outputs are provided to the user as a numerical score from 0 to 4 for each case note. 0 represents an invalid case note e.g. where the entry doesn’t give evidence that a key worker session took place and 4 represents a case note that provides evidence of a good quality key work session.
+4.2.6 - Model architecture
+BERT NER:
+https://huggingface.co/dslim/bert-base-NER
+Longformer:
+https://huggingface.co/allenai/longformer-base-4096
+GBM:
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingClassifier.html.
+The following hyperparameters were utilised: verbose=0, categorical_features = [0], random_state=42.
+4.2.7 - Model performance
+We evaluated the tool using a comprehensive approach, considering its performance, inter-rater reliability, and ethical implications. We completed case note level analysis and aggregated level analysis, comparing our predictions to scores from January – June 2024.​ From our analysis, the model outputs effectively replicate the outputs of the existing process, the model outputs are slightly more optimistic but there is no evidence to suggest that our model is delivering biased outputs.
+Agreement with manual process: Tested using the agreement rate (how often the model agrees with the previously scored data) and confidence intervals. The model matched original scores in 66% of cases, and the model either agrees with the score or is one off for 97% of case notes. Note that the ‘one away’  metric was specified by the OMiC team who were happy with a +/-1 tolerance for error.
+Inter-rater reliability: Measured the degree of agreement between different people observing or assessing the same thing.​ As the scores are subjective quality assessments, there is no such thing as a ‘ground truth’. Therefore, we tested whether human-model inter-rater reliability is the same as human-human inter-rater reliability using Krippendorff’s Alpha. The team/manager/prediction group inter-rater reliability was significantly higher (0.59) than the team/manager reliability (0.5). The model predictions have a higher agreement with the manager ratings (0.66), rather than the team ratings (0.6).
+Ethics and bias evaluation: We carried out a comprehensive ethics assessment in line with the MoJ’s Ethics Framework for Data Science and AI. We looked at fairness and bias by completing comparisons of regional model performance against demographic breakdown, testing examples of case notes and case note variation. Once the outlier regions were removed, there was no significant correlation found that would suggest our model includes bias towards ethnicity, gender or age.
+Finally, we have run the model in ‘shadow launch’ alongside the existing approach for several months. This has allowed us to further monitor the model (using metrics such as f1 scores and Matthews correlation coefficient) and also collect feedback from users. We did notice some changes in how our model was performing for October and November 2024 data. We investigated and identified that a different individual had been scoring case notes for those particular months. We continued to monitor this through shadow launch and were happy with the model’s performance. Users have responded positively, that the model accurately reflects the scoring for their case notes and also allows more case notes to be scored each month which is helpful for them as allows them to make more timely improvements to Key Work delivery.
+4.2.8 - Datasets
+Dataset 1 - Sample of 22,792 case notes taken from May 2022 to September 2023.
+Dataset 2 - Sample of ~2,400 case notes taken from January to June 2024.
+4.2.9 - Dataset purposes
+Dataset 1 - Used for initial model testing, training and validation.
+Dataset 2 - Used for model evaluation.
+Tier 2 - Data Specification
+4.3.1 - Source data name
+Prison NOMIS
+4.3.2 - Data modality
+Tabular
+4.3.3 - Data description
+The data extracted from NOMIS includes the case note free text and ancillary information e.g. offender ID, staff ID, contact time, case note ID, along with OMiC delivery frequencies. The features used by the model to make predictions are the case note text, OMiC delivery frequency and the text length which is calculated from the free text field. The other fields are passed onto a separate team for them to calculate RAG ratings from the quality scores, but aren’t used by the model to make predictions. Note that these fields were used for model training e.g. to be able to identify and then only use unique combinations of staff and prisoner ID in the case notes to avoid overfitting.
+4.3.4 - Data quantities
+Model trained on 18,233 case notes (80% of 22,792) taken from May 2022 to September 2023.
+Model tested and validated on two separate sets of 2,280 case notes (2 sets of 10% of 22,792).
+5-fold cross-validation was performed as part of training, splitting the searches over 4 parameter grids due to long training times and using negative log loss as the scoring method for these grid searches.
+4.3.5 - Sensitive attributes
+Personal identifiers are necessary to link scores to free text case notes. The case note itself is a free text field so this may contain sensitive data. It is almost impossible to remove all the personal data from the free text so this may contain information on the offender such as age, gender, ethnic origin, religion, family information, criminal history, contact details etc.
+Under Article 6 of the UK GDPR, processing this data is lawful as it is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.
+4.3.6 - Data completeness and representativeness
+Scores are only generated if a case note has been provided, therefore the data is complete in this sense. Any rows with missing data are dropped before loading into the model as all fields (e.g. case note text, OMiC frequency, offender ID) are required to predict the case note quality score.
+Training is based on a random sub-sample of case notes generated from May 2022 to September 2023, these had previously been scored by the OMiC team. In subsequent data uploads provided by the OMiC team, a small number of case note IDs were duplicated and seen in more than one upload.  Of these, some ratings have changed, and some are missing in the subsequent uploads. For these, the earliest available rating was taken.
+4.3.7 - Source data URL
+N/A (currently). The outcomes will be published with the performance publication at around the end of July 2026 -
+https://www.gov.uk/government/collections/prison-and-probation-trusts-performance-statistics.
+4.3.8 - Data collection
+The data is collected as part of core operational prison activities.
+4.3.9 - Data cleaning
+The case note text data is pre-processed ready for the embeddings to be created. This involves removing names using an NER model, removing gendered pronouns and creating a text length column.
+4.3.10 - Data sharing agreements
+N/A - Data is all held internally.
+4.3.11 - Data access and storage
+The source data is stored on a secure cloud platform only accessible to the development team, and kept in line with the department’s governance rules for the MoJ Analytical Platform.
+The tool’s estimates are provided to users via the Prison Performance Hub (a web-based corporate reporting service) which is governed by role-based access. This means that users can only access the specific data that they are permitted to for their role.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessment
+Data Privacy Impact Assessment completed and approved internally (final approval April 2025).
+Ethics Assessment completed based on MoJ’s Data Science Ethics Framework (July 2024) and shared with MoJ Senior Data Ethicist.
+5.2 - Risks and mitigations
+During Shadow Launch we assessed the likelihood and impact of the following risks and developed the mitigations set out below:
+The guidance changes and our model is no longer fit for purpose. We have been given assurance by the National OMiC team that this is unlikely to happen, if it does happen then the model would need to be retrained.
+The performance of our model drops unexpectedly and is no longer fit for purpose. We are conducting a monthly manual review of a sample of case notes to monitor the AI model’s performance. There is also the case note score challenge process. If a large-scale issue, then the model would need to be retrained.
+Staff in prisons try to ‘game’ the system i.e.. copy and pasting case notes that have previously received good scores. We mitigate against this, we are completing a monthly dip sample of case notes for up to two prisons, focussing on prisons where a step-change in performance is observed.
+Contents

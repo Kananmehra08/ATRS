@@ -1,0 +1,260 @@
+Dorset Council: Formulate for Adult Social Care
+Providing fair, accurate and financially sustainable personal budgets to adults with eligible care and support needs. This record was written jointly by both Dorset Council and the tool supplier, Imosphere.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 January 2025
+Organisation:
+Dorset Council
+Organisation type:
+Local authority
+Function:
+General public services
+and
+Social protection
+Capability:
+Forecasting
+and
+Analysis
+Phase:
+Production
+Region:
+South West
+Date published:
+28 January 2025
+ATRS version:
+v3.0
+Tier 1 Information
+Note: this record was produced by Dorset Council in conjunction with the tool supplier, Imosphere.
+Name
+Formulate for Adult Social Care
+Description
+The algorithmic tool is used by Dorset Council to calculate estimated personal budget figures for adults who have eligible care and support needs under the Care Act. We choose to use this tool because other areas have found that it provides a fair and accurate approach. The tool is accessed by social care practitioners completing a specific set of questions about the person’s care and support needs and personal situation within MOSAIC - our case management IT system.
+Website URL
+https://imosphere.com/care-and-support-tools/adult-social-care/
+Contact email
+customerservices@dorsetcouncil.gov.uk
+Tier 2 - Owner and Responsibility
+###1.1 - Organisation or department
+Dorset Council
+1.2 - Team
+Adult Social Care
+1.3 - Senior responsible owner
+Corporate Director for Commissioning, Adult Social Care Dorset Council
+1.4 - External supplier involvement
+Yes
+1.4.1 - External supplier
+Imosphere (using The Access Group’s case management system MOSAIC as a deployment method)
+1.4.2 - Companies House Number
+02878495
+1.4.3 - External supplier role
+Imosphere developed it and we pay for the use of it.
+1.4.4 - Procurement procedure type
+Crown Commercial Services - G Cloud
+1.4.5 - Data access terms
+Pseudonymised data provided to Imosphere to perform testing.
+Tier 2 - Description and Rationale
+###2.1 - Detailed description
+Formulate for Adult Social Care has been designed to enable local authorities to calculate fair, accurate and consistent estimated Personal Budgets (PBs) for adults with eligible needs under the Care Act.
+The purpose of the estimated PB is to provide a starting point for the care and support planning process. The figure provides a framework to enable choice, control and person-centred care within a sustainable financial envelope. This helps move the conversation away from more traditional service or provision-led thinking.
+There are three components to the overall Formulate solution:
+The ‘Needs Profile’ form which contains a pre-defined set of multiple choice questions about an individual’s care and support needs, the sustainable support available to them from unpaid sources and their ongoing living situation. This is completed once it has been established that an individual has eligible needs.
+The Formulate algorithm which calculates an individual’s estimated Personal Budget (PB) based on their Needs Profile. The algorithm has been developed using statistical best fit modelling based on needs and costs data collected on thousands of adults across England who already have local authority funded care in place.
+The specific local authority’s ‘Configuration Template’ (which captures decisions that control how Needs Profiles are turned into estimated PBs for individuals in the local area, such as hourly rates for care at home).
+2.2 - Scope
+Formulate for Adult Social Care has been designed to enable local authorities to calculate fair, accurate and consistent estimated PBs for adults with eligible needs under the Care Act who have been assessed as requiring longer-term care and support.
+Formulate for Adult Social Care has not been designed for:
+Assigning social care interventions (only for helping to set the PBs to fund those interventions)
+Use with under 18s (other than where it is useful to calculate an estimated PB for future purposes as part of the ‘moving to adulthood’ pathway for a teenager)
+Use with individuals who have been discharged from hospital under Section 117 of the Mental Health Act (unless the estimated PB is only for Care Act eligible needs)
+Use with individuals who are eligible for fully funded Continuing Healthcare.
+There are separate Formulate solutions available for use with the groups of individuals set out above.
+2.3 - Benefit
+Key benefits for people with care needs:
+- Clarity in understanding the money available for care and support planning.
+- Empowered to exercise choice and control - allows for greater creativity.
+- Assurance that allocation is fair and driven by needs and outcomes - rather than decisions on cost.
+Key benefits for practitioners:
+- Clarity in understanding the money available for care and support planning.
+- Confidence in decision making through the use of a robust, evidence-based tool.
+- Free to focus on the person rather than the money.
+Key benefits for local authorities:
+- Supports financial and budgetary planning and control, helping to inform future commissioning arrangements.
+- Helps eliminate variation in provision costs for individuals with similar needs.
+- Benchmarking between service user groups.
+- Delegated decision making - potential to reduce moderation/panels.
+2.4 - Previous process
+Individuals would use our current average cost of care prices and predict how much care a person would need based on the assessment. It was inconsistent and at times people used out of date rates.
+2.5 - Alternatives considered
+Historical spending patterns to allocate budgets:
+We looked at how much had been spent on similar cases in the past and used this information as a basis for determining future budgets. However, this approach didn’t always account for changes in individual needs or evolving service costs.
+Expert Judgment and Negotiation:
+Social workers and care managers would negotiate budgets with individuals and their families. These negotiations often involved expert judgment, discussions about needs, and compromises. While it allowed for flexibility, it could lead to inconsistencies and inequities.
+Trial and Error:
+Some local authorities experimented with different budgeting methods, adjusting them over time based on feedback and outcomes.
+This trial-and-error approach was resource-intensive and didn’t always yield optimal results.
+Tier 2 - Decision making Process
+###3.1 - Process integration
+The Formulate tool has been built into the Case Management System so it flows within the current process. The worker completes their main care act assessment and then populates the required fields for the Formulate tool. This allows the worker to make an informed decision about the next steps. They must first decide, based on their assessment, if the person is eligible for care. If they are, the Formulate tool informs them of the indicative budget that could be available to them as a Direct Payment (DP) should they wish. They then have a conversation about how to proceed - e.g. if they want the local authority to manage the process, the social worker will create a support plan with the person and then broker their care.
+3.2 - Provided information
+The main ‘output’ of the Formulate calculation is a weekly estimated PB figure. Having a reliably accurate estimate to work with provides a robust starting point for the local authority practitioner and the PB holder to take forward into the care and support planning process.
+An important point here is that the final PB figure (which equates to the cost of the agreed support to be purchased) can legitimately differ from the estimated figure, for example, where the individual has specialist needs, or requires support that can only be provided by a specialist provider at a higher hourly rate than the relevant rate configured into Formulate by the local authority. This means that Formulate’s role in the process is a decision support tool. It doesn’t set the PB figure but provides an estimated figure to work with.
+Formulate also optionally generates some additional outputs which can add value to the process - including:
+- A breakdown of the estimated PB figure into an amount allocated per area of need (such as ‘Household tasks’) - providing a level of transparency as to how the estimate has been arrived at by the algorithm’s calculation.
+- A range of alternative estimated PB figures based around different theoretical scenarios - known as ‘What If’ outputs - for example, what the estimated PB would have been for different living situations and with VS without unpaid carer support. These can help with decision-making around what care environment might be most suitable for the individual as well as with contingency planning relating to unavailability of unpaid carer support.
+- A recommendation as to whether the Continuing Healthcare ‘Checklist’ should be completed for the individual - based on whether or not their Needs Profile answers mean they are likely to meet the ‘positive’ criteria on the Checklist tool.
+In practice, the outputs described above are normally displayed within the local authority’s social care IT system once the Needs Profile form has been completed within the system by the practitioner working with the individual. Prior to this, the Needs Profile questions may have been partially or fully completed by the individual (or their representative) as part of a supported self-assessment process.
+3.3 - Frequency and scale of usage
+Formulate is used on an individual citizen basis during their assessment of needs under the Care Act. An individual’s estimated budget is reviewed at regular intervals, or where Dorset Council has been made aware of changes to the individual’s circumstances or needs. As the algorithm is associated with the assessment form, it is anticipated that each instance of this in a person’s record will contain an estimated budget calculated by the algorithm (unless a decision on eligibility means that the Needs Profile is not completed).
+There are currently 4643 citizens in receipt of a care package from Dorset Council. Of the assessments undertaken this year 3646 have resulted in a care plan being created, just under half (1760) are new plans the rest (1886) are revisions of previous plans. On average the needs profile is undertaken in 55% of cases the majority of which will be new assessment and the remainder where circumstances have changed.
+The average PB estimation frequency using the Needs Profile algorithm is 167 times per month (or 2004 per year).
+3.4 - Human decisions and review
+The decisions taken in the overall process which involves using Formulate for Adult Social Care are as follows:
+1. Decision by the local authority’s adult social care ‘front door’ (or ‘access team’) that the individual presenting with care and support needs should participate in a Care Act assessment to determine eligibility for longer-term support.
+2. The eligibility decision itself resulting from the Care Act assessment (which should never be automated).
+3. The decision as to the individual’s agreed Personal Budget (PB) amount, which is influenced but not set or constrained by the estimated PB calculated by Formulate.
+4. The decision as to whether the local authority should make a referral via the CHC Checklist to the local Continuing Healthcare service for the individual. A manual decision which may be influenced by the recommendation made by Formulate in this regard.
+3.5 - Required training
+Standard MOSAIC training is available to all staff to show how to complete the forms. There is strength-based practice training to help people undertake the assessment.
+Strength-based practice means clients are seen as active agents in their own lives, capable of making choices and decisions. The approach builds on clients’ existing strengths, skills, and abilities. It considers various aspects of an individual’s life, including personal strengths, social networks, and community resources. Rather than being service-led, strengths-based practice aims to achieve positive outcomes for the individual.
+In addition, the supplier offers the following knowledge transfer/training activities for local authorities:
+- Delivery of detailed training workshop session(s) to nominated local authority ‘superusers’, to equip them with the right knowledge about Formulate to be able to provide first line support to end users of the tool.
+- Provision of on-demand guidance videos with accompanying e-learning quizzes for all end users to complete before they use Formulate.
+3.6 - Appeals and review
+There is a complaints process in place. See:
+https://www.dorsetcouncil.gov.uk/w/how-to-complain-about-social-care-services?p_l_back_url=%2Fsearch%3Fq%3Dcomplain
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+https://imosphere.com/uploads/cast/asc-case-mgmt-system.jpg
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+Dorset Council review the tool annually to ensure it remains accurate and beneficial for staff.
+The Formulate for Adult Social Care algorithm is built and maintained within Microsoft Excel by the supplier, with each new release of the algorithm being version controlled (alongside the version control of the Needs Profile dataset which it relies on).
+Updates are produced by the supplier for the following reasons:
+- To resolve reported issues with the calculations (such as an observed lower-than-expected level of accuracy for specific profiles of need or individuals with a certain health condition).
+- To support changes to relevant national legislation, such as the planned introduction of a ‘national cap on lifetime care costs’.
+- To deliver more general improvements to elements of the algorithm arising from ongoing analysis of new sample data.
+The supplier is also involved in converting the Excel algorithm files to different technical formats for use within (or connected to) different local authority social care IT systems, for example, conversion to JavaScript.
+The contracts that the supplier holds with local authority customers include an annual Product Performance Review, which involves the supplier working with local authority representatives to audit the information about a sample of individuals whose estimated PBs were arrived at through use of Formulate - resulting in a report which may contain recommendations for changes to the local configuration decisions.
+Most local authorities also choose to update their local configuration template at least once per year to reflect financial year end ‘rate uplifts’ - which may or may not coincide with the annual health check described above. It is vital that these regular updates take place - to avoid the risk of Formulate producing ‘out of date’ figures which don’t align with the real costs of care in the local market - which then leads to the perception locally that Formulate isn’t accurate.
+Local configuration changes may be applied either by the supplier directly or by local authority IT staff - depending on the social care IT system used and the technical solution which enables Formulate to work within the system.
+Tier 2 - Model Specification: Formulate Adult Social Care (1/2)
+###4.2.1 - Model name
+Formulate Adult Social Care
+4.2.2 - Model version
+Version 9 (and its sub-versions)
+4.2.3 - Model task
+The model calculates a weekly estimated personal budget in relation to meeting the eligible needs of an adult with care needs under The Care Act which are not able to be met by unpaid carer(s).
+4.2.4 - Model input
+The model input is known as the Formulate Needs Profile - a set of enumerated questions which quantify an adult’s strengths and needs (primarily in relation to the Care Act eligibility criteria) - and the degree to which their needs can sustainably be met by unpaid carer(s) - along with the nature of their ongoing living situation.
+4.2.5 - Model output
+The model generates a number of outputs:
+- Estimated weekly budget
+- Quality Assurance - A set of one or more text statements describing any detected inconsistencies, irregularities or key omissions in the Needs Profile answers - designed to improve accuracy of form completion. This output is not generated if no quality assurance issues are detected.
+- Allocation Summary - A breakdown of the estimated weekly budget into need domains - each of which include an estimated sum of money and the equivalent units of care this is based on.
+- Total estimated number of weekly support hours (in relation to community-based living).
+- “What-if” outputs - A number of theoretical alternative estimated budget figures based on different scenarios (for example what the estimated budget would be for different types of living settings, or without unpaid carer support).
+4.2.6 - Model architecture
+Formulate is a bespoke model which has been built using data captured and provided by experienced social workers, data analysts and researchers. The end result is probably best described as a set of expert decision trees that contribute to the overall output.
+The model has a core structure which is the same for each local authority (with the exception of any bespoke changes requested by individual authorities). There is then a list of ‘Weightings’ (parameters) that are set per local authority based on a Configuration Template completed by the authority - which includes their local standard costs (e.g. hourly rates) for different types of care and support services - and decisions which reflect their desired local commissioning practices (e.g. whether the model should include allocations some specified types of living situations - such as residential and nursing care).
+4.2.7 - Model performance
+Statistical analysis is completed by Imosphere on data collected during local authority implementations for a sample of individuals already in receipt of care and support from the local authority, including calculating the Pearson’s Correlation between:
+The estimated personal budgets calculated by the locally-configured model for these individuals.
+The existing personal budget costs for these individuals.
+This measures the strength of relationship (from 0 to 1) between the two sets of figures, with the threshold for good performance being a correlation exceeding 0.9.
+4.2.8 - Datasets
+The base model has been iteratively developed using datasets supplied by local authorities. This numbers around 50 discrete datasets since the original model’s inception in 2010-11.
+4.2.9 - Dataset purposes
+The datasets are analysed against our core model - with weightings then being adjusted to achieve a higher correlation and increased levels of accuracy.
+Tier 2 - Data Specification: Formulate Needs Profile (1/2)
+###4.3.1 - Source data name
+Formulate Needs Profile
+4.3.2 - Data modality
+Tabular.
+4.3.3 - Data description
+The model input is known as the Formulate Needs Profile - a set of enumerated questions which quantify an adult’s strengths and needs (primarily in relation to the Care Act eligibility criteria) - and the degree to which their needs can sustainably be met by unpaid carer(s) - along with the nature of their ongoing living situation.
+4.3.4 - Data quantities
+A total of 123 possible data points exist in the Needs Profile dataset (each one being a question with enumerated answer). For new implementations of Formulate for Adult Social Care, a sample size of at least 70 Needs Profiles is collected from the local authority for analysis by Imosphere.
+4.3.5 - Sensitive attributes
+No identifying information is collected. The only field that could be considered remotely sensitive is a unique identifier for that case. However, we have no reference back to the source data so this identifier cannot be used by Imosphere to identify the person.
+4.3.6 - Data completeness and representativeness
+The process for collecting sample data during an implementation is led by Imosphere representatives. They ensure that each dataset is complete.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The process for collecting sample data during an implementation is led by Imosphere representatives, who undertake the recording of the dataset for each sample individual based on discussion of the individual’s needs and situation with a social worker. No identifying information about the individual is discussed or collected. The sample collected is used to configure the final model for local use.
+4.3.9 - Data cleaning
+The data cleaning is manual. As the sample cases are captured as part of real-time conversations with social workers, any unsuitable cases (e.g. the person doesn’t have a care package or has joint funding) are excluded.
+4.3.10 - Data sharing agreements
+Imosphere has a standard data sharing agreement with Formulate customers which also covers how the data is used.
+4.3.11 - Data access and storage
+The data collected as part of local authority implementations is stored securely on the Imosphere company network for the duration of the contract. Members of the Customer Operations teams within Imosphere have access to the data.
+Where a local authority performs its Formulate calculations using Imosphere’s Formulate online ‘Web Service’, the form and calculation data from day-to-day usage is stored securely in the Web Service database. The data is extracted and passed to the local authority at the end of the contract.
+A copy of all Formulate customer data is retained by Imosphere for a period of 15 years from the end of the relevant contract and is used periodically to support the ongoing development of the ‘master’ Formulate algorithm.
+Tier 2 - Model Specification: Continuing Health Care (CHC) Checklist Prediction (2/2)
+###4.2.1 - Model name
+Continuing Health Care (CHC) Checklist Prediction
+4.2.2 - Model version
+Version 9 (and its sub-versions)
+4.2.3 - Model task
+Continuing Health Care is an NHS entitlement awarded to adults requiring long-term care whose health needs are sufficiently high and/or complex to meet the national eligibility threshold, with the CHC Checklist being a national tool used by local authorities and voluntary organisations to ‘screen’ an adult’s needs in relation to the CHC eligibility criteria prior to making a referral to the CHC service. This model runs in parallel to the Estimated PB model, and is used to predict what the ‘A/B/C’ results of the CHC Checklist would be for an adult based on the answers in their Needs Profile, generating an overall recommendation as to whether the Checklist should be completed and a referral made to CHC.
+4.2.4 - Model input
+The model input is known as the Formulate Needs Profile - a set of enumerated questions which quantify an adult’s strengths and needs (primarily in relation to the Care Act eligibility criteria) - and the degree to which their needs can sustainably be met by unpaid carer(s) - along with the nature of their ongoing living situation.
+4.2.5 - Model output
+The model calculates the following outputs:
+A predicted ‘A/B/C’ score for each of the named NHS CHC Checklist domains.
+An overall recommendation as to whether the Checklist should be completed and a referral made to CHC.
+4.2.6 - Model architecture
+This model within Formulate is a bespoke model which has been specifically built to map relevant responses within the Needs Profile to the A/B/C levels within the NHS CHC Checklist tool based on the need descriptors provided within the Checklist. A set of decisions trees are used to apply the relevant A/B/C level and provide an overall recommendation of whether it would be advisable for the social worker to consider completing the NHS CHC Checklist tool for the individual.
+4.2.7 - Model performance
+The model has been tested directly with both healthcare and social care workers to ensure the predictions made in relation to the CHC Checklist are sufficiently accurate, with appropriate levels of sensitivity. Levels of accuracy/sensitivity are judged by customers through their usage of this model (as it is not possible to empirically determine whether the predicted A/B/C levels are ‘correct’).
+Any feedback from customer usage has been captured and, where appropriate, reflected in the model through refinement of the formula used for the prediction (for example, if the model has been observed to be over or under sensitive for a particular CHC domain).
+4.2.8 - Datasets
+The model has been developed and refined using discrete datasets supplied by local authorities which number around 25-30 since the development of this specific model in the mid 2010s.
+4.2.9 - Dataset purposes
+A specific dataset generated by a local authority and local NHS CHC service was used to initially develop this model. Routine datasets captured during local authority implementations since then have been used to validate and refine the model since then.
+Tier 2 - Data Specification: Care Package Breakdown (2/2)
+###4.3.1 - Source data name
+Care Package Breakdown
+4.3.2 - Data modality
+Tabular.
+4.3.3 - Data description
+As part of the data collection of the Needs Profile data, we also collect data on the Personal Budget being provided to the person by the local authority. This data is typically broken down into the number of hours, days or nights of support currently being funded by the local authority, and the relevant per hour, day or night rate of the support.
+4.3.4 - Data quantities
+The dataset contains up to 64 data points per individual, depending on the amount of support currently being provided to the individual.
+4.3.5 - Sensitive attributes
+No identifying information is collected. The only field that could be considered remotely sensitive is a unique identifier for the individual. However, we have no reference back to the source data so this identifier cannot be used by Imosphere to identify the individual.
+4.3.6 - Data completeness and representativeness
+The process for collecting sample data during an implementation is led by Imosphere representatives. They ensure that each dataset is complete.
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+The process for collecting  sample data during an implementation is led by Imosphere representatives, who undertake the recording of the dataset for each sample individual based on discussion of the individual’s needs and situation with a social worker. No identifying information about the individual is discussed or collected. The sample collected is used to configure the final model for local use.
+4.3.9 - Data cleaning
+The data cleaning is manual. As the sample cases are captured as part of realtime conversations with social workers, any unsuitable cases (e.g. the person doesn’t have a care package or has joint funding) are excluded.
+4.3.10 - Data sharing agreements
+Imosphere has a standard data sharing agreement with Formulate customers which also covers how the data is used.
+4.3.11 - Data access and storage
+The data collected as part of local authority implementations is stored securely on the Imosphere company network for the duration of the contract. Members of the Customer Operations teams within Imosphere have access to the data.
+A copy of all Formulate customer data is retained by Imosphere for a period of 15 years from the end of the relevant contract and is used periodically to support the ongoing development of the ‘master’ Formulate algorithm.
+Tier 2 - Risks, Mitigations and Impact Assessments
+###5.1 - Impact assessment
+A Data Protection Impact Assessment (DPIA) and an Equality Impact Assessment (EQIA) were completed by the ASC project manager as part of the initial implementation of V8 (May 21).
+These documents are now being redrafted as part of the V9 upgrade and up to date copies will be provided to DSIT for publication alongside this record as part of the upgrade process (Sept 24).
+5.2 - Risks and mitigations
+Supplier identified risks
+Identification of risks arising from use of the tool is the responsibility of individual local authorities who decide to use the tool. This should be part of their local due diligence processes.
+Imosphere do conduct Product Performance Reviews periodically (i.e. annually) with the local authority, to monitor and review how accurately the model is performing after go live. This health check aims of focus on cases where the Estimated Budget was deemed to be ‘inaccurate’ by the social worker, to identify possible causes/issues within the model’s calculation.
+Part of this case review by Imosphere representatives can also identify issues with local practice regarding use of Imosphere’s Care Act assessment toolset and advise on process or training issues identified for the cases reviewed.
+Local authorities may also receive Freedom of Information (FOI) requests from members of the public in relation to the tools/process they use for calculating estimated budgets. When required, Imosphere provides a high level explanatory document and/or a more detailed explanatory document setting out the steps involved in calculating the Estimated Budget, to support such requests.
+Local authority identified risks
+If the tool’s algorithms are inaccurate it leads to inaccurate indicative budgets.
+Over reliance on the tool may lead to reduced understanding of how the underlying calculations work.
+If the tools algorithms are not transparent it may be challenging to justify budget allocation.
+The tool may not adequately account for unique individual circumstances.
+Contents

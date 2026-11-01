@@ -1,0 +1,9 @@
+You are a requirements engineer. Below is a public-sector algorithmic transparency record describing an algorithmic tool.
+
+Write between 8 and 12 software requirements for this system that reflect its governance, transparency, risk and oversight commitments.
+
+Return ONLY a JSON array. Each element must be an object with one field:
+  "requirement": the requirement text
+
+RECORD:
+{record}

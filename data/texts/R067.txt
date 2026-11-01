@@ -1,0 +1,217 @@
+Leeds City Council: Xylo Core
+AI-powered workspace that boosts the capacity of validation and planning officers within local planning authority development management teams.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+27 November 2025
+Organisation:
+Leeds City Council
+Organisation type:
+Local authority
+Function:
+General public services
+and
+Housing and community amenities
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation
+Phase:
+Private Beta
+Region:
+Yorkshire and the Humber
+Date published:
+27 November 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Xylo Core
+2 - Description
+Xylo Core uses artificial intelligence to assist planning officers in validating and processing planning applications by automatically checking documents for completeness, identifying relevant planning history and policies, and drafting routine correspondence and report sections which officers review and approve before use.
+3 - Website URL
+https://www.buildxylo.ai/
+4 - Contact email
+planning@leeds.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Leeds City Council Planning and Sustainable Development
+1.2 - Team
+Development Management
+1.3 - Senior responsible owner
+Head of Development Management
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Xylo AI LTD
+1.4.2 - Companies House Number
+16113693
+1.4.3 - Third party role
+Xylo AI Ltd provides Xylo Core as software as a service including the AI deployment, system architecture, and technical support while Leeds City Council retains control over all planning decisions and data governance.
+1.4.4 - Procurement procedure type
+Proof-of-concept pilot with procurement to follow if successful
+1.4.5 - Third party data access terms
+Xylo processes planning application data as a data processor. The company cannot use council data for any purpose other than service provision and has no data retention rights other than in relation to the service provision itself.
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+The system works by ingesting planning application documents when an officer opens a case. Text is extracted and personal data is redacted using pattern matching. The cleaned text is processed alongside retrieved planning policies and constraints from an indexed database of planning documents. This combined information is sent to large language models from OpenAI, Anthropic and/or Google via API calls. The models generate validation results, policy references and draft text which are displayed to the officer for review and editing.
+Every suggestion supported by AI must be reviewed and accepted by the officer. Sources and reasoning are provided with every recommendation and an audit log tracks all activity allowing any officer to trace exactly what information Xylo supplied and what the officer kept, proving the human analysis step.
+Xylo Core does not evaluate planning merits.
+2.2 - Benefits
+Xylo Core is designed to boost the capacity of local planning authority development management departments with the aim to speed up end-to-end application determination times by 30% and increase decision accuracy.
+AI-assisted error checks and suggestions are designed to reduce the number of complaints and appeals the council receives.
+Additionally, enabling officers to work from one primary workspace as opposed to 10+ tabs covering different documents, maps and related planning information will improve the user experience and productivity of planning officers by reducing the amount of context switching they currently experience.
+2.3 - Previous process
+Officers manually review each document against validation checklists, search multiple databases and documents for planning history, policies and constraints, and type all correspondence from scratch or modified templates requiring extensive copying and pasting.
+2.4 - Alternatives considered
+Alternatives to using LLMs were considered but were rejected for being too narrow in scope or not scalable enough.
+Rule-based automation was explored but could not handle the complexity of planning documents.
+Rules engines also cannot easily handle diverse document types (including images), free-text or different report styles and formats.
+The chosen LLM-based workspace offers significant productivity gains with adaptable prompts accompanied by a comprehensive suite of bias evaluations and regression tests and human-in-the-loop editing.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+The tool operates alongside existing systems. Officers continue to use their normal workflows but can access Xylo’s suggestions for validation checks, research, document analysis and measuring, note taking and report writing.
+The tool collates and analyses the contextual and supporting information necessary for a validation and/or planning officer to carry out their work more efficiently and accurately.
+The tool supports the validation process by creating a tailored validation checklist for each application and highlights any missing documents and/or incorrect information along with supported reasoning and sources for that suggestion so that the planning officer can accept or decline that suggestion as they see fit.
+The tool suggests the site history, policies and constraints that appear to be most relevant to that application based on the application type, development description and Geographic Information System (GIS) data for that application.
+The tool also provides tailored templates for officer’s reports depending on the application type including relevant information about the planning application.
+No automated recommendation to approve/refuse is provided
+3.2 - Human review
+Validation and planning officers retain full control over all decisions. They must review every suggestion, verify its relevance, and edit any draft text. Officers can ignore or override any recommendation.
+Sources and reasoning are provided with every recommendation and an audit log tracks all activity allowing any officer and/or auditor to trace exactly what information Xylo supplied and what the officer kept.
+3.3 - Frequency and scale of usage
+The tool is not yet in a full live production environment, but the plan is for it to be used to process every application that a local planning authority receives, from permitted development certificates to major planning applications, after the end of the pilot period of 3 months. Citizens do not interact with Xylo directly.
+The pilot will be phased, starting with a group of approximately 10 officers using Xylo Core to process householder applications, which are the simplest planning applications. It is expected that officers participating in the pilot will initially process 1-2 applications a week using Xylo Core. More application types and additional application volume will be added as the pilot progresses and confidence in the accuracy and quality of the system is proven through the pilot metrics and officer feedback.
+3.4 - Required training
+A one hour individual onboarding session will be provided to each pilot participant to ensure that they are set up for success. Comprehensive supporting documentation will also be provided to all pilot participants to help with ongoing basic queries. Xylo staff will be available via Teams, email and phone to help with any support queries. Weekly and monthly check ins review common issues and share best practices.
+3.5 - Appeals and review
+Standard planning appeal procedures are unchanged. As the tool does not make decisions, all officer determinations remain subject to normal review through planning committees and the Planning Inspectorate. The planning officer is always in control and responsible for making all decisions.
+If there is a freedom of information request or a judicial review about any decision, the tool can provide a full audit trail of all actions made by the officer and all sources and reasoning provided by the tool.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+Xylo Core’s system architecture operates on a cloud-native model primarily using AWS (London region) and Supabase as a managed Postgres layer.
+AWS Lambda functions are used for compute, and there is no direct public inbound access to these functions.
+Outbound traffic from Lambdas is limited to necessary APIs, such as Supabase (for the database) and Braintrust (an evals and observability platform for building reliable AI tools). Braintrust is used to manage prompts and evaluation data for all AI workflows and the requests to LLM APIs, such as from OpenAI, Gemini, and Anthropic.
+Personal data is automatically redacted and minimised before processing and encrypted at all times. Any personal data required to be stored for the proper functioning of Xylo Core is securely encrypted and retained in AWS’ UK facilities.
+Please see here -
+https://drive.google.com/file/d/1nZ74WlVBt-pULJeobghflw8JrI4otlmN/view?usp=sharing
+- for a link to an overview of Xylo Core’s system architecture and its approach to data protection and AI transparency and explainability.
+4.1.2 - System-level input
+Historical planning application data from the council’s  public planning register and new planning application data from the council’s Planning Portal integration. Planning application data primarily comprises application forms, specialist reports, statements, drawings and plans. GIS and site specific data from internal council GIS layers, Ordinance Survey data, as well as publicly available GIS data sources by trusted providers, such as Natural England, are also ingested to aid officer review processes. Publicly available local plan documents and guidance are also relied on.
+4.1.3 - System-level output
+The tool’s output is a series of suggestions to aid development management review processes from validation to research to report writing. These suggestions are accompanied by sources and reasoning to help the officer decide on whether or not to accept, edit or reject the suggestions from the tool.
+4.1.4 - Maintenance
+The tool will be supervised, reviewed, inspected and updated regularly with a comprehensive suite of bias evaluations and regression tests.
+The underlying foundation models used by the tool are pretrained by the model providers (Anthropic, Google and OpenAI). No additional fine tuning by Xylo.
+Public planning documents will be indexed in the system’s RAG database to improve accuracy and provide citations for all suggestions.
+Relevant local and national planning policy information and constraints along with evaluation data for all tool behaviour will be continually added to the system and updated in line with best practices and feedback from users.
+4.1.5 - Models
+The tool leverages foundation LLMs via API from Anthropic, Google and/or OpenAI’s suite of models. These LLM APIs are supported by Xylo’s internal retrieval-augmented generation (RAG) layer. Prompts and a comprehensive set of evaluations for each respective function are managed using the Braintrust platform.
+The RAG and memory systems will provide the system with more relevant context about the application and the tasks at hand to reduce the risks of any hallucinations and increase the accuracy of all outputs.
+Tier 2 - Model Specification
+4.2.1. - Model name
+Xylo Core uses a number of different LLMs for reasons related to performance and cost depending on the task in question, which is constantly evaluated and iterated upon;
+GPT-5 from OpenAI via API
+Gemini 2.5 Pro from Google via API
+Claude Sonnet 4 from Anthropic via API
+Xylo also uses Microsoft’s open source Presidio framework (https://microsoft.github.io/presidio/) to handle redaction of personal data (names, email addresses, phone numbers, etc). It is run locally and adapted to the specific planning use case as well as general data protection best practices.
+4.2.2 - Model version
+gpt-5-2025-08-07 via Open AI API with EU data residency and a zero data retention agreement
+gemini-2.5-pro  via API hosted on the Google Cloud Vertex AI service with EU data residency and a zero data retention agreement
+claude-sonnet-4@20250514 via API hosted on the Google Cloud Vertex AI service with EU data residency and a zero data retention agreement
+Presidio - Data Protection and De-identification SDK
+4.2.3 - Model task
+The LLMs process planning application data (e.g. text and plans) to identify validation requirements, extract relevant information, suggest applicable policies and constraints, and generate draft correspondence and reports for officer review.
+Presido is used to anonymise and redact personal data such as names, email addresses and phone numbers in any new planning applications received.
+4.2.4 - Model input
+Tailored text-based prompts in English connected to specific officer workflows.
+Planning application documents, including PDFs and image files.
+4.2.5 - Model output
+For validation tasks, the models output assessments of application documents in JSON format that are provided back to the officer in an easy to use interface.
+The models also recommend relevant policies and constraints depending on the application type, development description and applicable GIS layers.
+The models also generate tailored officer report templates based on the application type and including key information about the application as determined by the officer through the research process.
+Additionally, the models provide summaries of all outputs along with reasoning for such suggestions to aid the officer’s review.
+For redaction purposes, Presidio provides an anonymised document as the output.
+4.2.6 - Model architecture
+Transformer-based large language models accessed via API. See linked documentation for detailed architecture specifications
+https://openai.com/index/gpt-5-system-card/
+https://modelcards.withgoogle.com/assets/documents/gemini-2.5-pro.pdf
+https://www-cdn.anthropic.com/6d8a8055020700718b0c49369f60816ba2a7c285.pdf
+Presidio uses machine learning models from the spaCy library to detect entities like names, locations, and organisations. The Presidio anonymizer is a Python based module for anonymising detected personal data text with desired values.
+See the GitHub for more information
+https://github.com/microsoft/presidio
+4.2.7 - Model performance
+The models are continuously evaluated using a combination of  automated evaluation checks for bias and regression using a platform called Braintrust, as well as direct user feedback
+Initial testing is delivering accuracy of 85%+ across the different prompts used for the different validation and policy recommendation workflows
+The target is to increase this accuracy to 99%+, starting with householder applications.
+Presidio is a  very well-known and used open source framework with
+4.2.8 - Datasets and their purposes
+This model has not received any further training to its core model or fine tuning. The Xylo team have have undertaken context engineering activities which have been evaluated and iterated on.
+2.4.3. Development Data
+4.3.1 - Development data description
+National and local planning policy documents -
+https://www.leeds.gov.uk/planning/planning-policy
+https://www.gov.uk/government/publications/national-planning-policy-framework–2
+Leeds historic planning application data -
+https://publicaccess.leeds.gov.uk/online-applications/search.do?action=simple&searchType=Application
+GIS layers received from Leeds City Council
+The National Polygon service from HM Land Registry -
+https://use-land-property-data.service.gov.uk/datasets/nps#polygon
+National planning data -
+https://www.planning.data.gov.uk/
+Additional GIS, constraints and planning guidance data is included from Leeds City Council and other central government sponsored sources.
+4.3.2 - Data modality
+Text, image, geospatial data
+4.3.3 - Data quantities
+N/A
+4.3.4 - Sensitive attributes
+N/A
+4.3.5 - Data completeness and representativeness
+The data within the tool’s knowledge base comprises policy documents from local and national websites with information recommended by members of the Leeds City Council planning team and other planning experts who advise Xylo. This will need to be updated from time to time with support from the Leeds’ team
+This approach doesn’t involve traditional model training. The website content was processed for retrieval-augmented lookups rather than model development in a conventional train/test manner.
+4.3.6 - Data cleaning
+N/A
+4.3.7 - Data collection
+All information is from publicly accessible data sources from reputable public sector providers
+4.3.8 - Data access and storage
+Public planning documents are indexed and stored in AWS in the London region. Access is restricted to Xylo technical staff for system maintenance. The indexed database is read-only during normal operation and updated when new policies are published.
+4.3.9 - Data sharing agreements
+All indexed documents are publicly available planning policies and guidance already published by government and Leeds City Council. GIS layers are provided as part of the pilot arrangements.
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+New planning applications are received from the Planning Portal and/or via manual imports.
+Officers can also add notes and make suggestions in the tool to reject or edit suggestions.
+Future iterations of the tool will include a sync functionality between the document management system and the tool to ensure that the officer is able to review the latest documents in Xylo Core, and vice-versa to sync any new information, such as notes or site photos, from Xylo Core to the document management system.
+GIS data consists of internal Leeds GIS layers plus some external APIs to national datasets.
+4.4.2 - Sensitive attributes
+Xylo receives planning-application data from the Planning Portal and/or via manual imports that can still contain personal data (names, addresses, phone numbers, email addresses). Only addresses are processed to support the officer’s work. All other personal data is either not stored or redacted.
+Future iterations of Xylo Core will include the ability to review, analyse and summarise public comments. In the limited cases where special category data is included in public comments (health, religious, political views), Xylo Core automatically detects it and masks it before AI processing. Xylo relies on the Controller’s Article 9(2)(g) exemption but implements technical safeguards to ensure such data is never analysed by AI systems, maintaining compliance while preserving planning-relevant objection content.
+All data is stored in the UK and processed in the UK and/or EU.
+The underlying LLMs are accessed through an anonymisation and minimisation layer.
+No personal data are retained by or used to train the LLMs due to the zero data retention agreements in place with each LLM provider.
+4.4.3 - Data processing methods
+Personal data is automatically redacted using pattern matching and named entity recognition before AI processing using the Presidio SDK
+4.4.4 - Data access and storage
+Planning application data necessary to the officer’s review is stored in the system.
+Audit logs are stored for future auditability and reference.
+All data is only accessible by the officer and on a restricted basis to named Xylo developers using IAM roles and all data encrypted at rest for maintenance purposes.
+Data retention policies will be set by the customer. Therefore, the customer decides when the data is deleted. Zero-data storage retention policies are in place between Xylo and its third-party LLM API providers.
+4.4.5 - Data sharing agreements
+Data sharing is agreed in the pilot agreement between Leeds City Council and Xylo. Data protection rules establish Xylo as processor under Article 28 UK GDPR with Leeds City Council as controller.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+AI Screening Toolkit completed on 17 June 2025 and shared with Stakeholder Lead and Technical Lead, Strategy and Resources, Leeds City Council in appendix 3 of the privacy and compliance whitepaper.
+AI Impact Assessment completed on 7 August 2025 and shared with Stakeholder Lead and Technical Lead, Strategy and Resources, Leeds City Council
+Data Protection Impact Assessment underway by Leeds City Council as of 18 September 2025.
+5.2 - Risks and mitigations
+Risk #1: AI generates incorrect planning law references or misinterprets policy.
+Mitigations: The tool always displays source links and reasoning for officer review, ensuring transparency of any AI-generated text. Every paragraph must be reviewed and deliberately accepted by the officer, which creates a human-in-the-loop safeguard. The tool will also be supervised, reviewed, inspected and updated regularly with a comprehensive suite of bias evaluations and regression tests.
+Risk #2: Unlawful access to data, unauthorised  modification of data, erasure of  data
+Mitigations: All information is held in encrypted form on UK-based AWS infrastructure, which keeps live replicas in a second availability zone and creates daily encrypted snapshots in line with agreed retention policies. Access to the environment is limited to named, role-based accounts; every action is logged; network traffic is protected by TLS; and automated monitoring alerts Xylo’s incident team so that any breach can be contained swiftly and the Controller notified.
+Risk #3: Processing of personal data that is not necessary for the purpose
+Mitigations: Personal data is automatically redacted and minimised before processing and encrypted at all times.
+Contents

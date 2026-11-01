@@ -1,0 +1,14 @@
+You are a requirements engineer. Below is a public-sector algorithmic transparency record describing an algorithmic tool.
+
+Write between 8 and 12 software requirements for this system that reflect its governance, transparency, risk and oversight commitments, following these rules:
+1. Use only information stated in the record. Do not add features, thresholds, standards, roles or numbers that the record does not state.
+2. Write each requirement as "The system shall ..." with a single, testable condition. Avoid vague words such as "appropriate", "adequate", "fast" unless the record defines them.
+3. For every requirement, copy VERBATIM from the record the sentence or phrase (max 40 words) that supports it, in "evidence_quote".
+4. If the record does not support a requirement, do not write it. Fewer than 8 is acceptable if the record is sparse.
+
+Return ONLY a JSON array. Each element must be an object with two fields:
+  "requirement": the requirement text
+  "evidence_quote": the exact supporting text copied from the record
+
+RECORD:
+{record}

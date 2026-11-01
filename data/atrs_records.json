@@ -1,0 +1,1778 @@
+{
+  "meta": {
+    "source": "GOV.UK Algorithmic Transparency Recording Standard records",
+    "source_url": "https://www.gov.uk/government/collections/algorithmic-transparency-recording-standard-hub",
+    "licence": "Open Government Licence v3.0",
+    "n_records": 136
+  },
+  "records": [
+    {
+      "publishing_body": "HMRC",
+      "tool_name": "Ask HMRC online",
+      "title": "HMRC: Ask HMRC online",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmrc-ask-hmrc-online",
+      "published": "2025-06-26T07:39:09Z",
+      "description": "Digital (virtual) assistant chat (chatbot) and human HMRC adviser webchat.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Money and Pensions Service",
+      "tool_name": "Pension Calculator",
+      "title": "Money and Pensions Service: Pension Calculator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-pension-calculator",
+      "published": "2024-12-17T08:03:37Z",
+      "description": "The Pension Calculator estimates your potential retirement income and helps you plan how much to save to reach your financial goals for retirement.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DVLA",
+      "tool_name": "Contact Centre Chatbot service",
+      "title": "DVLA: Contact Centre Chatbot service",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dvla-contact-centre-chatbot-service",
+      "published": "2025-12-16T11:53:55Z",
+      "description": "A Chatbot tool used by Contact Centre Webchat channel to automatically answer customers and collate relevant information for the Webchat advisor when required.  ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DfE",
+      "tool_name": "Attendance reports using similar schools",
+      "title": "DfE: Attendance reports using similar schools",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dfe-attendance-reports-using-similar-schools",
+      "published": "2025-11-27T15:37:24Z",
+      "description": "Identifying schools which are a similar to a given school, for the purposes of comparing their attendance",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "OSBC",
+      "tool_name": "Interest Calculator",
+      "title": "OSBC: Interest Calculator ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/osbc-interest-calculator",
+      "published": "2025-02-10T07:53:25Z",
+      "description": "The interest calculator assists small business owners to calculate the amount of interest due on an overdue invoice. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "TrustID",
+      "title": "TrustID",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/trustid",
+      "published": "2025-11-27T15:40:07Z",
+      "description": "Identity verification and right to work check for job applicants",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "GOV.UK Chat",
+      "title": "DSIT: GOV.UK Chat",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-chat",
+      "published": "2025-10-07T12:53:06Z",
+      "description": "GOV.UK Chat is our AI-powered chatbot that allows users, for the first time, to get quick, personalised answers to their questions based on GOV.UK guidance",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Money and Pensions Service",
+      "tool_name": "Budget Planner",
+      "title": "Money and Pensions Service: Budget Planner",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-budget-planner",
+      "published": "2025-02-10T07:50:38Z",
+      "description": "The Budget Planner is a free online tool that helps users track and categorise their spending, provides a detailed breakdown of their finances, and offers personalised tips to improve their money management - taking just 5-10 minutes to complete.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "LGSCO",
+      "tool_name": "LGSCO Chatbot",
+      "title": "LGSCO: LGSCO Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/lgsco-lgsco-chatbot",
+      "published": "2026-07-02T09:17:03Z",
+      "description": "AI enabled chatbot widget linked to our website, which provides information about the role of the LGSCO.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Maritime and Coastguard Agency",
+      "tool_name": "Proview Proctoring Tool",
+      "title": "Maritime and Coastguard Agency: Proview Proctoring Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/maritime-and-coastguard-agency-proview-proctoring-tool",
+      "published": "2026-07-02T09:28:29Z",
+      "description": "Tool to ensure adherence to Code of Conduct during online exams.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "The Probation Service",
+      "tool_name": "Effective Proposal Framework",
+      "title": "The Probation Service: Effective Proposal Framework",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/the-probation-service-effective-proposal-framework",
+      "published": "2025-02-10T07:50:58Z",
+      "description": "The Effective Proposal Framework (EPF) is a digital tool used by Probation Practitioners at pre-sentence stage and as part of pre-release planning. It is used to identify requirements, licence conditions and interventions for individuals based on their risk and need profile.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "DSIT - Parlex",
+      "title": "DSIT - Parlex",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-parlex",
+      "published": "2025-12-16T11:50:49Z",
+      "description": "Parlex is parliamentary intelligence tool that enables civil servants to more efficiently search and understand parliamentary activity.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Money and Pensions Service",
+      "tool_name": "Mortgage Repayment Calculator",
+      "title": " Money and Pensions Service: Mortgage Repayment Calculator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-mortgage-repayment-calculator",
+      "published": "2025-12-16T12:10:30Z",
+      "description": "The mortgage repayment calculator is a simple tool that lets customers estimate their monthly payments for both interest-only and repayment mortgages, and see how changes in interest rates would affect their payments.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NHS BSA",
+      "tool_name": "Prescriptions and Dental Exemption check",
+      "title": "NHS BSA: Prescriptions and Dental Exemption check",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nhsbsa-prescriptions-and-dental-exemption-check",
+      "published": "2025-09-25T07:43:38Z",
+      "description": "A check to confirm whether patients who have signed a declaration to claim free prescriptions or dental treatment and have not been confirmed through Real Time Exemption Checking, are eligible to do so.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "IPO",
+      "tool_name": "Check if you could register your trade mark tool",
+      "title": "IPO: Check if you could register your trade mark tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ipo-check-if-you-could-register-your-trade-mark-tool",
+      "published": "2025-12-16T12:03:37Z",
+      "description": "A tool that uses AI to improve the quality of trade mark applications by providing a pre-application search function.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Money and Pensions Service",
+      "tool_name": "Mortgage Affordability Calculator",
+      "title": " Money and Pensions Service: Mortgage Affordability Calculator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-mortgage-affordability-calculator",
+      "published": "2025-12-16T12:10:02Z",
+      "description": "The mortgage affordability calculator is a simple tool that lets customers  estimate how much they can afford to borrow to buy a home.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "Survey Summarisation Tool",
+      "title": "Survey Summarisation Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/survey-summarisation-tool",
+      "published": "2026-07-08T07:57:46Z",
+      "description": "A web-based tool that utilises a large language model (LLM) to enable inspectors to quickly summarise, identify themes and safeguarding concerns, and search large volumes of free-text survey responses providing insight.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DVSA",
+      "tool_name": "MOT Risk Rating",
+      "title": "DVSA: MOT Risk Rating",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dvsa-mot-risk-rating",
+      "published": "2025-02-10T07:52:06Z",
+      "description": "An algorithm to identify potential non-compliance in MOT testing, and prioritise visits to MOT garages.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "Urgent Journal Messages",
+      "title": "DWP: Urgent Journal Messages",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-urgent-journal-messages",
+      "published": "2025-10-30T08:05:54Z",
+      "description": "Flagging messages from Universal Credit customers that may indicate a risk of harm.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Public Sector Fraud Authority",
+      "tool_name": "Fraud Risk Assessment Accelerator",
+      "title": "Public Sector Fraud Authority: Fraud Risk Assessment Accelerator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/public-sector-fraud-authority-fraud-risk-assessment-accelerator",
+      "published": "2026-05-12T13:07:39Z",
+      "description": "Tool to generate initial drafts of Fraud Risk Assessments.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMRC",
+      "tool_name": "Organisational Listening Tool",
+      "title": "HMRC: Organisational Listening Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/organisational-listening-tool",
+      "published": "2026-06-03T09:12:09Z",
+      "description": "The Organisational Listening Tool (OLT) collates, classifies and displays customer feedback from HMRC digital, webchat and telephony services.\u00a0",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NHS BSA",
+      "tool_name": "Residency Checker for UK EHIC/GHIC/PRC/S2",
+      "title": "NHS BSA: Residency Checker for UK EHIC/GHIC/PRC/S2",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nhs-bsa-residency-checker-for-ehic-slash-ghic-slash-prc",
+      "published": "2025-02-10T07:51:23Z",
+      "description": "A process to support confirmation of UK residency for entitlement to healthcare in an European Economic Area (EEA) country or Switzerland.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "MoJ",
+      "tool_name": "nDelius Contact Log Semantic Search",
+      "title": "MoJ: nDelius Contact Log Semantic Search",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/moj-ndelius-contact-log-semantic-search",
+      "published": "2025-10-08T13:11:02Z",
+      "description": "A search tool which helps probation practitioners find information within the Probation case management system contact logs.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "Consult",
+      "title": "DSIT: Consult",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-consult",
+      "published": "2025-05-14T14:20:10Z",
+      "description": "Consult is a new internal tool offering civil service departments high-quality, assured AI topic modelling capabilities for consultation processing.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DESNZ",
+      "tool_name": "Heat Pump Suitability Tool",
+      "title": "DESNZ: Heat Pump Suitability Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/desnz-heat-pump-suitability-tool",
+      "published": "2025-12-16T12:04:45Z",
+      "description": "A calculator to determine if a heat pump could be suitable financial and net zero option for your home as well as determining if you require planning permission or eligible for energy grants.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "GOV.UK One Login - Liveness & Likeness Checks",
+      "title": "DSIT: GOV.UK One Login - Liveness & Likeness Checks",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-one-login-liveness-and-likeness-checks",
+      "published": "2025-12-16T11:54:44Z",
+      "description": "A verification tool that uses an matching algorithm to match the users image with a trusted ID and ensures that they are present during the process.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "Child Maintenance Service (CMS) - Predictive Analytics Compliance",
+      "title": "DWP: Child Maintenance Service (CMS) - Predictive Analytics Compliance",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-child-maintenance-service-cms-predictive-analytics-compliance",
+      "published": "2025-10-30T08:05:29Z",
+      "description": "This tool is used by the Child Maintenance Service to support caseworkers in the reduction of payment breakdowns of compliant cases in the Child Maintenance Collect and Pay service.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Oak National Academy",
+      "tool_name": "Aila (Oak's AI Lesson Assistant)",
+      "title": "Oak National Academy: Aila (Oak's AI Lesson Assistant)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/oak-national-academy-aila-oaks-ai-lesson-assistant",
+      "published": "2024-12-17T08:02:39Z",
+      "description": "AI lesson assistant for UK teachers to create personalised lesson resources for their classes, with the aim of reducing teacher workload.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Newcastle City Council",
+      "tool_name": "Magic Notes",
+      "title": "Newcastle City Council: Magic Notes",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/newcastle-city-council-magic-notes",
+      "published": "2025-12-16T12:22:50Z",
+      "description": "A digital solution designed to help adult social care professionals quickly and securely record case notes, improving efficiency and accuracy in service delivery.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "Conversational Platform",
+      "title": "DWP: Conversational Platform ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-conversational-platform",
+      "published": "2025-12-16T12:09:02Z",
+      "description": "A telephone based virtual assistant which asks callers the reason for their call, uses speech recognition to understand the response and then either signposts them to relevant self serve options such as GOV.UK or routes through to DWP advisors.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMPPS",
+      "tool_name": "Key Work quality assurance automation",
+      "title": "HMPPS: Key Work quality assurance automation",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmpps-key-work-quality-assurance-automation",
+      "published": "2025-09-25T07:43:06Z",
+      "description": "The model automates the process of assessing the quality of Key Work session case notes.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "Universal Credit Advances Model",
+      "title": "DWP: Universal Credit Advances Model",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-universal-credit-advances-model",
+      "published": "2025-12-16T12:05:38Z",
+      "description": "Risk assessment of Universal Credit Advances for fraud prevention ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Cabinet Office",
+      "tool_name": "Assist",
+      "title": "Cabinet Office: Assist",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/cabinet-office-assist",
+      "published": "2025-10-27T09:08:25Z",
+      "description": "A bespoke Generative AI tool to support members of the government communications profession in their roles in tasks such as brainstorming, creating first draft content and reviewing work.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Met Office",
+      "tool_name": "Weather and climate forecasting",
+      "title": "Met Office: Weather and climate forecasting",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/met-office-weather-and-climate-forecasting",
+      "published": "2025-02-10T07:53:51Z",
+      "description": "The Met Office forecasting capacity leverages advanced technology, scientific expertise, and a global observation network to provide accurate and reliable weather and climate forecasts for public, commercial, and government use.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Environment Agency",
+      "tool_name": "Hello Lamp Post",
+      "title": "Environment Agency: Hello Lamp Post",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/environment-agency-hello-lamp-post",
+      "published": "2025-06-03T09:06:44Z",
+      "description": "Hello Lamp Post is a community engagement platform that uses Artificial Intelligence to playfully communicate and consult with citizens.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMRC",
+      "tool_name": "VAT Return Analysis Tool",
+      "title": "HMRC: VAT Return Analysis Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmrc-vat-return-analysis-tool",
+      "published": "2025-12-16T12:00:44Z",
+      "description": "This tool detects anomalous values within a trader's VAT Return history",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMPPS",
+      "tool_name": "Violence in Prisons Estimator",
+      "title": "HMPPS: Violence in Prisons Estimator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmpps-violence-in-prisons-estimator",
+      "published": "2025-04-28T18:31:07Z",
+      "description": "The Violence in Prisons Estimator helps prison staff to understand the violence risk of offenders in custody.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NHS England",
+      "tool_name": "Electronic Prescription Service Assist Me",
+      "title": "NHS England: Electronic Prescription Service Assist Me",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/electronic-prescription-service-assist-me",
+      "published": "2026-05-28T14:17:05Z",
+      "description": "EPS Assist Me helps suppliers onboarding by answering their questions. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DVLA",
+      "tool_name": "Drivers Medical Casework System",
+      "title": "DVLA: Drivers Medical Casework System",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dvla-drivers-medical-casework-system",
+      "published": "2025-05-29T08:16:24Z",
+      "description": "A casework system which uses decision trees to assist DVLA staff in assessing the users' ability to drive based on responses to medical questionnaires inputted by the user.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Money and Pensions Service",
+      "tool_name": "Redundancy Pay Calculator",
+      "title": "Money and Pensions Service: Redundancy Pay Calculator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/money-and-pensions-service-redundancy-pay-calculator",
+      "published": "2025-02-10T07:52:26Z",
+      "description": "The Redundancy Pay Calculator is an online tool designed to help individuals who have been or are at risk of being made redundant understand their legal rights, calculate their potential redundancy pay, assess their financial situation, and explore available benefits and support.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "MoJ",
+      "tool_name": "Splink Master Record",
+      "title": "MoJ : Splink Master Record",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/moj-splink-master-record",
+      "published": "2025-10-06T07:41:56Z",
+      "description": "Splink is an open-source tool for probabilistic data linkage tool that enables fast, accurate and scalable linkage and deduplication of data that lacks unique IDs",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Maritime and Coastguard Agency",
+      "tool_name": "Themis",
+      "title": "Maritime and Coastguard Agency: Themis",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/maritime-and-coastguard-agency-themis",
+      "published": "2025-10-30T08:03:10Z",
+      "description": "Themis is an Electronic Maritime Drift modelling system used to calculate predicted drift of leeway objects using deterministic and probabilistic modelling.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DVLA",
+      "tool_name": "Contact Centre Natural Language IVR",
+      "title": "DVLA: Contact Centre Natural Language IVR ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dvla-contact-centre-natural-language-ivr",
+      "published": "2026-04-07T13:11:26Z",
+      "description": "A Natural Language IVR is used on the Contact Centre's voice channel, allowing customers to 'tell' us what their enquiry is about and then route them through to a relevant meessage and/or a advisor.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "DSIT - Redbox",
+      "title": "DSIT - Redbox",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-redbox",
+      "published": "2025-04-28T18:31:09Z",
+      "description": "An AI assistant to civil servants in the UK, enabling them to use the best large language models (LLMs) to help make their daily tasks easier.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DESNZ",
+      "tool_name": "Warm Homes: Local Grant",
+      "title": "DESNZ: Warm Homes: Local Grant",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/desnz-warm-homes-local-grant",
+      "published": "2026-03-30T09:18:04Z",
+      "description": "The Warm Homes: Local Grant (WH:LG) service provides users with guidance on whether they are eligible for the Warm Homes: Local Grant, and allows local authorities (LAs) to download referral data for citizens that could be eligible.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Cabinet Office",
+      "tool_name": "Civil Service Verbal and Numerical Tests",
+      "title": "Cabinet Office: Civil Service Verbal and Numerical Tests",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/cabinet-office-civil-service-verbal-and-numerical-tests",
+      "published": "2025-12-16T12:11:29Z",
+      "description": "Online tests that are commonly used in recruitment as part of a sift to assess aptitude, potential and whether a person meets the requirements",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "ICO",
+      "tool_name": "ICE 360 Case Creation Automation",
+      "title": "ICO: ICE 360 Case Creation Automation",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ico-ice-360-case-creation-automation",
+      "published": "2026-04-13T12:50:51Z",
+      "description": "Automated case creation for the ICO's primary case management system, ICE 360.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Valuation Office Agency",
+      "tool_name": "Automated Valuation Model",
+      "title": "Valuation Office Agency: Automated Valuation Model",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/valuation-office-agency-automated-valuation-model",
+      "published": "2025-08-06T08:38:21Z",
+      "description": "The automated model is being used to support the valuation of 1.5m domestic properties for a Council Tax revaluation in Wales in 2028.  ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Insolvency Service",
+      "tool_name": "Director Conduct Reporting Service - Rules Engine",
+      "title": "Insolvency Service: Director Conduct Reporting Service - Rules Engine",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/insolvency-service-director-conduct-reporting-service-rules-engine",
+      "published": "2025-04-28T18:31:08Z",
+      "description": "An algorithm using predetermined logic to score the answers to questions in the Director Conduct Reporting Service (DCRS) to determine if there are potential conduct issues that need to be explored further.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Leeds City Council",
+      "tool_name": "Xylo Core",
+      "title": "Leeds City Council: Xylo Core",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/leeds-city-council-xylo-core",
+      "published": "2025-11-27T15:31:41Z",
+      "description": "AI-powered workspace that boosts the capacity of validation and planning officers within local planning authority development management teams.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Home Office",
+      "tool_name": "Complexity Application Routing Solution - Visits",
+      "title": "Home Office: Complexity Application Routing Solution - Visits",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/home-office-complexity-application-routing-solution-visits",
+      "published": "2024-12-17T08:01:13Z",
+      "description": "CARS(V) is a semi-automated workflow routing solution which identifies the likely complexity of visitor visa applications based on applicant\u2019s declared attributes.  ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "UKHO",
+      "tool_name": "Tidal Harmonic Analysis and Prediction",
+      "title": "UKHO: Tidal Harmonic Analysis and Prediction",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ukho-tidal-harmonic-analysis-and-prediction",
+      "published": "2025-10-30T08:06:13Z",
+      "description": "A tool to analyse tidal data, calculate harmonic constants and generate astronomical tidal predictions at coastal locations in the UK and overseas.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NS&I",
+      "tool_name": "Customer Chatbot",
+      "title": "NS&I: Customer Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ns-and-i-customer-chatbot",
+      "published": "2025-02-27T07:59:45Z",
+      "description": "A chatbot used by customers of NS&I to obtain answers to product and service queries.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NHS Blood & Transplant",
+      "tool_name": "Organ Offering Scheme Algorithms",
+      "title": "NHS Blood & Transplant: Organ Offering Scheme Algorithms",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nhs-blood-and-transplant-organ-offering-scheme-algorithms",
+      "published": "2025-06-26T07:37:34Z",
+      "description": "The organ allocation algorithms enable quick processing of data to ensure that every precious organ donated, has the best possible chance of being transplanted successfully by an effective, fair, and transparent means.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "London Borough of Sutton",
+      "tool_name": "Access Assure, Technology Enabled Care",
+      "title": "London Borough of Sutton: Access Assure, Technology Enabled Care",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/london-borough-of-sutton-access-assure-technology-enabled-care",
+      "published": "2025-01-28T07:09:38Z",
+      "description": "Access Technology Enabled Care (TEC) transforms care through combining traditional reactive alarm functionality with proactive digital insights of daily living activities, to support personalised, proactive and preventative care both in and out of the home.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "ICO",
+      "tool_name": "Chatbot",
+      "title": "ICO: Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ico-chatbot",
+      "published": "2026-01-14T07:42:18Z",
+      "description": "A chatbot that's hosted on the ICO website to support organisations who have enquiries relating to Data Protection  Fees. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "UK Export Finance",
+      "tool_name": "PRISM (Portfolio Risk Simulation Model)",
+      "title": "UK Export Finance: PRISM (Portfolio Risk Simulation Model)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/uk-export-finance-prism-portfolio-risk-simulation-model",
+      "published": "2025-12-16T12:08:07Z",
+      "description": "An Economic Capital simulation model used to calculate and analyse the risk for a UK Government portfolio of loans, guarantees and insurance products supporting UK exports.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Insolvency Service",
+      "tool_name": "Redundancy Payment Calculation Engine",
+      "title": "Insolvency Service: Redundancy Payment Calculation Engine",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/insolvency-service-redundancy-payment-calculation-engine",
+      "published": "2025-06-26T07:38:46Z",
+      "description": "An algorithmic function which calculates redundancy payments received by individuals who have been dismissed and whose employers cannot or will not pay.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Office for National Statistics",
+      "tool_name": "Survey Assist",
+      "title": "Office for National Statistics: Survey Assist",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/office-for-national-statistics-survey-assist",
+      "published": "2025-10-30T08:03:28Z",
+      "description": "A tool that calls on a large language model to ask supplementary questions in the ONS's Transformed Labour Force Survey to better code Standard Industrial Code and Standard Occupational Code to survey responses.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "Employment and Support Allowance Online Medical Matching",
+      "title": "DWP: Employment and Support Allowance Online Medical Matching",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-employment-and-support-allowance-online-medical-matching",
+      "published": "2025-02-10T07:51:51Z",
+      "description": "A tool which helps Employment and Support Allowance (ESA) agents match medical conditions for ESA claims.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "FCDO",
+      "tool_name": "Correspondence Triage",
+      "title": "FCDO: Correspondence Triage",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/fcdo-correspondence-triage",
+      "published": "2025-12-16T12:09:30Z",
+      "description": "A tool to triage incoming correspondence for the correspondence team to ensure teams receive and respond more quickly to incoming communications.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Care Quality Commission",
+      "tool_name": "Risk Categorisation",
+      "title": "Care Quality Commission: Risk Categorisation",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/care-quality-commission-risk-categorisation",
+      "published": "2026-03-30T09:18:38Z",
+      "description": "Using data and information from and about health and care organisations to understand the risk of poor quality care in the services that the Care Quality Commission (CQC) regulates.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "GOV.UK site search",
+      "title": "DSIT: GOV.UK site search",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-gov-dot-uk-site-search",
+      "published": "2025-02-10T07:53:40Z",
+      "description": "GOV.UK site search is the search engine for GOV.UK. It enables users to search for information and services on GOV.UK by entering a search query to view results that are relevant to their query. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Hampshire and Thames Valley Police",
+      "tool_name": "DARAT",
+      "title": "Hampshire and Thames Valley Police: DARAT",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hampshire-and-thames-valley-police-darat",
+      "published": "2024-02-29T17:36:25Z",
+      "description": "DARAT (Domestic Abuse Risk Assessment Tool) helps police officers to effectively grade the risk of future harmful incidents of domestic abuse.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMT",
+      "tool_name": "Policy Engine UK",
+      "title": "HMT: Policy Engine UK",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmt-modelling-policy-engine",
+      "published": "2024-12-17T08:00:19Z",
+      "description": "PolicyEngine UK is an open-source microsimulation model of the UK tax and benefit system. The model estimates tax liabilities and benefit entitlement in the Family Resources Survey dataset from given policy parameters and structures. HMT does not currently use PolicyEngine.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "National Highways",
+      "tool_name": "Highways Webchat",
+      "title": "National Highways: Highways Webchat ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/national-highways-highways-webchat",
+      "published": "2025-02-10T07:52:58Z",
+      "description": "The National Highways chatbot provides customers with an additional communication channel to get immediate answers to their questions using publicly available information (such as traffic information).",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Natural England",
+      "tool_name": "AI4Peat",
+      "title": "Natural England : AI4Peat",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/natural-england-ai4peat",
+      "published": "2025-10-30T08:04:56Z",
+      "description": "Mapping upland peat surface features for  peat drainage and damage using deep learning and aerial imagery.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Natural England",
+      "tool_name": "Living England",
+      "title": "Natural England: Living England",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/natural-england-living-england",
+      "published": "2025-02-10T07:54:03Z",
+      "description": "Habitat mapping for the whole of England using satellite imagery, targeted field survey and machine learning.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "Whitemail Insights and Vulnerability Scanner",
+      "title": "Whitemail Insights and Vulnerability Scanner",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/whitemail-insights-and-vulnerability-scanner",
+      "published": "2025-11-27T15:28:20Z",
+      "description": "A service that reads circa 25,000 scanned documents/letters received from citizens per day and flags people who may need urgent assistance as a result of a vulnerability; it also builds Management Information(MI) trends over time against a set of themes.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": null,
+      "tool_name": "AI Writing Assistant (Social Care)",
+      "title": "AI Writing Assistant (Social Care)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ai-writing-assistant-social-care",
+      "published": "2025-11-10T12:20:06Z",
+      "description": "An AI service to suggest wording for sections of a children's home inspection report based on the written evidence collected during its full inspection.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Barnet Council",
+      "tool_name": "Ami Chatbot",
+      "title": "Barnet Council: Ami Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/barnet-council-ami-chatbot",
+      "published": "2025-01-28T07:12:03Z",
+      "description": "Implementing an automated webchat functionality ('chatbot') to the Barnet Council website to provide a better customer experience. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Cabinet Office",
+      "tool_name": "Automated Digital Document Review",
+      "title": "Cabinet Office: Automated Digital Document Review",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/cabinet-office-automated-digital-document-review",
+      "published": "2024-02-29T17:48:00Z",
+      "description": "An algorithm to assist in the identification of digital records of long-term historic value and digital information assets that hold no long-term value.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DBT",
+      "tool_name": "Expenses Fraud Detector",
+      "title": "DBT: Expenses Fraud Detector",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dbt-expenses-fraud-detector",
+      "published": "2025-02-27T07:59:21Z",
+      "description": "A model to detect policy violations, anomalies and possible fraud within expense and Government Procurement Card (GPC) claims.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DfE",
+      "tool_name": "Virtual Assistant for Education Providers and Learners (Davina)",
+      "title": "DfE: Virtual Assistant for Education Providers and Learners (Davina)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dfe-virtual-assistant-for-education-providers-and-learners-davina",
+      "published": "2025-04-04T10:02:25Z",
+      "description": "The virtual assistant is used by customers to retrieve answers to simple queries. Customers are generally education providers and members of the general public.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "Ask Ops Chatbot",
+      "title": "DSIT: Ask Ops Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-ask-ops-chatbot",
+      "published": "2024-12-17T08:00:31Z",
+      "description": "Ask Ops Chatbot is a prototype tool that uses a Large Language Model to provide users with accurate and speedy answers 24/7 to questions about internal HR guidance.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "FCDO",
+      "tool_name": "Consular Digital Triage - Written Enquiries LLM",
+      "title": "FCDO: Consular Digital Triage - Written Enquiries LLM ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/fcdo-consular-digital-triage-written-enquiries-llm",
+      "published": "2024-12-17T08:01:01Z",
+      "description": "A tool for suggesting relevant guidance and services for British nationals abroad.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMRC",
+      "tool_name": "Logo Detection and Classification Toolkit (LDK)",
+      "title": "HMRC: Logo Detection and Classification Toolkit (LDK)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmrc-logo-detection-and-classification-toolkit-ldk",
+      "published": "2025-02-10T07:52:40Z",
+      "description": "This is a tool to detect unauthorised uses of HMRC's logo.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "MoJ",
+      "tool_name": "Data First (Splink)",
+      "title": "MoJ: Data First (Splink)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/moj-data-first-splink",
+      "published": "2024-12-17T08:01:45Z",
+      "description": "Splink is an open-source tool for probabilistic data linkage developed for the Data First program. Data First provides academic researchers with datasets across the Justice system where individuals can be identified with a single, universal ID across domains.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NS&I",
+      "tool_name": "PolyAI",
+      "title": "NS&I: PolyAI",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ns-and-i-polyai",
+      "published": "2025-10-30T08:02:23Z",
+      "description": "PolyAI delivers AI agents that respond to customer phone calls with lifelike voice interactions.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Welsh Government",
+      "tool_name": "Dylun - A content design assistant",
+      "title": "Welsh Government: Dylun - A content design assistant",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/welsh-government-dylun-a-content-design-assistant",
+      "published": "2025-07-11T08:33:22Z",
+      "description": "AI to improve planned content for the GOV.Wales website",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DBT",
+      "tool_name": "Business Growth Service AI Summariser",
+      "title": "DBT: Business Growth Service AI Summariser ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dbt-business-growth-service-ai-summariser",
+      "published": "2025-10-16T07:34:44Z",
+      "description": "An AI-powered summarisation feature that provides personalised funding information to business decision makers who are either starting a new business or looking to grow an existing business. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DESNZ",
+      "tool_name": "Find ways to save energy in your home",
+      "title": "DESNZ: Find ways to save energy in your home",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/desnz-find-ways-to-save-energy-in-your-home",
+      "published": "2026-03-30T09:18:16Z",
+      "description": "An online government tool that provides personalised recommendations for energy-saving improvements in homes in England and Wales.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DESNZ",
+      "tool_name": "Green Deal Reduction Calculator",
+      "title": "DESNZ: Green Deal Reduction Calculator",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/desnz-green-deal-reduction-calculator",
+      "published": "2025-12-16T11:52:15Z",
+      "description": "An algorithmic tool for calculating the amount to reduce a Green Deal loan by when a consumer complaint is upheld. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DESNZ",
+      "tool_name": "Warm Home Discount Eligibility - Energy Cost Modelling",
+      "title": "DESNZ: Warm Home Discount Eligibility - Energy Cost Modelling",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/desnz-warm-home-discount-eligibility-energy-cost-modelling",
+      "published": "2025-03-02T07:58:06Z",
+      "description": "Models to help determine household eligibility for the Warm Home Discount Scheme (a one-off \u00a3150 discount on winter energy bills). ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Dorset Council",
+      "tool_name": "Formulate for Adult Social Care",
+      "title": "Dorset Council: Formulate for Adult Social Care",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dorset-council-formulate-for-adult-social-care",
+      "published": "2025-01-28T07:08:22Z",
+      "description": "Providing fair, accurate and financially sustainable personal budgets to adults with eligible care and support needs. This record was written jointly by both Dorset Council and the tool supplier, Imosphere.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DWP",
+      "tool_name": "CMG Return Letters processing",
+      "title": "DWP: CMG Return Letters processing",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dwp-cmg-return-letters-processing",
+      "published": "2025-12-22T14:05:09Z",
+      "description": "A computer vision tool used to extract the address and reference number from return letters.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Mining Remediation Authority",
+      "tool_name": "Experian Commercial Delphi Score",
+      "title": "Mining Remediation Authority: Experian Commercial Delphi Score",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/mining-remediation-authority-experian-commercial-delphi-score",
+      "published": "2025-08-06T08:27:08Z",
+      "description": "Commercial credit rating tool to predict business failure risk of companies that work with the Mining Remediation Authority.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Office for Students",
+      "tool_name": "Teaching Funding Allocations",
+      "title": "Office for Students: Teaching Funding Allocations",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/office-for-students-teaching-funding-allocations",
+      "published": "2025-02-27T08:00:48Z",
+      "description": "Calculates OfS funding allocations for higher education providers in England.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "The Gambling Commission",
+      "tool_name": "Illegal Gambling website identification tool",
+      "title": "The Gambling Commission: Illegal Gambling website identification tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/the-gambling-commission-illegal-gambling-website-identification-tool",
+      "published": "2025-12-16T12:04:08Z",
+      "description": "A tool for identifying and tracking the activity associated with illegal gambling websites.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NICE",
+      "tool_name": "NORMA (NICE-ONS Recommendation Matching Algorithm)",
+      "title": "NICE: NORMA (NICE-ONS Recommendation Matching Algorithm)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nice-norma-nice-ons-recommendation-matching-algorithm",
+      "published": "2024-12-17T08:03:04Z",
+      "description": "NORMA is an internal tool that allows staff at NICE to search NICE published guidance and recommendations quickly by undertaking a simple keyword or recommendation search.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMT",
+      "tool_name": "Correspondence Triage Automation Tool",
+      "title": "HMT: Correspondence Triage Automation Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmt-correspondence-triage-automation-tool",
+      "published": "2024-12-17T08:00:47Z",
+      "description": "Automates steps when triaging correspondence.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Leeds City Council",
+      "tool_name": "Money Information Centre Chatbot",
+      "title": "Leeds City Council: Money Information Centre Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/leeds-city-council-money-information-centre-chatbot",
+      "published": "2025-06-26T07:40:06Z",
+      "description": "The Money Information Centre Chatbot assists website visitors to find information on the Money Information Centre website.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Salix Finance",
+      "tool_name": "Fraud Risk Assessment Reviewer",
+      "title": "Salix Finance: Fraud Risk Assessment Reviewer ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/salix-finance-fraud-risk-assessment-reviewer",
+      "published": "2025-10-03T07:56:29Z",
+      "description": "A tool to review Grant Applicant Fraud Risk Assessments against a defined criteria list to support determination of its robustness ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Social Care Wales",
+      "tool_name": "Qualification Chatbot",
+      "title": "Social Care Wales: Qualification Chatbot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/social-care-wales-qualification-chatbot",
+      "published": "2025-01-28T07:10:37Z",
+      "description": "The Qualifications Chatbot is used to support the public with an interest in social care qualifications find the appropriate qualification and information to work in the social care, early years, and childcare sector in Wales.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Bristol City Council",
+      "tool_name": "Not In Education, Employment or Training Model",
+      "title": "Bristol City Council: Not In Education, Employment or Training Model",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/bristol-city-council-not-in-education-employment-or-training-model",
+      "published": "2025-01-28T07:12:20Z",
+      "description": "The NEET (Not in Education, Employment, or training) Model is hosted on the Think Family Database (TFD) and used to help safeguarding professionals from Bristol City Council to coordinate support for families who are at risk of becoming NEET. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Camden Council",
+      "tool_name": "RentSense",
+      "title": "Camden Council: RentSense",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/camden-council-rentsense",
+      "published": "2025-01-28T07:08:46Z",
+      "description": "RentSense analyses rent transaction data from Council Housing tenants' rent accounts to present a prioritised list of arrears cases recommended for contact via a standalone case management portal. This will be used alongside the existing Housing system to manage tenancies.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DBT",
+      "tool_name": "Find Exporters",
+      "title": "DBT: Find Exporters",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dbt-find-exporters",
+      "published": "2024-12-17T08:02:27Z",
+      "description": "Find Exporters data uses the Export Propensity Scores to aid users in establishing the export potential of companies on the Companies House register. The algorithm predicts the probability that a company exports goods. This can then be used to identify companies to work with.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DBT",
+      "tool_name": "Redbox",
+      "title": "DBT: Redbox",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dbt-redbox",
+      "published": "2025-10-16T07:34:19Z",
+      "description": "Redbox an internal Large Language Model tool for DBT staff to ask questions and upload documents to which aids and supports their work.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DfE",
+      "tool_name": "Apprenticeship Withdrawal Rate AI",
+      "title": "DfE: Apprenticeship Withdrawal Rate AI",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dfe-apprenticeship-withdrawal-rate-ai",
+      "published": "2025-04-28T18:31:05Z",
+      "description": "This tool aims to help identify the likelihood of an apprentice withdrawing from their course, along with the key risk factors and the specific time intervals where the possibility is higher. The tool hopes to improve low achievement rates.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Food Standards Agency",
+      "tool_name": "Food Hygiene Rating Scheme \u2013 AI",
+      "title": "Food Standards Agency: Food Hygiene Rating Scheme \u2013 AI",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/food-standards-agency-food-hygiene-rating-scheme-ai",
+      "published": "2024-02-29T17:37:03Z",
+      "description": "The aim of this tool is to help local authorities manage the hygiene inspection of food establishments. It supports local authorities to prioritise which businesses to inspect by predicting which might be at a higher risk of non-compliance with food hygiene regulations.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Greater Cambridge Partnership",
+      "tool_name": "Smart Pedestrian Crossing Trial",
+      "title": "Greater Cambridge Partnership: Smart Pedestrian Crossing Trial",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/greater-cambridge-partnership-smart-pedestrian-crossing-trial",
+      "published": "2024-04-15T13:28:53Z",
+      "description": "Starling's Pedestrian Detector is a camera based, AI powered sensor for signalised pedestrian crossings that runs real-time analysis of all street users.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Cafcass",
+      "tool_name": "Genesys ChatBot",
+      "title": "Cafcass: Genesys ChatBot",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/cafcass-genesys-chatbot",
+      "published": "2024-12-17T08:03:20Z",
+      "description": "A chatbot to assist website and telephone users find information faster.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "BDUK",
+      "tool_name": "Intervention Area Design Algorithms",
+      "title": "BDUK: Intervention Area Design Algorithms",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/bduk-intervention-area-design-algorithms",
+      "published": "2025-09-15T07:50:18Z",
+      "description": "The model is a rule-based geospatial classification system that analyses Unique Property Reference Numbers, subsidy data, and commercial plans, applying sequential filtering algorithms and geospatial decision rules to determine gigabit intervention eligibility.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "West Midlands Police",
+      "tool_name": "exploratory analysis of sexual convictions",
+      "title": "West Midlands Police: exploratory analysis of sexual convictions",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/west-midlands-police-exploratory-analysis-of-sexual-convictions",
+      "published": "2024-02-29T17:36:53Z",
+      "description": "This algorithmic tool helps to ascertain the potential effects of a number of factors (e.g. the number of officers allocated to an investigation) on the success or failure of RASSO (rape and serious sexual offences) investigations.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "The Crown Prosecution Service",
+      "tool_name": "Correspondence Drafting Tool",
+      "title": "The Crown Prosecution Service: Correspondence Drafting Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/the-crown-prosecution-service-correspondence-drafting-tool",
+      "published": "2025-08-28T07:39:43Z",
+      "description": "The 'Correspondence Drafting Tool' aids CPS teams by utilising key information from the CPS case management system to streamline the correspondence drafting process according to CPS guidelines.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Student Loans Company",
+      "tool_name": "Advanced Learning Loans Assessment Rules",
+      "title": "Student Loans Company: Advanced Learning Loans Assessment Rules",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/slc-advanced-learning-loans-assessment-rules",
+      "published": "2025-09-25T07:44:26Z",
+      "description": "Automatic evaluation of a student's advanced learner loan application to determine eligibility and entitlement.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NICE",
+      "tool_name": "Cochrane Randomised Controlled Trials (RCT) Classifier",
+      "title": "NICE: Cochrane Randomised Controlled Trials (RCT) Classifier",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nice-cochrane-randomised-controlled-trials-rct-classifier",
+      "published": "2025-02-27T08:01:38Z",
+      "description": "Distinguishes randomised controlled trials from other types of study within research papers to help NICE staff narrow down the number of papers they need to read and review for evidence synthesis.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "MOD",
+      "tool_name": "Textio",
+      "title": "MOD: Textio",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/mod-textio",
+      "published": "2024-12-17T08:01:30Z",
+      "description": "An AI-powered writing assistant tool that enhances job adverts by analysing and optimising language for inclusivity, engagement and effectiveness.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "HMT",
+      "tool_name": "HERMeS (HMT's Excerpt Retrieval Messaging System)",
+      "title": "HMT: HERMeS (HMT's Excerpt Retrieval Messaging System)",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/hmt-hermes-hmts-excerpt-retrieval-messaging-system",
+      "published": "2025-06-03T09:01:41Z",
+      "description": "A Q&A chatbot which allows HMT staff to search HMT documents from the knowledge base, reducing time to find, read and access information.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Greater London Authority",
+      "tool_name": "London Building Stock Model 2",
+      "title": "Greater London Authority: London Building Stock Model 2",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/greater-london-authority-london-building-stock-model-2",
+      "published": "2025-01-28T07:09:19Z",
+      "description": "Key information about London's properties, drawn from a range of sources and enhanced by modelling with the purpose of informing energy and housing programmes.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DSIT",
+      "tool_name": "Succession Select",
+      "title": "DSIT: Succession Select",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dsit-succession-select",
+      "published": "2024-12-17T08:00:38Z",
+      "description": "A search tool to support identification of current Senior Civil Servants with career profiles that match requirements for senior digital role vacancies.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DfE",
+      "tool_name": "Student Loans Forecast Modelling Pipeline",
+      "title": "DfE: Student Loans Forecast Modelling Pipeline",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dfe-student-loans-forecast-modelling-pipeline",
+      "published": "2025-02-27T08:02:29Z",
+      "description": "Produces forecasts for the Department of Education's expenditure on, and the repayments it expects to receive from, higher education and further education student loans in England.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DEFRA",
+      "tool_name": "Local Authority Waste Collection Cost Groupings",
+      "title": "DEFRA: Local Authority Waste Collection Cost Groupings",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/defra-local-authority-waste-collection-cost-groupings",
+      "published": "2025-08-28T07:40:29Z",
+      "description": "A tool that categorises local authorities into groups based on shared factors influencing the cost of waste collection.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Care Quality Commission",
+      "tool_name": "Relativity Active Learning",
+      "title": "Care Quality Commission: Relativity Active Learning ",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/care-quality-commission-relativity-active-learning",
+      "published": "2026-03-30T09:18:27Z",
+      "description": "Active Learning is a technology assisted review tool that helps the Care Quality Commission (CQC) quickly organise its data and predict which documents are most likely to be relevant to reviewers, the legal team and therefore inquiries.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DfE",
+      "tool_name": "Correspondence Drafter",
+      "title": "DfE: Correspondence Drafter",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dfe-correspondence-drafter",
+      "published": "2025-12-16T12:10:55Z",
+      "description": "The Correspondence Drafter tool assists with the drafting of responses that the department's correspondence teams have received.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Ealing Council",
+      "tool_name": "Adult Social Care Annual Financial Expenditure Forecast",
+      "title": "Ealing Council: Adult Social Care Annual Financial Expenditure Forecast",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/ealing-council-adult-social-care-annual-financial-expenditure-forecast",
+      "published": "2025-01-28T07:09:07Z",
+      "description": "A machine learning model to forecast annual adult social care expenditure by cost centre.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Wilton Park",
+      "tool_name": "Data Cleaning Tool",
+      "title": "Wilton Park: Data Cleaning Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/wilton-park-data-cleaning-tool",
+      "published": "2025-02-10T07:51:08Z",
+      "description": "A tool to enable compliance with The General Data Protection Regulation (GDPR) by identifying and automatically cleaning personal data from the Wilton Park customer database.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Department for Health and Social Care and NHS Digital",
+      "tool_name": "QCovid algorithm",
+      "title": "Department for Health and Social Care and NHS Digital: QCovid algorithm",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/department-for-health-and-social-care-and-nhs-digital-qcovid-algorithm",
+      "published": "2024-02-21T13:50:12Z",
+      "description": "The aim of this clinical tool is to create a way of predicting how at-risk individuals might be from coronavirus. The tool was developed for use by clinicians in support of conversations with patients about personal risk.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "GOV.UK Data Labs (Cabinet Office)",
+      "tool_name": "Related Links",
+      "title": "GOV.UK Data Labs (Cabinet Office): Related Links",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/gov-dot-uk-data-labs-cabinet-office-related-links",
+      "published": "2024-02-29T17:37:10Z",
+      "description": "Related Links is a recommendation engine built to aid navigation of GOV.UK by providing relevant onward journeys from a content page.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "UK Heath Security Agency",
+      "tool_name": "TB Country of Birth support tool",
+      "title": "UK Heath Security Agency: TB Country of Birth support tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/uk-heath-security-agency-tb-country-of-birth-support-tool",
+      "published": "2025-09-25T07:42:30Z",
+      "description": "A tool to support manual processing of country of birth records, as a part of the invitation for TB testing for those from high-risk countries. ",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Standards and Testing Agency",
+      "tool_name": "Reception Baseline Assessment Routing",
+      "title": "Standards and Testing Agency: Reception Baseline Assessment Routing",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/standards-and-testing-agency-reception-baseline-assessment-routing",
+      "published": "2025-10-30T08:03:48Z",
+      "description": "Rules applied to the Reception Baseline Assessment which help prevent pupils from being presented with too many questions with which they are unlikely to be successful.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "DBT",
+      "tool_name": "Business Intelligence (BI) Subject Tagger",
+      "title": "DBT: Business Intelligence (BI) Subject Tagger",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/dbt-business-intelligence-bi-subject-tagger",
+      "published": "2025-04-28T18:31:09Z",
+      "description": "Suggests subject tags for Business Intelligence (BI), which is information that UK-based and international companies share with the department.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "MHCLG",
+      "tool_name": "Safer Greener Buildings Building Image Recognition Tool",
+      "title": "MHCLG: Safer Greener Buildings Building Image Recognition Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/mhclg-safer-greener-buildings-building-image-recognition-tool",
+      "published": "2025-04-28T18:31:08Z",
+      "description": "Ascertains an accurate estimate of residential building height and an understanding of the external wall system materials used.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Student Loans Company",
+      "tool_name": "Postgraduate Assessment Rules",
+      "title": "Student Loans Company: Postgraduate Assessment Rules",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/student-loans-company-postgraduate-assessment-rules",
+      "published": "2025-02-27T08:01:09Z",
+      "description": "Performs an automatic assessment of applications from applicants wishing to obtain contribution to cost funding for postgraduate study.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Health Research Authority",
+      "tool_name": "Proportionate Review Toolkit",
+      "title": "Health Research Authority: Proportionate Review Toolkit",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/health-research-authority-proportionate-review-toolkit",
+      "published": "2025-02-10T07:53:07Z",
+      "description": "A toolkit presented as a PowerPoint questionnaire to help Research Ethics Committee applicants determine whether their project would be eligible for proportionate review.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Warwickshire County Council",
+      "tool_name": "Domestic EPC Estimates",
+      "title": "Warwickshire County Council: Domestic EPC Estimates",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/warwickshire-county-council-domestic-epc-estimates",
+      "published": "2025-01-28T07:10:52Z",
+      "description": "This algorithmic tool is used to estimate the domestic energy performance certificates (EPC) of all households in Warwickshire that are missing one.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Care Quality Commission",
+      "tool_name": "Fees Calculator Application",
+      "title": "Care Quality Commission: Fees Calculator Application",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/care-quality-commission-fees-calculator-application",
+      "published": "2026-03-30T09:18:48Z",
+      "description": "The Fees Calculator Application analyses information supplied by care providers based in England to determine the correct invoice value payable by provider, based on a set of pre-determined rules.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Standards and Testing Agency",
+      "tool_name": "Key stage 2 Test Administration form rules",
+      "title": "Standards and Testing Agency: Key stage 2 Test Administration form rules",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/standards-and-testing-agency-key-stage-2-test-administration-form-rules",
+      "published": "2025-10-30T08:04:08Z",
+      "description": "KS2 Test Administration form rules for applications",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "West Berkshire Council",
+      "tool_name": "Apply for a Larger Rubbish Bin",
+      "title": "West Berkshire Council: Apply for a Larger Rubbish Bin",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/west-berkshire-council-apply-for-a-larger-rubbish-bin",
+      "published": "2025-01-28T07:11:46Z",
+      "description": "The tool is used to automate the process of assessing whether applicants for a larger non-recyclable household waste container meet the minimum threshold as set out in the council\u2019s policy. Applications that meet the minimum requirement are sent to Waste Management for review.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "ICO",
+      "tool_name": "Registration Inbox AI",
+      "title": "ICO: Registration Inbox AI",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/information-commissioners-office-registration-inbox-ai",
+      "published": "2024-02-21T13:51:48Z",
+      "description": "This algorithmic tool helps to categorise emails sent to the Information Commissioner\u2019s Office (ICO)\u2019s registration inbox and sends out auto-replies in specific cases.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NHS England",
+      "tool_name": "NHS.UK Reviews Automoderation Tool",
+      "title": "NHS England: NHS.UK Reviews Automoderation Tool",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nhs-england-nhs-dot-uk-reviews-automoderation-tool",
+      "published": "2024-07-23T14:30:14Z",
+      "description": "The NHS.UK website receives thousands of reviews each year about NHS services. This tool automates a previously manual process by using natural language processing (NLP) techniques to improve efficiency, scalability, and user satisfaction.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Network Rail",
+      "tool_name": "Digital Assistant",
+      "title": "Network Rail: Digital Assistant",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/network-rail-digital-assistant",
+      "published": "2024-12-17T08:03:53Z",
+      "description": "Chatbot to filter and resolve public enquiries and where necessary, hand-off to a live advisor for further review.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "BDUK",
+      "tool_name": "Project Gigabit Voucher Eligibility Engine",
+      "title": "BDUK: Project Gigabit Voucher Eligibility Engine",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/bduk-project-gigabit-voucher-eligibility-engine",
+      "published": "2025-04-28T18:31:05Z",
+      "description": "An algorithm to assess whether a UK premise is eligible for a Project Gigabit Voucher.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Welsh Government",
+      "tool_name": "Mapping Ancient Woodland Image Segmentation Model",
+      "title": "Welsh Government: Mapping Ancient Woodland Image Segmentation Model",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/welsh-government-mapping-ancient-woodland-image-segmentation-model",
+      "published": "2025-07-04T10:25:42Z",
+      "description": "Uses an image segmentation model to predict areas of woodland on OS Landmark maps using a sample of manually labelled data.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "NICE",
+      "tool_name": "Priority Screening Algorithm",
+      "title": "NICE: Priority Screening Algorithm",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/nice-priority-screening-algorithm",
+      "published": "2025-02-27T08:01:26Z",
+      "description": "Takes a set of titles and abstracts of research papers manually screened by the user and learns from those decisions to rank the unscreened papers, assisting staff in identifying the more relevant papers faster.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    },
+    {
+      "publishing_body": "Standards and Testing Agency",
+      "tool_name": "Colossyan AI for voiceovers and videos",
+      "title": "Standards and Testing Agency: Colossyan AI for voiceovers and videos",
+      "url": "https://www.gov.uk/algorithmic-transparency-records/standards-and-testing-agency-colossyan-ai-for-voiceovers-and-videos",
+      "published": "2025-10-30T08:04:22Z",
+      "description": "A voiceover AI that narrates scripts for the Standards and Testing Agency helpline and training videos.",
+      "listed_organisations": [
+        "Cabinet Office",
+        "Department for Science, Innovation and Technology",
+        "Government Digital Service"
+      ]
+    }
+  ]
+}

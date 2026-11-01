@@ -1,0 +1,162 @@
+West Berkshire Council: Apply for a Larger Rubbish Bin
+The tool is used to automate the process of assessing whether applicants for a larger non-recyclable household waste container meet the minimum threshold as set out in the council’s policy. Applications that meet the minimum requirement are sent to Waste Management for review.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+28 January 2025
+Organisation:
+West Berkshire Council
+Organisation type:
+Local authority
+Function:
+Housing and community amenities
+Capability:
+Analysis
+Phase:
+Production
+Region:
+South East
+Date published:
+28 January 2025
+ATRS version:
+v3.0
+Tier 1 Information
+###Name
+Apply for a Larger Rubbish Bin
+Description
+The tool is used to assess whether applicants for a larger non-recyclable household waste container meet the minimum threshold as set out in the council’s policy.
+It automates this assessment, rejecting and informing those applicants who don’t meet the minimum threshold , removing the administrative requirement to do this.
+Applications that meet the minimum requirement are sent to Waste Management for review.
+Website URL
+https://www.westberks.gov.uk/extrarubbish
+Contact email
+digital@westberks.gov.uk
+Tier 2 - Owner and Responsibility
+###1.1 - Organisation or department
+West Berkshire Council
+1.2 - Team
+Digital Services
+1.3 - Senior responsible owner
+Digital Services Manager
+1.4 - External supplier involvement
+No
+1.4.1 - External supplier
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - External supplier role
+Goss Interactive supply the digital platform on which the tool was created. The tool itself, however, was created in-house entirely by West Berkshire Council.
+1.4.4 - Procurement procedure type
+There was no procurement process specifically for the tool itself as it was created in-house.
+Tier 2 - Description and Rationale
+###2.1 - Detailed description
+The council offers larger black bins for non-recyclable refuse to those that meet at least the minimum criteria. These criteria are defined in policy by our Waste Management team.
+Applications for larger black bins can be made through a form on the council’s website as part of a digital service.
+Once the application has been made, the tool uses an algorithm to determine whether an applicant may be eligible for a larger black refuse bin. The algorithm is based on the policy, so it is in effect just enacting that policy as a person would.
+The applications of those who do meet at least the minimum criteria are then reviewed by the Waste Management team. Those which do not are informed automatically and their application rejected.
+2.2 - Scope
+The tool is designed specifically for the purpose of automating the assessment of online applications against the council policy for larger black bins.
+2.3 - Benefit
+The tool reduces the amount of manual processing for each application for a larger black bin, in many cases reducing that manual processing time down to simply recording the outcome and its result on a database for future reference.
+It also provides a faster assessment for the applicant, as in the applications where the need for human interaction has been removed, the automated decision and response can be sent more quickly.
+2.4 - Previous process
+The previous process was for a council officer to assess each application against the policy, essentially doing the same thing the tool is doing now but manually.
+2.5 - Alternatives considered
+The alternative was to continue with the manual process against the same criteria.
+Tier 2 - Decision making Process
+###3.1 - Process integration
+The council offers larger black bins for non-recyclable refuse to those that meet at least the minimum criteria. These criteria are defined in policy by the council’s Waste Management team.
+Applications for larger black bins can be made through a form on the council’s website as part of a digital service.
+Once the application has been made, the tool uses an algorithm to determine whether an applicant may be eligible for a larger black refuse bin. The algorithm is based on a policy, so it is in effect just enacting that policy in the same way a manual process would.
+The applications of those who do meet at least the minimum criteria are then reviewed by the Waste Management team. If approved the digital service automatically raises a request with the council’s waste contractor, if not the request if closed. The applicant is automatically informed by email of this outcome.
+Applicants who do not meet the minimum criteria are informed automatically and their application is closed.
+3.2 - Provided information
+The decision is automated, so in effect the tool is the decision maker based on policy. However, it does allow for the Waste Management team to scrutinise every decision made by it as all applications and outcomes are subsequently recorded on a database.
+3.3 - Frequency and scale of usage
+An average of 42 decisions are made per month using the algorithmic tool.
+3.4 - Human decisions and review
+The tool provides an overview of all applications it has processed, which allows a human to review each decision and the data entered as part of the application which it used to make that decision.
+3.5 - Required training
+The digital service is intuitive enough so that minimal training is required.
+3.6 - Appeals and review
+Applicants can appeal the decision by contacting the Waste Management team. As the decision is made according to the policy, and therefore a human would have made the same decision, it is unlikely that the decision would be changed. We also still receive hard copy applications and as with the automated process, this would lead to us sending an outcome email to the applicant. Applicants wishing to appeal the decision can simply respond to the email they receive in the first instance. Outcome emails are sent from
+recycle@westberks.gov.uk
+If the appeal is not upheld by the Waste Management team, further information is also provided to the applicant about the Council’s complaint process.
+Tier 2 - Tool Specification
+###4.1.1 - System architecture
+The algorithm is written in server side JavaScript, utilises Node.JS, and runs as part of a process model deployed in Goss Interactive’s digital platform.
+4.1.2 - Phase
+Production
+4.1.3 - Maintenance
+The tool is reviewed and updated as and when the policy it implements changes. Other than that no maintenance of the tool is required over and above that related to the platform is deployed as part of.
+4.1.4 - Models
+A mathematical model.
+Tier 2 - Model Specification
+###4.2.1 - Model name
+Assessment of applications for a larger container for non-recyclable household waste.
+4.2.2 - Model version
+Version 1
+4.2.3 - Model task
+The model makes an automated decision on eligibility based on the following data:
+- The size of their current refuse bin
+- The number of people permanently living at the household
+- The number of children in disposable nappies living at the household
+- Whether non-recyclable medical waste is produced by the household
+No weighting is applied, the algorithm assesses for whether the minimum criteria has been met.
+4.2.4 - Model input
+Applicant data collected by the online form as part of the application process for a larger black bin.
+4.2.5 - Model output
+The tool informs applicants that their application is being processed. They then receive an email that confirm the decision: ‘rejected’ or ‘approved’.
+4.2.6 - Model architecture
+Rules based system
+4.2.7 - Model performance
+The model was evaluated for the accuracy of its output in a testing environment.
+The tool was fully tested before deployment to ensure the decisions made by it were the same as would be made by a human against the same policy.
+4.2.8 - Datasets
+N/A
+4.2.9 - Dataset purposes
+N/A
+Tier 2 - Data Specification
+###4.3.1 - Source data name
+Application for a  Larger Rubbish Bin
+4.3.2 - Data modality
+Multimodal
+4.3.3 - Data description
+Information captured in the dataset that is needed to make an automated decision is:
+- The size of the household’s current refuse bin
+- The number of people permanently living at the household
+- The number of children in disposable nappies living at the household
+- Whether non-recyclable medical waste is produced by the household
+4.3.4 - Data quantities
+N/A - Data inputs shown above
+4.3.5 - Sensitive attributes
+Data used to make the decision relates to the household rather than a specific individual.
+We consider the following data used to be personal:
+The number of children in disposable nappies living at the household
+Whether non-recyclable medical waste is produced by the household
+4.3.6 - Data completeness and representativeness
+N/A
+4.3.7 - Source data URL
+N/A
+4.3.8 - Data collection
+Data is collected by an online form as part of the application process for a larger black bin.
+4.3.9 - Data cleaning
+N/A
+4.3.10 - Data sharing agreements
+N/A
+4.3.11 - Data access and storage
+The data is stored securely on the council’s digital platform, and is deleted as part of a retention schedule in-line with that of the council.
+Tier 2 - Risks, Mitigations and Impact Assessments
+###5.1 - Impact assessment
+The tool was fully tested before deployment to ensure the decisions made by it were the same as would be made by a human against the same policy.
+Automated decisions made in the production environment are periodically sampled and tested as above.
+5.2 - Risks and mitigations
+The main risk is that the tool makes an incorrect decision that impacts the user.
+The tool was fully tested before deployment to ensure the decisions made by it were the same as would be made by a human against the same policy.
+Automated decisions made in the production environment are periodically sampled and tested as above.
+Applicants can also appeal the decision by contacting the Waste Management team. If the appeal is not upheld by the Waste Management team, further information is also provided to the applicant about the Council’s complaint process.
+Contents

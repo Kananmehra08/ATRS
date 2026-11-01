@@ -1,0 +1,161 @@
+DESNZ: Heat Pump Suitability Tool
+A calculator to determine if a heat pump could be suitable financial and net zero option for your home as well as determining if you require planning permission or eligible for energy grants.
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+16 December 2025
+Organisation:
+Department for Energy Security and Net Zero
+Organisation type:
+Ministerial department
+Function:
+General public services
+Capability:
+Analysis
+Task:
+Multivariate analysis
+Phase:
+Production
+Region:
+UK
+Date published:
+16 December 2025
+ATRS version:
+v4.0
+1. Summary
+1 - Name
+Heat Pump Suitability Tool
+2 - Description
+A tool to help users determine if a heat pump could be a suitable choice of central heating system before they install one.
+Users will need to provide the following information about their home:
+- whether it’s in England, Scotland, Wales or Northern Ireland
+- what type of heating system it has (for example, gas or electric)
+- How many bedrooms it has
+This tool will then compare the cost and carbon emission savings available to the user and what they will need to install a heat pump.
+3 - Website URL
+https://www.gov.uk/check-heat-pump
+4 - Contact email
+heatpumpcheck@energysecurity.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+Department for Energy Security and Net Zero
+1.2 - Team
+EPBD
+1.3 - Senior responsible owner
+Project Director - Electrification, Buildings, Products and Delivery
+1.4 - Third party involvement
+Yes
+1.4.1 - Third party
+Oxford Computing Consultants, Panlogic, and Flatrock
+1.4.2 - Companies House Number
+Oxford Computing Consultants Ltd: 03521204
+Panlogic Limited: 03753915
+Flat Rock Technology Limited: 06461660
+1.4.3 - Third party role
+Oxford Computing Consultants: Setting up the first version of the tool, including hosting and maintenance.
+Panlogic - Procurement of a service for Hosting, Maintenance, and Development of the second version of the Heat pump home suitability tool for the Department for Energy Security and Net Zero.
+Flat Rock - Hosting and Maintenance of service.
+1.4.4 - Procurement procedure type
+Call-Off from a Framework Agreement (G-cloud 14)
+1.4.5 - Third party data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+This service uses the details users input about the number of bedrooms and fuel usage against benchmarks derived from  government held data.
+It estimates the heat pump installation cost and carbon emissions savings associated with heating your home. It does this by comparing the fuel used in your current heating system to the electricity used to power a heat pump.
+This service is intended for anybody who is responsible for their home’s heating system and can decide on the upgrades undertaken on this system. Therefore, it is intended for owner occupiers and landlords.
+2.2 - Benefits
+This tool enables DESNZ to provide a standardised and low cost service to provide users with:
+1. Quick and Personalised Assessment
+Helps users quickly understand whether a heat pump is a realistic option for their property.
+Environmental Impact
+Gives an estimate of the carbon emissions reduction users could achieve by switching.
+Clear Next Steps
+Guides users on what to do if a heat pump is suitable (e.g. contact MCS-certified installers).
+Saves Time
+Rather than expecting users to undertake complex research or getting quotes upfront, this tool gives users a first-look feasibility check in just a few minutes.
+2.3 - Previous process
+N/A
+2.4 - Alternatives considered
+N/A
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+This tool has been created for users to access as the beginning stage of their journey to determine if a heat pump would be suitable for their property and economic position. The user is expected to insert some simple information about their circumstances to provide the user with some initial options open to them. This tool is intended to provide advisory insights based on high-level information. Users are advised to seek expert guidance before making decisions, as the tool does not replace professional advice.
+3.2 - Human review
+It is down to the user to enter their information correctly into the tool, and the tool makes clear what information it uses to produce results. Once the tool provides an answer, it is down to the user to make the final decision as to if the tool has provided them with the answer they were expecting.
+3.3 - Frequency and scale of usage
+The tool is intended for one-time use during the early stages of considering a heat pump, helping users explore initial options before seeking detailed advice.
+Since implementation on 1st September 2025, the website has been viewed 8,009 times (as of 17/11/2025).
+3.4 - Required training
+The tool is straight forward to use and does not expect the user to have any further training. There is guidance about how the tool works including the calculations and assumptions (https://www.heat-pump-check.service.gov.uk/howThisServiceWorks).
+3.5 - Appeals and review
+There is a survey to provide feedback on the calculator, how useful this tool is, what information the user was seeking, what information they would further wish and an  opportunity to share with the team any thoughts they have.
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+HSM is a .NET 8 Razor Pages web app that helps UK homeowners assess heat pump suitability. It uses a layered monolithic architecture, an in-memory analysis engine, and a 67k-record SQLite database for property-to-heat-pump scoring. The app integrates with the UK EPC service via OAuth 2.0, runs on ASP.NET Core with EF Core and Serilog, and stores no user data beyond session state. Source code resides in the company’s GitLab and is mirrored to Azure DevOps for CI/CD. There is no public Github repository.
+4.1.2 - System-level input
+User data
+Reference data from studies
+4.1.3 - System-level output
+Install costs and emission savings for different heat pumps
+4.1.4 - Maintenance
+Weekly reviews of the tool are carried out to raise issues by exception. Changes and updates to information are carried out to ensure accuracy on an ad hoc basis.
+4.1.5 - Models
+Analysis Engine
+Tier 2 - Model Specification
+4.2.1. - Model name
+No machine learning models are used in this application, instead it uses a deterministic lookup-based system rather than AI/ML models.
+4.2.2 - Model version
+2024
+4.2.3 - Model task
+Looks up benchmark HP install costs and calculate the carbon emissions savings of the HP against the existing  heating appliance.
+4.2.4 - Model input
+User data
+Reference benchmark data
+4.2.5 - Model output
+A set of costs and carbon emissions savings for different heat pumps based on the user inputs.
+4.2.6 - Model architecture
+Rules based engine uses inputs from the user to produce cost estimates based on the Cost of Heating Appliances report produced by Eunomia on behalf of the department.
+https://eunomia.eco/reports/title-the-cost-of-heating-appliances-a-comprehensive-uk-database/
+4.2.7 - Model performance
+Validated through comparison with independent calculations conducted using a different software platform.
+4.2.8 - Datasets and their purposes
+The algorithm only does simple arithmetic calculations and lookup so requires no training data.
+2.4.3. Development Data
+4.3.1 - Development data description
+The installation cost data is based on applying the Eunomia report on cost of heating appliance (https://eunomia.eco/reports/title-the-cost-of-heating-appliances-a-comprehensive-uk-database/) to DESNZ housing stock model (https://www.data.gov.uk/dataset/957eadbe-43b6-4d8d-b931-8594cb346ecd/national-household-model) to serve benchmark values. Carbon intensities of fuel is taken from the Treasury’s Green Book supplementary guidance: valuation of energy use and greenhouse gas emissions for appraisal  (https://www.gov.uk/government/publications/valuation-of-energy-use-and-greenhouse-gas-emissions-for-appraisal). The efficiency of boilers is taken from the In-situ monitoring of efficiencies of
+condensing boilers (https://assets.publishing.service.gov.uk/media/5a75149be5274a3cb28697f7/In-situ_monitoring_of_condensing_boilers_final_report.pdf) and the efficiency of heat pumps from field trial data in the Electrfication of Heat Demonstration project (https://es.catapult.org.uk/project/electrification-of-heat-demonstration-project/)
+4.3.2 - Data modality
+Tabular datasets.
+4.3.3 - Data quantities
+A set of tables of a few megabytes.
+4.3.4 - Sensitive attributes
+No personal data.
+4.3.5 - Data completeness and representativeness
+The data provides a range of values that are representative of typical dwellings. However, these values are subject to change over time due to factors such as technological improvements and cost reductions.
+4.3.6 - Data cleaning
+N/A
+4.3.7 - Data collection
+The data are sourced from government evidence (see above) and have been repurposed to provide indicative ranges for installation costs and emissions savings.
+4.3.8 - Data access and storage
+The development team has controlled access through Azure DevOps and Azure App Service. No personal data is stored; user inputs exist only in session state and automatically expire. Security relies on HTTPS, OAuth 2.0, RBAC, and isolated logging. The SQLite database contains only anonymised reference data.
+4.3.9 - Data sharing agreements
+N/A
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+Guidance on its use can be found here:
+https://www.heat-pump-check.service.gov.uk/howThisServiceWorks
+Privacy Notice published in July 2022:
+https://www.heat-pump-check.service.gov.uk/PrivacyPolicy
+5.2 - Risks and mitigations
+Key Risks:
+Human error, such as users entering incorrect data.
+Incorrect tool usage, due to users not reading the guidance beforehand.
+Mitigation Measures:
+Comprehensive user guidance and FAQs have been provided to support correct tool usage.
+Clear instructions are prominently displayed on the landing page to encourage users to read the guidance before using the tool.
+Contents

@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+scikit-learn
+matplotlib
+requests
+beautifulsoup4
+anthropic
+tabulate
+python-dotenv

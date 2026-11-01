@@ -1,0 +1,209 @@
+Ofsted: AI Writing Assistant (Social Care)
+An AI service to suggest wording for sections of a children's home inspection report based on the written evidence collected during its full inspection.
+Updates to this page
+From:
+Cabinet Office
+,
+Department for Science, Innovation and Technology
+and
+Government Digital Service
+Published:
+10 November 2025
+Last updated:
+24 September 2026
+Show all updates
+24 September 2026
+Following the beta phase of testing, Ofsted chose not to progress this project further - record updated to 'retired'.
+10 November 2025
+First published.
+Organisation:
+Ofsted
+Organisation type:
+Agency or public body
+Function:
+Education
+and
+Regulation
+Capability:
+Computer linguistics
+Task:
+Semantic text understanding, translation and summarisation. Sentence and text generation.
+Phase:
+Retired
+Region:
+England
+Date published:
+12 November 2025
+ATRS version:
+v4.0
+Other tags:
+LLM
+1. Summary
+1 - Name
+AI Writing Assistant (Social Care)
+2 - Description
+The project aims to drive efficiency in the inspection process by deploying a self-serve assistant for inspectors that creates suggested wording for 3 sections of a children’s home full inspection report based on written inspection evidence using a Large Language Model (LLM). The text output will be edited, reviewed, and quality assured by inspectors. It will form the first step in the inspection report drafting process.
+Following the beta phase of testing, Ofsted chose not to progress this project further.
+3 - Website URL
+N/A
+4 - Contact email
+datascience@ofsted.gov.uk
+Tier 2 - Owner and Responsibility
+1.1 - Organisation or department
+The Office for Standards in Education, Children’s Services and Skills
+1.2 - Team
+Data and Insight Team
+1.3 - Senior responsible owner
+Head of Regulatory Business Change, Regulation and Social Care Policy
+1.4 - Third party involvement
+No
+1.4.1 - Third party
+N/A
+1.4.2 - Companies House Number
+N/A
+1.4.3 - Third party role
+N/A
+1.4.4 - Procurement procedure type
+N/A
+1.4.5 - Third party data access terms
+N/A
+Tier 2 - Description and Rationale
+2.1 - Detailed description
+Ofsted inspectors of children’s homes assess the quality of care, safety, and outcomes for children living in residential settings. They write reports based on inspection evidence to ensure transparency, hold providers accountable, and support improvements that promote the welfare and development of children in care.
+Through a web interface these inspectors will provide a judgement alongside inspection evidence they gather in OneNote exported as a PDF. The web interface will connect to an API where Python will act as an intermediary for their text data to be processed by a Large Language Model (LLM) in OpenAI’s ChatGPT family. The LLM will work through a series of prompts for report drafting and house styling, generating sections of a draft report from the text data temporarily held in CPU memory (RAM).
+The output does not contain the requirements section of the final report as this requires judgement and decision-making that must remain entirely with the inspector. The suggested wording for 3 sections of the report is output as a Word document that can be uploaded to our report management system Cygnum. At the top of the output, there is wording that outlines the text generated as a suggestion, and what the responsibilities of the inspector are. The suggested wording will be written into a draft, reviewed, and edited by the lead inspector as needed in line with new guidance, before continuing through quality assurance (QA).
+2.2 - Benefits
+Time: AI can instantly generate a structured first draft based on inspection evidence, eliminating the need to start from scratch and reducing time spent on formatting. Less time spent writing reports means more time for the evaluative process or more reports produced in the same amount of time.
+Cost: Inspector’s time-savings can be expressed in financial terms but are non-cash-releasing.​
+Quality and consistency: A report’s first draft will be of greater quality as consistent styling and consideration for what makes a good draft report is applied universally. Improved quality and consistency will in turn increase clarity, ease of quality assurance, and trust.
+2.3 - Previous process
+The pre-existing process was for inspectors to manually write the first report draft. This first draft would then be extensively reviewed, quality assured, and edited by inspectors. Following the introduction of the report drafting tool, only after the inspection and decision-making does an LLM support in the first draft of writing a report, with the following quality assurance requiring further comparison to the inspection evidence than may have occurred otherwise.
+2.4 - Alternatives considered
+Whilst different LLMs have been considered based upon their costs and capabilities, this would have minimal impact on the end product. Our current approach is for a web interface to connect via an API to Python scripts which manage LLM calls.
+Another option considered was to use Microsoft’s Power Apps with its integration to Azure AI Services. This offers low-code development benefits, however, in the discovery phase of development we found Power App’s limited customisation and compatibility challenging. Expertise within the development team is focussed on Python, offering further weight to the preferred solution.
+Tier 2 - Deployment Context
+3.1 - Integration into broader operational process
+Ofsted inspects children’s homes to ensure that young people in care receive safe, high-quality support. Inspections may be routine or triggered by specific concerns. Inspectors gather observations and documentation during their visits to inform reports that assess the effectiveness of the home and support continuous improvement.  These reports highlight strengths, identify areas for improvement, and guide action by providers and regulators.
+The proposed LLM service would be integrated as the first step in the report drafting process by providing only suggested wording for select sections of the first draft using inspectors’ evidence base. Following this, the existing writing and QA processes continue, where iterative moderation, editing, and quality assurance will develop the draft into a suitable report setting out the inspection findings.
+3.2 - Human review
+Inspectors will be part of the testing process before deployment of this tool. Once in place, the lead inspector and staff involved in QA will remain the same as now, to author, assess the quality, and edit the final inspection report.
+The text suggested by AI will be retained seperately through naming conventions and version controls in internal systems, creating clear distinction between it and inspector’s output for accountability and auditability.
+3.3 - Frequency and scale of usage
+Currently the tool is in  development and has a limited number of test users (for evaluation purposes). No citizens interact with the tool.
+If the service were live, it is anticipated it would run  several hundred times per week.
+3.4 - Required training
+Training and written guidance produced alongside Policy, Operations, and Legal teams will be provided to children’s homes inspectors on how to use the tool effectively and appropriately.
+Across training and written guidance will cover:
+- How to operate the tool
+- Decision ownership
+- Approved scope
+- Prohibited use
+- How the tool functions
+- Limitations of the tool
+- Quality assurance and accountability
+- Ensuring fairness and limiting bias
+- Further available training and support
+3.5 - Appeals and review
+The tool does not make judgments about the quality or effectiveness of a children’s home. The tool has no influence on inspection functions, it will assist inspectors with reporting functions alone. Its outputs are designed to support inspectors with suggested wording for select sections of an inspection report based on their evidence, helping them produce informed, evidence-based findings. Final decisions and evaluations remain the responsibility of the inspector, following established multi-layered quality assurance processes. Ofsted inspection reports for children’s homes can be challenged by providers through a formal complaints process.
+More information is available here:
+https://www.gov.uk/government/publications/complain-about-ofsted
+Tier 2 - Tool Specification
+4.1.1 - System architecture
+At present, the Python pipeline feeds a locally stored PDF document of text data into ChatGPT 4.1 Mini (an LLM by OpenAI) with some data cleaning to replace common acronyms with their full form. This runs through a series of prompts, each of which creates an output for a section of the report. These outputs are then collated in a Word document with a heading for each section. This document is then passed through a series of house styling prompts, applying rules to each section.
+4.1.2 - System-level input
+In internal testing, synthetic and historic children’s homes inspection evidence will be used. At the private beta stage, the tool would be on selected live inspections, but the output would not be published. If this service were to go live, the input would be present time children’s homes inspection evidence.
+4.1.3 - System-level output
+The service’s output is a Word document containing suggested wording for select sections of a children’s home full inspection report.
+4.1.4 - Maintenance
+Our intentions are to update the LLM architecture as better models become available and feasible, requiring updates to the prompts in turn. We would seek customer satisfaction data from inspectors on their usage of the service and perceived value to inform follow-up user testing and decisions on maintenance. We also plan to use real and synthetic data to measure the tool over time once deployed.
+4.1.5 - Models
+Report drafting ChatGPT 4.1 Mini model and house style drafting ChatGPT 4.1 Mini model (Internal Azure Instances).
+Tier 2 - Model Specification
+4.2.1. - Model name
+ChatGPT 4.1 Mini (Internal Azure Instance)
+4.2.2 - Model version
+4.1
+4.2.3 - Model task
+The drafting of children’s homes full inspection reports based on the evidence collected during an inspection to free up inspector resource for other tasks.
+4.2.4 - Model input
+Inspection evidence recorded by Ofsted staff (children’s homes inspectors).
+4.2.5 - Model output
+A first draft Ofsted report with house styling applied.
+4.2.6 - Model architecture
+A Large Language Model (LLM) with a series of 3 report drafting prompts and further house styling prompts. Temperature is minimized. Output in JSON format.
+4.2.7 - Model performance
+Prior report drafts can be compared in quality to those produced by AI. Time to execute to completion is recorded as a key metric.
+Better understanding the model’s performance is a key reason for ongoing testing. We would seek customer satisfaction data from inspectors on their usage of the tool and perceived value to inform follow-up user testing and decisions on how best to improve performance. We also plan to use real and synthetic data to measure the quality of the service over time once deployed.
+4.2.8 - Datasets and their purposes
+Synthetic inspection evidence produced by subject matter experts.
+Historic inspection evidence for published reports dating back to April 2024 where approval has been granted by a responsible body.
+2.4.3. Development Data
+4.3.1 - Development data description
+In addition to synthetic data, the development and testing of this tool has been supported by historic written evidence approved for piloting by responsible bodies and local authorities.
+4.3.2 - Data modality
+Text
+4.3.3 - Data quantities
+14 responsible bodies and selected local authorities have been invited to join a pilot using historical inspection evidence from children’s homes reports published since April 2024. This will be used for testing, with 20 cases evaluated.
+4.3.4 - Sensitive attributes
+Inspection evidence will contain sensitive personal details of those managing and running the home as well as life experiences of children living in the home. This includes but is not limited to matters of abuse, medical history, protected characteristics, protected characteristics, and criminal records.
+4.3.5 - Data completeness and representativeness
+Inspection evidence can vary in detail and style, however it will be captured in a set template, making it easier to process with AI.
+4.3.6 - Data cleaning
+We have a find and replace function within the Python script to identify acronyms in the inspection evidence and replace them with their full meaning before being processed by the LLM.
+4.3.7 - Data collection
+The evidence written by the inspector originates with anyone involved in an inspection – responsible individuals, registered managers, staff at settings, and children. They may speak to inspectors directly or complete surveys, be observed by inspectors, inspectors may look at documents that contain information about them.
+4.3.8 - Data access and storage
+Procedures determining the storage of and access permissions to raw inspection evidence (input data) are currently already in place and will not be stored by the tool. Input data is not used to train the model and will not be retained by the model.
+The raw data will be used by the service to form draft inspection reports, but no input data will be retained by the service. The data newly created by this service (the drafted inspection reports) will be saved in Ofsted’s operational systems.
+For the piloting phases of this work, no information will be entered onto publishing systems.
+4.3.9 - Data sharing agreements
+N/A
+Tier 2 - Operational Data Specification
+4.4.1 - Data sources
+Children’s homes inspection evidence recorded by Ofsted staff (inspectors).
+4.4.2 - Sensitive attributes
+Children’s homes inspection evidence includes sensitive attributes such as special category personal data (e.g. health, ethnicity, sexual orientation) and potential proxies for protected characteristics. These attributes are processed by the AI tool solely for generating draft reports, with safeguards in place including role-based access, strict version control, and mandatory inspector review to identify and remove any inappropriate or identifying content before finalisation.
+The secure storage of inspection evidence will be unchanged by the introduction of this tool. LLM itself does not retain any input data, and does not use any input data for training the model. Only the generated report is stored by the development team for monitoring and audit purposes. Report drafts generated during testing will be logged and retained internally for 6 months.
+4.4.3 - Data processing methods
+We have a find and replace function within the Python script to identify acronyms in the inspection evidence and replace them with their full meaning before being processed by the LLM.
+4.4.4 - Data access and storage
+Procedures determining the storage of and access permissions to raw inspection evidence (input data) are currently already in place and will not be stored by the tool. The raw data will be used by the service to form suggested wording for sections of an inspection report, but no input data will be retained by the service.
+The data newly created by this service will be in plain text (not the final report format) in a Word document that must be saved in Ofsted’s operational systems (Cygnum) unedited as version 1 (V1). V2 will be produced by the inspector in the report format and contain changes made by the inspector to the suggested wording of the AI, in addition to the sections produced entirely by the inspector without AI assistance.
+4.4.5 - Data sharing agreements
+Reports can be shared with commissioning bodies for children in care.
+Tier 2 - Risks, Mitigations and Impact Assessments
+5.1 - Impact assessments
+Data Protection Impact Assessment (DPIA) for testing phases completed on 06/08/2025.
+The DPIA identifies that testing the capability of AI to suggest wording for select sections of children’s homes inspection reports from synthetic and historic inspection data introduces suitably mitigateable risks. It concludes that while testing is legally permissible, deployment in live inspections will require robust safeguards, clear accountability, and demonstrable necessity to meet GDPR requirements. Another DPIA will be produced to assess the needs for a live product.
+Equality Impact Assessment (EIA) completed on 23/06/2025.
+The EIA concludes that the AI assistant is not expected to negatively impact individuals with protected characteristics, with no equality impacts identified across all nine categories. It recommends continued monitoring through human-led quality assurance and stakeholder engagement as the tool progresses, ensuring compliance with the public sector equality duty.
+We are committed to conducting periodic reviews of these impact assessments and this ATRS submission at each key stage of development and testing, to ensure continued relevance, compliance, and effectiveness.
+5.2 - Risks and mitigations
+Automated decision-making
+Risk: AI-generated wording could influence regulatory findings, breaching GDPR Article 22.
+Mitigation: The inspector will draft the report with the support of plain (not in the required report format) text suggested by the AI assistant for select sections of the report. We will maintain human-in-the-loop once the inspector has drafted their report through the existing detailed  before publication. Guidance and training for inspectors is a key mitigation here by instructing inspectors how to use the tool appropriately to ensure that they remain the decision-maker. In addition, the tool requires inspectors enter their final judgement before they can generate a report, as to not shape that outcome.
+Legal basis
+Risk: Insufficient justification for processing sensitive data with AI.
+Mitigation: Develop a business case demonstrating necessity and interest, validate improvements through testing, and ensure inspectors remain the decision-maker through guidance and training.
+Data lifecycle
+Risk: Unclear retention and deletion of AI outputs could expose sensitive information.
+Mitigation: Implement retention/deletion policy, restrict access, and avoid inclusion in core systems during testing.
+Accountability
+Risk: Unclear responsibility for AI outputs and risk of function creep.
+Mitigation: Define roles and governance to limit use and avoid scope changes.
+Accuracy and bias
+Risk: AI may produce inaccurate or biased text, leading to unfair outcomes.
+Mitigation: Rigorous testing, mandatory QA, and guidance to counter automation bias.
+Security
+Risk: Processing outside organisational domain introduces data security risks.
+Mitigation: Conduct security assessment; ensure encryption and secure routing.
+Transparency
+Risk: Stakeholders unaware of AI use in processing their data.
+Mitigation: Provide clear information and opt-out during testing; maintain transparency for live use.
+Explainability
+Risk: Inspectors may struggle to justify AI-generated wording.
+Mitigation: Ensure fidelity to evidence and require explicit validation of each section. Through training and guidance ensure that the wording is a starting point and a suggestion, it is not to be the final wording.
+Societal and unintended impacts
+Risk: Reduced trust, over-reliance on AI, and environmental impact.
+Mitigation: Publish clear explanations, provide training, monitor usage, and adopt energy-efficient practices.
+Contents
